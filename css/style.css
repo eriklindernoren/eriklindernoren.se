@@ -782,7 +782,7 @@ body,html{
 	font-size: 45px;
 }
 
-#mail{
+#github{
 	order: 1;
 	-webkit-order:1;
 }
@@ -815,7 +815,7 @@ body,html{
 	transition: color 150ms linear;
 }
 
-#mail span:hover{
+#github span:hover{
 	color: rgb(200, 200, 0);
 
 }
