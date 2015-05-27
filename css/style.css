@@ -61,7 +61,7 @@ body,html{
 
 #navWrapper{
 	width: 90%;
-	max-width: 1000px;
+	max-width: 900px;
 	height: 100px;
 	margin: 0 auto;
 
@@ -78,9 +78,10 @@ body,html{
 
 #navWrapper a{
 	font-style: bold;
-	font-family: 'Roboto';
+	font-family: 'Open Sans';
 	font-weight: 300;
-	font-size: 22px;
+	text-transform: uppercase;
+	font-size: 18px;
 	color: white;
 	text-decoration: none;
 }
@@ -256,7 +257,7 @@ body,html{
 }
 
 #resume{
-	font-family: "Open Sans Condensed";
+	font-family: "Open Sans";
 	font-weight: 700;
 	font-size: 20px;
 	text-align: center;
@@ -444,7 +445,7 @@ body,html{
 
 .eduTimeline .period { 
 	font-family: 'Open sans';
-	font-weight: 400;
+	font-weight: 300;
 	padding-left: 5px;
 	font-size: 20px;
 	color: #cacdc4;
@@ -682,7 +683,7 @@ body,html{
 }
 
 .info em{
-	font-family: 'Open Sans';
+	font-family: 'Open Sans Condensed';
 	font-weight: 600;
 	font-size: 16px;
 	text-transform: uppercase;
