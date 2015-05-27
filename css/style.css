@@ -87,7 +87,8 @@ body,html{
 }
 
 #navWrapper a:hover{
-	color: rgb(200,200,200);
+	color: #a34949;
+	font-weight: 400;
 }
 
 /*MOBILE NAVIGATION*/
