@@ -62,32 +62,40 @@ body,html{
 #navWrapper{
 	width: 90%;
 	max-width: 900px;
-	height: 60px;
+	height: 80px;
 	margin: 0 auto;
-
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-	display: -ms-flexbox;      /* TWEENER - IE 10 */
-	display: -webkit-flex;     /* NEW - Chrome */
-	display: flex;
-	align-items: center;
-	-webkit-align-items: center;
-	justify-content: space-around;
-	-webkit-justify-content: space-around;
+	text-align: center;
+	overflow: hidden;
+	display: block;
 }
+
+
 
 #navWrapper a{
 	font-style: bold;
 	font-family: 'Open Sans Condensed';
 	font-weight: 300;
+	
+	padding: 22px 10px 0 10px;
+	margin: 0 10px 0 10px;
 	text-transform: uppercase;
-	color: rgba(180,180,180,0.8);
+	color: rgb(240,240,240);
 	font-size: 22px;
 	text-decoration: none;
+	border-bottom: 5px solid transparent;
+	display: inline-block;
+
 }
 
-#navWrapper a:hover{
-	color: rgba(230,230,230,1);;
+#navWrapper a:hover > .navbarUnderline{
+	width: 100%;
+}
+
+.navbarUnderline{
+	margin-top: 2px;
+	border-bottom: 3px solid rgb(240,240,240);
+	width: 0px;
+	transition: width 200ms linear;
 }
 
 /*MOBILE NAVIGATION*/
@@ -757,12 +765,12 @@ body,html{
 #infoWrap{
 	margin: 0;
 /*	width: 200px;
-	height: 200px;*/
-	padding: 0 20px 0 20px;
-	position: relative;
-	text-align: center;
-	order: 3;
-	-webkit-order:3;
+height: 200px;*/
+padding: 0 20px 0 20px;
+position: relative;
+text-align: center;
+order: 3;
+-webkit-order:3;
 }
 
 #contactText{

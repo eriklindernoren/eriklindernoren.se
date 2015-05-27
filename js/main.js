@@ -57,8 +57,7 @@ $(document).ready(function(){
             $('#startimg').hide();
         }
     }
-    //Init set up background
-    //whatBackground($(window).scrollTop());
+
 
 
     // Scroll animations
