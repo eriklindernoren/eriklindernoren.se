@@ -55,14 +55,14 @@ body,html{
 	top: 0%;
 	width: 100%;
 	z-index: 50;
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.5);
 
 }
 
 #navWrapper{
 	width: 90%;
 	max-width: 900px;
-	height: 100px;
+	height: 60px;
 	margin: 0 auto;
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -78,17 +78,16 @@ body,html{
 
 #navWrapper a{
 	font-style: bold;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans Condensed';
 	font-weight: 300;
 	text-transform: uppercase;
-	font-size: 18px;
-	color: white;
+	color: rgba(180,180,180,0.8);
+	font-size: 22px;
 	text-decoration: none;
 }
 
 #navWrapper a:hover{
-	color: #a34949;
-	font-weight: 400;
+	color: rgba(230,230,230,1);;
 }
 
 /*MOBILE NAVIGATION*/
@@ -206,7 +205,7 @@ body,html{
 	right: 0;
 	font-family: 'abril Fatface', sans-serif;
 	font-size: 35px;
-	color: white;
+	color: rgb(240,240,240);
 
 }
 
@@ -258,7 +257,7 @@ body,html{
 }
 
 #resume{
-	font-family: "Open Sans";
+	font-family: "Open Sans Condensed";
 	font-weight: 700;
 	font-size: 20px;
 	text-align: center;
