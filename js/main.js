@@ -14,18 +14,16 @@ $(document).ready(function(){
         event.preventDefault();
         var target = "#" + this.getAttribute('data-target');
         if(target == "#contact"){
-           $('html, body').animate({
+         $('html, body').animate({
             scrollTop: $(document).height()
         }, 800);       
-       }else{
+     }else{
         $('html, body').animate({
             scrollTop: $(target).offset().top
         }, 800);
     }
 });
 
-    $('#projectHeader').fitText(1.2, { minFontSize: '20px', maxFontSize: '45px' });
-    $('.workButton > h1').fitText(1.2, { minFontSize: '18px', maxFontSize: '40px' });
 
     $('#startImg').backstretch("./images/desk1.jpeg");
     $('#schoolImg').backstretch("./images/liu.jpeg");
@@ -237,13 +235,13 @@ var stopHoverWorkButtons = function(){
         var navBackground = startscreenHeight - 80;
 
         if(distTop > lastDistTop && distTop > 400 && !isHover){
-         $('#navbar').fadeOut(800);
-     }
-     else if(scrollDif > 20 && window.innerWidth > 925){
-         $('#navbar').fadeIn(800);
-     }
+           $('#navbar').fadeOut(800);
+       }
+       else if(scrollDif > 20 && window.innerWidth > 925){
+           $('#navbar').fadeIn(800);
+       }
 
-     if(distTop > 300 && window.innerWidth > 568){
+       if(distTop > 300 && window.innerWidth > 568){
         $('.scrollToTop').fadeIn(400);
     }
     else{
@@ -252,37 +250,3 @@ var stopHoverWorkButtons = function(){
     lastDistTop = distTop;
 });
 });
-
-
-(function( $ ){
-
-  $.fn.fitText = function( kompressor, options ) {
-
-    // Setup options
-    var compressor = kompressor || 1,
-    settings = $.extend({
-      'minFontSize' : Number.NEGATIVE_INFINITY,
-      'maxFontSize' : Number.POSITIVE_INFINITY
-  }, options);
-
-    return this.each(function(){
-
-      // Store the object
-      var $this = $(this);
-
-      // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-    };
-
-      // Call once to set.
-      resizer();
-
-      // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
-
-  });
-
-};
-
-})( jQuery );

@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="E_Icon.ico" />
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 
 	<!-- 'abril Fatface' -->
 	<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
@@ -227,12 +226,16 @@
 			<div class="slideDiv" id="div1">
 				<div class="projWrapper">
 					<div class="info">
-						<em><h2>Geolocation Application</h2>iOS development</em>
+						<h2>Geolocation Application</h2>
+						<br>
+						<em>iOS development</em>
 						<p>This was a project I did to get more practice with Swift. It started out in me wanting to build a user interface for the Google Maps SDK and then evolved to adding as much location based information from APIs out there as I could find. The application could with the help of APIs from several photo sharing services display the most recently taken photo from the tagged location. The most interesting part in working on this project was using a bunch of APIs together and realizing how much great accessible stuff that is out there.</p>
+						<br>
 						<em>Programming languages and tools used:</em>
 						<ul>
 							<li>Swift</li>
 						</ul>
+						<br>
 						<em>APIs used:</em>
 						<ul>
 							<li>Google Maps SDK</li>
@@ -249,13 +252,17 @@
 			<div class="slideDiv" id="div2">
 				<div class="projWrapper">
 					<div class="info">
-						<em><h2>Bra Bärs</h2> iOS development</em>
-						<p>'Bra Bärs', read in English as "Good beer", was a idea me and my classmates came up with one evening while we were sitting at our favourite pub in Linköping. The idea of the app was to be able to navigate the beers available at the Swedish alcohol monopoly Systembolaget and sort beers by professional and customer reviews, by prices and by the users favourite type of beer. <br>Similar products are available for wines, but as there was nothing like that for beers and the fact that we ourself felt that it was something that we would use made us go ahead and start building. <br> I used the API supplied by Systembolaget to get information about the current supply, and added images from a separate API. There was no way of requesting data from Systembolaget specified by categories at a time, and I thereby decided to build a XML-parser in Java to seperate the data that was relevant to that which was not. </p>
+						<h2>Bra Bärs</h2>
+						<br>
+						<em>iOS development</em>
+						<p>'Bra Bärs', roughly translated as " A Good Beer", was a idea me and my classmates came up with one evening while we were sitting at our favourite pub in Linköping. The idea of the app was to be able to navigate the beers available at the Swedish alcohol monopoly Systembolaget and sort beers by professional and customer reviews, by prices and by the users favourite type of beer. <br>Similar products are available for wines, but as there was nothing like that for beers and the fact that we ourself felt that it was something that we would use made us go ahead and start building. <br> I used the API supplied by Systembolaget to get information about the current supply, and added images from a separate API. There was no way of requesting data from Systembolaget specified by categories at a time, and I thereby decided to build a XML-parser in Java to seperate the data that was relevant to that which was not. </p>
+						<br>
 						<em>Programming languages and tools used:</em>
 						<ul>
 							<li>Swift</li>
 							<li>Java</li>
 						</ul>
+						<br>
 						<em>APIs used:</em>
 						<ul>
 							<li>Systembolaget.se API</li>
@@ -269,8 +276,11 @@
 			<div class="slideDiv" id="div3">
 				<div class="projWrapper">
 					<div class="info">
-						<em><h2>Sonus</h2> Application development in Java</em>
+						<h2>Sonus</h2>
+						<br>
+						<em>Application development in Java</em>
 						<p>This was a project that I did with a classmate in a Java class that we had. The project was not meant to take up as much time that it did in the end, but it was really fun working on. <br> I was after the course ended employed by Ericsson for the summer and ended up building my project there solely in Java and I think that the time that we put into our Java project in the class before helped me out at Ericsson in the beginning. <br><br>Most other project groups ended up doing games as their project but we decided early on that we wanted to build a tool of some sort. We did a little research about fun modules out there for Java and we found JFugue. <br> JFugue makes it easy to compose music just by entering strings of the achords to be played and by what instrument.</p>
+						<br>
 						<em>Programming languages and tools used:</em>
 						<ul>
 							<li>Java</li>
@@ -283,8 +293,11 @@
 			<div class="slideDiv" id="div4">
 				<div class="projWrapper">
 					<div class="info">
-						<em><h2>This website</h2>Web development</em>
+						<h2>This website</h2>
+						<br>
+						<em>Web development</em>
 						<p>I have wanted to get into learning web development for a long time and it was fun to finally find the inspiration. The idea of building sort of like a digital resume came from a friend who talked to me about building one himself and I thought it sounded kind of fun. <br> This site has been built in HTML, CSS and Javascript. During the process of building it I have used tools such as jQuery, Animate.css, Wow.js, Font Awesome and a couple of Google Fonts. Working on this site has been a great learning experience for me and I already look forward to the next web dev project.</p>
+						<br>
 						<em>Programming languages and tools used:</em>
 						<ul>
 							<li>HTML</li>
@@ -315,14 +328,13 @@
 					<p>Repslagaregatan 8a</p>
 					<p>58222 Linköping</p>
 					<p>+46 702429524</p>
-					<a href="mailto:eriklindernoren@live.se">eriklindernoren@live.se</a>
 				</div>
 			</div>
 
 			<a id="github" class="socMedia" target="_blank" href="https://github.com/eriklindernoren">
 				<span class="fa-stack">
 					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+					<i id="ghb" class="fa fa-github fa-stack-1x fa-inverse"></i>
 				</span>
 			</a>
 
@@ -346,30 +358,11 @@
 					<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 				</span>
 			</a>
-
-
 		</div>
 
-		<!-- <form id="messageForm" action="http://formspree.io/eriklindernoren@live.se"
-		method="POST">
-		<div id="messageInfo">
-			<label>
-				<span>Your Name</span>
-				<input class="messageInput" type="text" name="name">
-			</label>
-			<label>
-				<span>Your Email</span>
-				<input class="messageInput" type="email" name="_replyto">
-			</label>
-		</div>
-		<label>
-			<span>Message</span>
-			<textarea class="messageInput" name="message"></textarea>
-		</label>
-		<input id="submit" class="messageInput" type="submit" value="Send">
-	</form> -->
-	<h2>© 2015 Erik Linder-Norén</h2>
-</div>
+		<a id="mail" href="mailto:eriklindernoren@gmail.com">eriklindernoren@gmail.com</a>
+		<h2>© 2015 Erik Linder-Norén</h2>
+	</div>
 
 
 
