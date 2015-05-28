@@ -95,7 +95,7 @@ body,html{
 	margin-top: 2px;
 	border-bottom: 3px solid rgb(240,240,240);
 	width: 0px;
-	transition: width 200ms ease;
+	transition: width 250ms ease;
 }
 
 /*MOBILE NAVIGATION*/
@@ -747,12 +747,10 @@ body,html{
 }
 
 #mail{
-	margin-top: 50px;
 	font-family: "Roboto";
 	font-weight: 300;
 	font-size: 60px;
 	color: rgba(170,170,170,0.8);
-	margin-bottom: 50px;
 	text-decoration: none;
 }
 
@@ -760,8 +758,16 @@ body,html{
 	color: #a34949;
 }
 
+#contactSeparator{
+	display: block;
+	width: 30%;
+	border-bottom: 4px solid #a34949;
+	border-radius: 2px;
+	margin: 80px auto 80px auto;
+}
+
 #contact h2{
-	padding: 50px 0 20px 0;
+	padding: 80px 0 20px 0;
 	color: rgb(220,220,220);
 	font-size: 18px;
 }
@@ -769,7 +775,7 @@ body,html{
 #contactWrap{
 	width: 80%;
 	max-width: 780px;
-	padding: 10px 0px 40px 0px;
+	padding: 10px 0px 0px 0px;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
 	display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -811,6 +817,8 @@ order: 3;
 	color: rgba(170,170,170,0.8);
 	font-size: 45px;
 }
+
+
 
 #github{
 	order: 1;
@@ -1068,18 +1076,18 @@ textarea{
 		width: 100%;
 	}
 
-	.educationContainer{
+	.educationContainer, .projWrapper{
 		width: 90%;
 		flex-direction: column;
 		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
 	}
 
-	.educationContainer .eduSummary{
+	.educationContainer .eduSummary, .info{
 		margin: 0 auto;
 		width: 100%
 	}
-	.educationContainer .eduTimeline{
+	.educationContainer .eduTimeline, .imageDiv{
 		margin: 0 auto;
 		margin-top: 20px;
 		width: 100%
@@ -1088,6 +1096,7 @@ textarea{
 	#mail{
 		font-size: 35px;
 	}
+
 
 }
 
