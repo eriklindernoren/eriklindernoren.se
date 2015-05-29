@@ -14,10 +14,10 @@ $(document).ready(function(){
         event.preventDefault();
         var target = "#" + this.getAttribute('data-target');
         if(target == "#contact"){
-         $('html, body').animate({
+           $('html, body').animate({
             scrollTop: $(document).height()
         }, 800);       
-     }else{
+       }else{
         $('html, body').animate({
             scrollTop: $(target).offset().top
         }, 800);
@@ -39,11 +39,13 @@ $(document).ready(function(){
 
         if(window.innerWidth > 568){
             if(scrolledY < distToEdu){
-                $('#schoolImg').hide();
                 $('#startImg').show();
+                $('#schoolImg').hide();
+                $('#contact').hide();
             }else if(scrolledY > distToEdu && scrolledY < distToProj){
                 $('#startImg').hide();
                 $('#schoolImg').show();
+                $('#contact').hide();
             }
             else{
                 $('#schoolImg').hide();
@@ -72,20 +74,20 @@ $(document).ready(function(){
 
                 var temp = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 700);
 
-                $('.educationContainer > .eduSummary').css({'transform': 'translate3d(' + temp + 'px, 20px, 0px)'});
-                $('.educationContainer > .eduSummary').css({'-webkit-transform': 'translate3d(' + temp + 'px, 20px, 0px)'});
-                $('.educationContainer > .eduSummary').css({'-moz-transform': 'translate3d(' + temp + 'px, 20px, 0px)'});
+                $('.educationContainer > .eduSummary').css({'transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
+                $('.educationContainer > .eduSummary').css({'-webkit-transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
+                $('.educationContainer > .eduSummary').css({'-moz-transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
 
-                $('.educationContainer > .eduTimeline').css({'transform': 'translate3d(' + Math.abs(temp) + 'px, 20px, 0px)'});
-                $('.educationContainer > .eduTimeline').css({'-webkit-transform': 'translate3d(' + Math.abs(temp) + 'px, 20px, 0px)'});
-                $('.educationContainer > .eduTimeline').css({'-moz-transform': 'translate3d(' + Math.abs(temp) + 'px, 20px, 0px)'});
+                $('.educationContainer > .eduTimeline').css({'transform': 'translate3d(' + Math.abs(temp) + 'px, 0px, 0px)'});
+                $('.educationContainer > .eduTimeline').css({'-webkit-transform': 'translate3d(' + Math.abs(temp) + 'px, 0px, 0px)'});
+                $('.educationContainer > .eduTimeline').css({'-moz-transform': 'translate3d(' + Math.abs(temp) + 'px, 0px, 0px)'});
             }
             else if(scrolledY > distToAbout){
                 var temp = Math.min(0, scrolledY - $('.about').offset().top + $(window).height() - 700);
 
-                $('#hello').css({'transform': 'translate3d(' + temp + 'px, 20px, 0px)'});
-                $('#hello').css({'-webkit-transform': 'translate3d(' + temp + 'px, 20px, 0px)'});
-                $('#hello').css({'-moz-transform': 'translate3d(' + temp + 'px, 20px, 0px)'});
+                $('#hello').css({'transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
+                $('#hello').css({'-webkit-transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
+                $('#hello').css({'-moz-transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
             }
         }
     });
@@ -93,6 +95,13 @@ $(document).ready(function(){
 var up = true;
 $('.showNav').click(function(){
     if(up){
+        $('.lowerMNavList').css({
+            "display": "-webkit-box",
+            "display": "-ms-flexbox", 
+            "display": "-webkit-flex",
+            "display": "flex" 
+        });
+        $('.lowerMNavList').hide();        
         $('.lowerMNavList').slideDown(400);
         up = false;
     }else{
@@ -102,13 +111,18 @@ $('.showNav').click(function(){
 });
 
 
+
+
+
 var lastUsed;
 var isShowing = false;
 var showWork = function(){
     var _this = '.' + $(this).data("target");
     if(isShowing && _this != lastUsed){
-        $(lastUsed).fadeOut(400);
-        $(_this).fadeIn(400);
+        $('#popDownWrapper').slideUp(400);
+        $(lastUsed).hide();
+        $('#popDownWrapper').slideDown(400);
+        $(_this).delay(300).fadeIn(400);
     }
     else if(isShowing){
         $('#popDownWrapper').slideUp(400);
@@ -125,39 +139,15 @@ var showWork = function(){
 var hoverWorkButtons = function(){
 
     $('.experience > h1').css({
-        "color": "rgb(243,134,48)",
+        "color":  "rgb(140,140,140)",
         "transition": "color 150ms linear"
-    });
-    $(this).css({
-        "box-shadow": "0px 0px 10px rgba(180,180,180,0.8)",
-        "transform": "scale(1.1)",
-        "-webkit-transform": "scale(1.1)",
-        "-ms-transform": "scale(1.1)",
-        "-moz-transform": "scale(1.1)",
-        "-o-transform": "scale(1.1)"
-    });
-    $(this).children('h1').css({
-        'color': 'rgba(0,0,0,0.2)',
-        'font-weight': '700'
     });
 }
 
 var stopHoverWorkButtons = function(){
-    $(this).css({
-        "box-shadow": "none",
-        "transform": "scale(1)",
-        "-webkit-transform": "scale(1)",
-        "-ms-transform": "scale(1)",
-        "-moz-transform": "scale(1)",
-        "-o-transform": "scale(1)"
-    });
     $('.experience > h1').css({
-        "color": "rgba(170,170,170,0.4)",
+        "color": "rgb(170,170,170)",
         "transition": "color 150ms linear"
-    });
-    $(this).children('h1').css({
-        'color': 'rgba(130,130,130,0.4)',
-        'font-weight': '300'
     });
 }
 
@@ -195,7 +185,7 @@ var stopHoverWorkButtons = function(){
                     "position": "fixed"
                 });
             }          
-            $('.projects').css({"margin-bottom":$('#contact').height() + "px"});
+            $('.projects').css({"margin-bottom":$('#contact').height() - 20 + "px"});
         }else{
             $('.projects').css({"margin-bottom": "0px"});
             $('#contact').css({
@@ -235,13 +225,13 @@ var stopHoverWorkButtons = function(){
         var navBackground = startscreenHeight - 80;
 
         if(distTop > lastDistTop && distTop > 400 && !isHover){
-           $('#navbar').fadeOut(800);
-       }
-       else if(scrollDif > 20 && window.innerWidth > 925){
-           $('#navbar').fadeIn(800);
-       }
+         $('#navbar').fadeOut(800);
+     }
+     else if(scrollDif > 20 && window.innerWidth > 925){
+         $('#navbar').fadeIn(800);
+     }
 
-       if(distTop > 300 && window.innerWidth > 568){
+     if(distTop > 300 && window.innerWidth > 568){
         $('.scrollToTop').fadeIn(400);
     }
     else{
