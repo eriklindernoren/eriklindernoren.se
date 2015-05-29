@@ -16,11 +16,11 @@ $(document).ready(function(){
         if(target == "#contact"){
            $('html, body').animate({
             scrollTop: $(document).height()
-        }, 800);       
+        }, 800, "easeOutSine");       
        }else{
         $('html, body').animate({
             scrollTop: $(target).offset().top
-        }, 800);
+        }, 800, "easeOutSine");
     }
 });
 
@@ -119,18 +119,18 @@ var isShowing = false;
 var showWork = function(){
     var _this = '.' + $(this).data("target");
     if(isShowing && _this != lastUsed){
-        $('#popDownWrapper').slideUp(400);
+        $('#popDownWrapper').slideUp(400, "easeInSine");
         $(lastUsed).hide();
-        $('#popDownWrapper').slideDown(400);
+        $('#popDownWrapper').slideDown(400, "easeOutSine");
         $(_this).delay(300).fadeIn(400);
     }
     else if(isShowing){
-        $('#popDownWrapper').slideUp(400);
+        $('#popDownWrapper').slideUp(400, "easeInSine");
         $(lastUsed).fadeOut(400);
         isShowing = false;
     }else {
         $(_this).fadeIn(400);
-        $("#popDownWrapper").slideDown(400);
+        $("#popDownWrapper").slideDown(400, "easeOutSine");
         isShowing = true;
     }
     lastUsed = _this;
@@ -172,11 +172,15 @@ var stopHoverWorkButtons = function(){
         $('#div' + currentDiv).fadeIn(1000);
     });
 
+    $('.about').ready(function(){
+
+
+
+    });
 
 
     var prevScreenWidth;
     var setupWindowSize = function(){
-
         if(window.innerWidth > 568){
             if(prevScreenWidth <= 568){
                 $('#contact').css({
@@ -184,7 +188,7 @@ var stopHoverWorkButtons = function(){
                     "z-index": "0",
                     "position": "fixed"
                 });
-            }          
+            }        
             $('.projects').css({"margin-bottom":$('#contact').height() - 20 + "px"});
         }else{
             $('.projects').css({"margin-bottom": "0px"});
