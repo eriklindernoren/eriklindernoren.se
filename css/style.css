@@ -12,6 +12,27 @@ body,html{
 	padding: 0;
 }
 
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
+}
+
+/*---------------------------------------*/
+/*	---------- NON SELECTABLE -----------*/
+/*---------------------------------------*/
+
+img, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobileNav, a{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
 
 .scrollToTop{
 	opacity: 0.9;
@@ -445,7 +466,7 @@ body,html{
 	display: block;
 }
 
-.education .eduTimeline h2{
+.education .eduTimeline h1{
 	font-family: 'abril Fatface';
 	color: #a34949;
 	font-size: 40px;

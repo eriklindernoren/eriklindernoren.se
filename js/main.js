@@ -70,17 +70,23 @@ $(document).ready(function(){
             var distToProj = $('.projects').offset().top - 200;
             var distToAbout = $('.about').offset().top - $(window).height();
 
+
             if(scrolledY > distToEdu){
 
-                var temp = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 700);
+                var swoop = -Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 700);
 
-                $('.educationContainer > .eduSummary').css({'transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
-                $('.educationContainer > .eduSummary').css({'-webkit-transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
-                $('.educationContainer > .eduSummary').css({'-moz-transform': 'translate3d(' + temp + 'px, 0px, 0px)'});
+                $('.educationContainer > .eduTimeline').css({'transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
+                $('.educationContainer > .eduTimeline').css({'-webkit-transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
+                $('.educationContainer > .eduTimeline').css({'-moz-transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
+            }
 
-                $('.educationContainer > .eduTimeline').css({'transform': 'translate3d(' + Math.abs(temp) + 'px, 0px, 0px)'});
-                $('.educationContainer > .eduTimeline').css({'-webkit-transform': 'translate3d(' + Math.abs(temp) + 'px, 0px, 0px)'});
-                $('.educationContainer > .eduTimeline').css({'-moz-transform': 'translate3d(' + Math.abs(temp) + 'px, 0px, 0px)'});
+            if(scrolledY > distToEdu){
+                var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 700);
+                var swoopY = -swoopX / 3;
+
+                $('.educationContainer > .eduSummary').css({'transform': 'translate3d(' + swoopX + 'px,0px, 0px)'});
+                $('.educationContainer > .eduSummary').css({'-webkit-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
+                $('.educationContainer > .eduSummary').css({'-moz-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
             }
             else if(scrolledY > distToAbout){
                 var temp = Math.min(0, scrolledY - $('.about').offset().top + $(window).height() - 700);
