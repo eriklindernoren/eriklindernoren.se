@@ -23,7 +23,7 @@ body,html{
 /*	---------- NON SELECTABLE -----------*/
 /*---------------------------------------*/
 
-img, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobileNav, a{
+.img-circle, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobileNav, a{
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -325,12 +325,12 @@ img, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobi
 }
 
 #resume{
-	width: 140px;
 	font-family: "Open Sans";
 	font-weight: 600;
 	font-size: 18px;
 	text-align: center;
 	padding: 60px 0 60px 0;
+	display: inline-block;
 
 }
 
@@ -340,7 +340,7 @@ img, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobi
 }
 
 #resume a:hover > .expandingUnderline{
-	width: 90px;
+	width: 100%;
 }
 
 #resume a > .expandingUnderline{
@@ -572,7 +572,7 @@ img, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobi
 	-moz-transform: scale(1.1) !important;
 	-ms-transform: scale(1.1) !important;
 	-o-transform: scale(1.1) !important;
-	box-shadow: 0px 0px 20px rgba(150,150,150,0.8)
+	box-shadow: 0px 0px 20px rgba(150,150,150,0.8);
 }
 
 
@@ -624,6 +624,7 @@ img, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobi
 #popDownWrapper{
 	width: 100%;
 	background-color: rgb(240,240, 240);
+	padding: 50px 0 50px 0;
 	margin: 0 auto;
 	display: none;
 	text-align: center;
@@ -702,7 +703,6 @@ img, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobi
 	position: absolute;
 	top: 50%;
 	z-index: 5;
-	transition;
 }
 
 #slideLeft{
@@ -718,15 +718,15 @@ img, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobi
 	font-size: 70px;
 }
 
-#slideLeft i:hover{
-	transform: translateX(-5px);
-	-webkit-transform: translateX(-5px);
 
+#slideLeft i:hover{
+	transform: translateX(-5px) scale(1.2);
+	-webkit-transform: translateX(-5px) scale(1.2);
 }
 
 #slideRight i:hover{
-	transform: translateX(5px);
-	-webkit-transform: translateX(5px);
+	transform: translateX(5px) scale(1.2);
+	-webkit-transform: translateX(5px) scale(1.2);
 }
 
 .slideDiv .container{
