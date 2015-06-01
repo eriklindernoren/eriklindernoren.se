@@ -37,7 +37,7 @@ $(document).ready(function(){
         var distToProj = $('.projects').offset().top - 200;
         var distToCont = $('#contact').offset().top - $(window).height();
 
-        if(window.innerWidth > 568){
+        if(window.innerWidth > 668){
             if(scrolledY < distToEdu){
                 $('#startImg').show();
                 $('#schoolImg').hide();
@@ -54,7 +54,13 @@ $(document).ready(function(){
             }
         }else{
             $('#schoolImg').hide();
-            $('#startimg').hide();
+            if(scrolledY < distToEdu + 100){
+                $('#startImg').show();
+                $('#contact').hide();
+            }else{
+                $('#startImg').hide();
+                $('#contact').show();
+            }
         }
     }
 
@@ -95,17 +101,18 @@ $(document).ready(function(){
             if(window.innerWidth <= 925){
                 var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 400);            
             }else
-                var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 700);            
+            var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 700);            
 
             var swoopY = -swoopX / 3;
 
             $('.educationContainer > .eduSummary').css({'transform': 'translate3d(' + swoopX + 'px,0px, 0px)'});
             $('.educationContainer > .eduSummary').css({'-webkit-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
             $('.educationContainer > .eduSummary').css({'-moz-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
-       
+
 
         }
     });
+
 
 var up = true;
 $('.showNav').click(function(){
@@ -114,7 +121,7 @@ $('.showNav').click(function(){
             "display": "-webkit-box",
             "display": "-ms-flexbox", 
             "display": "-webkit-flex",
-            "display": "flex" 
+            "display": "flex"
         });
         $('.lowerMNavList').hide();        
         $('.lowerMNavList').slideDown(400);
@@ -196,8 +203,10 @@ var stopHoverWorkButtons = function(){
 
     var prevScreenWidth;
     var setupWindowSize = function(){
-        if(window.innerWidth > 568){
-            if(prevScreenWidth <= 568){
+        if(window.innerWidth > 668){
+            $('#startImg').backstretch("./images/desk1.jpeg");
+            $('.education').css({'background-image': 'none'});
+            if(prevScreenWidth <= 668){
                 $('#contact').css({
                     "display": "block",
                     "z-index": "0",
@@ -206,6 +215,11 @@ var stopHoverWorkButtons = function(){
             }        
             $('.projects').css({"margin-bottom":$('#contact').height() - 20 + "px"});
         }else{
+            $('#startImg').backstretch("./images/desk1mobile.jpeg");
+            $('.education').css({
+                'background-image': 'url(/images/liumobile.jpeg)',
+                'background-size': 'cover'
+            });
             $('.projects').css({"margin-bottom": "0px"});
             $('#contact').css({
                 "display": "block",
@@ -244,18 +258,18 @@ var stopHoverWorkButtons = function(){
 
         if(distTop > lastDistTop && distTop > 200 && !isHover){
            $('#navbar').fadeOut(800);
-        }
-        else if(scrollDif > 10 && window.innerWidth > 925){
-            $('#navbar').css({'background-color': 'rgba(0,0,0,0.5)'});
-            $('#navbar').fadeIn(800);
-        }
-        if(window.innerWidth <= 925 && distTop > lastDistTop && distTop > 200){
-            $('#mobileNav').fadeOut(800);
-        }else if(window.innerWidth <= 925 && scrollDif > 10){
-            $('#mobileNav').fadeIn(800);
-        }
+       }
+       else if(scrollDif > 20 && window.innerWidth > 925){
+        $('#navbar').css({'background-color': 'rgba(0,0,0,0.5)'});
+        $('#navbar').fadeIn(800);
+    }
+        // if(window.innerWidth <= 925 && distTop > lastDistTop && distTop > 200 && !isFocus){
+        //     $('#mobileNav').fadeOut(800);
+        // }else if(window.innerWidth <= 925 && scrollDif > 20){
+        //     $('#mobileNav').fadeIn(800);
+        // }
 
-        if(distTop > 300 && window.innerWidth > 568){
+        if(distTop > 300 && window.innerWidth > 668){
             $('.scrollToTop').fadeIn(400);
         }
         else{
