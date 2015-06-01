@@ -13,10 +13,10 @@ body,html{
 }
 
 ::selection {
-  background: #ffb7b7; /* WebKit/Blink Browsers */
+	background: #ffb7b7; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #ffb7b7;/* Gecko Browsers */
+	background: #ffb7b7;/* Gecko Browsers */
 } 
 /*---------------------------------------*/
 /*	---------- NON SELECTABLE -----------*/
@@ -31,21 +31,42 @@ body,html{
 .scrollToTop{
 	opacity: 0.9;
 	position: fixed;
-	right: 5%;
-	bottom: 10%;
+	right: 50px;
+	bottom: 50px;
 	cursor: pointer;
+	text-align: center;
 	display: none;
 	z-index: 6;
+	text-decoration: none;
+	border-radius: 2px;
+	padding: 0px 12px 0px 12px;
+	/*color: #803939;*/
+	color: rgb(240,240,240);
+	background-color: rgba(0,0,0,0.5);
 }
 .scrollToTop i{
-	padding: 30px;
-	font-size: 70px;
-	color: #803939;
-}
-
-.scrollToTop i:hover{
+	display: inline-block;
+	font-size: 50px;
 	transform: translateY(-5px);
 }
+
+.scrollToTop h1{
+	display: none;
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 20px;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	transform: translateY(-10px);
+	color: rgb(240,240,240);
+}
+
+.scrollToTop:hover > h1{
+	display: inline-block;
+}
+
+
 
 #startImg, #schoolImg{
 	position: fixed;
@@ -83,11 +104,13 @@ body,html{
 #navWrapper{
 	width: 90%;
 	max-width: 900px;
-	height: 80px;
+	height: 75px;
 	margin: 0 auto;
 	text-align: center;
 	overflow: hidden;
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
 
@@ -96,8 +119,6 @@ body,html{
 	font-family: 'Roboto';
 	font-weight: 300;
 	
-	padding: 30px 10px 0 10px;
-	margin: 0 10px 0 10px;
 	text-transform: uppercase;
 	color: rgb(240,240,240);
 	font-size: 18px;
@@ -148,13 +169,16 @@ body,html{
 	padding: 0;
 	margin: 0;
 	display: block;
-	color: white;
+	color: rgb(240,240,240);
+	text-decoration: none;
 }
 
 #headerName{
 	padding-left: 15px;
 	font-family: "Abril Fatface";
-	font-size: 30px;
+}
+#headerName i{
+	font-size: 35px;
 }
 
 .showNav{
@@ -163,7 +187,7 @@ body,html{
 }
 .showNav i{
 	font-size: 35px;
-	color: white;
+	color: rgb(240,240,240);
 }
 
 
@@ -186,7 +210,7 @@ body,html{
 	font-weight: 300;
 	display: block;
 	margin: 0 auto;
-	color: white;
+	color: rgb(240,240,240);
 	text-decoration: none;
 	font-size: 18px;
 	padding: 20px 0 0 0;
@@ -246,7 +270,7 @@ body,html{
 
 .about{
 	background-color: #ffdbaa;
-	
+
 	text-align: center;
 	display: block;
 	position: relative;
@@ -278,6 +302,7 @@ body,html{
 	font-family: 'Abril Fatface';
 	font-size: 40px;
 	color: #5A352D;
+	padding-bottom: 10px;
 }
 
 #aboutText{
@@ -297,8 +322,8 @@ body,html{
 }
 
 #resume{
-	font-family: "Open Sans";
-	font-weight: 600;
+	font-family: "Roboto";
+	font-weight: 500;
 	font-size: 18px;
 	text-align: center;
 	padding: 60px 0 60px 0;
@@ -380,7 +405,7 @@ body,html{
 	background-color: rgba(163,73,73,0.8);
 	border-radius: 2px;
 	text-align: center;
-
+	backface-visibility: hidden;
 	order: 1;
 
 }
@@ -432,6 +457,7 @@ body,html{
 	font-family: 'abril Fatface';
 	color: #a34949;
 	font-size: 40px;
+	margin-bottom: 10px;
 }
 
 
@@ -444,7 +470,7 @@ body,html{
 
 .eduTimeline .period { 
 	font-family: 'Roboto';
-	font-weight: 300;
+	font-weight: 500;
 	padding-left: 5px;
 	font-size: 20px;
 	color: #cacdc4;
@@ -498,31 +524,56 @@ body,html{
 	text-align: center;
 	padding-bottom: 40px;
 	width: 100%;
-	height: 220px;
 	display: flex;
+	align-items: center;
 	justify-content: space-around;
 }
 
 
-.workButton{
+.flip3d{
 	position: relative;
-	display: inline-block;
-	text-align: center;
-	margin: 0 auto;
-	text-decoration: none;
 	width: 200px;
 	height: 200px;
-	background-color: rgb(240,240,240);
-	border-radius: 50%;
-	cursor: pointer;
-	transform: scale(1);
-	transition: 150ms ease;
 }
 
-.workButton:hover{
-	transform: scale(1.1) !important;
-	box-shadow: 0px 0px 20px rgba(150,150,150,0.8);
+
+
+.flip3d > div{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	cursor: pointer;
+	backface-visibility: hidden;
+	transition: 0.4s linear 0s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 1px 5px 10px 1px rgb(150,150,150);	
 }
+
+
+
+.flip3d > .workButton{
+	transform: perspective(600px) rotateY(0deg);
+	background-color: rgb(240,240,240);
+}
+
+.flip3d > .workButtonBack{
+	background-color: rgb(140,140,140);
+	transform: perspective(600px) rotateY(180deg);
+}
+
+
+.flip3d:hover > .workButton{
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+.flip3d:hover > .workButtonBack{
+	transform: perspective(600px) rotateY(0deg);
+}
+
+
 
 
 
@@ -533,19 +584,31 @@ body,html{
 
 
 
-.workButton h1{
-	position: absolute;
+.flip3d h1{
 	font-family: 'Roboto';
 	font-weight: 300;
 	font-size: 22px;
 	text-transform: uppercase;
-	margin: 0 auto;
-	top: 44%;
-	left: 0;
-	right: 0;
-	color: rgba(0,0,0,0.2);
 	text-decoration: none;
+	transition: color 150ms ease;
 }
+
+.flip3d em{
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 18px;
+	text-decoration: none;
+	color: rgb(200,200,200);
+}
+
+.workButton h1{
+	color: rgba(0,0,0,0.2);
+}
+
+.workButtonBack h1{
+	color: rgb(240,240,240);
+}
+
 
 .workplace { 
 	display: none;
@@ -560,12 +623,12 @@ body,html{
 
 .workplace p{
 	font-size: 20px;
-	color: rgb(180,180,180);
+	color: rgb(150,150,150);
 }
 
 .workplace h4{
 	color: #a34949;
-	color: rgb(140,140,140);
+	color: rgb(120,120,120);
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -614,7 +677,7 @@ body,html{
 
 #projectHeader{
 	padding: 60px 0px 0px 0px;
-	color: white;
+	color: rgb(240,240,240);
 	opacity: 0.8;
 	font-family: 'Abril Fatface';
 	font-size: 40px;
@@ -680,22 +743,24 @@ body,html{
 
 .info{
 	text-align: left;
-	color: white;
+	color: rgb(240,240,240);
 	width: 45%;
 }
 
 .info h2{
-	font-family: 'Open Sans';
+	font-family: 'Roboto';
 	font-weight: 700;
 	font-size: 24px;
 }
 
 .info em{
 	font-style: bold;
-	font-family: 'Open Sans';
-	font-weight: 600;
+	font-family: 'Roboto';
+	font-weight: 500;
 	font-size: 16px;
 	text-transform: uppercase;
+	display: block;
+	padding-bottom: 5px;
 }
 
 .info p{
@@ -719,12 +784,17 @@ body,html{
 .imageDiv{
 	text-align: center;
 	width: 50%;
+	overflow: hidden;
 }
 
 .imageDiv img{
-	border-radius: 3px;
+	display: block;
 	width: 100%;
+	border-radius: 3px;
+	transition: 0.5s ease;
+	margin: 0 auto;
 }
+
 /*---------------------------------------*/
 /*	---------- FOOTER --------------  */
 /*---------------------------------------*/
@@ -879,19 +949,27 @@ body,html{
 	}
 
 	#workWrapper{
-		width: 90%;
-	}
-
-	.workButton{
 		width: 100%;
-		height: 80px;
-		border-radius: 0px;
 	}
 
-	.workButton h1{
-		top: 30%;
-		font-size: 22px;
+	.flip3d, .flip3d > .workButton, .flip3d > .workButtonBack{
+		width: 150px;
+		height: 150px;
+		font-size: 30px;
 	}
+
+	.flip3d h1{
+		font-size: 18px;
+		padding: 0;
+		margin: 0;
+	}
+	.flip3d em{
+		font-size: 16px;		
+		padding: 0;
+		margin: 0;
+	}
+
+
 
 	.projWrapper{
 		flex-direction: column;
@@ -921,14 +999,7 @@ body,html{
 		width: 100%
 	}
 
-	.info{
-		text-align: center;
-	}
 
-	.info ul{
-		padding: 0;
-		list-style-type: none;
-	}
 
 	#mail{
 		font-size: 50px;
@@ -941,22 +1012,8 @@ body,html{
 
 @media screen and (max-width: 768px){
 
-
-	.startscreen .img-circle{
-		width: 130px;
-		height: 130px;
-	}
-
-	.startscreen h1{
-		display: none;
-	}
-
 	.educationContainer .eduSummary, .educationContainer .eduTimeline{
 		transform: none;
-	}
-
-	#hello{
-		transform: translate(0);
 	}
 
 	#mail{
@@ -964,18 +1021,55 @@ body,html{
 	}
 
 
-
-	.workButton h1{
-		top: 35%;
-		font-size: 18px;
-	}
-
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 668px){
+
+	.startscreen .img-circle{
+		width: 180px;
+		height: 180px;
+	}
+
+	.startscreen h1{
+		font-size: 30px;
+	}
+
+
 	#contactWrap{
 		display: block;
 		text-align: center;
+	}
+
+	#workWrapper{
+		flex-direction: column;
+		justify-content: center;
+	}
+	.flip3d{
+		margin-top: 10px;
+		width: 60%;
+		height: 90px;
+	}
+
+	.flip3d > .workButton, .flip3d > .workButtonBack{
+		width: 100%;
+		height: 90px;
+		border-radius: 2px;
+	}
+
+	.flip3d > .workButton{
+		transform: perspective(600px) rotateX(0deg);	
+	}
+
+	.flip3d > .workButtonBack{
+		transform: perspective(600px) rotateX(180deg);
+	}
+
+	.flip3d:hover > .workButton{
+		transform: perspective(600px) rotateX(-180deg);
+	}
+
+	.flip3d:hover > .workButtonBack{
+		transform: perspective(600px) rotateX(0deg);
 	}
 
 	#contactWrap a{
@@ -1004,15 +1098,15 @@ body,html{
 		font-size: 35px;
 	}
 
-	.workButton h1{
-		top: 35%;
-		font-size: 16px;
-	}
 
 }
 
 
 @media screen and (max-width: 568px){
+
+	.startscreen h1{
+		font-size: 24px;
+	}
 
 	.startscreen .img-circle{
 		width: 130px;
