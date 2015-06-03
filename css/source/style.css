@@ -2,9 +2,8 @@
 body,html{
 	font-family: 'Roboto';
 	font-weight: 300;
-	max-width: 100%;
+	width: 100%;
 	overflow-x: hidden;
-
 }
 
 *{
@@ -29,8 +28,8 @@ body,html{
 
 
 .scrollToTop{
-	opacity: 0.9;
 	position: fixed;
+	display: none;
 	right: 50px;
 	bottom: 50px;
 	cursor: pointer;
@@ -46,7 +45,9 @@ body,html{
 .scrollToTop i{
 	display: inline-block;
 	font-size: 50px;
-	transform: translateY(-5px);
+	padding: 0;
+	transform: translateY(-4px);
+	margin: 0 auto;
 }
 
 .scrollToTop h1{
@@ -55,10 +56,10 @@ body,html{
 	font-weight: 300;
 	font-size: 20px;
 	text-decoration: none;
-	margin: 0;
+	margin: 0 6px 0 0;
 	padding: 0;
-	transform: translateY(-10px);
 	color: rgb(240,240,240);
+	transform: translateY(-11px);
 }
 
 .scrollToTop:hover > h1{
@@ -66,19 +67,30 @@ body,html{
 }
 
 
+#startOuter{
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: none;
+	z-index: 2;
+}
 
-#startImg, #schoolImg{
+#startImg{
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	display: block;
+}
+
+#schoolImg{
 	position: fixed;
 	top: 0%;
 	width: 100%;
 	height: 100vh;
 	display: none;
-}
-
-#startImg{
-	z-index: 2;
-}
-#schoolImg{
 	z-index: 1;
 }
 
@@ -128,13 +140,16 @@ body,html{
 
 #navWrapper a:hover > .expandingUnderline{
 	width: 100%;
+	opacity: 1;
+	transform: translateY(2px);
 }
 
 .expandingUnderline{
-	margin-top: 2px;
+	transform: translateY(12px);
 	border-bottom: 3px solid rgb(240,240,240);
 	width: 0px;
-	transition: width 250ms ease;
+	opacity: 0.1;
+	transition: 250ms ease;
 }
 
 /*MOBILE NAVIGATION*/
@@ -229,9 +244,7 @@ body,html{
 	height: 100vh;
 	text-align: center;
 	z-index: 3;
-
 	transform: translate3d(0,0,0);
-
 }
 
 .startscreen .img-circle{
@@ -244,6 +257,7 @@ body,html{
 	border-radius: 50%;
 	width: 200px;
 	height: 200px;
+	z-index: 3;
 }
 
 
@@ -255,6 +269,7 @@ body,html{
 	font-family: 'abril Fatface';
 	font-size: 35px;
 	color: rgb(240,240,240);
+	z-index: 3;
 
 }
 
@@ -266,13 +281,12 @@ body,html{
 
 .about{
 	background-color: #ffdbaa;
-
+	width: 100%;
 	text-align: center;
 	display: block;
 	position: relative;
 	z-index: 3;
-	min-height: 100vh;
-	/*height: 100vh;*/
+	min-height: 50vh;
 	overflow: visible;
 	-webkit-overflow: visible;
 
@@ -305,7 +319,7 @@ body,html{
 }
 
 #aboutText{
-	padding: 100px 0 100px 0;
+	padding: 80px 0 50px 0;
 	max-width: 1000px;
 	margin: 0 auto;
 	width: 80%;
@@ -322,11 +336,12 @@ body,html{
 
 #resume{
 	font-family: "Roboto";
-	font-weight: 500;
-	font-size: 18px;
+	font-weight: 300;
+	font-size: 20px;
 	text-align: center;
-	padding: 60px 0 60px 0;
+	padding: 80px 0 80px 0;
 	display: inline-block;
+	text-transform: uppercase;
 
 }
 
@@ -335,25 +350,30 @@ body,html{
 	text-decoration: none;
 }
 
-#resume a:hover > .expandingUnderline{
-	width: 100%;
-}
 
 #resume a > .expandingUnderline{
 	border-color: rgba(0,0,0,0.8);
 }
 
+#resume a:hover > .expandingUnderline{
+	width: 100%;
+	opacity: 1;
+	transform: translateY(2px);
+}
+
+
 #interests{
+	position: relative;
+	bottom: 80px;
 	width: 100%;
 	margin: 0 auto;
 	max-width: 800px;
 	font-size: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-#interests span{
-	display: inline-block;
-	margin: 20px 20px 20px 20px;
-}
 
 .fa-stack{
 	color: #5A352D;
@@ -377,6 +397,7 @@ body,html{
 	padding: 0;
 
 	display: block;
+	background-image: none;
 
 	transform: translate3d(0,0,0);
 
@@ -404,7 +425,7 @@ body,html{
 	width: 45%;
 	max-width: 500px;
 	font-size: 18px;
-	background-color: rgba(163,73,73,0.8);
+	background-color: rgba(163,73,73,0.9);
 	border-radius: 2px;
 	text-align: center;
 	backface-visibility: hidden;
@@ -502,6 +523,10 @@ body,html{
 
 
 
+
+
+
+
 /*---------------------------------------*/
 /*	---------- EXPERIENCE --------------  */
 /*---------------------------------------*/
@@ -521,7 +546,7 @@ body,html{
 }
 
 .experience > h1{
-	padding: 40px 0 20px 0;
+	padding: 50px 0 20px 0;
 	font-family: 'Abril Fatface';
 	font-weight: 700;
 	font-size: 40px; 
@@ -670,7 +695,10 @@ body,html{
 	background-color: #a34949;
 	width: 100%;
 	padding: 0;
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	position: relative;
 	margin: 0 auto;
 	z-index: 3;
@@ -681,16 +709,20 @@ body,html{
 }
 
 .slideWrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	width: 100%;
 	position: relative;
-	padding: 20px 0px 80px 0px;
+	padding: 60px 0px 80px 0px;
 }
 
 #projectHeader{
-	padding: 60px 0px 0px 0px;
+	position: relative;
+	top: 50px;
+	display: block;
 	color: rgb(240,240,240);
-	opacity: 0.8;
 	font-family: 'Abril Fatface';
 	font-size: 40px;
 }
@@ -736,7 +768,6 @@ body,html{
 	font-size: 70px;
 }
 
-
 #slideLeft i:hover{
 	transform: translateX(-5px) scale(1.2);
 }
@@ -759,10 +790,17 @@ body,html{
 	width: 45%;
 }
 
-.info h2{
+.info a{
 	font-family: 'Roboto';
 	font-weight: 700;
+	display: block;
 	font-size: 24px;
+	color: rgb(240,240,240);
+	text-decoration: none;
+}
+
+.info a:hover{
+	color: rgb(210,210,210);
 }
 
 .info em{
@@ -1038,7 +1076,14 @@ body,html{
 @media screen and (max-width: 668px){
 
 
+	.education{
+		background-image: url('/images/liu.jpeg');
+		background-size: cover;
+	}
 
+	#eduBackgroundDesc{
+		display: none;
+	}
 
 	.startscreen .img-circle{
 		width: 180px;
