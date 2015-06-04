@@ -33,54 +33,38 @@ $(document).ready(function(){
     }
 });
 
-
     $('#startImg').backstretch("./images/desk1.jpeg");
     //$('#schoolImg').backstretch(["./images/zurich1.jpeg", "./images/liu.jpeg"], {duration:10000, fade:'slow'});
-
     $('#schoolImg').backstretch("./images/zurich1.jpeg");
 
 
 
+  var whatBackground = function(scrolledY){
 
+    var halfStart = $(window).height()*1/2;
+    var noStart = $(window).height();
+    var shiftContact = $('.projects').offset().top - $('.experience').height();
 
-    var whatBackground = function(scrolledY){
-
-        var distHaltStart = $(window).height()*1/2;
-        var distNoStart = $(window).height();
-
-        if(window.innerWidth > 668){
-            if(scrolledY < distHaltStart){
-                $('#startOuter').show();
-                $('#startOuter').css({'height':'100vh'});
-                $('#schoolImg').hide();
-                $('#contact').hide();
-            }
-            else if(scrolledY < distNoStart){
-                $('#startOuter').show();
-                $('#startOuter').css({'height':'50vh'});
-                $('#schoolImg').show();
-                $('#contact').hide();
-            }else if(scrolledY < $('.education').offset().top + $(window).height()){
-                $('#startOuter').hide();
-                $('#schoolImg').show();
-                $('#contact').hide();
-            }
-            else{
-                $('#schoolImg').hide();
-                $('#startOuter').hide();
-                $('#contact').show();
-            }
+    if(window.innerWidth <= 668){
+        $('#schoolImg').hide();
+        $('#startImg').show();
+        if(scrolledY > $(document).height()/2){
+            $('#startImg').css({'visibility': 'hidden'});
         }else{
+            $('#startImg').css({'visibility': 'visible'});
+        }
+    }else{
+        if(scrolledY > shiftContact){
             $('#schoolImg').hide();
-            if(scrolledY < distToEdu + 100){
-                $('#startOuter').show();
-                $('#contact').hide();
-            }else{
-                $('#startOuter').hide();
-                $('#contact').show();
-            }
+            $('#startImg').hide();
+            $('#contact').show();
+        }else{
+            $('#schoolImg').show();
+            $('#startImg').show();
+            $('#contact').hide();
         }
     }
+}
 
 
 
@@ -187,9 +171,7 @@ var stopHoverWorkButtons = function(){
     });
 }
 
-    //$('.workButton').click(function(){$(this).hide();});    
     $('.flip3d').click(showWork);
-
     $('.flip3d').hover(hoverWorkButtons, stopHoverWorkButtons);
 
 
@@ -209,9 +191,6 @@ var stopHoverWorkButtons = function(){
     });
 
     $('.about').ready(function(){
-
-
-
     });
 
 
@@ -226,17 +205,19 @@ var stopHoverWorkButtons = function(){
                 $('#contact').css({
                     "display": "block",
                     "z-index": "0",
-                    "position": "fixed"
+                    "position": "fixed",
+                    'bottom': '0'
                 });
             }        
             $('.projects').css({"margin-bottom":$('#contact').height() - 20 + "px"});
         }else{
-            $('#startImg').backstretch("./images/desk1mobile.jpeg");
+             $('#startImg').backstretch("./images/desk1mobile.jpeg");
             $('.projects').css({"margin-bottom": "0px"});
             $('#contact').css({
                 "display": "block",
-                "z-index": "2",
-                "position": "relative"
+                "z-index": "3",
+                "position": "relative",
+                'bottom': '0'
             });
         }
 

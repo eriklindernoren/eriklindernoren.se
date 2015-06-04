@@ -6,6 +6,10 @@ body,html{
 	overflow-x: hidden;
 }
 
+section{
+	z-index: 2;
+}
+
 *{
 	margin: 0 auto;
 	padding: 0;
@@ -21,7 +25,7 @@ body,html{
 /*	---------- NON SELECTABLE -----------*/
 /*---------------------------------------*/
 
-.img-circle, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobileNav, a{
+.img-circle, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobileNav, a, #startImg, #schoolImg{
 	user-select: none;
 }
 
@@ -67,32 +71,8 @@ body,html{
 }
 
 
-#startOuter{
-	position: fixed;
-	top: 0%;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	display: none;
-	z-index: 2;
-}
 
-#startImg{
-	position: absolute;
-	top: 0%;
-	width: 100%;
-	height: 100vh;
-	display: block;
-}
 
-#schoolImg{
-	position: fixed;
-	top: 0%;
-	width: 100%;
-	height: 100vh;
-	display: none;
-	z-index: 1;
-}
 
 
 /*---------------------------------------*/
@@ -239,13 +219,25 @@ body,html{
 /*---------------------------------------*/
 
 .startscreen{
-	position: relative;
 	display: block;
+	width: 100%;
 	height: 100vh;
 	text-align: center;
-	z-index: 3;
-	transform: translate3d(0,0,0);
+	overflow: hidden;
+	position: relative;
 }
+
+
+#startImg{
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	display: none;
+}
+
+
 
 .startscreen .img-circle{
 	position: absolute;
@@ -257,7 +249,7 @@ body,html{
 	border-radius: 50%;
 	width: 200px;
 	height: 200px;
-	z-index: 3;
+	z-index: 2;
 }
 
 
@@ -269,8 +261,7 @@ body,html{
 	font-family: 'abril Fatface';
 	font-size: 35px;
 	color: rgb(240,240,240);
-	z-index: 3;
-
+	z-index: 2;
 }
 
 
@@ -285,10 +276,9 @@ body,html{
 	text-align: center;
 	display: block;
 	position: relative;
-	z-index: 3;
 	min-height: 50vh;
-	overflow: visible;
-	-webkit-overflow: visible;
+
+	transform: translate3d(0,0,0);
 
 	display: flex;
 
@@ -296,9 +286,8 @@ body,html{
 	flex-direction: column;
 	justify-content: center;
 
-	transform: translate3d(0,0,0);
-
-
+	padding: 0;
+	margin: 0 auto;
 
 }
 
@@ -323,6 +312,7 @@ body,html{
 	max-width: 1000px;
 	margin: 0 auto;
 	width: 80%;
+	display: block;
 }
 
 
@@ -342,7 +332,7 @@ body,html{
 	padding: 80px 0 80px 0;
 	display: inline-block;
 	text-transform: uppercase;
-
+	
 }
 
 #resume a{
@@ -352,13 +342,13 @@ body,html{
 
 
 #resume a > .expandingUnderline{
-	border-color: rgba(0,0,0,0.8);
+	border-color: #5A352D;
 }
 
 #resume a:hover > .expandingUnderline{
 	width: 100%;
-	opacity: 1;
 	transform: translateY(2px);
+	opacity: 0.8;
 }
 
 
@@ -390,22 +380,27 @@ body,html{
 
 
 .education{
-	position: relative;
-	z-index: 3;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0;
-
 	display: block;
-	background-image: none;
-
-	transform: translate3d(0,0,0);
-
+	text-align: center;
+	padding: 100px 0 100px 0;
+	overflow: hidden;
+	backface-visibility: hidden;
 }
 
+#schoolImg{
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	display: none;
+}
+
+
+
+
 .educationContainer{
-	position: relative;
-	padding: 100px 0 100px 0;
+	padding: 0px 0 0px 0;
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -428,10 +423,10 @@ body,html{
 	background-color: rgba(163,73,73,0.9);
 	border-radius: 2px;
 	text-align: center;
-	backface-visibility: hidden;
 	order: 1;
+	z-index: 2;
+	transform: translate3D(0,0,0);
 
-	transform: translate3d(0,0,0);
 
 }
 
@@ -462,10 +457,9 @@ body,html{
 	max-width: 600px;
 	background-color: rgba(243,134,48,0.8);
 	border-radius: 2px;
-
+	transform: translate3D(0,0,0);
+	z-index: 2;
 	order: 2;
-
-	transform: translate3d(0,0,0);
 }
 
 .eduTimeline ol { 
@@ -538,7 +532,6 @@ body,html{
 	background-color: rgb(210,210,210);
 	margin: 0 auto;
 	position: relative;
-	z-index: 3;
 	text-align: center;
 
 	transform: translate3d(0,0,0);
@@ -568,6 +561,7 @@ body,html{
 	position: relative;
 	width: 200px;
 	height: 200px;
+	transform: translate3D(0,0,0);
 }
 
 
@@ -695,13 +689,10 @@ body,html{
 	background-color: #a34949;
 	width: 100%;
 	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	display: block;
 	position: relative;
 	margin: 0 auto;
-	z-index: 3;
+	text-align: center;
 
 	transform: translate3d(0,0,0);
 
@@ -721,7 +712,7 @@ body,html{
 #projectHeader{
 	position: relative;
 	top: 50px;
-	display: block;
+	display: inline-block;
 	color: rgb(240,240,240);
 	font-family: 'Abril Fatface';
 	font-size: 40px;
@@ -751,7 +742,7 @@ body,html{
 .slideDir{
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	z-index: 5;
 }
 
@@ -856,9 +847,8 @@ body,html{
 	bottom: 0;
 	text-align: center;
 	background-color: rgb(240,240,240);
-	z-index: 0;
 	display: none;
-	
+	z-index: 0;
 }
 
 #contact h1{
@@ -1158,6 +1148,19 @@ body,html{
 		font-size: 35px;
 	}
 
+	.scrollToTop{
+		display: none;
+	}
+
+	#contact{                
+		display: block;
+		z-index: 3;
+		position: relative;
+		bottom: 0;
+	}
+
+
+
 
 }
 
@@ -1187,9 +1190,7 @@ body,html{
 		font-size: 25px;
 	}
 
-	#startImg, #schoolImg, .scrollToTop{
-		display: none;
-	}
+
 
 	#mail{
 		font-size: 24px;

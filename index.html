@@ -52,18 +52,18 @@
 	</nav>
 
 
-	<div id="startOuter"><div id="startImg"></div></div>
-	<div id="schoolImg"></div> 
 
-
-	<div id="homescreen" class="startscreen">
-		<div class="bg"></div>
-		<!-- Picture - Name - Social Network links -->
-		<img src="images/bild.jpeg" class="img-circle wow flipInY" alt="Chania">
-		<h1>- Erik Linder-Norén -</h1>
-	</div>
 	
-	<div id="about" class="about">
+
+
+	<section id="homescreen" class="startscreen">
+		<div id="startImg"></div>
+		<!-- Picture - Name - Social Network links -->
+		<img src="images/bild.jpeg" class="img-circle" alt="Chania">
+		<h1>- Erik Linder-Norén -</h1>
+	</section>
+	
+	<section id="about" class="about">
 		<div id="aboutText">
 			<h1 id="hello">Hello,</h1>
 			<p><br>
@@ -97,11 +97,12 @@
 			</span>
 		</div>
 
-	</div>
+	</section>
 
 
 
-	<div  id="education" class="education">
+	<section  id="education" class="education">
+		<div id="schoolImg"></div> 
 		<div class="educationContainer">
 			<div class="eduSummary">
 				<div id="textContainer">
@@ -157,9 +158,9 @@
 				</ol>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div id="experience" class="experience">
+	<section id="experience" class="experience">
 
 		<h1>Experience</h1>
 
@@ -242,15 +243,17 @@
 				<p>I have been working on developing a command-line interface for Radio Base Station communication using the NETCONF protocol. I was employed as a summer intern in the summer of 2014 and have since then worked on the project in parallel to my studies in Linköping.<br> The application has been developed in Java and it has been nice to build on my skills in that language.</p>				
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class="projects" id="projects">
+	<section class="projects" id="projects">
 
 		<h1 id="projectHeader">Some personal projects</h1>
 
+		<a class="slideDir" id="slideLeft" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
+		<a class="slideDir" id="slideRight" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
+
 		<div class="slideWrapper">
-			<a class="slideDir" id="slideLeft" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
-			<a class="slideDir" id="slideRight" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
+
 
 			<div class="slideDiv" id="div1">
 				<div class="projWrapper">
@@ -263,10 +266,6 @@
 						<em>Programming languages and tools used:</em>
 						<ul>
 							<li>Swift</li>
-						</ul>
-						<br>
-						<em>APIs used:</em>
-						<ul>
 							<li>Google Maps SDK</li>
 							<li>OpenWeatherMap API</li>
 							<li>TimezoneDB</li>
@@ -284,19 +283,15 @@
 						<a href="https://github.com/eriklindernoren/BraBars"  target="_blank">Bra Bärs</a>
 						<br>
 						<em>iOS development</em>
-						<p>'Bra Bärs', roughly translated as " A Good Beer", was a idea me and my classmates came up with one evening while we were sitting at our favourite pub in Linköping. The idea of the app was to be able to navigate the beers available at the Swedish alcohol monopoly Systembolaget and sort beers by professional and customer reviews, by prices and by the users favourite type of beer. <br>Similar products are available for wines, but as there was nothing like that for beers and the fact that we ourself felt that it was something that we would use made us go ahead and start building. <br> I used the API supplied by Systembolaget to get information about the current supply, and added images from a separate API. There was no way of requesting data from Systembolaget specified by categories at a time, and I thereby decided to build a XML-parser in Java to seperate the data that was relevant to that which was not. </p>
+						<p>The idea of the app is to be able to navigate the beers available at the Swedish alcohol monopoly Systembolaget and sort beers by professional and customer reviews, by prices and by the users favourite type of beer. <br>I used the API supplied by Systembolaget to get information about the current supply, and added images from a separate API. <br>There was no way of requesting data from Systembolaget specified by categories at a time, and I thereby decided to build a XML-parser in Java to seperate the data that was relevant to that which was not. </p>
 						<br>
 						<em>Programming languages and tools used:</em>
 						<ul>
 							<li>Swift</li>
 							<li>Java</li>
-						</ul>
-						<br>
-						<em>APIs used:</em>
-						<ul>
 							<li>Systembolaget.se API</li>
 							<li>Systemetbevakningsenheten.se API</li>
-							<li>Systembolagetapi.se</li>
+							<li>Systembolagetapi.se API</li>
 						</ul>
 					</div>
 					<div class="imageDiv"><img src="images/sliderImage2.jpeg"></img></div>
@@ -334,21 +329,16 @@
 							<li>Javascript</li>
 							<li>Gulp</li>
 							<li>JQuery</li>
-							<li>Font Awesome</li>
-							<li>Google Fonts</li>
-							<li>Animate.css</li>
-							<li>Wow.js</li>
 						</ul>
 					</div>
 					<div class="imageDiv"><img src="images/sliderImage4.jpeg"></img></div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-
-	<div id="contact">
-
+	
+	<footer id="contact">
 		<h1>Get in touch</h1>
 		<div id="contactWrap">
 
@@ -392,7 +382,7 @@
 		<div id="contactSeparator"></div>
 		<a id="mail" href="mailto:eriklindernoren@gmail.com">eriklindernoren@gmail.com</a>
 		<h2>© 2015 Erik Linder-Norén</h2>
-	</div>
+	</footer>
 
 
 
