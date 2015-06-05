@@ -11,14 +11,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="E_Icon.ico" />
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
 
 	<!-- 'abril Fatface' -->
 	<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 
 	<!-- 'Roboto' -->
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,700' rel='stylesheet' type='text/css'>
-
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
 	
 </head>
 <body>
@@ -67,7 +66,7 @@
 		<div id="aboutText">
 			<h1 id="hello">Hello,</h1>
 			<p><br>
-				My name is Erik Linder-Norén and I'm currently studying towards a Master of Science in Computer Science and I'm really enjoying it this far. <br>This site is meant to function as a online resume of mine but has also been my way of learning web development and design. <br> I've always loved sketching, tinkering with things and exploring new tools to create with. The joy in building might have originated in my Lego days as a kid, and later evolved to putting computers together in my younger teen years to as of now really enjoying building with ones and zeros.<br><br>
+				My name is Erik Linder-Norén and I'm currently studying towards a Master of Science in Computer Science and I'm really enjoying it this far. <br>This site is meant to function as a online resume of mine but has also been my way of learning web development and web design. <br> I've always loved sketching, tinkering with things and exploring new tools to create with. The joy in building might have originated in my Lego days as a kid, and later evolved to putting computers together in my younger teen years to as of now really enjoying building with ones and zeros.<br><br>
 				I love how programming enables people to quickly explore new ideas and I've found that the best, and most fun way for me to learn is to explore the languages and tech in small side projects parallel to my studies and current employment. <br> The results of some of my side projects has spanned from iOS applications to goofy music production software for the OSX platform.<br><br>
 				I have since june 2014 been employed by Ericsson as a software developer. I'm currently developing a command-line interface for handling communications with Radio Base Stations using the NETCONF protocol. <br><br>
 				I'm a huge fan of all things basketball and watches just about every Boston Celtics game. 
@@ -76,25 +75,18 @@
 			<div id="resume"><a href="pdf/cv.pdf" target="_black"> My Resume <div class="expandingUnderline"></div></a></div>
 		</div>
 		<div id="interests">
-			<span id="pencil" class="fa-stack">
-				<i class="outer fa fa-circle fa-stack-2x"></i>
-				<i class="inner fa fa-pencil fa-stack-1x fa-inverse"></i>
-			</span>
-
-			<span id="computer" class="fa-stack">
-				<i class="outer fa fa-circle fa-stack-2x"></i>
-				<i class="inner fa fa-laptop fa-stack-1x fa-inverse"></i>
-			</span>
-
-			<span id="coffee" class="fa-stack">
-				<i class="outer fa fa-circle fa-stack-2x"></i>
-				<i class="inner fa fa-coffee fa-stack-1x fa-inverse"></i>
-			</span>
-
-			<span id="basketball" class="fa-stack">
-				<i class="outer fa fa-circle fa-stack-2x"></i>
-				<i class="inner fa fa-dribbble fa-stack-1x fa-inverse"></i>
-			</span>
+			<div id="pencil" class="interestHolder">
+				<i class="inner fa fa-pencil"></i>
+			</div>
+			<div id="laptop" class="interestHolder">
+				<i class="inner fa fa-laptop"></i>
+			</div>
+			<div id="coffee" class="interestHolder">
+				<i class="inner fa fa-coffee"></i>
+			</div>
+			<div id="basketball" class="interestHolder">
+				<i class="inner fa fa-dribbble"></i>
+			</div>
 		</div>
 
 	</section>
@@ -274,7 +266,12 @@
 							<li>Wikipedia API</li>
 						</ul>
 					</div>
-					<div class="imageDiv"><img src="images/sliderImage1.jpeg"></img></div>
+					<div class="imageDiv">
+						<img src="images/sliderImage1.jpeg"></img>
+						<a class="imgText" href="https://github.com/eriklindernoren/MapApp"  target="_blank">
+							<p>GITHUB</p>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="slideDiv" id="div2">
@@ -294,7 +291,12 @@
 							<li>Systembolagetapi.se API</li>
 						</ul>
 					</div>
-					<div class="imageDiv"><img src="images/sliderImage2.jpeg"></img></div>
+					<div class="imageDiv">
+						<img src="images/sliderImage2.jpeg"></img>
+						<a class="imgText" href="https://github.com/eriklindernoren/BraBars"  target="_blank">
+							<p>GITHUB</p>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="slideDiv" id="div3">
@@ -311,7 +313,12 @@
 							<li>JFugue API</li>	
 						</ul>
 					</div>
-					<div class="imageDiv"><img src="images/sliderImage3.jpeg"></img></div>
+					<div class="imageDiv">
+						<img src="images/sliderImage3.jpeg"></img>
+						<a class="imgText" href="https://github.com/eriklindernoren/Sonus-JFugueUI"  target="_blank">
+							<p>GITHUB</p>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="slideDiv" id="div4">
@@ -331,7 +338,12 @@
 							<li>JQuery</li>
 						</ul>
 					</div>
-					<div class="imageDiv"><img src="images/sliderImage4.jpeg"></img></div>
+					<div class="imageDiv">
+						<img src="images/sliderImage4.jpeg"></img>
+						<a class="imgText" href="https://github.com/eriklindernoren/eriklindernoren.se"  target="_blank">
+							<p>GITHUB</p>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -352,43 +364,33 @@
 			</div>
 
 			<a id="github" class="socMedia" target="_blank" href="https://github.com/eriklindernoren">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i id="ghb" class="fa fa-github fa-stack-1x fa-inverse"></i>
-				</span>
+				<i class="fa fa-github fa-stack-1x fa-inverse"></i>
 			</a>
 
 			<a id="linkedin" class="socMedia" target="_blank" href="https://se.linkedin.com/pub/erik-linder-norén/76/509/5b">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-				</span>
+				<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
 			</a>
 
 			<a id="twitter" class="socMedia" target="_blank" href="http://www.twitter.com/eriklindernoren">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-				</span>
+				<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 			</a>
 
 			<a id="facebook" class="socMedia"  target="_blank" href="https://www.facebook.com/erik.linder.5">
-				<span class="fa-stack">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-				</span>
+				<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 			</a>
 		</div>
 		<div id="contactSeparator"></div>
 		<a id="mail" href="mailto:eriklindernoren@gmail.com">eriklindernoren@gmail.com</a>
-		<h2>© 2015 Erik Linder-Norén</h2>
+		<h2 id="copyright">© 2015 Erik Linder-Norén</h2>
 	</footer>
 
 
 
 	<a class="navbuttons scrollToTop" href="#" data-target="homescreen">
-		<h1>TOP</h1>
-		<i class="fa fa-angle-up"></i>
+		<div class="contentHolder">
+			<h1>TOP</h1>
+			<i class="fa fa-angle-up"></i>			
+		</div>
 	</a>
 
 
@@ -397,6 +399,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="js/all.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
 </body>
 </html>

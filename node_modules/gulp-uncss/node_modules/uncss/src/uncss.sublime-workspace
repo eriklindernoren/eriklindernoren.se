@@ -1,0 +1,1158 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pla",
+				"Player"
+			],
+			[
+				"val",
+				"validationError"
+			],
+			[
+				"va",
+				"validateDraft"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"footer",
+				"footer-height"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"list",
+				"listTemplate"
+			],
+			[
+				"req",
+				"requires"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"li",
+				"listProblems"
+			],
+			[
+				"get",
+				"getProblems"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"sow",
+				"showFolders"
+			],
+			[
+				"doc",
+				"docfrag"
+			],
+			[
+				"prob",
+				"problem"
+			],
+			[
+				"pro",
+				"problems"
+			],
+			[
+				"fo",
+				"forward"
+			],
+			[
+				"ba",
+				"back"
+			],
+			[
+				"sel",
+				"selector"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"las",
+				"last_indent"
+			],
+			[
+				"chil",
+				"children"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"sort",
+				"sort_array"
+			],
+			[
+				"can",
+				"candidate_one"
+			],
+			[
+				"text",
+				"textStatus"
+			],
+			[
+				"user",
+				"user_info"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"require",
+				"required"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"perm",
+				"permutations"
+			],
+			[
+				"m",
+				"Math"
+			],
+			[
+				"cal",
+				"calcPI"
+			],
+			[
+				"time",
+				"timeTaken"
+			],
+			[
+				"cu",
+				"currVal"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"cell",
+				"cell_template"
+			],
+			[
+				"html",
+				"html_template"
+			],
+			[
+				"read",
+				"readFile"
+			],
+			[
+				"fi",
+				"first_line"
+			],
+			[
+				"problem",
+				"problemTemplate"
+			],
+			[
+				"set_",
+				"set_array2	auto"
+			],
+			[
+				"hash",
+				"hash_array	std::array<unsigned, 1000000>"
+			],
+			[
+				"isa",
+				"isalpha(int)	int"
+			],
+			[
+				"inser",
+				"insert(size_type __pos, const _CharT *__s)	basic_string<_CharT, _Traits, _Alloc> &"
+			],
+			[
+				"is",
+				"isalpha(int)	int"
+			],
+			[
+				"term",
+				"term_width()	int"
+			],
+			[
+				"from",
+				"from_string(std::string s)	boost::gregorian::date"
+			],
+			[
+				"chara",
+				"character	char &"
+			],
+			[
+				"f_",
+				"f_password	std::string"
+			],
+			[
+				"us",
+				"ustring	typedef"
+			],
+			[
+				"basic_s",
+				"basic_string	class"
+			],
+			[
+				"en",
+				"encrypt	Shasum"
+			],
+			[
+				"prin",
+				"print_shasum(const Shasum &shasum)	void"
+			],
+			[
+				"SHA",
+				"SHA512_CTX	typedef"
+			],
+			[
+				"temp",
+				"template_file"
+			],
+			[
+				"cat",
+				"category_id"
+			],
+			[
+				"bu",
+				"build_dir"
+			],
+			[
+				"pa",
+				"parseInstruction"
+			],
+			[
+				"NO",
+				"NO_NAME"
+			],
+			[
+				"ha",
+				"handle_multiple_opcodes"
+			],
+			[
+				"Fa",
+				"PARSE_FAIL"
+			],
+			[
+				"N",
+				"NO_NAME"
+			],
+			[
+				"in",
+				"instructions"
+			],
+			[
+				"iter",
+				"iter_end"
+			],
+			[
+				"par",
+				"parse_name"
+			],
+			[
+				"n",
+				"name_end"
+			],
+			[
+				"value",
+				"value_"
+			],
+			[
+				"e",
+				"TEST_EXCEPT"
+			],
+			[
+				"con",
+				"concurrent_helpers"
+			],
+			[
+				"pr",
+				"promise_ptr"
+			],
+			[
+				"cv_",
+				"cv_pop_"
+			],
+			[
+				"fun",
+				"functor_"
+			],
+			[
+				"end",
+				"END_TEST_SUITE"
+			],
+			[
+				"TEST_",
+				"TEST_MODULE"
+			],
+			[
+				"t",
+				"thread"
+			],
+			[
+				"St",
+				"StringType"
+			],
+			[
+				"S",
+				"StringType"
+			],
+			[
+				"CLA",
+				"CLANGEXECUTABLE"
+			],
+			[
+				"cl",
+				"CLANGEXECUTABLE"
+			],
+			[
+				"GCC",
+				"GCCEXECUTABLE"
+			],
+			[
+				"CLANG",
+				"CLANGWARNFLAGS"
+			],
+			[
+				"string",
+				"StringType"
+			],
+			[
+				"Cla",
+				"ClampRange"
+			],
+			[
+				"In",
+				"InputIterator"
+			],
+			[
+				"beg",
+				"begin"
+			],
+			[
+				"cin",
+				"container"
+			],
+			[
+				"RHS",
+				"RHSValueType"
+			],
+			[
+				"LHS",
+				"LHSValueType"
+			],
+			[
+				"CON",
+				"ContainerParams"
+			],
+			[
+				"num",
+				"num_to_generate"
+			],
+			[
+				"TEST",
+				"TEST"
+			],
+			[
+				"NUM",
+				"NUM_TESTS"
+			],
+			[
+				"TERM_COLOR_BG",
+				"TERM_COLOR_BG_RED"
+			],
+			[
+				"TER",
+				"TERM_COLOR_RED"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"TES",
+				"TEST"
+			],
+			[
+				"Si",
+				"SIMPLE_TEST"
+			],
+			[
+				"V",
+				"ValueType"
+			],
+			[
+				"D",
+				"DropWhile"
+			],
+			[
+				"MO",
+				"MODULE_MESSAGE"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"TERM_COLO",
+				"TERM_COLOR_BLUE"
+			],
+			[
+				"TERM_",
+				"TERM_COLOR_RESET"
+			],
+			[
+				"name",
+				"namespace"
+			],
+			[
+				"de",
+				"define"
+			],
+			[
+				"Te",
+				"TEST_EQ"
+			],
+			[
+				"is_",
+				"is_less_than_4"
+			],
+			[
+				"Boo",
+				"BOOST_CHECK_MESSAGE"
+			],
+			[
+				"ret",
+				"return_type"
+			],
+			[
+				"BOO",
+				"BOOST_AUTO_TEST_CASE"
+			],
+			[
+				"toggl",
+				"toggleSendCommands"
+			],
+			[
+				"sub",
+				"subcategory"
+			],
+			[
+				"error",
+				"error_str"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"open",
+				"open-message"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"ex",
+				"exception_ptr"
+			],
+			[
+				"test",
+				"test1"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 368.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"lint th",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"edito",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sni",
+				"Snippet: Dailyprogrammer docstring"
+			],
+			[
+				"snipdai",
+				"Snippet: Dailyprogrammer docstring"
+			],
+			[
+				"snipdail",
+				"Snippet: Dailyprogrammer docstring"
+			],
+			[
+				"snipp",
+				"Snippet: Dailyprogrammer docstring"
+			],
+			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
+				"hex",
+				"Hex Viewer: Toggle Hex View"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"trai",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ssc",
+				"Set Syntax: C++"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"gru",
+				"Grunt"
+			],
+			[
+				"ssja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"tra",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"gr",
+				"Grunt"
+			],
+			[
+				"ssphp",
+				"Set Syntax: PHP"
+			],
+			[
+				"ssba",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"op",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"open",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"add ",
+				"Project: Add Folder"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"fetch",
+				"Fetch: Manage"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"INSTA",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/create/create.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/draft/draft.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/player/player.service.spec.js",
+		"/home/gix/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/gix/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/gix/SpiderOak Hive/git/uncss/src/lib.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/draft/draft.model.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/draft/draft.jade",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/lobby/lobby.socket.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/index.html",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/socketio.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/draft/draft.socket.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/lobby/lobby.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/socket/socket.service.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/environment/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/draft/draft.less",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/lobby/lobby.helpers.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/draft/draft.helpers.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/draft/draft.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/draft/draft.service.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/seed.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/main/main.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/components/cards/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/routes.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/lobby/lobby.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/node_modules/lodash/package.json",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/express.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/environment/development.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/lobby/lobby.jade",
+		"/home/gix/SpiderOak Hive/git/drafted/server/components/sets/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/cardDb.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/lobby/lobby.model.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/create/create.jade",
+		"/home/gix/SpiderOak Hive/git/drafted/server/components/boosters/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/draft/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/components/boosters/json/set-list.json",
+		"/home/gix/SpiderOak Hive/git/drafted.bak/src/client/app/main/main.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted.bak/src/client/components/cardService.js",
+		"/home/gix/SpiderOak Hive/git/drafted.bak/src/client/app/draft/draft.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/bower_components/lodash/.bower.json",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/player/player.service.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/lobby/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/components/helpers/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/draft/draft.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/app.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/navbar/navbar.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/components/errors/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/user/user.model.spec.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/local.env.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/local.env.sample.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/lobby/lobby.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/draft/draft.spec.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/assets/json/set-list.json",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/create/create.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/auth/user.service.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/cardManager/cardManager.service.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/create/create.model.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/cardService/cardService.service.js",
+		"/home/gix/SpiderOak Hive/git/drafted/package.json",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/create/index.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/create/create.socket.js",
+		"/home/gix/SpiderOak Hive/git/drafted.bak/src/client/assets/json/set-list.json",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/create/create.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/app.less",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/create/create.less",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/main/main.jade",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/navbar/navbar.jade",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/navbar/navbar.less",
+		"/home/gix/SpiderOak Hive/git/drafted.bak/src/client/index.html",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/account/signup/signup.jade",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/admin/admin.jade",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/account/settings/settings.jade",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/account/login/login.jade",
+		"/home/gix/SpiderOak Hive/git/drafted.bak/src/client/app/main/main.html",
+		"/home/gix/SpiderOak Hive/git/drafted.bak/src/client/assets/less/components/navbar.less",
+		"/home/gix/SpiderOak Hive/git/drafted/server/api/thing/thing.model.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/.jshintrc",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/environment/test.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/config/environment/production.js",
+		"/home/gix/SpiderOak Hive/git/drafted/server/app.js",
+		"/home/gix/SpiderOak Hive/git/drafted/Gruntfile.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/socket/socket.mock.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/admin/admin.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/main/main.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/main/main.controller.spec.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/mongoose-error/mongoose-error.directive.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/admin/admin.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/components/auth/auth.service.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/account/login/login.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/account/settings/settings.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/account/account.js",
+		"/home/gix/SpiderOak Hive/git/drafted/client/app/account/signup/signup.controller.js",
+		"/home/gix/SpiderOak Hive/git/drafted/.editorconfig",
+		"/home/gix/.gitconfig",
+		"/home/gix/SpiderOak Hive/git/react-starter-kit/gulpfile.js",
+		"/home/gix/SpiderOak Hive/git/react-starter-kit/gulp/scripts.js",
+		"/home/gix/SpiderOak Hive/git/react-starter-kit/app/index.html",
+		"/home/gix/dead.letter",
+		"/home/gix/.lesshst",
+		"/home/gix/.gitignore",
+		"/home/gix/.gitattributes",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/package.json",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/app/vendor.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/.tmp/serve/app/index.js",
+		"/home/gix/Desktop/CV tate/it/template.tex",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/assets/less/layout.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/assets/less/variables.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/assets/less/theme.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/assets/less/base.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/app/main/main.html",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/app/main/main.controller.js",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/index.html",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/assets/less/components/navbar.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/app/index.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/assets/less/components/awesome-things.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/app/index.js",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/gulp/watch.js",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/.tmp/serve/index.html",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/.tmp/serve/app/index.css",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/.tmp/6to5/app/main/main.controller.spec.js",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/gulp/server.js",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/components/IRC/IRC.factory.js",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/bower_components/socket.io-client/.bower.json",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/bower_components/angular/.bower.json",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/components/navbar/navbar.controller.js",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/assets/less/module.less",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/src/app/main/main.controller.spec.js",
+		"/home/gix/SpiderOak Hive/git/angular-starter-kit/.jshintrc"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 157.0,
+		"where_history":
+		[
+			"-node_modules,/home/gix/SpiderOak Hive/git/drafted/server",
+			"-node_modules",
+			"",
+			"/home/gix/Dropbox/git/dailyprogrammer/javascript/problems/easy",
+			"/var/www",
+			"/var/www/**/*\\.php",
+			"/var/www/**/*.php",
+			"/var/www/**/^.less",
+			"/var/www/",
+			"/var/www/lib/templates",
+			"/var/www/public_html",
+			"/var/www/"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"util",
+			"res",
+			"conversation",
+			"draft.socket",
+			"draft.model",
+			"pure-u",
+			"pure-u-m",
+			"(@",
+			"r",
+			"cons",
+			"console",
+			"send",
+			"rarity",
+			"rarities",
+			"password",
+			"params",
+			"forEach",
+			"                }",
+			"cards",
+			" },",
+			"res.json",
+			"sendStatus",
+			"consol",
+			"user",
+			"matches",
+			"num_players",
+			"fillBoosters",
+			"Set",
+			"set",
+			"Set",
+			"sets",
+			"draft",
+			"boosters",
+			"num_players",
+			"setName",
+			"Set",
+			"Draft",
+			"cards",
+			"sets",
+			"pluck",
+			"str",
+			"sets",
+			"draftHelpers",
+			"sessionID",
+			"sessionId",
+			"draftId",
+			"handleError",
+			"draft",
+			"Draft",
+			"draft",
+			"Draft",
+			"draft",
+			"Draft",
+			"exports",
+			"handleError",
+			"isOwner",
+			"router",
+			"startDraft",
+			"res",
+			"stateProvider",
+			"httpProvider",
+			"\n    ",
+			"var",
+			"passport",
+			"cb",
+			"user",
+			"updated",
+			"addListeners",
+			"cookieStore",
+			"validationError",
+			"data",
+			"handleError",
+			"CardManager",
+			"Draft",
+			"draft",
+			"Draft",
+			"Create",
+			"Schema",
+			"DraftSchema",
+			"name",
+			"editions",
+			"import",
+			"open",
+			"Column",
+			"width",
+			"default",
+			"main",
+			"difficulty",
+			"javascript",
+			"json",
+			"MainCtrl",
+			"authRequiredControllerModule",
+			"MainCtrl",
+			"main",
+			"middleware",
+			"window",
+			"str",
+			"this.selector",
+			"options",
+			"eq.params.difficulty",
+			"basePath",
+			"),\n",
+			"data",
+			"showProblems",
+			"results",
+			"req_path",
+			"data",
+			"listProblems",
+			"folders",
+			"id",
+			"div",
+			"folder",
+			"response",
+			"showFolders",
+			"response",
+			"loadProblems",
+			"reponse",
+			"problems",
+			"request",
+			"oReq",
+			"renderTemplate",
+			"problemTemplate",
+			"exports",
+			"keyup",
+			"fun",
+			"Change",
+			"class",
+			"jQuery"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"change"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "uncss.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"20",
+				"problems/easy/20.js"
+			],
+			[
+				"te",
+				"test.cpp"
+			],
+			[
+				"py",
+				"project/deploy.py"
+			],
+			[
+				"norm",
+				"project/less/normalize.less"
+			],
+			[
+				"",
+				"project/index.html"
+			],
+			[
+				"ut",
+				"project/less/utilities.less"
+			],
+			[
+				"bu",
+				"project/less/buttons.less"
+			],
+			[
+				"sign",
+				"project/signup.html"
+			],
+			[
+				"html",
+				"project/index.html"
+			],
+			[
+				"sty",
+				"project/css/style.css"
+			],
+			[
+				"css",
+				"project/css/style.css"
+			],
+			[
+				"for",
+				"project/js/formshim.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 308.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

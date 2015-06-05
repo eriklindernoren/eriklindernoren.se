@@ -1,0 +1,1914 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"f",
+				"f	Anonymous Function"
+			],
+			[
+				"button-computer",
+				"button-computer"
+			],
+			[
+				"li",
+				"list	list-style-type"
+			],
+			[
+				"for",
+				"for: for (…) {…}"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/index.js",
+			"settings":
+			{
+				"buffer_size": 2181,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/crawler.js",
+			"settings":
+			{
+				"buffer_size": 7838,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/index.js",
+			"settings":
+			{
+				"buffer_size": 1576,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/builder.js",
+			"settings":
+			{
+				"buffer_size": 2648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 65 files for \"useBuffers\" (case sensitive)\n\n/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/README.md:\n   85  \n   86  	// Set to true to pass in buffers via the \"files\" parameter below\n   87: 	\"useBuffers\" : false,\n   88  \n   89  	// By default, this task will crawl all *.js, *.css, *.scss files.\n   ..\n  139  This is an optional parameter.\n  140  \n  141: ###### **`useBuffers`** (Boolean, optional)\n  142  When `true`, the `files` parameter will accept an array of buffers in lieu of lookup strings.\n  143  \n  ...\n  146  \n  147  - An array of all [minimatch](https://github.com/isaacs/minimatch) options\n  148: - An array of [Vinyl-style](https://github.com/wearefractal/vinyl) File buffers. `useBuffers` must be `true` to enable this functionality.\n  149  \n  150  This is an optional parameter.\n  ...\n  200  	\"excludeTests\": [],\n  201  	\"crawl\" : true,\n  202: 	\"useBuffers\": false,\n  203  	\"files\" : {\n  204  		\"src\": [\n\n/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/builder.js:\n  103  \n  104  				// Write code to file\n  105: 				if (settings.dest && !settings.useBuffers) {\n  106  					this.builder.writeCodeToFile(result, settings);\n  107  				}\n\n/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/crawler.js:\n  224  			});\n  225  \n  226: 			if (settings.crawl !== true && settings.useBuffers !== true) {\n  227  				tests = this.crawler.filterTests(tests);\n  228  \n  ...\n  243  \n  244  			// Support including code via string rather than reading a file.\n  245: 			if (settings.useBuffers === true) {\n  246  				this.crawler.parseCodeFromBuffers(settings.files.src, metadata);\n  247  \n\n/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/settings.json:\n   15  		\"excludeTests\": [],\n   16  		\"crawl\" : true,\n   17: 		\"useBuffers\": false,\n   18  		\"files\" : {\n   19  			\"src\": [\n\n/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/index.js:\n   23  \n   24  	// Enable string parsing in customizr\n   25: 	opt.useBuffers = true;\n   26  \n   27  	// Set crawl to false, Gulp is providing files & data\n\n9 matches across 5 files\n",
+			"settings":
+			{
+				"buffer_size": 2084,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 95.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"disable",
+				"SublimeLinter: Disable Background Linting"
+			],
+			[
+				"Disable",
+				"SublimeLinter: Disable Background Linting"
+			],
+			[
+				"Sublime",
+				"SublimeLinter: Disable Background Linting"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 117.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/package.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/package.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/test/settings/cache-invalidate.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/builder.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/README.md",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/index.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/crawler.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/README.md",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/test/generate-tests.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/test/tests.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/test/tests.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/build/modernizr-custom.js",
+		"/Users/richard.herrera/.ssh/config",
+		"/Users/richard.herrera/.ssh/known_hosts",
+		"/Users/doctyper/Dropbox/Documents/Private/jordan-amazon-notes.md",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/build/modernizr-custom.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/grunt-modernizr/test/tests.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/grunt-modernizr/README.md",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/grunt-modernizr/package.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/test/settings/prefixed.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/settings.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/grunt-modernizr/tasks/modernizr.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/grunt-modernizr/Gruntfile.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/index.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/grunt-modernizr/lib/gruntifier.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/utils.js",
+		"/Users/richard.herrera/Dropbox/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/richard.herrera/Dropbox/Sites/nfl/site/NFL-site-web/src/main/webapp/scripts/global/toughometer.js",
+		"/Users/richard.herrera/.profile",
+		"/Users/richard.herrera/.zpreztorc",
+		"/Users/richard.herrera/.zshrc",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/package.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/bin/customizr",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/test/settings/custom.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/test/tests.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/src/builder.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/src/settings.json",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/.git/config",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/src/index.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-test/tasks/modernizr.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-test/Gruntfile.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/.jshintrc",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-test/gulpfile.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/README.md",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/test/runner.js",
+		"/Users/richard.herrera/Dropbox/Sites/doctyper/Customizr/test/runner.js",
+		"/Users/richard.herrera/Desktop/yui-coding-guideline/README.md",
+		"/Users/richard.herrera/Desktop/yui-coding-guideline/scripts/feature-a/page-a.js",
+		"/Users/richard.herrera/Desktop/yui-coding-guideline/scripts/feature-b/page-b-controller.js",
+		"/Users/richard.herrera/Desktop/yui-coding-guideline/scripts/feature-b/page-b.js",
+		"/Users/richard.herrera/.gitconfig",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/node_modules/customizr/src/index.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/node_modules/customizr/src/crawler.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/package.json",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/generate-tests.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/runner.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/tests.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/Gruntfile.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/tasks/modernizr.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/src/utils.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/src/builder.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/src/index.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/src/crawler.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/src/metadata.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/src/settings.json",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/build/modernizr-custom.js",
+		"/Volumes/Media/Wrestling/WWE/TV/Monday Night Raw/WWE.Monday.Night.RAW.2013.02.11.720p.HDTV.x264-KYR/wwe.monday.night.raw.2013.02.11.720p.hdtv.x264-kyr.nfo",
+		"/Users/doctyper/Dropbox/Sites/doctyper/Modernizr/Gruntfile.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/lib/gruntifier.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/lib/modulizr.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/lib/modernizr-dev.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/README.md",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/gruntfiles/Gruntfile.exclude.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/build/modernizr-exclude.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/css/vanilla.css",
+		"/Users/doctyper/Dropbox/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/js/amd.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/.travis.yml",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/cache/options.json",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/node_modules/Modernizr/package.json",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/node_modules/Modernizr/Gruntfile.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/gruntfiles/Gruntfile.select.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/build/modernizr-prefixed.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/gruntfiles/Gruntfile.prefixed.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/node_modules/Modernizr/lib/build.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/node_modules/Modernizr/lib/config-all.json",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/.jshintrc",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/test/js/vanilla.js",
+		"/Users/doctyper/Dropbox/Sites/doctyper/grunt-modernizr/modernizr.js",
+		"/Users/doctyper/.profile",
+		"/Users/doctyper/.zshrc",
+		"/Users/doctyper/.zprofile",
+		"/Users/doctyper/.profi",
+		"/Users/doctyper/.profie",
+		"/Applications/Intermission.app/Contents/Info.plist",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/base/history.page.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/modules/shell/shell.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/project/modules/_lithium.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/modules/history/history.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/modules/lithium/lithium.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/modules/scrollbar/scrollbar.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/caboose/placeholders/_scrollable.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/templates/focus/aof.html",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/pages/shared/detail.page.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/pages/work/view.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/project/modules/_tinyscrollbar.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/apps/work/views.py",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/project/views/work/view.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/project/views/work.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/pages/work.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/templates/base.html",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/project/base/_body.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/project/mixins/_respond-to.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/caboose/mixins/_respond-to.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/project/_site-settings.scss",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/templates/focus/base.html",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/pages/shared/grid.page.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/pages/focus.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/apps/ff0000/context_processors.py",
+		"/Users/doctyper/Dropbox/stuff-to-say.md",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/urls.py",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/apps/focus/views.py",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/views/global/nav.json",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/apps/work/urls.py",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/templates/work/base.html",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/apps/focus/models.py",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/project/static/js/ff0000/base/utils.js",
+		"/Users/rich.herrera/Dropbox/Sites/red/ff0000.com/resources/compass/scss/project/views/focus.scss"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"+*.py,-*.txt",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"useBuffers",
+			"dest",
+			"load",
+			"process",
+			"Intl",
+			"files",
+			"Modulizr",
+			"files",
+			"opt.files",
+			"readFileSync",
+			"checkCacheValidity",
+			"Caching",
+			"Embed",
+			"overSkin",
+			"upSkin",
+			"-f",
+			"Success",
+			"console",
+			"writeCodeToFile",
+			"modernizr-build",
+			"Customizr",
+			"'",
+			"grunt",
+			"'",
+			"csslint",
+			"gulp-csslint",
+			".dest",
+			"writeCodeToFile",
+			"'",
+			"log.ok",
+			"OK",
+			"settings",
+			"currentConfig",
+			"getSettings",
+			"modernizrPath",
+			"config",
+			"setDefaults",
+			"grunt.",
+			"underscore",
+			"grunt.",
+			"console",
+			"settings",
+			"grunt.",
+			"grunt",
+			"mkir",
+			"grunt",
+			"warn",
+			"grunt",
+			"expand",
+			".file.",
+			"grunt",
+			"this.utils",
+			"utils",
+			"console",
+			".log",
+			"Looking for",
+			"utils",
+			"subhead",
+			"grunt.log",
+			"grunt.log.ok",
+			"this.file",
+			"parse",
+			"grunt.util._",
+			"finalize",
+			"Generating a custom",
+			"animation",
+			"addTest",
+			"apng",
+			"console",
+			"testPattern",
+			"include",
+			"Imp",
+			"im",
+			"notification",
+			"Modernizr",
+			"\"Modernizr\"",
+			"Modernizr",
+			"force",
+			"nodeunit",
+			"qunit",
+			"tests",
+			"prefixed",
+			"csstransforms3d",
+			"window.crypto.getRandomValues",
+			"'",
+			"ize",
+			"Generating a custom Modernizr build",
+			"rgba",
+			"0.3.1-1",
+			".xhr",
+			"domain",
+			".xhr",
+			"domain",
+			"err",
+			"domain",
+			"community",
+			"0.3",
+			".css",
+			"extensibility",
+			"setDefaults",
+			"data-history",
+			"prefix",
+			"any",
+			"data-history",
+			".off(",
+			"History.",
+			"statechange",
+			"this.vars.cache",
+			"cacheJSON",
+			"cache",
+			"check",
+			"activeFilter",
+			"FILTER_CHECK",
+			"ticker",
+			"details",
+			"filters",
+			"labels",
+			"featured=1",
+			"smartresize",
+			"orientationchange",
+			"smartresize",
+			"overflow",
+			"orientation",
+			"scrollable",
+			"portrait",
+			"min-width",
+			"h1",
+			"lithium-count"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"modernizr",
+			"gulp-modernizr",
+			"\"",
+			"About",
+			"about",
+			"not settings.TEMPLATE_DEBUG",
+			"css/views",
+			"\"",
+			"{{ STATIC_URL }}js_v1",
+			"@extend %magic-bullet-fix",
+			"@extend %position-zero",
+			"@extend %scrollable",
+			"@extend %microfix;",
+			"min-device-pixel-ratio: 2",
+			"min-device-pixel-ratio: 1.5",
+			"data-$1=",
+			"data-height=",
+			"data-width=",
+			"data-media=",
+			"div data-src",
+			"data-media",
+			"packages",
+			"installed_packages",
+			"available_packages",
+			"flatpage \"what-is-a-cutie\"",
+			"cuties_",
+			"\"",
+			"cuties",
+			"<div data-href",
+			"</div>",
+			"<div data-href",
+			"<span data-href",
+			"content.",
+			"ms",
+			"moz",
+			":\"m/d\"",
+			"/css/hero.css",
+			"href=\"/static/css/hero.css\"",
+			"DonorsChoose.org",
+			"winner",
+			"{{ contest.description }}",
+			"{{ contest.title }}",
+			"<",
+			".contentAPI",
+			"",
+			"AQ~~,AAABHU3oqok~,NtPjdlkt_5uJUtRg-uq-mw4-rFTQAfzq",
+			"total_votes",
+			"this_weeks_contest",
+			"&",
+			"'{{ content.title }}'",
+			"\"",
+			"relatedIDs",
+			"static/contact.html",
+			"contact.html",
+			"country",
+			"comments",
+			"store",
+			"@media only screen and (min-width: 801px) and (max-width: 1240px)  {",
+			"pass",
+			"squash ",
+			"typeface(\"Extra Bold\")",
+			"(?P<contest_id>[\\d]+)",
+			"(?P<content_id>[\\d]+)",
+			"?P<content_id>[\\d]+",
+			"",
+			"block fb_",
+			"}",
+			"${",
+			"}}",
+			"{{",
+			"/if",
+			"}}",
+			"{{",
+			"}",
+			"${",
+			"\\t'<$1>',",
+			"required=\"required\"",
+			"last_weeks_contest",
+			"content.",
+			".cotd_winner",
+			"errors %}",
+			"entry.",
+			"pod.",
+			"content.",
+			"entry.",
+			"content_type",
+			"content.id",
+			"entry",
+			"content.",
+			"content_id=params.content_id contest_id=params.contest_id",
+			"video_resized_thumbnail",
+			"\\t'<$1>',\\n",
+			"upload",
+			"\\t'<$1>',\\n",
+			"\\t'<$1>'\\n",
+			"&:",
+			": $1",
+			"&:",
+			": $1",
+			"",
+			"Upload",
+			"static",
+			"Static",
+			"Flatpages",
+			"Profile",
+			"Contests",
+			"$active-color",
+			"landing",
+			"settings.TEMPLATE_DEBUG",
+			"Slider",
+			"\\t'<$1>',",
+			"\\t'<$1>,",
+			"Bold",
+			"$cell-box-inset",
+			"$box-inset",
+			"$box-offset",
+			"Landing",
+			"Grid",
+			"\"",
+			"loc.",
+			"win.",
+			"data-grid-item",
+			"figure data-type=\"video\" data-item-id",
+			"<figure data-item-id=\"12345\"",
+			"\"",
+			"($cell-margin * 2)",
+			"<figcaption>1x2</figcaption>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/richard.herrera/Dropbox/Sites/doctyper/gulp-modernizr/index.js",
+					"settings":
+					{
+						"buffer_size": 2181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								604,
+								604
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"asi": false,
+								"bitwise": true,
+								"boss": false,
+								"browser": true,
+								"camelcase": false,
+								"couch": false,
+								"curly": true,
+								"debug": false,
+								"devel": true,
+								"dojo": false,
+								"eqeqeq": true,
+								"eqnull": false,
+								"esnext": false,
+								"evil": false,
+								"expr": false,
+								"forin": true,
+								"funcscope": false,
+								"globals":
+								{
+								},
+								"globalstrict": false,
+								"immed": false,
+								"indent": 4.0,
+								"iterator": false,
+								"jquery": false,
+								"lastsemic": false,
+								"latedef": false,
+								"laxbreak": false,
+								"laxcomma": false,
+								"loopfunc": false,
+								"maxcomplexity": false,
+								"maxdepth": false,
+								"maxerr": 100.0,
+								"maxlen": false,
+								"maxparams": false,
+								"maxstatements": false,
+								"mootools": false,
+								"moz": false,
+								"multistr": false,
+								"newcap": false,
+								"noarg": true,
+								"node": true,
+								"noempty": true,
+								"nonew": false,
+								"nonstandard": false,
+								"plusplus": false,
+								"proto": false,
+								"prototypejs": false,
+								"quotmark": false,
+								"rhino": false,
+								"scripturl": false,
+								"shadow": false,
+								"smarttabs": false,
+								"strict": true,
+								"sub": false,
+								"supernew": false,
+								"trailing": false,
+								"undef": true,
+								"unused": true,
+								"validthis": false,
+								"worker": false,
+								"wsh": false,
+								"yui": false
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": true,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": true,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"JavaScript Next": "js",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/crawler.js",
+					"settings":
+					{
+						"buffer_size": 7838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6012,
+								6011
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"asi": false,
+								"bitwise": true,
+								"boss": false,
+								"browser": true,
+								"camelcase": false,
+								"couch": false,
+								"curly": true,
+								"debug": false,
+								"devel": true,
+								"dojo": false,
+								"eqeqeq": true,
+								"eqnull": false,
+								"esnext": false,
+								"evil": false,
+								"expr": false,
+								"forin": true,
+								"funcscope": false,
+								"globals":
+								{
+								},
+								"globalstrict": false,
+								"immed": false,
+								"indent": 4.0,
+								"iterator": false,
+								"jquery": false,
+								"lastsemic": false,
+								"latedef": false,
+								"laxbreak": false,
+								"laxcomma": false,
+								"loopfunc": false,
+								"maxcomplexity": false,
+								"maxdepth": false,
+								"maxerr": 100.0,
+								"maxlen": false,
+								"maxparams": false,
+								"maxstatements": false,
+								"mootools": false,
+								"moz": false,
+								"multistr": false,
+								"newcap": false,
+								"noarg": true,
+								"node": true,
+								"noempty": true,
+								"nonew": false,
+								"nonstandard": false,
+								"plusplus": false,
+								"proto": false,
+								"prototypejs": false,
+								"quotmark": false,
+								"rhino": false,
+								"scripturl": false,
+								"shadow": false,
+								"smarttabs": false,
+								"strict": true,
+								"sub": false,
+								"supernew": false,
+								"trailing": false,
+								"undef": true,
+								"unused": true,
+								"validthis": false,
+								"worker": false,
+								"wsh": false,
+								"yui": false
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": true,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": true,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"JavaScript Next": "js",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3414.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/index.js",
+					"settings":
+					{
+						"buffer_size": 1576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"asi": false,
+								"bitwise": true,
+								"boss": false,
+								"browser": true,
+								"camelcase": false,
+								"couch": false,
+								"curly": true,
+								"debug": false,
+								"devel": true,
+								"dojo": false,
+								"eqeqeq": true,
+								"eqnull": false,
+								"esnext": false,
+								"evil": false,
+								"expr": false,
+								"forin": true,
+								"funcscope": false,
+								"globals":
+								{
+								},
+								"globalstrict": false,
+								"immed": false,
+								"indent": 4.0,
+								"iterator": false,
+								"jquery": false,
+								"lastsemic": false,
+								"latedef": false,
+								"laxbreak": false,
+								"laxcomma": false,
+								"loopfunc": false,
+								"maxcomplexity": false,
+								"maxdepth": false,
+								"maxerr": 100.0,
+								"maxlen": false,
+								"maxparams": false,
+								"maxstatements": false,
+								"mootools": false,
+								"moz": false,
+								"multistr": false,
+								"newcap": false,
+								"noarg": true,
+								"node": true,
+								"noempty": true,
+								"nonew": false,
+								"nonstandard": false,
+								"plusplus": false,
+								"proto": false,
+								"prototypejs": false,
+								"quotmark": false,
+								"rhino": false,
+								"scripturl": false,
+								"shadow": false,
+								"smarttabs": false,
+								"strict": true,
+								"sub": false,
+								"supernew": false,
+								"trailing": false,
+								"undef": true,
+								"unused": true,
+								"validthis": false,
+								"worker": false,
+								"wsh": false,
+								"yui": false
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": true,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": true,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"JavaScript Next": "js",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/richard.herrera/Dropbox/Sites/doctyper/customizr/src/builder.js",
+					"settings":
+					{
+						"buffer_size": 2648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2436,
+								2436
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"asi": false,
+								"bitwise": true,
+								"boss": false,
+								"browser": true,
+								"camelcase": false,
+								"couch": false,
+								"curly": true,
+								"debug": false,
+								"devel": true,
+								"dojo": false,
+								"eqeqeq": true,
+								"eqnull": false,
+								"esnext": false,
+								"evil": false,
+								"expr": false,
+								"forin": true,
+								"funcscope": false,
+								"globals":
+								{
+								},
+								"globalstrict": false,
+								"immed": false,
+								"indent": 4.0,
+								"iterator": false,
+								"jquery": false,
+								"lastsemic": false,
+								"latedef": false,
+								"laxbreak": false,
+								"laxcomma": false,
+								"loopfunc": false,
+								"maxcomplexity": false,
+								"maxdepth": false,
+								"maxerr": 100.0,
+								"maxlen": false,
+								"maxparams": false,
+								"maxstatements": false,
+								"mootools": false,
+								"moz": false,
+								"multistr": false,
+								"newcap": false,
+								"noarg": true,
+								"node": true,
+								"noempty": true,
+								"nonew": false,
+								"nonstandard": false,
+								"plusplus": false,
+								"proto": false,
+								"prototypejs": false,
+								"quotmark": false,
+								"rhino": false,
+								"scripturl": false,
+								"shadow": false,
+								"smarttabs": false,
+								"strict": true,
+								"sub": false,
+								"supernew": false,
+								"trailing": false,
+								"undef": true,
+								"unused": true,
+								"validthis": false,
+								"worker": false,
+								"wsh": false,
+								"yui": false
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": true,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": true,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"JavaScript Next": "js",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 681.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"settings":
+					{
+						"buffer_size": 2084,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										212,
+										222
+									],
+									[
+										385,
+										395
+									],
+									[
+										713,
+										723
+									],
+									[
+										883,
+										893
+									],
+									[
+										1097,
+										1107
+									],
+									[
+										1329,
+										1339
+									],
+									[
+										1524,
+										1534
+									],
+									[
+										1771,
+										1781
+									],
+									[
+										1969,
+										1979
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								1529,
+								1529
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"grunti",
+				"grunt-modernizr/lib/gruntifier.js"
+			],
+			[
+				"modulizr",
+				"lib/modulizr.js"
+			],
+			[
+				"work.scss",
+				"resources/compass/scss/project/views/work.scss"
+			],
+			[
+				"base.html",
+				"project/templates/base.html"
+			],
+			[
+				"view.js",
+				"project/static/js/ff0000/pages/work/view.js"
+			],
+			[
+				"history.page",
+				"project/static/js/ff0000/base/history.page.js"
+			],
+			[
+				"lithium.js",
+				"project/static/js/ff0000/modules/lithium/lithium.js"
+			],
+			[
+				"lithium.scss",
+				"resources/compass/scss/project/modules/_lithium.scss"
+			],
+			[
+				"lithium",
+				"project/static/js/ff0000/modules/lithium/lithium.js"
+			],
+			[
+				"work/views",
+				"project/apps/work/views.py"
+			],
+			[
+				"aof.html",
+				"project/templates/focus/aof.html"
+			],
+			[
+				"scrollable",
+				"resources/compass/scss/caboose/placeholders/_scrollable.scss"
+			],
+			[
+				"tinyscrollbar",
+				"resources/compass/scss/project/modules/_tinyscrollbar.scss"
+			],
+			[
+				"detailpage",
+				"project/static/js/ff0000/pages/shared/detail.page.js"
+			],
+			[
+				"shell.js",
+				"project/static/js/ff0000/modules/shell/shell.js"
+			],
+			[
+				"scrollbar",
+				"project/static/js/ff0000/modules/scrollbar/scrollbar.js"
+			],
+			[
+				"respond",
+				"resources/compass/scss/project/mixins/_respond-to.scss"
+			],
+			[
+				"view.scss",
+				"resources/compass/scss/project/views/work/view.scss"
+			],
+			[
+				"ff0000/context",
+				"project/apps/ff0000/context_processors.py"
+			],
+			[
+				"project/work/ur",
+				"project/apps/work/urls.py"
+			],
+			[
+				"project/urls",
+				"project/urls.py"
+			],
+			[
+				"focus/views",
+				"project/apps/focus/views.py"
+			],
+			[
+				"focus/views.py",
+				"project/apps/focus/views.py"
+			],
+			[
+				"itemworklarge",
+				"project/static/js/ff0000/views/lithium/itemworklarge.json"
+			],
+			[
+				"home.html",
+				"project/templates/home.html"
+			],
+			[
+				"global-transition",
+				"resources/compass/scss/caboose/placeholders/_global-transition.scss"
+			],
+			[
+				"trans",
+				"resources/compass/test/caboose/placeholders/global-transition.scss"
+			],
+			[
+				"work.js",
+				"project/static/js/ff0000/pages/work.js"
+			],
+			[
+				"site-sett",
+				"resources/compass/scss/project/_site-settings.scss"
+			],
+			[
+				"work",
+				"project/templates/work.html"
+			],
+			[
+				"body.scss",
+				"resources/compass/scss/project/base/_body.scss"
+			],
+			[
+				"base/_body",
+				"resources/compass/scss/project/base/_body.scss"
+			],
+			[
+				"server.js",
+				".robyn/plugins/red-start/tasks/server.js"
+			],
+			[
+				"about.html",
+				"project/templates/about.html"
+			],
+			[
+				"contact.html",
+				"project/templates/contact.html"
+			],
+			[
+				"contact",
+				"project/static/js/ff0000/pages/contact.js"
+			],
+			[
+				"tap.js",
+				"project/static/js/libs/plugins/jquery.event.tap.js"
+			],
+			[
+				"detail",
+				"project/static/js/ff0000/pages/shared/detail.page.js"
+			],
+			[
+				"work.html",
+				"project/templates/work.html"
+			],
+			[
+				"about.js",
+				"project/static/js/ff0000/pages/about.js"
+			],
+			[
+				"about.scss",
+				"resources/compass/scss/project/views/about.scss"
+			],
+			[
+				"modernizr",
+				".robyn/plugins/modernizr/tasks/modernizr.js"
+			],
+			[
+				"scroll",
+				"resources/compass/scss/project/modules/_tinyscrollbar.scss"
+			],
+			[
+				"history",
+				"project/static/js/ff0000/base/history.page.js"
+			],
+			[
+				"tap",
+				"project/static/js/libs/plugins/jquery.event.tap.js"
+			],
+			[
+				"site-set",
+				"resources/compass/scss/project/_site-settings.scss"
+			],
+			[
+				"history.page.js",
+				"project/static/js/ff0000/base/history.page.js"
+			],
+			[
+				"detail.page",
+				"project/static/js/ff0000/pages/shared/detail.page.js"
+			],
+			[
+				"focus.scss",
+				"resources/compass/scss/project/views/focus.scss"
+			],
+			[
+				"culture.scss",
+				"resources/compass/scss/project/views/culture.scss"
+			],
+			[
+				"culture.html",
+				"project/templates/culture.html"
+			],
+			[
+				"culture.js",
+				"project/static/js/ff0000/pages/culture.js"
+			],
+			[
+				"modernizr.js",
+				".robyn/plugins/modernizr/tasks/modernizr.js"
+			],
+			[
+				"base",
+				"project/templates/base.html"
+			],
+			[
+				"ff0000.app",
+				"project/templates/ff0000.appcache"
+			],
+			[
+				"contact.scss",
+				"resources/compass/scss/project/views/contact.scss"
+			],
+			[
+				"ugli",
+				"robyn/tasks/uglify.js"
+			],
+			[
+				"app",
+				"project/templates/ff0000.appcache"
+			],
+			[
+				"site.js",
+				"project/static/js/ff0000/site.js"
+			],
+			[
+				"requirej",
+				".robyn/plugins/rosy/tasks/requirejs.js"
+			],
+			[
+				"requirejs",
+				".robyn/plugins/rosy/tasks/helpers/require.js"
+			],
+			[
+				"uglify",
+				"robyn/tasks/uglify.js"
+			],
+			[
+				"appcache",
+				"project/templates/ff0000.appcache"
+			],
+			[
+				"tiny",
+				"project/static/js/libs/plugins/jquery.tinyscrollbar.js"
+			],
+			[
+				"modules/module",
+				"project/static/js/ff0000/modules/module.js"
+			],
+			[
+				"custom",
+				"resources/compass/scss/project/modules/_custom-form-field.scss"
+			],
+			[
+				"module.js",
+				"project/static/js/ff0000/modules/module.js"
+			],
+			[
+				"gridpage",
+				"project/static/js/ff0000/pages/shared/grid.page.js"
+			],
+			[
+				"shell",
+				"project/static/js/ff0000/modules/shell/shell.js"
+			],
+			[
+				"scrollbar.js",
+				"project/static/js/ff0000/modules/scrollbar/scrollbar.js"
+			],
+			[
+				"propagation",
+				"project/static/js/libs/plugins/modernizr.transformpropagation.js"
+			],
+			[
+				"scroller.js",
+				"project/static/js/red/modules/scroller/scroller.js"
+			],
+			[
+				"settings/ini",
+				"project/settings/__init__.py"
+			],
+			[
+				"context",
+				"project/apps/ff0000/context_processors.py"
+			],
+			[
+				"scss/news.scss",
+				"resources/compass/scss/project/views/news.scss"
+			],
+			[
+				"news.scss",
+				"resources/compass/sass/pages/news.scss"
+			],
+			[
+				"news",
+				"resources/compass/sass/pages/news.scss"
+			],
+			[
+				"local",
+				"deploy/django-settings/local_settings.py"
+			],
+			[
+				"defaults",
+				"resources/compass/sass/modules/_defaults.scss"
+			],
+			[
+				"mixins",
+				"resources/compass/sass/modules/_mixins.scss"
+			],
+			[
+				"debounce",
+				"project/static/js/libs/plugins/jquery.debounce.js"
+			],
+			[
+				"global",
+				"resources/compass/sass/partials/_globals.scss"
+			],
+			[
+				"grid",
+				"project/static/js/ff0000/pages/shared/grid.page.js"
+			],
+			[
+				"global.scss",
+				"resources/compass/sass/partials/_globals.scss"
+			],
+			[
+				"slide.",
+				"project/static/js/ff0000/modules/transition/slide.transition.js"
+			],
+			[
+				"animation",
+				"resources/compass/sass/modules/mixins/_animation.scss"
+			],
+			[
+				"transition.js",
+				"project/static/js/ff0000/modules/transition/transition.js"
+			],
+			[
+				"transition",
+				"resources/compass/sass/modules/transitions/_slide-transition.scss"
+			],
+			[
+				"section.",
+				"project/static/js/ff0000/modules/transition/section.transition.js"
+			],
+			[
+				"history.js",
+				"project/static/js/ff0000/modules/history/history.js"
+			],
+			[
+				"base/h",
+				"project/static/js/ff0000/base/history.page.js"
+			],
+			[
+				"project",
+				"project/templates/work/project.html"
+			],
+			[
+				"contact/urls",
+				"project/apps/contact/urls.py"
+			],
+			[
+				"500.html",
+				"project/templates/500.html"
+			],
+			[
+				"project.html",
+				"project/templates/work/project.html"
+			],
+			[
+				"job.html",
+				"project/templates/contact/job.html"
+			],
+			[
+				"contact/views",
+				"project/apps/contact/views.py"
+			],
+			[
+				"ie.scss",
+				"resources/compass/sass/ie.scss"
+			],
+			[
+				"contct.js",
+				"project/static/js/ff0000/pages/contact.js"
+			],
+			[
+				"news.html",
+				"project/templates/news.html"
+			],
+			[
+				"picturefill",
+				"project/static/js/libs/picturefill.js"
+			],
+			[
+				"contact.js",
+				"project/static/js/ff0000/pages/contact.js"
+			],
+			[
+				"detai.page.js",
+				"project/static/js/ff0000/pages/shared/detail.page.js"
+			],
+			[
+				"header.scss",
+				"resources/compass/sass/partials/_header.scss"
+			],
+			[
+				"utils.js",
+				"resources/tasks/helpers/utils.js"
+			],
+			[
+				"watch/compass",
+				"resources/tasks/watch/compass.js"
+			],
+			[
+				"init",
+				"resources/tasks/init.js"
+			],
+			[
+				"exec",
+				"resources/tasks/helpers/exec-queue.js"
+			],
+			[
+				"update",
+				"resources/tasks/update.js"
+			],
+			[
+				"utils",
+				"resources/tasks/helpers/utils.js"
+			],
+			[
+				"coupon.scss",
+				"resources/compass/sass/views/_coupon.scss"
+			],
+			[
+				"style.scss",
+				"resources/compass/sass/style.scss"
+			],
+			[
+				"views.py",
+				"project/apps/cuties/views.py"
+			],
+			[
+				"urls.py",
+				"project/urls.py"
+			],
+			[
+				"models.py",
+				"project/apps/cuties/models.py"
+			],
+			[
+				"grid.scss",
+				"resources/compass/sass/modules/_grid.scss"
+			],
+			[
+				"filter.html",
+				"project/templates/filter.html"
+			],
+			[
+				"static.scss",
+				"resources/compass/sass/views/_static.scss"
+			],
+			[
+				"form",
+				"project/templates/upload/upload-form.html"
+			],
+			[
+				"contests.html",
+				"project/templates/contests.html"
+			],
+			[
+				"donrs",
+				"project/templates/static/donors-choose.html"
+			],
+			[
+				"grid.js",
+				"project/static/js/cuties/modules/grid/grid.js"
+			],
+			[
+				"search.js",
+				"project/static/js/cuties/search.js"
+			],
+			[
+				"search.scss",
+				"resources/compass/sass/views/_search.scss"
+			],
+			[
+				"customsearch",
+				"project/templates/customsearch/search.html"
+			],
+			[
+				"defaults.scss",
+				"resources/compass/sass/modules/_defaults.scss"
+			],
+			[
+				"tag",
+				"project/templates/tag.html"
+			],
+			[
+				"setu.json",
+				"resources/tasks/config/setup.json"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 128.0,
+	"status_bar_visible": true
+}

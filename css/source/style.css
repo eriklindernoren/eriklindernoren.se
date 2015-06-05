@@ -15,6 +15,10 @@ section{
 	padding: 0;
 }
 
+p{
+	line-height: 25px;
+}
+
 ::selection {
 	background: #ffb7b7; /* WebKit/Blink Browsers */
 }
@@ -37,38 +41,52 @@ section{
 	right: 50px;
 	bottom: 50px;
 	cursor: pointer;
-	text-align: center;
-	display: none;
 	z-index: 6;
 	text-decoration: none;
 	border-radius: 2px;
-	padding: 0px 12px 0px 12px;
 	color: rgb(240,240,240);
 	background-color: rgba(0,0,0,0.5);
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	transition: width 0.2s linear;
+}
+
+.contentHolder{
+	position: absolute;
+	right: 0;
+	left: auto;
+	top: 30%;
+	width: 110px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	transform: translateY(-1px);
 }
 .scrollToTop i{
-	display: inline-block;
-	font-size: 50px;
 	padding: 0;
-	transform: translateY(-4px);
-	margin: 0 auto;
+	margin: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 50px;
+	transform: translateY(-17px) translateX(8px);
 }
 
 .scrollToTop h1{
-	display: none;
+	height: 50px;
+	margin-right: 2px;
 	font-family: 'Roboto';
 	font-weight: 300;
 	font-size: 20px;
 	text-decoration: none;
-	margin: 0 6px 0 0;
 	padding: 0;
 	color: rgb(240,240,240);
-	transform: translateY(-11px);
 }
 
-.scrollToTop:hover > h1{
-	display: inline-block;
+.scrollToTop:hover{
+	width: 100px;	
 }
+
 
 
 
@@ -232,9 +250,8 @@ section{
 	position: fixed;
 	top: 0%;
 	width: 100%;
-	height: 100vh;
+	height: 110vh;
 	z-index: 1;
-	display: none;
 }
 
 
@@ -249,19 +266,21 @@ section{
 	border-radius: 50%;
 	width: 200px;
 	height: 200px;
-	z-index: 2;
+	z-index: 5;
 }
+
+
 
 
 .startscreen h1{
 	position: absolute;
-	bottom: 10%;
+	bottom: 60px;
 	left: 0;
 	right: 0;
 	font-family: 'abril Fatface';
-	font-size: 35px;
+	font-size: 40px;
 	color: rgb(240,240,240);
-	z-index: 2;
+	z-index: 5;
 }
 
 
@@ -364,8 +383,19 @@ section{
 	justify-content: space-between;
 }
 
+.interestHolder{
+	display: block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: rgb(245,219,170);
+	box-shadow: 0px 4px 10px 2px rgb(225,189,140);
+}
 
-.fa-stack{
+
+#interests i{
+	padding-top: 20px;
 	color: #5A352D;
 }
 
@@ -391,7 +421,7 @@ section{
 	position: fixed;
 	top: 0%;
 	width: 100%;
-	height: 100vh;
+	height: 110vh;
 	z-index: 1;
 	display: none;
 }
@@ -421,10 +451,11 @@ section{
 	max-width: 500px;
 	font-size: 18px;
 	background-color: rgba(163,73,73,0.9);
-	border-radius: 2px;
+	border-radius: 3px;
 	text-align: center;
 	order: 1;
 	z-index: 2;
+	transition: linear;
 	transform: translate3D(0,0,0);
 
 
@@ -456,7 +487,8 @@ section{
 	padding: 30px 0px 50px 0px;
 	max-width: 600px;
 	background-color: rgba(243,134,48,0.8);
-	border-radius: 2px;
+	border-radius: 3px;
+	transition: linear;
 	transform: translate3D(0,0,0);
 	z-index: 2;
 	order: 2;
@@ -485,13 +517,15 @@ section{
 .eduTimeline .school{ 
 	font-size: 25px;
 	font-family: 'Roboto';
-	font-weight: 700;
+	font-weight: 400;
+	font-style: normal;
 	color: #a34949;
 }
 
 .eduTimeline .period { 
 	font-family: 'Roboto';
-	font-weight: 500;
+	font-weight: 300;
+	font-style: normal;
 	padding-left: 5px;
 	font-size: 20px;
 	color: #cacdc4;
@@ -500,6 +534,7 @@ section{
 .eduTimeline .programDesc { 
 	font-family: 'Roboto';
 	font-weight: 300;
+	font-style: normal;
 	font-size:18px; 
 	padding-top: 10px;
 	color: rgb(220,220,220);
@@ -798,6 +833,7 @@ section{
 	font-style: bold;
 	font-family: 'Roboto';
 	font-weight: 500;
+	font-style: normal;
 	font-size: 16px;
 	text-transform: uppercase;
 	display: block;
@@ -823,17 +859,54 @@ section{
 }
 
 .imageDiv{
+	position: relative;
 	text-align: center;
 	width: 50%;
 	overflow: hidden;
+	box-shadow: 0px 4px 10px 2px rgb(133,43,43);
+	text-align: center;
+	transition: 0.3s linear;
+	border-radius: 3px;
+	margin: 0;
+	padding: 0;
 }
+
+.imageDiv:hover{
+	box-shadow: 0px 4px 12px 3px rgb(123,33,33);
+}
+
 
 .imageDiv img{
 	display: block;
 	width: 100%;
-	border-radius: 3px;
-	transition: 0.5s ease;
-	margin: 0 auto;
+	height: auto;
+}
+
+.imgText{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	height: 0;
+	width: 100%;
+	background-color: rgba(240,240,240,0.9);
+	cursor: pointer;
+	text-decoration: none;
+
+}
+
+.imageDiv p{
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-style: normal;
+	font-size: 30px;
+	color: rgb(170,170,170);
+	opacity: 0;
+}
+
+.imageDiv .imgText:hover > p{
+	color: rgb(173,63,63);
 }
 
 /*---------------------------------------*/
@@ -853,11 +926,11 @@ section{
 
 #contact h1{
 	width: 80%;
+	display: block;
 	padding-top: 50px;
 	font-family: "Abril Fatface";
 	font-size: 40px;
 	color: #a34949;
-	margin-bottom: 40px;
 }
 
 #mail{
@@ -866,6 +939,7 @@ section{
 	font-size: 60px;
 	color: rgba(170,170,170,0.8);
 	text-decoration: none;
+	transition: 150ms linear;
 }
 
 #mail:hover{
@@ -874,22 +948,22 @@ section{
 
 #contactSeparator{
 	display: block;
-	width: 30%;
+	width: 20%;
 	border-bottom: 4px solid #a34949;
 	border-radius: 2px;
-	margin: 80px auto 80px auto;
+	margin: 60px auto 60px auto;
 }
 
-#contact h2{
-	padding: 80px 0 20px 0;
+#copyright{
+	padding: 60px 0 20px 0;
 	color: rgb(220,220,220);
 	font-size: 18px;
 }
 
 #contactWrap{
 	width: 80%;
-	max-width: 780px;
-	padding: 10px 0px 0px 0px;
+	max-width: 800px;
+	padding: 60px 0px 0px 0px;
 	display: flex;
 	text-align: center;
 	margin: 0 auto;
@@ -909,21 +983,58 @@ section{
 
 
 #contactText{
+	display: inline-block;
 	font-family: 'Roboto';
 	font-size: 18px;
-	color: #a34949;
+	/*color: #a34949;*/
+	color: rgba(170,170,170,0.8);
 	text-align: center;
+	background: rgb(240,240,240);
+	padding: 10px 20px 18px 20px;
+	border-radius: 3px;
+	box-shadow: 0px 4px 10px 1px rgb(200,200,200);
+	transition: 80ms linear;
 }
 
 #contactText p{
 	margin-top: 10px;
 }
 
-#contactWrap span{
+#contactText:hover{
+	transform: scale(1.1);
+	box-shadow: 0px 4px 10px 1px rgb(180,180,180);
+	color: rgb(170,170,170);
+}
+
+
+
+.socMedia{
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: rgb(240,240,240);
+	box-shadow: 0px 4px 10px 1px rgb(200,200,200);
+	transition: 80ms linear;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+
+
+.socMedia i{
+	position: relative;
+	display: block;
+	padding-top: 17px;
 	text-decoration: none;
 	color: rgba(170,170,170,0.8);
+	transition: color 80ms linear;
+	width: 100%;
+	height: 80px;
 	font-size: 45px;
 }
+
 
 
 
@@ -940,34 +1051,29 @@ section{
 	order: 5;
 }
 
-.socMedia{
-	transition-property: transform;
-}
-
 .socMedia:hover{
 	transform: scale(1.2);
+	box-shadow: 0px 4px 10px 1px rgb(180,180,180);
 }
 
-.socMedia span{
-	transition: color 150ms linear;
+
+
+#github:hover > i{
+	color: rgb(60, 60, 60);
 }
 
-#github span:hover > #ghb{
-	color: rgb(30, 30, 30);
-
-}
-
-#linkedin span:hover{
+#linkedin:hover > i{
 	color:#007bb6;
 }
 
-#twitter span:hover{
+#twitter:hover > i{
 	color: #00aced;
 }
 
-#facebook span:hover{
+#facebook:hover > i{
 	color: #3b5998;
 }
+
 
 
 
@@ -1010,23 +1116,24 @@ section{
 	}
 
 
-
-	.projWrapper{
-		flex-direction: column;
-	}
-
 	.info{
 		width: 100%;
 	}
 
 	.imageDiv{
-		padding-top: 40px;
+		margin-top: 40px;
 		width: 100%;
 	}
 
 	.educationContainer, .projWrapper{
-		width: 90%;
 		flex-direction: column;
+	}
+
+	.educationContainer{
+		width: 90%;
+	}
+	.projWrapper{
+		width: 80%;
 	}
 
 	.educationContainer .eduSummary, .info{
@@ -1064,12 +1171,6 @@ section{
 }
 
 @media screen and (max-width: 668px){
-
-
-	.education{
-		background-image: url('/images/liu.jpeg');
-		background-size: cover;
-	}
 
 	#eduBackgroundDesc{
 		display: none;
@@ -1131,7 +1232,7 @@ section{
 		margin-left: auto;
 		margin-right: auto;
 	}
-	#pencil{
+	#basketball{
 		display: none;
 	}
 
@@ -1159,8 +1260,25 @@ section{
 		bottom: 0;
 	}
 
+	.socMedia{
+		width: 40px;
+		height: 40px;
+		border-radius: 3px;
+		margin: 0 3px 0 3px;
+	}
 
+	.socMedia i{
+		font-size: 24px;
+		padding-top: 8px;
+	}
 
+	#contactSeparator{
+		margin: 40px auto 40px auto;
+	}
+
+	#contact h2{
+		padding-top: 30px;
+	}
 
 }
 

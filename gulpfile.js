@@ -44,13 +44,12 @@ gulp.task('css_concat', function() {
 	return gulp.src('./css/source/*.css')
 	.pipe(plumber({errorHandler: onError}))
 	.pipe(css_concat('all.css'))
+
 	.pipe(prefix('last 10 versions'))
 	.pipe(minify())
 	.pipe(gulp.dest('./css/'))
 	.pipe(reload({stream:true}));
 });
-
-
 
 
 
