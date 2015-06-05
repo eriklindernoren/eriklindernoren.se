@@ -903,6 +903,7 @@ p{
 	font-size: 30px;
 	color: rgb(170,170,170);
 	opacity: 0;
+	
 }
 
 .imageDiv .imgText:hover > p{
