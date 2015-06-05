@@ -83,7 +83,7 @@ $(document).ready(function(){
                 var swoop = -Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 900);
             }else {
                 if(scrolledY < goal){
-                 var swoop = Math.min(0.003*Math.pow(scrolledY - goal, 2), $(window).height());                   
+                 var swoop = Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
              }else{
                 swoop = 0;
             }
@@ -100,7 +100,7 @@ $(document).ready(function(){
             var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 400);            
         }else{
             if(scrolledY < goal){
-             var swoopX = -Math.min(0.003*Math.pow(scrolledY - goal, 2), $(window).height());                   
+             var swoopX = -Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
          }else{
             swoopX = 0;
         }
@@ -263,12 +263,6 @@ setUpDisplayTypesForPopups();
                 $('#navbar').fadeIn(800);
             }
         }
-
-        // if(window.innerWidth <= 925 && distTop > lastDistTop && distTop > 200 && !isFocus){
-        //     $('#mobileNav').fadeOut(800);
-        // }else if(window.innerWidth <= 925 && scrollDif > 20){
-        //     $('#mobileNav').fadeIn(800);
-        // }
 
         if(distTop > 300 && window.innerWidth > 668){
             $('.scrollToTop').fadeIn(400);
