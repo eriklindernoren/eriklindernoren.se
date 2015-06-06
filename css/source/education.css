@@ -1,0 +1,150 @@
+
+
+/*---------------------------------------*/
+/*	---------- EDUCATION --------------  */
+/*---------------------------------------*/
+
+
+.education{
+	display: block;
+	text-align: center;
+	padding: 100px 0 100px 0;
+	overflow: hidden;
+	backface-visibility: hidden;
+}
+
+#schoolImg{
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	height: 110vh;
+	z-index: 1;
+	display: none;
+}
+
+
+
+
+.educationContainer{
+	padding: 0px 0 0px 0;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	display: flex;
+
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+.education .eduSummary{
+	padding: 20px 0px 20px 0px;
+	display: block;
+	margin: 0 auto;
+	width: 45%;
+	max-width: 500px;
+	font-size: 18px;
+	background-color: rgba(163,73,73,0.9);
+	border-radius: 2px;
+	text-align: center;
+	order: 1;
+	z-index: 2;
+	transition: linear;
+	transform: translate3D(0,0,0);
+
+
+}
+
+#textContainer{
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+
+}
+
+.education .eduSummary h1{
+	font-family: 'abril Fatface';
+	color: #F38630;
+	font-size: 40px;
+}
+
+.education .eduSummary p{
+	font-family: 'Roboto';
+	font-weight: 300;
+	padding-top: 10px;
+	color: rgb(220,220,220);
+}
+
+.education .eduTimeline{
+	display: block;
+	width: 45%;
+	padding: 30px 0px 50px 0px;
+	max-width: 600px;
+	background-color: rgba(243,134,48,0.8);
+	border-radius: 2px;
+	transition: linear;
+	transform: translate3D(0,0,0);
+	z-index: 2;
+	order: 2;
+}
+
+.eduTimeline ol { 
+	text-align: left;
+	list-style: none;
+	padding: 0 0 0px 20px;
+}
+
+.eduTimeline ol li { 
+	padding: 0;
+	width: 85%;
+	display: block;
+}
+
+.education .eduTimeline h1{
+	font-family: 'abril Fatface';
+	color: #a34949;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+
+.eduTimeline .school{ 
+	font-size: 25px;
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-style: normal;
+	color: #a34949;
+}
+
+.eduTimeline .period { 
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-style: normal;
+	padding-left: 5px;
+	font-size: 20px;
+	color: #cacdc4;
+}
+
+.eduTimeline .programDesc { 
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-style: normal;
+	font-size:18px; 
+	padding-top: 10px;
+	color: rgb(220,220,220);
+}
+
+.eduTimeline .eduSeparator{
+	text-align: left;
+	padding: 10px 0 10px 0;
+	border-top: 2px solid #F49741;
+	opacity: 0.6;
+	margin-top: 20px;
+	width: 90%;
+}
+
+
+
+

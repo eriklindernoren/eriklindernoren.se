@@ -1,0 +1,161 @@
+
+
+/*---------------------------------------*/
+/*	---------- EXPERIENCE --------------  */
+/*---------------------------------------*/
+
+.experience{
+	display: block;
+	width: 100%;
+	padding: 0;
+	background-color: rgb(210,210,210);
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+
+	transform: translate3d(0,0,0);
+
+}
+
+.experience > h1{
+	padding: 50px 0 20px 0;
+	font-family: 'Abril Fatface';
+	font-weight: 700;
+	font-size: 40px; 
+	color: rgb(170,170,170);
+}
+
+#workWrapper{
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 40px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+.flip3d{
+	position: relative;
+	margin: 10px 0 10px 0;
+	width: 200px;
+	height: 200px;
+	transform: translate3D(0,0,0);
+}
+
+
+
+.flip3d > div{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	cursor: pointer;
+	backface-visibility: hidden;
+	transition: 0.4s linear 0s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 1px 5px 10px 1px rgb(150,150,150);	
+}
+
+
+
+.flip3d > .workButton{
+	transform: perspective(600px) rotateY(0deg);
+	background-color: rgb(240,240,240);
+}
+
+.flip3d > .workButtonBack{
+	background-color: rgb(140,140,140);
+	transform: perspective(600px) rotateY(180deg);
+}
+
+
+.flip3d:hover > .workButton{
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+.flip3d:hover > .workButtonBack{
+	transform: perspective(600px) rotateY(0deg);
+}
+
+
+
+
+
+/*mm-color: rgba(198,8,20,0.6)*/
+/*onoff-color: rgba(26,168,46,0.6)*/
+/*siba-color: rgba(189,0,4,0.6)*/
+/*ericsson-color: rgba(26,33,79,0.6)*/
+
+
+
+.flip3d p{
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 22px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 150ms ease;
+}
+
+.flip3d em{
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 18px;
+	text-decoration: none;
+	color: rgb(200,200,200);
+}
+
+.workButton p{
+	color: rgba(0,0,0,0.2);
+}
+
+.workButtonBack p{
+	color: rgb(240,240,240);
+}
+
+
+.workplace { 
+	display: none;
+	margin: 0 auto;
+	width: 40%;
+	height: auto;
+	font-family: "Roboto";
+	padding: 20px;
+	font-weight: 300;
+	
+}
+
+.workplace p{
+	font-size: 20px;
+	line-height: 30px;
+	color: rgb(150,150,150);
+}
+
+.workplace h4{
+	color: #a34949;
+	color: rgb(120,120,120);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#popDownWrapper{
+	width: 100%;
+	background-color: rgb(240,240, 240);
+	padding: 50px 0 50px 0;
+	margin: 0 auto;
+	display: none;
+	text-align: center;
+}
+
+
+.workplace img{
+	max-width: 300px;
+	max-height: auto;
+	width: 80%;
+}
+
+

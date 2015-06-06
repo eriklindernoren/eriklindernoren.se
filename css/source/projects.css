@@ -1,0 +1,221 @@
+
+
+/*---------------------------------------*/
+/*	---------- Personal Projects -------  */
+/*---------------------------------------*/
+
+
+.projects{
+	background-color: #a34949;
+	width: 100%;
+	padding: 0;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+
+	transform: translate3d(0,0,0);
+
+
+
+}
+
+.slideWrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	position: relative;
+	padding: 60px 0px 80px 0px;
+}
+
+#projectHeader{
+	position: relative;
+	top: 50px;
+	display: inline-block;
+	color: rgb(240,240,240);
+	font-family: 'Abril Fatface';
+	font-size: 40px;
+}
+
+
+
+.slideDiv{
+	padding: 60px 0px 40px 0px;
+	border-radius: 2px;
+	width: 100%;
+	display: none;
+	z-index: 3;
+	overflow: hidden;
+}
+
+.projWrapper{
+	display: flex;
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.slideDir{
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+	z-index: 5;
+}
+
+#slideLeft{
+	left: 5%;
+}
+
+#slideRight{
+	right: 5%;
+}
+
+.slideDir i{
+	color: rgb(240,240,240);
+	font-size: 70px;
+	transition: 0.2s linear;
+}
+
+#slideLeft i:hover{
+	transform: translateX(-5px) scale(1.2);
+}
+
+#slideRight i:hover{
+	transform: translateX(5px) scale(1.2);
+}
+
+.slideDiv .container{
+	width: 80%;
+}
+
+.slideDiv .row{
+	text-align: center;
+}
+
+.info{
+	text-align: left;
+	color: rgb(240,240,240);
+	width: 45%;
+	display: inline-block;
+}
+
+
+.info a{
+	font-family: 'Roboto';
+	font-weight: 400;
+	display: block;
+	font-size: 28px;
+	color: rgb(240,240,240);
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+
+
+.info em{
+	font-style: bold;
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.info p{
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.projSeparatorLeft{
+	display: block;
+	max-width: 200px;
+	min-width: 50px;
+	width: 30%;
+	border-bottom: 4px solid rgb(240,240,240);
+	margin: 30px auto 30px 0;
+}
+
+.projSeparatorRight{
+	display: none;
+	max-width: 200px;
+	min-width: 50px;
+	width: 30%;
+	border-bottom: 4px solid rgb(240,240,240);
+	margin: 30px 0 30px auto;
+}
+
+
+
+.info ul{
+	padding-left: 20px;
+}
+
+.info ul > li{
+	margin-bottom: 5px;
+}
+
+.toolList{
+	padding-top: 30px;
+}
+
+#div4{
+	display: block
+}
+
+.imageDiv{
+	position: relative;
+	text-align: center;
+	width: 50%;
+	overflow: hidden;
+	text-align: center;
+	transition: 0.2s linear;
+	border-radius: 2px;
+	margin: 0;
+	padding: 0;
+}
+
+
+.imageDiv img{
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: 0.3s linear;
+}
+
+
+
+.imgText{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	height: 0;
+	width: 100%;
+	background-color: rgb(240,240,240);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.imageDiv p{
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-style: normal;
+	font-size: 30px;
+	color: rgb(170,170,170);
+	opacity: 0;
+	transition: color 0.2s linear;
+
+}
+
+.imageDiv .imgText:hover > p{
+	color: rgb(173,63,63);
+}

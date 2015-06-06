@@ -1,0 +1,53 @@
+
+
+/*---------------------------------------*/
+/*	---------- START SCREEN --------------  */
+/*---------------------------------------*/
+
+.startscreen{
+	display: block;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+
+
+#startImg{
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	height: 110vh;
+	z-index: 1;
+}
+
+
+
+.startscreen .img-circle{
+	position: absolute;
+	top: 25%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	z-index: 5;
+}
+
+
+
+
+.startscreen h1{
+	position: absolute;
+	bottom: 60px;
+	left: 0;
+	right: 0;
+	font-family: 'abril Fatface';
+	font-size: 40px;
+	color: rgb(240,240,240);
+	z-index: 5;
+}
+

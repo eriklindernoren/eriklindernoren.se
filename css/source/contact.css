@@ -1,0 +1,172 @@
+
+
+/*---------------------------------------*/
+/*	---------- FOOTER --------------  */
+/*---------------------------------------*/
+
+#contact{
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	background-color: rgb(240,240,240);
+	display: none;
+	z-index: 0;
+}
+
+#contact h1{
+	width: 80%;
+	display: block;
+	padding-top: 50px;
+	font-family: "Abril Fatface";
+	font-size: 40px;
+	color: #a34949;
+}
+
+#mail{
+	font-family: "Roboto";
+	font-weight: 100;
+	font-size: 70px;
+	color: rgba(170,170,170,0.8);
+	text-decoration: none;
+	transition: 150ms linear;
+}
+
+#mail:hover{
+	color: #a34949;
+}
+
+#contactSeparator{
+	display: block;
+	width: 20%;
+	border-bottom: 4px solid #a34949;
+	margin: 60px auto 60px auto;
+}
+
+
+
+#contactWrap{
+	width: 80%;
+	max-width: 800px;
+	padding: 60px 0px 0px 0px;
+	display: flex;
+	text-align: center;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#infoWrap{
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
+	position: relative;
+	text-align: center;
+	order: 3;
+	-webkit-order:3;
+}
+
+
+
+#contactText{
+	display: inline-block;
+	font-family: 'Roboto';
+	font-size: 18px;
+	color: rgba(170,170,170,0.8);
+	text-align: center;
+	background: rgb(240,240,240);
+	padding: 10px 20px 18px 20px;
+	border-radius: 2px;
+	box-shadow: 0px 4px 10px 1px rgb(200,200,200);
+	transition: 80ms linear;
+}
+
+#contactText p{
+	margin-top: 10px;
+}
+
+#contactText:hover{
+	transform: scale(1.1);
+	background-color: rgb(250,250,250);
+	box-shadow: 0px 4px 10px 1px rgb(170,170,170);
+	color: rgb(170,170,170);
+}
+
+
+
+.socMedia{
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: rgb(240,240,240);
+	box-shadow: 0px 4px 10px 1px rgb(200,200,200);
+	transition: 0.12s linear;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+
+
+.socMedia i{
+	position: relative;
+	display: block;
+	padding-top: 17px;
+	text-decoration: none;
+	color: rgba(170,170,170,0.8);
+	transition: color 80ms linear;
+	width: 100%;
+	height: 80px;
+	font-size: 45px;
+}
+
+
+
+
+#github{
+	order: 1;
+}
+#linked{
+	order: 2;
+}
+#twitter{
+	order: 4;
+}
+#facebook{
+	order: 5;
+}
+
+.socMedia:hover{
+	transform: scale(1.2);
+	background-color: rgb(250,250,250);
+	box-shadow: 0px 4px 10px 1px rgb(170,170,170);
+}
+
+
+
+#github:hover > i{
+	color: rgb(60, 60, 60);
+}
+
+#linkedin:hover > i{
+	color:#007bb6;
+}
+
+#twitter:hover > i{
+	color: #00aced;
+}
+
+#facebook:hover > i{
+	color: #3b5998;
+}
+
+
+#copyright{
+	padding: 60px 0 20px 0;
+	color: rgb(220,220,220);
+	font-size: 18px;
+}
+
+
+

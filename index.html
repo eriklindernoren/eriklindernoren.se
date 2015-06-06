@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="E_Icon.ico" />
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
 
 	<!-- 'abril Fatface' -->
@@ -66,29 +65,29 @@
 		<div id="aboutText">
 			<h1 id="hello">Hello,</h1>
 			<p><br>
-				My name is Erik Linder-Norén and I'm currently studying towards a Master of Science in Computer Science and I'm really enjoying it this far. <br>This site is meant to function as a online resume of mine but has also been my way of learning web development and web design. <br> I've always loved sketching, tinkering with things and exploring new tools to create with. The joy in building might have originated in my Lego days as a kid, and later evolved to putting computers together in my younger teen years to as of now really enjoying building with ones and zeros.<br><br>
-				I love how programming enables people to quickly explore new ideas and I've found that the best, and most fun way for me to learn is to explore the languages and tech in small side projects parallel to my studies and current employment. <br> The results of some of my side projects has spanned from iOS applications to goofy music production software for the OSX platform.<br><br>
+				My name is Erik Linder-Norén and I'm currently studying towards a Master of Science in Computer Science and I'm really enjoying it this far. This site is meant to function as a online resume of mine but has also been my way of learning web development and web design. <br> I've always loved sketching, tinkering with things and exploring new tools to create with. The joy in building might have originated in my Lego days as a kid, and later evolved to putting computers together in my younger teen years to as of now really enjoying building with ones and zeros.<br>
+				I love how programming enables people to quickly explore new ideas and I've found that the best, and most fun way for me to learn is to explore the languages and tech in small side projects parallel to my studies and current employment. <br> The results of some of my side projects has spanned from iOS applications to goofy music production software for the OSX platform.<br>
 				I have since june 2014 been employed by Ericsson as a software developer. I'm currently developing a command-line interface for handling communications with Radio Base Stations using the NETCONF protocol. <br><br>
 				I'm a huge fan of all things basketball and watches just about every Boston Celtics game. 
-				<br><br> I would very much like to hear from you so don't hesitate to say hello!
+				<br><br> Don't hesitate to say hello!
 			</p>
+			<div id="aboutSeparator"></div>
 			<div id="resume"><a href="pdf/cv.pdf" target="_black"> My Resume <div class="expandingUnderline"></div></a></div>
 		</div>
 		<div id="interests">
-			<div id="pencil" class="interestHolder">
+			<div id="pencil" class="interestHolder wow fadeInLeftBig" data-wow-offset="-30">
 				<i class="inner fa fa-pencil"></i>
 			</div>
-			<div id="laptop" class="interestHolder">
+			<div id="laptop" class="interestHolder wow fadeInLeftBig" data-wow-offset="-30">
 				<i class="inner fa fa-laptop"></i>
 			</div>
-			<div id="coffee" class="interestHolder">
+			<div id="coffee" class="interestHolder wow fadeInRightBig" data-wow-offset="-30">
 				<i class="inner fa fa-coffee"></i>
 			</div>
-			<div id="basketball" class="interestHolder">
+			<div id="basketball" class="interestHolder wow fadeInRightBig" data-wow-offset="-30">
 				<i class="inner fa fa-dribbble"></i>
 			</div>
 		</div>
-
 	</section>
 
 
@@ -160,12 +159,12 @@
 			<div class="flip3d wow fadeInDownBig">
 				<div class="workButton">
 					<a data-target="mediaM" data-color ="red">
-						<h1>Media Markt</h1>
+						<p>Media Markt</p>
 					</a>
 				</div>
 				<div class="workButtonBack">
 					<a data-color ="red">
-						<h1>Salesman</h1>
+						<p>Salesman</p>
 						<em>2009</em>
 					</a>
 				</div>
@@ -173,12 +172,12 @@
 			<div class="flip3d wow fadeInDownBig">
 				<div class="workButton">
 					<a data-target="onoff" data-color ="red">
-						<h1>Onoff</h1>
+						<p>Onoff</p>
 					</a>
 				</div>
 				<div class="workButtonBack">
 					<a data-color ="red">
-						<h1>Salesman</h1>
+						<p>Salesman</p>
 						<em>2012</em>
 					</a>
 				</div>
@@ -186,12 +185,12 @@
 			<div class="flip3d wow fadeInDownBig">
 				<div class="workButton">
 					<a data-target="siba" data-color ="red">
-						<h1>Siba</h1>
+						<p>Siba</p>
 					</a>
 				</div>
 				<div class="workButtonBack">
 					<a data-color ="red">
-						<h1>Salesman</h1>
+						<p>Salesman</p>
 						<em>2012-2013</em>
 					</a>
 				</div>
@@ -199,12 +198,12 @@
 			<div class="flip3d wow fadeInDownBig">
 				<div class="workButton">
 					<a data-target="ericsson" data-color ="red">
-						<h1>Ericsson</h1>
+						<p>Ericsson</p>
 					</a>
 				</div>
 				<div class="workButtonBack">
 					<a data-color ="red">
-						<h1>Software Developer</h1>
+						<p>Software Developer</p>
 						<em>2014-</em>
 					</a>
 				</div>
@@ -251,11 +250,10 @@
 				<div class="projWrapper">
 					<div class="info">
 						<a href="https://github.com/eriklindernoren/MapApp"  target="_blank">Geolocation Application</a>
-						<br>
 						<em>iOS development</em>
 						<p>This was a project I did to get more practice with Swift. It started out in me wanting to build a user interface for the Google Maps SDK and then evolved to adding as much location based information from APIs out there as I could find. The application could with the help of APIs from several photo sharing services display the most recently taken photo from the tagged location. The most interesting part in working on this project was using a bunch of APIs together and realizing how much great accessible stuff that is out there.</p>
-						<br>
-						<em>Programming languages and tools used:</em>
+						<div class="projSeparatorLeft"></div>
+						<em>Programming languages and tools used</em>
 						<ul>
 							<li>Swift</li>
 							<li>Google Maps SDK</li>
@@ -266,6 +264,7 @@
 							<li>Wikipedia API</li>
 						</ul>
 					</div>
+					<div class="projSeparatorRight"></div>
 					<div class="imageDiv">
 						<img src="images/sliderImage1.jpeg"></img>
 						<a class="imgText" href="https://github.com/eriklindernoren/MapApp"  target="_blank">
@@ -278,11 +277,10 @@
 				<div class="projWrapper">
 					<div class="info">
 						<a href="https://github.com/eriklindernoren/BraBars"  target="_blank">Bra Bärs</a>
-						<br>
 						<em>iOS development</em>
 						<p>The idea of the app is to be able to navigate the beers available at the Swedish alcohol monopoly Systembolaget and sort beers by professional and customer reviews, by prices and by the users favourite type of beer. <br>I used the API supplied by Systembolaget to get information about the current supply, and added images from a separate API. <br>There was no way of requesting data from Systembolaget specified by categories at a time, and I thereby decided to build a XML-parser in Java to seperate the data that was relevant to that which was not. </p>
-						<br>
-						<em>Programming languages and tools used:</em>
+						<div class="projSeparatorLeft"></div>
+						<em>Programming languages and tools used</em>
 						<ul>
 							<li>Swift</li>
 							<li>Java</li>
@@ -291,6 +289,7 @@
 							<li>Systembolagetapi.se API</li>
 						</ul>
 					</div>
+					<div class="projSeparatorRight"></div>
 					<div class="imageDiv">
 						<img src="images/sliderImage2.jpeg"></img>
 						<a class="imgText" href="https://github.com/eriklindernoren/BraBars"  target="_blank">
@@ -303,16 +302,16 @@
 				<div class="projWrapper">
 					<div class="info">
 						<a href="https://github.com/eriklindernoren/Sonus-JFugueUI"  target="_blank">Sonus</a>
-						<br>
 						<em>Music composing app built around JFugue API</em>
 						<p>This was a project that I did with a classmate in a Java class that we had. The project was not meant to take up as much time that it did in the end, but it was really fun working on. <br> I was after the course ended employed by Ericsson for the summer and ended up building my project there solely in Java and I think that the time that we put into our Java project in the class before helped me out at Ericsson in the beginning. <br><br>Most other project groups ended up doing games as their project but we decided early on that we wanted to build a tool of some sort. We did a little research about fun modules out there for Java and we found JFugue. <br> JFugue makes it easy to compose music just by entering strings of the achords to be played and by what instrument.</p>
-						<br>
-						<em>Programming languages and tools used:</em>
+						<div class="projSeparatorLeft"></div>
+						<em>Programming languages and tools used</em>
 						<ul>
 							<li>Java</li>
 							<li>JFugue API</li>	
 						</ul>
 					</div>
+					<div class="projSeparatorRight"></div>
 					<div class="imageDiv">
 						<img src="images/sliderImage3.jpeg"></img>
 						<a class="imgText" href="https://github.com/eriklindernoren/Sonus-JFugueUI"  target="_blank">
@@ -325,19 +324,19 @@
 				<div class="projWrapper">
 					<div class="info">
 						<a href="https://github.com/eriklindernoren/eriklindernoren.se"  target="_blank">This website</a>
-						<br>
 						<em>Web development</em>
 						<p>I have wanted to get into learning web development for a long time and it was fun to finally find the inspiration. The idea of building sort of like a digital resume came from a friend who talked to me about building one himself and I thought it sounded like a fun way to get my web development ball rolling. <br> This site has been built in HTML, CSS and Javascript using Gulp as the build system. During the process of building it I have used tools such as jQuery, Animate.css, Wow.js, Font Awesome and a couple of Google Fonts. Working on this site has been a great learning experience for me and I already look forward to the next web dev project.</p>
-						<br>
-						<em>Programming languages and tools used:</em>
+						<div class="projSeparatorLeft"></div>
+						<em>Programming languages and tools used</em>
 						<ul>
 							<li>HTML</li>
 							<li>CSS</li>
 							<li>Javascript</li>
 							<li>Gulp</li>
 							<li>JQuery</li>
-						</ul>
+						</ul>							
 					</div>
+					<div class="projSeparatorRight"></div>
 					<div class="imageDiv">
 						<img src="images/sliderImage4.jpeg"></img>
 						<a class="imgText" href="https://github.com/eriklindernoren/eriklindernoren.se"  target="_blank">
@@ -396,10 +395,20 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="js/all.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-63052877-1', 'auto');
+	ga('send', 'pageview');
+
+	</script>
 
 </body>
 </html>

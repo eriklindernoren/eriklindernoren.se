@@ -25,11 +25,11 @@ $(document).ready(function(){
         if(target == "#contact"){
            $('html, body').animate({
             scrollTop: $(document).height()
-        }, 800, "easeOutSine");       
+        }, 800, "linear");       
        }else{
         $('html, body').animate({
             scrollTop: $(target).offset().top
-        }, 800, "easeOutSine");
+        }, 800, "linear");
     }
 });
     $('#startImg').backstretch("./images/desk5.jpeg");
@@ -39,11 +39,13 @@ $(document).ready(function(){
 
 
     $('.imageDiv').hover(function(){
+        $(this).children('.imgText').delay(150);
+        $(this).children('.imgText').children('p').delay(150);
         $(this).children('.imgText').animate({'height':'20%'},200, "linear");
-        $(this).children('.imgText').children('p').animate({'opacity': '1'},200,"linear");
+        $(this).children('.imgText').children('p').animate({'opacity': '1'},100,"linear");
     },function(){
         $(this).children('.imgText').animate({'height':'0'},200, "linear");
-        $(this).children('.imgText').children('p').animate({'opacity': '0'},200,"linear");
+        $(this).children('.imgText').children('p').animate({'opacity': '0'},100,"linear");
     });
 
     var whatBackground = function(scrolledY){
@@ -122,10 +124,10 @@ $(document).ready(function(){
 var up = true;
 $('.showNav').click(function(){
     if(up){       
-        $('.lowerMNavList').slideDown(400);
+        $('.lowerMNavList').slideDown(400, "linear");
         up = false;
     }else{
-        $('.lowerMNavList').slideUp(400);
+        $('.lowerMNavList').slideUp(400, "linear");
         up = true;
     }
 });
@@ -138,18 +140,18 @@ var isShowing = false;
 var showWork = function(){
     var _this = '.' + $(this).children('.workButton').children('a').data("target");
     if(isShowing && _this != lastUsed){
-        $('#popDownWrapper').slideUp(400, "easeInSine");
+        $('#popDownWrapper').slideUp(300, "linear");
         $(lastUsed).hide();
-        $('#popDownWrapper').slideDown(400, "easeOutSine");
-        $(_this).delay(300).fadeIn(400);
+        $('#popDownWrapper').slideDown(300, "linear");
+        $(_this).delay(300).fadeIn(300);
     }
     else if(isShowing){
-        $('#popDownWrapper').slideUp(400, "easeInSine");
-        $(lastUsed).fadeOut(400);
+        $('#popDownWrapper').slideUp(300, "linear");
+        $(lastUsed).fadeOut(300);
         isShowing = false;
     }else {
-        $(_this).fadeIn(400);
-        $("#popDownWrapper").slideDown(400, "easeOutSine");
+        $(_this).fadeIn(300);
+        $("#popDownWrapper").slideDown(300, "linear");
         isShowing = true;
     }
     lastUsed = _this;
