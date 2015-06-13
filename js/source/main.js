@@ -23,10 +23,10 @@ $(document).ready(function(){
         event.preventDefault();
         var target = "#" + this.getAttribute('data-target');
         if(target == "#contact"){
-           $('html, body').animate({
+         $('html, body').animate({
             scrollTop: $(document).height()
         }, 800, "linear");       
-       }else{
+     }else{
         $('html, body').animate({
             scrollTop: $(target).offset().top
         }, 800, "linear");
@@ -52,18 +52,18 @@ $(document).ready(function(){
 
         var halfStart = $(window).height()*1/2;
         var noStart = $(window).height();
-        var shiftContact = $('.projects').offset().top - $('.experience').height();
+        var shiftContact = $('.projects').offset().top - 100;
 
-        if(scrolledY > shiftContact+100){
-            $('#schoolImg').hide();
-            $('#startImg').hide();
+        if(scrolledY > shiftContact){
             $('#contact').show();
         }else{
-            $('#schoolImg').show();
-            if(scrolledY <= 0) $('#schoolImg').hide();
-            $('#startImg').show();
             $('#contact').hide();
+            if(scrolledY > 100)
+                $('#schoolImg').show();
+            else 
+                $('#schoolImg').hide();
         }
+
     }
 
 
@@ -85,8 +85,8 @@ $(document).ready(function(){
                 var swoop = -Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 900);
             }else {
                 if(scrolledY < goal){
-                 var swoop = Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
-             }else{
+                   var swoop = Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
+               }else{
                 swoop = 0;
             }
         }
@@ -102,8 +102,8 @@ $(document).ready(function(){
             var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 400);            
         }else{
             if(scrolledY < goal){
-             var swoopX = -Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
-         }else{
+               var swoopX = -Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
+           }else{
             swoopX = 0;
         }
     }
@@ -123,11 +123,13 @@ $(document).ready(function(){
 
 var up = true;
 $('.showNav').click(function(){
-    if(up){       
+    if(up){
+        $('.lowerMNavList > a').fadeIn(300);
         $('.lowerMNavList').slideDown(400, "linear");
         up = false;
     }else{
         $('.lowerMNavList').slideUp(400, "linear");
+        $('.lowerMNavList > a').fadeOut(300);
         up = true;
     }
 });
@@ -193,32 +195,32 @@ $(".slideDir").on("click", function(){
 var prevScreenWidth;
 var setupWindowSize = function(){
     if(window.innerWidth > 668){
-        $('#startImg').backstretch("./images/desk5.jpeg");
+            $('#startImg').backstretch("./images/desk5.jpeg");
             //$('#schoolImg').backstretch(["./images/zurich1.jpeg", "./images/liu.jpeg"], {duration:10000, fade:'slow'});
             $('#schoolImg').backstretch("./images/zurich1.jpeg");
             if(prevScreenWidth <= 668){
 
                 $('#contact').css({
                     "display": "block",
-                    "z-index": "0",
                     "position": "fixed",
-                    'bottom': '0'
+                    'bottom': '0',
+                    'z-index': '2'
                 });
             }        
             $('.projects').css({"margin-bottom": "620px"});
         }else{
-           $('#startImg').backstretch("./images/desk1mobile.jpeg");
-           $('.projects').css({"margin-bottom": "0px"});
-           $('#contact').css({
+         $('#startImg').backstretch("./images/desk1mobile.jpeg");
+         $('.projects').css({"margin-bottom": "0px"});
+         $('#contact').css({
             "display": "block",
             "z-index": "3",
             "position": "relative",
             'bottom': '0'
         });
-       }
+     }
 
 
-       if(window.innerWidth <= 925 && prevScreenWidth > 925){
+     if(window.innerWidth <= 925 && prevScreenWidth > 925){
         $('#navbar').fadeOut(600);
         $('#mobileNav').fadeIn(600);
     }else if(window.innerWidth > 925 && prevScreenWidth <= 925){
@@ -238,39 +240,38 @@ var setUpDisplayTypesForPopups = function(){
     "display": "-ms-flexbox", 
     "display": "-webkit-flex",
     "display": "flex"
-});
+    });
   $('.lowerMNavList').hide(); 
-
 }
+
+
 
 setUpDisplayTypesForPopups();
 
-
-
-
     // Show navigation background, "scroll to top"-button
-    var lastDistTop = 0;
+    var lastDistTop = $(window).scrollTop;
+    var navPos = "down";
     $(document).scroll(function(){
-
         var distTop = $('body').scrollTop();
         var scrollDif = lastDistTop - distTop;
         var isHover = $('#navbar').is(":hover");
         var navBackground = startscreenHeight - 80;
         if(window.innerWidth > 925){
-            if(distTop > lastDistTop && distTop > 200 && !isHover){
-                $('#navbar').fadeOut(800);
+            if((navPos == 'down') && scrollDif < 0 && distTop > 200 && !isHover){
+                $('#navbar').css({'transform': 'translateY(-75px)'});
+                navPos = 'up';
             }
-            else if(scrollDif > 20 || distTop < 200){
-                $('#navbar').css({'background-color': 'rgba(0,0,0,0.5)'});
-                $('#navbar').fadeIn(800);
+            else if((navPos == 'up') && (scrollDif > 20 || distTop < 200)){
+                $('#navbar').css({'transform': 'translateY(0px)'});
+                navPos = 'down';
             }
         }
 
-        if(distTop > 300 && window.innerWidth > 668){
-            $('.scrollToTop').fadeIn(400);
+        if(distTop > 200 && window.innerWidth > 668){
+            $('.scrollToTop').css({"transform": "translateY(-100px)"});
         }
         else{
-            $('.scrollToTop').fadeOut(400);
+            $('.scrollToTop').css({"transform": "translateY(100px)"});
         }
         lastDistTop = distTop;
     });

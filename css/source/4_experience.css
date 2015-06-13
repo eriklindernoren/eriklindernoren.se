@@ -12,7 +12,7 @@
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
-
+	z-index: 3;
 	transform: translate3d(0,0,0);
 
 }
@@ -52,7 +52,6 @@
 	height: 200px;
 	border-radius: 50%;
 	cursor: pointer;
-	backface-visibility: hidden;
 	transition: 0.4s linear 0s;
 	display: flex;
 	align-items: center;
@@ -64,7 +63,7 @@
 
 .flip3d > .workButton{
 	transform: perspective(600px) rotateY(0deg);
-	background-color: rgb(240,240,240);
+	background-color: rgb(245,245,245);
 }
 
 .flip3d > .workButtonBack{
@@ -110,11 +109,11 @@
 }
 
 .workButton p{
-	color: rgba(0,0,0,0.2);
+	color: rgb(140,140,140);
 }
 
 .workButtonBack p{
-	color: rgb(240,240,240);
+	color: rgb(245,245,245);
 }
 
 
@@ -132,7 +131,7 @@
 .workplace p{
 	font-size: 20px;
 	line-height: 30px;
-	color: rgb(150,150,150);
+	color: rgb(140,140,140);
 }
 
 .workplace h4{
@@ -144,7 +143,7 @@
 
 #popDownWrapper{
 	width: 100%;
-	background-color: rgb(240,240, 240);
+	background-color: rgb(245,245,245);
 	padding: 50px 0 50px 0;
 	margin: 0 auto;
 	display: none;

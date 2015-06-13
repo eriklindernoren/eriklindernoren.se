@@ -5,13 +5,13 @@
 /*---------------------------------------*/
 
 .startscreen{
-	display: block;
 	width: 100%;
 	height: 100vh;
 	text-align: center;
-	overflow: hidden;
 	position: relative;
+	overflow: hidden;
 }
+
 
 
 #startImg{
@@ -19,25 +19,21 @@
 	top: 0%;
 	width: 100%;
 	height: 110vh;
-	z-index: 1;
+	z-index: 0;
 }
-
 
 
 .startscreen .img-circle{
 	position: absolute;
 	top: 25%;
-	margin-left: auto;
-	margin-right: auto;
 	left: 0;
 	right: 0;
 	border-radius: 50%;
 	width: 200px;
 	height: 200px;
-	z-index: 5;
+	z-index: 2 !important;
+	backface-visibility: hidden;
 }
-
-
 
 
 .startscreen h1{
@@ -47,7 +43,8 @@
 	right: 0;
 	font-family: 'abril Fatface';
 	font-size: 40px;
-	color: rgb(240,240,240);
-	z-index: 5;
+	color: rgb(245,245,245);
+	z-index: 2 !important;
+	backface-visibility: hidden;
 }
 
