@@ -17,6 +17,7 @@
 	text-align: center;
 
 	transform: translate3d(0,0,0);
+	box-shadow: inset 0px -3px 2px 3px rgba(193, 103, 103, 0.6), 0px 2px 4px 1px rgb(140,140,140);
 }
 
 .slideWrapper{

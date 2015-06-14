@@ -14,6 +14,7 @@
 	justify-content: center;
 	position: relative;
 	z-index: 3;
+	box-shadow: inset 0px 3px 5px 1px rgb(255, 245, 205), inset 0px -3px 5px 1px rgb(255, 245, 205), 0px -1px 10px 5px rgba(80,80,80, 0.3), 0px 1px 20px 5px rgba(80,80,80, 0.3);
 }
 
 
@@ -21,6 +22,7 @@
 	font-family: 'Abril Fatface';
 	font-size: 40px;
 	color: #5A352D;
+	padding: 0;
 	margin-bottom: 10px;
 }
 
@@ -34,7 +36,7 @@
 }
 
 #aboutText{
-	padding: 80px 0 50px 0;
+	padding: 80px 0 40px 0;
 	max-width: 800px;
 	margin: 0 auto;
 	width: 80%;

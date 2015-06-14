@@ -14,6 +14,7 @@
 	text-align: center;
 	z-index: 3;
 	transform: translate3d(0,0,0);
+	box-shadow: inset 0px 2px 5px 1px rgb(245, 245, 245), 0px -1px 20px 5px rgba(80,80,80, 0.4);
 
 }
 
