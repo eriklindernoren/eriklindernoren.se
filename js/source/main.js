@@ -32,7 +32,7 @@ $(document).ready(function(){
         }, 800, "linear");
     }
 });
-    $('#startImg').backstretch("./images/desk5.jpeg");
+    $('#startImg').backstretch("./images/desk5dyed.jpeg");
 
     //$('#schoolImg').backstretch(["./images/zurich1.jpeg", "./images/liu.jpeg"], {duration:10000, fade:'slow'});
     $('#schoolImg').backstretch("./images/zurich1.jpeg");
@@ -195,7 +195,7 @@ $(".slideDir").on("click", function(){
 var prevScreenWidth;
 var setupWindowSize = function(){
     if(window.innerWidth > 668){
-            $('#startImg').backstretch("./images/desk5.jpeg");
+            $('#startImg').backstretch("./images/desk5dyed.jpeg");
             //$('#schoolImg').backstretch(["./images/zurich1.jpeg", "./images/liu.jpeg"], {duration:10000, fade:'slow'});
             $('#schoolImg').backstretch("./images/zurich1.jpeg");
             if(prevScreenWidth <= 668){

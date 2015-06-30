@@ -13,8 +13,10 @@
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+	border-top: 1px solid #ffdbaa;
+	border-bottom: 1px solid #ffdbaa;
 	z-index: 3;
-	box-shadow: inset 0px 3px 5px 1px rgb(255, 245, 205), inset 0px -3px 5px 1px rgb(255, 245, 205), 0px -1px 10px 5px rgba(80,80,80, 0.3), 0px 1px 20px 5px rgba(80,80,80, 0.3);
+	box-shadow: inset 0px 3px 6px 0px rgb(255, 245, 205), inset 0px -3px 6px 0px rgb(255, 245, 205), 0px -3px 5px 3px rgba(0,0,0, 0.2), 0px 3px 5px 3px rgba(0,0,0, 0.2);
 }
 
 
@@ -24,6 +26,7 @@
 	color: #5A352D;
 	padding: 0;
 	margin-bottom: 10px;
+	text-shadow: 2px 3px 4px rgb(205,169,120);
 }
 
 #aboutSeparator{
@@ -33,6 +36,7 @@
 	width: 30%;
 	border-bottom: 4px solid #5A352D;
 	margin: 70px auto 60px 0;
+	box-shadow: 2px 2px 2px 1px rgb(205,169,120);
 }
 
 #aboutText{
