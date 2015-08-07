@@ -22,7 +22,7 @@ h1{
 }
 
 p{
-	line-height: 25px;
+	line-height: 28px;
 }
 
 div{
@@ -111,6 +111,9 @@ div{
 
 #navbar{
 	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	top: 0px;
 	width: 100%;
 	z-index: 50;
@@ -128,6 +131,7 @@ div{
 	text-align: center;
 	overflow: hidden;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
 }
@@ -356,6 +360,10 @@ div{
 	#contactWrap{
 		display: block;
 		text-align: center;
+	}
+
+	.timeLine{
+		display: none;
 	}
 
 	#workWrapper{

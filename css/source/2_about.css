@@ -15,6 +15,7 @@
 	position: relative;
 	border-top: 1px solid #ffdbaa;
 	border-bottom: 1px solid #ffdbaa;
+	overflow: hidden;
 	z-index: 3;
 	box-shadow: inset 0px 3px 6px 0px rgb(255, 245, 205), inset 0px -3px 6px 0px rgb(255, 245, 205), 0px -3px 5px 3px rgba(0,0,0, 0.2), 0px 3px 5px 3px rgba(0,0,0, 0.2);
 }

@@ -11,15 +11,23 @@
 	padding: 100px 0 100px 0;
 	position: relative;
 	overflow: hidden;
+}
 
+
+#eduContent{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
 }
 
 #schoolImg{
+	display: none;
 	position: fixed;
-	top: 0%;
+	top: 0;
 	width: 100%;
-	height: 100vh;
-
+	height: 100%;
+	z-index: 2;
 }
 
 
@@ -30,7 +38,6 @@
 	margin: 0 auto;
 	text-align: center;
 	display: flex;
-
 	align-items: center;
 	justify-content: space-around;
 }
@@ -50,8 +57,6 @@
 	z-index: 2;
 	transition: linear;
 	transform: translate3D(0,0,0);
-
-
 }
 
 #textContainer{
