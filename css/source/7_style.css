@@ -39,7 +39,7 @@ div{
 /*	---------- NON SELECTABLE -----------*/
 /*---------------------------------------*/
 
-.img-circle, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobileNav, a, #startImg, #schoolImg{
+#profileImg, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobileNav, a, #startImg, #schoolImg{
 	user-select: none;
 }
 
@@ -79,6 +79,7 @@ div{
 	height: 50px;
 	font-size: 45px;
 	transform: translateY(-15px) translateX(10px);
+	transition: transform 0.5s linear;
 }
 
 
@@ -347,7 +348,7 @@ div{
 		display: none;
 	}
 
-	.startscreen .img-circle{
+	#profileImg{
 		width: 180px;
 		height: 180px;
 	}
@@ -362,7 +363,7 @@ div{
 		text-align: center;
 	}
 
-	.timeLine{
+	.smallButton{
 		display: none;
 	}
 
@@ -464,7 +465,7 @@ div{
 		font-size: 24px;
 	}
 
-	.startscreen .img-circle{
+	#profileImg{
 		width: 130px;
 		height: 130px;
 	}

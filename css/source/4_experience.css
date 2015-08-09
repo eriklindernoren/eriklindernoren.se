@@ -29,6 +29,7 @@
 	font-weight: 700;
 	font-size: 40px; 
 	color: rgb(170,170,170);
+	transition: color 150ms linear;
 }
 
 #workWrapper{
@@ -39,14 +40,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	z-index: 2;
 }
 
 
 .flip3d{
 	position: relative;
 	margin: 0 auto;
-	width: 200px;
-	height: 200px;
 	transform: translate3D(0,0,0);
 }
 
@@ -54,50 +54,46 @@
 
 .flip3d > div{
 	position: absolute;
-	width: 200px;
-	height: 200px;
 	border-radius: 50%;
-	cursor: pointer;
 	transition: 0.4s linear 0s;
+	width: 100%;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 1px 5px 10px 1px rgb(150,150,150);	
 }
 
+.bigButton{
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+	opacity: 0;
+}
 
 
-.flip3d > .workButton{
+.bigButton > .workButton{
 	transform: perspective(600px) rotateY(0deg);
 	background-color: rgb(245,245,245);
 }
 
-.flip3d > .workButtonBack{
+.bigButton > .workButtonBack{
 	background-color: rgb(140,140,140);
 	transform: perspective(600px) rotateY(180deg);
 }
 
 
-.flip3d:hover > .workButton{
+.bigButton:hover > .workButton{
 	transform: perspective(600px) rotateY(-180deg);
 }
 
-.flip3d:hover > .workButtonBack{
+.bigButton:hover > .workButtonBack{
 	transform: perspective(600px) rotateY(0deg);
 }
 
 
 
-
-
-/*mm-color: rgba(198,8,20,0.6)*/
-/*onoff-color: rgba(26,168,46,0.6)*/
-/*siba-color: rgba(189,0,4,0.6)*/
-/*ericsson-color: rgba(26,33,79,0.6)*/
-
-
-
-.flip3d p{
+.bigButton p{
 	font-family: 'Roboto';
 	font-weight: 300;
 	font-size: 22px;
@@ -106,7 +102,7 @@
 	transition: color 150ms ease;
 }
 
-.flip3d em{
+.bigButton em{
 	font-family: 'Roboto';
 	font-weight: 300;
 	font-size: 18px;
@@ -114,11 +110,11 @@
 	color: rgb(200,200,200);
 }
 
-.workButton p{
+.flip3d .workButton p{
 	color: rgb(140,140,140);
 }
 
-.workButtonBack p{
+.flip3d .workButtonBack p{
 	color: rgb(245,245,245);
 }
 
@@ -136,23 +132,18 @@
 
 
 .workplace {
-	backface-visibility: hidden;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	right: 0;
 	left: 0;
 	margin-top: 40px;
-	width: auto;
 	max-width: 600px;
 	padding: 20px;
-	font-family: "Roboto";
-	font-weight: 300;
 	border-radius: 5px;
-	background-clip: rgb(240,240,240);
 	opacity: 0;
 	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
-	transform: rotate(0deg) scale(1.0);
+	z-index: -1;
 }
 
 .workplaceHeader{
@@ -164,6 +155,7 @@
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 20px;
+	z-index: 100;
 }
 
 .popdown{
@@ -184,6 +176,17 @@
 .popright{
 	animation-name: popright;
 	animation-duration: 0.5s;
+}
+
+.popdownBig{
+	animation-name: popdownBig;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes popdownBig{
+	0%   {opacity: 0;transform: translateY(-1400px);}
+	100%   {transform: translateY(0px); opacity: 1;}
 }
 
 @keyframes popdown{
@@ -213,29 +216,40 @@
 }
 
 
-.timeLine{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: rgb(235,235,235);
-	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
-	font-weight: 300;
-	border-radius: 50%;
-	font-size: 22px;
+
+.smallButton{
 	width: 80px;
 	height: 80px;
-	color: rgb(120,120,120);
-	transition: 0.5s linear;
-}
-
-.timeLineFrom{
-	left: 20px;
 }
 
 
-.timeLineTo{
-	right: 20px;
+.smallButton > .workButton{
+	transform: perspective(600px) rotateY(0deg);
+	background-color: rgb(245,245,245);
 }
+
+.smallButton > .workButtonBack{
+	background-color: rgb(140,140,140);
+	transform: perspective(600px) rotateY(180deg);
+}
+
+
+.smallButton:hover > .workButton{
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+.smallButton:hover > .workButtonBack{
+	transform: perspective(600px) rotateY(0deg);
+}
+
+
+
+.smallButton p{
+	font-size: 22px;
+	font-family: "Roboto";
+	font-weight: 300;
+}
+
 
 .position{
 	display: block;

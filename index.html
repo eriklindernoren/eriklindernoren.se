@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="E_Icon.ico" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
 
 	<!-- 'abril Fatface' -->
 	<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
@@ -56,7 +55,7 @@
 
 	<section id="homescreen" class="startscreen">
 		<div id="startContent">
-			<img src="images/bild.jpeg" class="img-circle wow flipInY" alt="Chania">
+			<img src="images/bild.jpeg" id="profileImg" alt="Chania">
 			<h1>- Erik Linder-Norén -</h1>
 		</div>
 		<div id="startImg"></div>
@@ -157,7 +156,7 @@
 		<div class="expUpper">
 			<h1>Experience</h1>
 			<div id="workWrapper">
-				<div class="flip3d wow fadeInDownBig">
+				<div class="flip3d bigButton">
 					<div class="workButton">
 						<a data-target="mediaM" data-color ="red">
 							<p>Media Markt</p>
@@ -166,11 +165,11 @@
 					<div class="workButtonBack">
 						<a data-color ="red">
 							<p>Salesman</p>
-							<em>2009</em>
+							<em>2009-2010</em>
 						</a>
 					</div>
 				</div>
-				<div class="flip3d wow fadeInDownBig">
+				<div class="flip3d bigButton">
 					<div class="workButton">
 						<a data-target="onoff" data-color ="red">
 							<p>Onoff</p>
@@ -183,7 +182,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="flip3d wow fadeInDownBig">
+				<div class="flip3d bigButton">
 					<div class="workButton">
 						<a data-target="siba" data-color ="red">
 							<p>Siba</p>
@@ -196,7 +195,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="flip3d wow fadeInDownBig">
+				<div class="flip3d bigButton">
 					<div class="workButton">
 						<a data-target="ericsson" data-color ="red">
 							<p>Ericsson</p>
@@ -205,7 +204,7 @@
 					<div class="workButtonBack">
 						<a data-color ="red">
 							<p>Software Developer</p>
-							<em>2014-</em>
+							<em>2014-2015</em>
 						</a>
 					</div>
 				</div>
@@ -214,48 +213,104 @@
 		<div id="popDownWrapper">
 			<div class="mediaM workplace">
 				<div class="workplaceHeader">
-					<h4 class="timeLine timeLineFrom">2009</h4>
+					<div class="flip3d smallButton">
+						<div class="workButton">
+							<p>2009</p>
+						</div>
+						<div class="workButtonBack">
+							<p>From</p>
+						</div>
+					</div>
 					<div class="imgPosition">
 						<img src="images/mm.png" alt="">
-						<h4 class="position">Salesman</h4>
+						<p class="position">Salesman</p>
 					</div>
-					<h4 class="timeLine timeLineTo">2010</h4>
+					<div class="flip3d smallButton">
+						<div class="workButton">
+							<p>2010</p>
+						</div>
+						<div class="workButtonBack">
+							<p>To</p>
+						</div>
+					</div>
 				</div>
 				<p>I was one of 120 out of 6000 applicants who got employed when Media Markt opened their department store in Valbo.<br> I got a salesman education and got to experience the process of opening a new store. I got the chance to build the custom made computers that were used in the gaming department.</p>				
 			</div>
 
 			<div class="onoff workplace">
 				<div class="workplaceHeader">
-					<h4 class="timeLine timeLineFrom">2010</h4>
+					<div class="flip3d smallButton">
+						<div class="workButton">
+							<p>2010</p>
+						</div>
+						<div class="workButtonBack">
+							<p>From</p>
+						</div>
+					</div>
 					<div class="imgPosition">
 						<img src="images/onoff.svg" alt="">
-						<h4 class="position">Salesman</h4>
+						<p class="position">Salesman</p>
 					</div>
-					<h4 class="timeLine timeLineTo">2010</h4>
+					<div class="flip3d smallButton">
+						<div class="workButton">
+							<p>2010</p>
+						</div>
+						<div class="workButtonBack">
+							<p>To</p>
+						</div>
+					</div>
 				</div>
 				<p>My employment at Onoff gave me a new perspective on the home electronics business in that they had a clearer focus on sales figures. The sales figures were always available for the salesforce which created a competetive environment which I felt that Media Markt lacked.<br> The store was also much smaller than at Media Markt which gave me a chance to sell from all product categories which was a good learning experience.</p>				
 			</div>
 
 			<div class="siba workplace">
 				<div class="workplaceHeader">
-					<h4 class="timeLine timeLineFrom">2012</h4>
+					<div class="flip3d smallButton">
+						<div class="workButton">
+							<p>2012</p>
+						</div>
+						<div class="workButtonBack">
+							<p>From</p>
+						</div>
+					</div>
 					<div class="imgPosition">
 						<img src="images/siba.png" alt="">
-						<h4 class="position">Salesman</h4>
+						<p class="position">Salesman</p>
 					</div>
-					<h4 class="timeLine timeLineTo">2013</h4>
+					<div class="flip3d smallButton">
+						<div class="workButton">
+							<p>2013</p>
+						</div>
+						<div class="workButtonBack">
+							<p>To</p>
+						</div>
+					</div>
 				</div>
 				<p>I was the second best seller of credit in Sweden in the company for a period of a couple of months. Me and a fellow colleague was in charge of the computer department for a period. </p>
 			</div>
 
 			<div class="ericsson workplace">
 				<div class="workplaceHeader">
-					<h4 class="timeLine timeLineFrom">2014</h4>
+					<div class="flip3d smallButton">
+						<div class="workButton">
+							<p>2014</p>
+						</div>
+						<div class="workButtonBack">
+							<p>From</p>
+						</div>
+					</div>
 					<div class="imgPosition">
 						<img src="images/ericsson.gif" alt="">
-						<h4 class="position">Software Developer</h4>
+						<p class="position">Software Developer</p>
 					</div>
-					<h4 class="timeLine timeLineTo">2015</h4>
+					<div class="flip3d smallButton">
+						<div class="workButton">
+							<p>2015</p>
+						</div>
+						<div class="workButtonBack">
+							<p>To</p>
+						</div>
+					</div>
 				</div>
 				
 				<p>I have been developing a command-line interface for handling communication and manipulation of Radio Base Stations using the NETCONF protocol. I was also helped develop the COM abstraction layer on top of the NETCONF common library at Ericsson. The COM abstraction layer was used as back end of the application I was working on. Both were built in Java.<br> I was employed as a summer intern in the summer of 2014 and have since then worked on the project in parallel to my studies in Linköping.</p>				
@@ -352,7 +407,7 @@
 					<div class="info">
 						<a href="https://github.com/eriklindernoren/eriklindernoren.se"  target="_blank">This website</a>
 						<em>Web development</em>
-						<p>I have wanted to get into learning web development for a long time and it was fun to finally find the inspiration. The idea of building sort of like a digital resume came from a friend who talked to me about building one himself and I thought it sounded like a fun way to get my web development ball rolling. <br> This site has been built in HTML, CSS and Javascript using Gulp as the build system. During the process of building it I have used tools such as jQuery, Animate.css, Wow.js, Font Awesome and a couple of Google Fonts. Working on this site has been a great learning experience for me and I already look forward to the next web dev project.</p>
+						<p>I have wanted to get into learning web development for a long time and it was fun to finally find the inspiration. The idea of building sort of like a digital resume came from a friend who talked to me about building one himself and I thought it sounded like a fun way to get my web development ball rolling. <br> This site has been built in HTML, CSS and Javascript using Gulp as the build system. During the process of building it I have tried tools such as jQuery, Bootstrap, Animate.css, Wow.js, Font Awesome and a couple of Google Fonts. I have since getting a bit more accustomed to web development tried to limit my use of frameworks for the structure of the website and for animations and such. As it stands right now everything on this site is custom built using only HTML, CSS, Javascript and JQuery. <br> Working on this site has been a great learning experience for me and I already look forward to the next web dev project.</p>
 						<div class="projSeparatorLeft"></div>
 						<em>Programming languages and tools used</em>
 						<ul>
@@ -423,8 +478,6 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/all.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

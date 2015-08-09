@@ -18,9 +18,12 @@
 #startImg{
 	position: fixed;
 	top: 0;
+	bottom: 0;
 	width: 100%;
-	height: 100%;
 	z-index: 2;
+	background-image: url("../images/desk5dyed.jpeg");
+	background-position: center center;
+	background-size: cover;
 }
 
 #startContent{
@@ -32,7 +35,7 @@
 }
 
 
-.startscreen .img-circle{
+#profileImg{
 	position: absolute;
 	top: 25%;
 	left: 0;
@@ -40,6 +43,18 @@
 	border-radius: 50%;
 	width: 200px;
 	height: 200px;
+	opacity: 0;
+}
+
+.spin{
+	animation-name: spin;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes spin{
+	0%   	{opacity: 0;transform: rotateY(-90deg);}
+	100%   	{opacity: 1; transform: rotateY(0deg);}
 }
 
 
