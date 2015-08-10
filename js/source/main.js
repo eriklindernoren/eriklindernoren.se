@@ -15,11 +15,11 @@ $(document).ready(function(){
             scrollTop: $(document).height()
         }, 800, "linear");       
        }else{
-            $('html, body').animate({
-                scrollTop: $(target).offset().top
-            }, 800, "linear");
-        }
-    });
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 800, "linear");
+    }
+});
 
 
 
@@ -54,7 +54,6 @@ $(document).ready(function(){
             up = true;
         }
     });
-
 
 
 
@@ -116,25 +115,37 @@ $(document).ready(function(){
         $('#navbar').fadeIn(600);
     }
     prevScreenWidth = window.innerWidth;
-    }
+}
 
-    setupWindowSize();
-    $(window).resize(setupWindowSize);
+setupWindowSize();
+$(window).resize(setupWindowSize);
 
-    var setUpDisplayTypesForPopups = function(){
+var setUpDisplayTypesForPopups = function(){
 
-        $('.lowerMNavList').css({
-            "display": "-webkit-box",
-            "display": "-ms-flexbox", 
-            "display": "-webkit-flex",
-            "display": "flex"
+    $('.lowerMNavList').css({
+        "display": "-webkit-box",
+        "display": "-ms-flexbox", 
+        "display": "-webkit-flex",
+        "display": "flex"
+    });
+    $('.lowerMNavList').hide(); 
+}
+
+var periscopeIfMozilla = function(){
+    if($.browser.mozilla){
+        $('.eduPeriscope > div').removeClass('schoolImg');
+        $('.eduPeriscope').css({
+            'background-image': 'url("../images/zurich1.jpeg")',
+            'background-position': 'center center',
+            'background-attachment': 'fixed',
+            'background-size': 'cover'
         });
-        $('.lowerMNavList').hide(); 
     }
+}
+periscopeIfMozilla();
 
 
-
-    setUpDisplayTypesForPopups();
+setUpDisplayTypesForPopups();
 
     // Show navigation background, "scroll to top"-button
     var lastDistTop = $(window).scrollTop();
@@ -167,24 +178,24 @@ $(document).ready(function(){
 
 var lastUsed;
 var isShowing = false;
-var showWork = function(){
+function showWork(){
     var _this = '.' + $(this).children('.workButton').children('a').data("target");
     $('#popDownWrapper').css({'height': $(_this).outerHeight()+80+'px'});
     if(isShowing && _this != lastUsed){
         $(lastUsed).css({'opacity': '0', 'z-index': '-1'});
         $(lastUsed).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-            $(this).removeClass("popright");
-        }).addClass("popright");
+            $(this).removeClass("slideRight");
+        }).addClass("slideRight");
         $(_this).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-            $(this).removeClass("popleft");
-        }).addClass("popleft");
+            $(this).removeClass("slideInFromLeft");
+        }).addClass("slideInFromLeft");
         $(_this).css({'opacity': '1', 'z-index': '3'});
     }
     else if(isShowing){
         $(lastUsed).css({'opacity': '0', 'z-index': '-1'});
         $(lastUsed).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-            $(this).removeClass("popup");
-        }).addClass("popup");
+            $(this).removeClass("slideUp");
+        }).addClass("slideUp");
         $('#popDownWrapper').delay(100).queue(function (next) { 
             $(this).css('height', '0'); 
             next(); 
@@ -194,77 +205,126 @@ var showWork = function(){
     }else {
         $(_this).css({'opacity': '1', 'z-index': '3'});
         $(_this).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-            $(this).removeClass("popdown");
-        }).addClass("popdown");
+            $(this).removeClass("slideDown");
+        }).addClass("slideDown");
         isShowing = true;
     }
     lastUsed = _this;
 }
 
-var bigFlipButtonLoaded = false;
-var profileImageLoaded = false;
 
-var scrollAnimations = function(){
+function scrollAnimations(){
     var scrolledY = $(window).scrollTop();
     whatBackground(scrolledY);
 
-    var distToEdu = $('.education').offset().top - $(window).height();
+    var distToEdu = $('.education').offset().top - $(window).height() + 200;
     var distToProj = $('.projects').offset().top - 200;
     var distToAbout = $('.about').offset().top - $(window).height();
-    var distToExp = $('.education').offset().top + 500;
+    var distToExp = $('.experience').offset().top - 500;
     var distToExpLower = $('.projects').offset().top - 100;
     var distToProfileImage = $(window).outerHeight()/2; 
+    var distToZurich = distToEdu + 1000;
 
-    if(scrolledY < distToProfileImage && !profileImageLoaded){
-        $('#profileImg').addClass("spin");
-        profileImageLoaded =true;
+
+    var eduSummaryChildren = $('.eduSummary').children();
+    var eduTimelineChildren = $('.eduTimeline').children();
+
+    var appearFromBottomList = [
+    ['#hello', '#aboutSeparator', '#resume'], 
+    $('#interests').children(),
+    eduSummaryChildren, 
+    ['.eduSummary h1', '.eduTimeline h1'] 
+    ];
+
+    for(var i = 0; i < appearFromBottomList.length; i++){
+        var elements = appearFromBottomList[i];
+        for(var a = 0; a < elements.length; a++){
+            var elem = elements[a];
+            if(isScrolledIntoView(elem)){
+                $(elem).addClass("appearFromBottom");
+            }
+        }
+        
     }
 
-    if(scrolledY > distToExp && scrolledY < distToExpLower && !bigFlipButtonLoaded){
-        $('.bigButton').addClass("popdownBig");
-        bigFlipButtonLoaded = true;
-    }
+    var timelineItems = $('.time');
+    for(var i = 0; i < timelineItems.length; i++){
+        var elem = timelineItems[i];
+        if(isScrolledIntoView(elem)){
+            if((i%2)==0)
+                $(elem).addClass("appearFromRight");
+            else
+                $(elem).addClass("appearFromLeft");
 
-
-    if(scrolledY > distToEdu){
-        var goal = distToEdu + 700;
-        if(window.innerWidth <= 925){
-            var swoop = -Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 900);
-        }else {
-            if(scrolledY < goal){
-             var swoop = Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
-         }else{
-            swoop = 0;
         }
     }
 
-    $('.educationContainer > .eduTimeline').css({'transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
-    $('.educationContainer > .eduTimeline').css({'-webkit-transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
-    $('.educationContainer > .eduTimeline').css({'-moz-transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
-}
-
-if(scrolledY > distToEdu){
-    var goal = distToEdu + 700;
-    if(window.innerWidth <= 925){
-        var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 400);            
-    }else{
-        if(scrolledY < goal){
-            var swoopX = -Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
-        }else{
-            swoopX = 0;
+    var eduSumSeparators = $('.eduSummary .eduBorder');
+    for(var i = 0; i < eduSumSeparators.length; i++){
+        var elem = eduSumSeparators[i];
+        if(isScrolledIntoView(elem)){
+            $(elem).addClass("expand70");
         }
     }
 
+    if(isScrolledIntoView('#profileImg')){
+        $('#profileImg').addClass("spinAppearance");
+    }
 
-    var swoopY = -swoopX / 3;
+    if(isScrolledIntoView('#eduPeriscopeWrapper .eduBorder')){
+        $('#eduPeriscopeWrapper .eduBorder').addClass("expand20");
+    }
 
-    $('.educationContainer > .eduSummary').css({'transform': 'translate3d(' + swoopX + 'px,' + swoopY + 'px, 0px)'});
-    $('.educationContainer > .eduSummary').css({'-webkit-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
-    $('.educationContainer > .eduSummary').css({'-moz-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
+    if(isScrolledIntoView('#eduTimelineWrapper .eduBorder')){
+        $('#eduTimelineWrapper .eduBorder').addClass("expand20");
+    }
+
+    if(isScrolledIntoView('.bigButton')){
+        $('.bigButton').addClass("slideDownBig");
+    }
+
+    
+
+
+//     if(scrolledY > distToEdu){
+//         var goal = distToEdu + 700;
+//         if(window.innerWidth <= 925){
+//             var swoop = -Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 900);
+//         }else {
+//             if(scrolledY < goal){
+//              var swoop = Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
+//          }else{
+//             swoop = 0;
+//         }
+//     }
+
+//     $('.educationContainer > .eduTimeline').css({'transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
+//     $('.educationContainer > .eduTimeline').css({'-webkit-transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
+//     $('.educationContainer > .eduTimeline').css({'-moz-transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
+// }
+
+// if(scrolledY > distToEdu){
+//     var goal = distToEdu + 700;
+//     if(window.innerWidth <= 925){
+//         var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 400);            
+//     }else{
+//         if(scrolledY < goal){
+//             var swoopX = -Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
+//         }else{
+//             swoopX = 0;
+//         }
+//     }
+
+
+//     var swoopY = -swoopX / 3;
+
+//     $('.educationContainer > .eduSummary').css({'transform': 'translate3d(' + swoopX + 'px,' + swoopY + 'px, 0px)'});
+//     $('.educationContainer > .eduSummary').css({'-webkit-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
+//     $('.educationContainer > .eduSummary').css({'-moz-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
+// } 
 }
-}
 
-var whatBackground = function(scrolledY){
+function whatBackground(scrolledY){
 
     var halfStart = $(window).height()*1/2;
     var windowHeight = $(window).height();
@@ -276,8 +336,22 @@ var whatBackground = function(scrolledY){
     }else{
         $('#contact').hide();
         if(scrolledY > shiftSchool)
-            $('#schoolImg').show();
+            $('.schoolImg').show();
         else 
-            $('#schoolImg').hide();
+            $('.schoolImg').hide();
     }
+}
+
+function isScrolledIntoView(elem){
+
+    var $elem = $(elem);
+    var $window = $(window);
+
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }

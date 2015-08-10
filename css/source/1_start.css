@@ -46,16 +46,6 @@
 	opacity: 0;
 }
 
-.spin{
-	animation-name: spin;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes spin{
-	0%   	{opacity: 0;transform: rotateY(-90deg);}
-	100%   	{opacity: 1; transform: rotateY(0deg);}
-}
 
 
 .startscreen h1{

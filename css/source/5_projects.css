@@ -18,7 +18,7 @@
 
 	transform: translate3d(0,0,0);
 	border-bottom: 1px solid #a34949;
-	box-shadow: inset 0px -4px 10px 0px rgba(223, 133, 133, 0.4), 0px 2px 3px 2px rgba(0,0,0, 0.5);
+	/*box-shadow: inset 0px -4px 10px 0px rgba(223, 133, 133, 0.4), 0px 2px 3px 2px rgba(0,0,0, 0.5);*/
 }
 
 .slideWrapper{

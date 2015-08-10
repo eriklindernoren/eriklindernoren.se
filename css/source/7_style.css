@@ -7,6 +7,10 @@ body,html{
 	position: relative;
 }
 
+body{
+	z-index: 0;
+}
+
 section{
 	z-index: 2;
 	backface-visibility: hidden;
@@ -35,6 +39,142 @@ div{
 ::-moz-selection {
 	background: #ffb7b7;/* Gecko Browsers */
 } 
+
+
+/*---------------------------------------*/
+/*	---------- CSS ANIMATIONS -----------*/
+/*---------------------------------------*/
+
+.spinAppearance{
+	animation-name: spin;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes spin{
+	0%   	{opacity: 0;transform: rotateY(-90deg) translateY(100px);}
+	100%   	{opacity: 1; transform: rotateY(0deg) translateY(0);}
+}
+
+.appearFromBottom{
+	animation-name: appearFromBottom;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearFromBottom{
+	0%   	{opacity: 0; transform: translateY(100px);}
+	100%   	{opacity: 1; transform: translateY(0px);}
+}
+
+
+
+.slideDown{
+	animation-name: popdown;
+	animation-duration: 1s;
+}
+
+@keyframes popdown{
+	0%   {display: none;opacity: 0;transform: translateY(-800px);}
+	100%   {transform: translateY(0px); opacity: 1;}
+}
+
+.slideUp{
+	animation-name: popup;
+	animation-duration: 1s;
+}
+
+@keyframes popup{
+	0%   {opacity: 1;}
+	100%   {transform: translateY(-800px); opacity: 1;}
+}
+
+.slideInFromLeft{
+	animation-name: popleft;
+	animation-duration: 1s;
+}
+
+@keyframes popleft{
+	0%   {opacity: 0;transform: translateX(-800px);}
+	10%  {opacity: 1;}
+	100%   {transform: translateY(0px); opacity: 1;}
+}
+
+.slideRight{
+	animation-name: popright;
+	animation-duration: 0.5s;
+}
+
+
+@keyframes popright{
+	0%   {opacity: 1;}
+	100%   {transform: translateX(800px); opacity: 0;}
+}
+
+.slideDownBig{
+	animation-name: popdownBig;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes popdownBig{
+	0%   {opacity: 0;transform: translateY(-400px);}
+	100%   {transform: translateY(0px); opacity: 1;}
+}
+
+
+.expand20{
+	animation-name: expand20;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes expand20{
+	0%   {width: 0;}
+	100%   {width: 18%;}
+}
+
+
+.expand70{
+	animation-name: expand70;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes expand70{
+	0%   {width: 0;}
+	100%   {width: 70%;}
+}
+
+.appearFromLeft{
+	animation-name: appearFromLeft;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearFromLeft{
+	0%   {opacity: 0; transform: translateX(-200px);}
+	100%   {opacity: 1; transform: translateX(0);}
+}
+
+.appearFromRight{
+	animation-name: appearFromRight;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearFromRight{
+	0%   {opacity: 0; transform: translateX(200px);}
+	100%   {opacity: 1; transform: translateX(0);}
+}
+
+
+
+
+
+
+
+
 /*---------------------------------------*/
 /*	---------- NON SELECTABLE -----------*/
 /*---------------------------------------*/
@@ -289,8 +429,11 @@ div{
 		margin: 0;
 	}
 
+	#eduPeriscopeWrapper .eduBorder{
+		display: none;
+	}
 
-	.educationContainer, .projWrapper{
+	.projWrapper{
 		flex-direction: column;
 		width: 90%;
 	}
@@ -300,12 +443,12 @@ div{
 	}
 
 
-	.educationContainer .eduSummary, .info, .imageDiv, .educationContainer .eduTimeline{
+	.info, .imageDiv{
 		margin: 0 auto;
 		width: 100%;
 	}
 
-	.educationContainer .eduTimeline, .imageDiv{
+	.imageDiv{
 		margin-top: 20px;
 	}
 
@@ -321,12 +464,22 @@ div{
 
 @media screen and (max-width: 768px){
 
-	.educationContainer .eduSummary, .educationContainer .eduTimeline{
-		transform: none;
-	}
 
 	#mail{
 		font-size: 50px;
+	}
+
+	.eduTimeline ol{
+		flex-direction: column;
+	}
+
+	.eduPeriscope{
+		width: 500px;
+		height: 500px;
+	}
+
+	.eduPeriscopeLowerBack{
+		height: 250px;
 	}
 
 	.socMedia{
@@ -353,8 +506,21 @@ div{
 		height: 180px;
 	}
 
+	.eduPeriscope{
+		width: 400px;
+		height: 400px;
+	}
+
+	.eduPeriscopeLowerBack{
+		height: 200px;
+	}
+
 	.startscreen h1{
 		font-size: 30px;
+	}
+
+	.time{
+		max-width: 90%;
 	}
 
 
@@ -416,11 +582,6 @@ div{
 		width: 80%;
 	}
 
-
-	.education .eduSummary, .education .eduTimeline{
-		width: 100%;
-	}
-
 	#mail{
 		font-size: 40px;
 	}
@@ -468,6 +629,15 @@ div{
 	#profileImg{
 		width: 130px;
 		height: 130px;
+	}
+
+	.eduPeriscope{
+		width: 350px;
+		height: 350px;
+	}
+
+	.eduPeriscopeLowerBack{
+		height: 175px;
 	}
 
 	.experience{

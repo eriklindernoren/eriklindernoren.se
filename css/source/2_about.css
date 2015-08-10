@@ -17,11 +17,12 @@
 	border-bottom: 1px solid #ffdbaa;
 	overflow: hidden;
 	z-index: 3;
-	box-shadow: inset 0px 3px 6px 0px rgb(255, 245, 205), inset 0px -3px 6px 0px rgb(255, 245, 205), 0px -3px 5px 3px rgba(0,0,0, 0.2), 0px 3px 5px 3px rgba(0,0,0, 0.2);
+	/*box-shadow: inset 0px 3px 6px 0px rgb(255, 245, 205), inset 0px -3px 6px 0px rgb(255, 245, 205), 0px -3px 5px 3px rgba(0,0,0, 0.2), 0px 3px 5px 3px rgba(0,0,0, 0.2);*/
 }
 
 
 #hello{
+	opacity: 0;
 	font-family: 'Abril Fatface';
 	font-size: 40px;
 	color: #5A352D;
@@ -31,6 +32,7 @@
 }
 
 #aboutSeparator{
+	opacity: 0;
 	display: block;
 	max-width: 200px;
 	min-width: 50px;
@@ -57,11 +59,11 @@
 	font-family: 'Roboto';
 	font-weight: 300;
 	font-size: 18px;
-	opacity: 0.7;
 	color: #552000;
 }
 
 #resume{
+	opacity: 0;
 	font-family: "Roboto";
 	font-weight: 300;
 	font-size: 20px;
@@ -115,7 +117,9 @@
 	background-color: rgb(245,219,170);
 	box-shadow: 0px 4px 10px 2px rgb(205,169,120);
 }
-
+#interests > div{
+	opacity: 0;
+}
 
 #interests i{
 	padding-top: 20px;
