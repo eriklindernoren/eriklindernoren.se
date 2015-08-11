@@ -26,7 +26,7 @@ h1{
 }
 
 p{
-	line-height: 28px;
+	line-height: 32px;
 }
 
 div{
@@ -67,6 +67,38 @@ div{
 	100%   	{opacity: 1; transform: translateY(0px);}
 }
 
+.appearFromTop{
+	animation-name: appearFromTop;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearFromTop{
+	0%   	{opacity: 0; transform: translateY(-100px);}
+	100%   	{opacity: 1; transform: translateY(0px);}
+}
+
+.expandFromBottom30{
+	animation-name: expandFromBottom30;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes expandFromBottom30{
+	0%   	{opacity: 0; width: 0; transform: translateY(100px);}
+	100%   	{opacity: 1; width: 30%; transform: translateY(0px);}
+}
+
+.expandFromBottom20{
+	animation-name: expandFromBottom20;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes expandFromBottom20{
+	0%   	{opacity: 0; width: 0; transform: translateY(100px);}
+	100%   	{opacity: 1; width: 20%; transform: translateY(0px);}
+}
 
 
 .slideDown{
@@ -111,15 +143,34 @@ div{
 	100%   {transform: translateX(800px); opacity: 0;}
 }
 
-.slideDownBig{
+.slideDownBig0{
 	animation-name: popdownBig;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 }
 
 @keyframes popdownBig{
-	0%   {opacity: 0;transform: translateY(-400px);}
+	0%   {opacity: 1;transform: translateY(-400px);}
 	100%   {transform: translateY(0px); opacity: 1;}
+}
+
+.slideDownBig1{
+	animation-name: popdownBig;
+	animation-duration: 1s;
+	animation-delay: 0.2s;
+	animation-fill-mode: forwards;
+}
+.slideDownBig2{
+	animation-name: popdownBig;
+	animation-duration: 1s;
+	animation-delay: 0.4s;
+	animation-fill-mode: forwards;
+}
+.slideDownBig3{
+	animation-name: popdownBig;
+	animation-duration: 1s;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
 }
 
 
@@ -132,6 +183,28 @@ div{
 @keyframes expand20{
 	0%   {width: 0;}
 	100%   {width: 18%;}
+}
+
+.expand30{
+	animation-name: expand30;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes expand30{
+	0%   {width: 0;}
+	100%   {width: 30%;}
+}
+
+.growToFull{
+	animation-name: growToFull;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes growToFull{
+	0%   {transform: scale(0);}
+	100%   {transform: scale(1);}
 }
 
 
@@ -153,7 +226,7 @@ div{
 }
 
 @keyframes appearFromLeft{
-	0%   {opacity: 0; transform: translateX(-200px);}
+	0%   {opacity: 0.8; transform: translateX(-200px);}
 	100%   {opacity: 1; transform: translateX(0);}
 }
 
@@ -164,13 +237,45 @@ div{
 }
 
 @keyframes appearFromRight{
-	0%   {opacity: 0; transform: translateX(200px);}
+	0%   {opacity: 0.8; transform: translateX(200px);}
 	100%   {opacity: 1; transform: translateX(0);}
 }
 
+.appearFromLeft1{
+	animation-name: appearFromLeft;
+	animation-delay: 0.1s;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
 
+.appearFromRight1{
+	animation-name: appearFromRight;
+	animation-delay: 0.1s;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
 
+.appearFromLeftInBackground{
+	animation-name: appearFromLeftInBackground;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
 
+@keyframes appearFromLeftInBackground{
+	0%   {opacity: 0; transform: translateX(-200px);}
+	100%   {opacity: 0.4; transform: translateX(0);}
+}
+
+.appearFromRightInBackground{
+	animation-name: appearFromRightInBackground;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearFromRightInBackground{
+	0%   {opacity: 0; transform: translateX(200px);}
+	100%   {opacity: 0.3; transform: translateX(0);}
+}
 
 
 
@@ -183,7 +288,9 @@ div{
 	user-select: none;
 }
 
-
+/*---------------------------------------*/
+/*	------- SCROLL TO TOP POP-UP --------*/
+/*---------------------------------------*/
 
 .scrollToTop{
 	position: fixed;
@@ -194,7 +301,7 @@ div{
 	text-decoration: none;
 	border-radius: 2px;
 	color: rgb(245,245,245);
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.7);
 	width: 50px;
 	height: 48px;
 	overflow: hidden;
@@ -258,7 +365,7 @@ div{
 	top: 0px;
 	width: 100%;
 	z-index: 50;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.7);
 	transition: 0.6s ease;
 	transform: translate3D(0,0,0);
 
@@ -418,6 +525,17 @@ div{
 		font-size: 30px;
 	}
 
+	.expUpper{
+		background: linear-gradient(to bottom, transparent 245px, rgb(100,100,100) 0);
+	}
+
+
+	#mac{
+		width: 300px;
+		bottom: 5%;
+	}
+
+
 	.flip3d h1{
 		font-size: 18px;
 		padding: 0;
@@ -473,9 +591,14 @@ div{
 		flex-direction: column;
 	}
 
+
 	.eduPeriscope{
 		width: 500px;
 		height: 500px;
+	}
+
+	.eduSummary{
+		width: 80%;
 	}
 
 	.eduPeriscopeLowerBack{
@@ -488,8 +611,7 @@ div{
 	}
 
 	.socMedia i{
-		padding-top: 11px;
-		font-size: 40px;
+		font-size: 34px;
 	}
 
 
@@ -537,6 +659,11 @@ div{
 		flex-direction: column;
 		justify-content: center;
 	}
+
+	.expUpper{
+		background-color: rgb(100,100,100);
+	}
+
 	.flip3d{
 		margin-top: 10px;
 		width: 60%;
@@ -606,7 +733,6 @@ div{
 
 	.socMedia i{
 		font-size: 24px;
-		padding-top: 8px;
 	}
 
 	#contactSeparator{
@@ -629,6 +755,19 @@ div{
 	#profileImg{
 		width: 130px;
 		height: 130px;
+	}
+
+	.time{
+		flex-direction: column;
+	}
+
+	.timeContent{
+		order: 2;
+	}
+
+	.period{
+		flex-order: 1;
+		margin-bottom: 20px;
 	}
 
 	.eduPeriscope{

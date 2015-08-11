@@ -7,7 +7,7 @@
 
 
 .projects{
-	background-color: #a34949;
+	background-color: rgb(100,100,100);
 	z-index: 3;
 	width: 100%;
 	padding: 0;
@@ -15,9 +15,8 @@
 	position: relative;
 	margin: 0 auto;
 	text-align: center;
-
 	transform: translate3d(0,0,0);
-	border-bottom: 1px solid #a34949;
+	border-bottom: 5px solid rgb(80,80,80);
 	/*box-shadow: inset 0px -4px 10px 0px rgba(223, 133, 133, 0.4), 0px 2px 3px 2px rgba(0,0,0, 0.5);*/
 }
 
@@ -32,10 +31,11 @@
 }
 
 #projectHeader{
+	opacity: 0;
 	position: relative;
 	top: 50px;
 	display: inline-block;
-	color: rgb(240,240,240);
+	color: rgb(250,250,250);
 	font-family: 'Abril Fatface';
 	font-size: 40px;
 }
@@ -70,15 +70,17 @@
 }
 
 #slideLeft{
+	opacity: 0;
 	left: 5%;
 }
 
 #slideRight{
+	opacity: 0;
 	right: 5%;
 }
 
 .slideDir i{
-	color: rgb(240,240,240);
+	color: rgb(250,250,250);
 	font-size: 70px;
 	transition: 0.2s linear;
 }
@@ -101,7 +103,7 @@
 
 .info{
 	text-align: left;
-	color: rgb(240,240,240);
+	color: rgb(250,250,250);
 	width: 45%;
 	display: inline-block;
 }
@@ -112,7 +114,7 @@
 	font-weight: 400;
 	display: block;
 	font-size: 28px;
-	color: rgb(240,240,240);
+	color: rgb(250,250,250);
 	text-decoration: none;
 	margin-bottom: 20px;
 }
@@ -141,7 +143,7 @@
 	max-width: 200px;
 	min-width: 50px;
 	width: 30%;
-	border-bottom: 4px solid rgb(240,240,240);
+	border-bottom: 5px solid rgb(250,250,250);
 	margin: 30px auto 30px 0;
 }
 
@@ -150,7 +152,7 @@
 	max-width: 200px;
 	min-width: 50px;
 	width: 30%;
-	border-bottom: 4px solid rgb(240,240,240);
+	border-bottom: 5px solid rgb(250,250,250);
 	margin: 30px 0 30px auto;
 }
 
@@ -204,7 +206,7 @@
 	bottom: 0;
 	height: 0;
 	width: 100%;
-	background-color: rgb(240,240,240);
+	background-color: rgb(250,250,250);
 	cursor: pointer;
 	text-decoration: none;
 }

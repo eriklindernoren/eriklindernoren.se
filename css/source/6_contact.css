@@ -22,10 +22,11 @@ footer{
 	padding-top: 50px;
 	font-family: "Abril Fatface";
 	font-size: 40px;
-	color: #a34949;
+	color: rgb(160,160,160);
 }
 
 #mail{
+	margin: 0 auto;
 	font-family: "Roboto";
 	font-weight: 100;
 	font-size: 70px;
@@ -35,28 +36,29 @@ footer{
 }
 
 #mail:hover{
-	color: #a34949;
+	color: rgb(80,80,80);
 }
 
 #contactSeparator{
+	opacity: 0;
 	display: block;
-	width: 20%;
-	border-bottom: 4px solid #a34949;
-	margin: 60px auto 60px auto;
+	width: 0;
+	border-bottom: 5px solid rgb(100,100,100);
+	margin: 70px auto 50px auto;
 }
 
 
 
 #contactWrap{
 	width: 80%;
-	max-width: 800px;
+	max-width: 900px;
 	padding: 60px 0px 0px 0px;
 	display: flex;
 	text-align: center;
 	position: relative;
 	margin: 0 auto;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 #infoWrap{
@@ -74,7 +76,7 @@ footer{
 	display: inline-block;
 	font-family: 'Roboto';
 	font-size: 18px;
-	color: rgb(170,170,170);
+	color: rgb(160,160,160);
 	text-align: center;
 	background: rgb(250,250,250);
 	padding: 10px 20px 18px 20px;
@@ -91,37 +93,40 @@ footer{
 	transform: scale(1.1);
 	background-color: rgb(250,250,250);
 	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
-	color: rgb(140,140,140);
+	color: rgb(100,100,100);
 }
 
 
 
 .socMedia{
 	position: relative;
-	display: block;
-	width: 80px;
-	height: 80px;
+	width: 90px;
+	height: 90px;
 	border-radius: 50%;
 	background-color: rgb(250,250,250);
 	box-shadow: 0px 4px 10px 1px rgb(180,180,180);
 	transition: 0.12s linear;
 	overflow: hidden;
 	text-decoration: none;
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
 
 .socMedia i{
 	position: relative;
-	display: block;
-	padding-top: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-decoration: none;
-	color: rgb(170,170,170);
+	color: rgb(160,160,160);
 	transition: color 80ms linear;
 	width: 100%;
-	height: 80px;
-	font-size: 45px;
+	height: 100%;
+	font-size: 52px;
+	margin: 0 auto;
 }
 
 

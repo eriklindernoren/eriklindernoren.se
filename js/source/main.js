@@ -55,19 +55,7 @@ $(document).ready(function(){
         }
     });
 
-
-
-
-    var hoverWorkButtons = function(){
-        $('.expUpper > h1').css({"color":  "rgb(140,140,140)"});
-    }
-
-    var stopHoverWorkButtons = function(){
-        $('.expUpper > h1').css({"color": "rgb(170,170,170)"});
-    }
-
     $('.bigButton').click(showWork);
-    $('.flip3d').hover(hoverWorkButtons, stopHoverWorkButtons);
 
 
     //Slide divs in project section
@@ -97,7 +85,7 @@ $(document).ready(function(){
                     'z-index': '2'
                 });
             }        
-            $('.projects').css({"margin-bottom": "620px"});
+            $('.projects').css({"margin-bottom": "660px"});
         }else{
          $('.projects').css({"margin-bottom": "0px"});
          $('#contact').css({
@@ -217,24 +205,17 @@ function scrollAnimations(){
     var scrolledY = $(window).scrollTop();
     whatBackground(scrolledY);
 
-    var distToEdu = $('.education').offset().top - $(window).height() + 200;
-    var distToProj = $('.projects').offset().top - 200;
-    var distToAbout = $('.about').offset().top - $(window).height();
-    var distToExp = $('.experience').offset().top - 500;
-    var distToExpLower = $('.projects').offset().top - 100;
-    var distToProfileImage = $(window).outerHeight()/2; 
-    var distToZurich = distToEdu + 1000;
 
+    var appearFromBottomList = [['#resume'],['.eduTimeline h1']];
 
-    var eduSummaryChildren = $('.eduSummary').children();
-    var eduTimelineChildren = $('.eduTimeline').children();
+    var triggerContactAnimations = $('.projects').offset().top + $(window).height();
 
-    var appearFromBottomList = [
-    ['#hello', '#aboutSeparator', '#resume'], 
-    $('#interests').children(),
-    eduSummaryChildren, 
-    ['.eduSummary h1', '.eduTimeline h1'] 
-    ];
+    if(scrolledY > triggerContactAnimations){
+        $('#contactSeparator').addClass('expandFromBottom20');
+    }
+    // else{
+    //     $('#contactSeparator').removeClass('expandFromBottom20');
+    // }
 
     for(var i = 0; i < appearFromBottomList.length; i++){
         var elements = appearFromBottomList[i];
@@ -257,79 +238,147 @@ function scrollAnimations(){
                 $(elem).addClass("appearFromLeft");
 
         }
+        // else if(!bigTextFieldIsScrolledIntoView('.education')){
+        //     $(elem).removeClass("appearFromRight");
+        //     $(elem).removeClass("appearFromLeft");            
+        // }
     }
 
     var eduSumSeparators = $('.eduSummary .eduBorder');
     for(var i = 0; i < eduSumSeparators.length; i++){
         var elem = eduSumSeparators[i];
         if(isScrolledIntoView(elem)){
-            $(elem).addClass("expand70");
+            $(elem).addClass("growToFull");
+        }
+        // else if(!bigTextFieldIsScrolledIntoView('.education')){
+        //     $(elem).removeClass("expand70");
+        // }
+    }
+
+
+    var aboutTextParagraphs = $('#aboutText p');
+    for(var i = 0; i < aboutTextParagraphs.length; i++){
+        var elem = aboutTextParagraphs[i];
+        if(isScrolledIntoView(elem)){
+            $(elem).addClass("appearFromBottom");
         }
     }
+
+    var eduSummaryTextParagraphs = $('.eduSummary p');
+    for(var i = 0; i < eduSummaryTextParagraphs.length; i++){
+        var elem = eduSummaryTextParagraphs[i];
+        if(isScrolledIntoView(elem)){
+            $(elem).addClass("appearFromBottom");
+        }
+    }
+
+    if(isScrolledIntoView(".eduSummary h1")){
+        $('.eduSummary h1').addClass('appearFromTop');
+    }
+
+    if(isScrolledIntoView('#aboutMe')){
+        $('#aboutMe').addClass('appearFromLeft');
+    }
+
+
+    $('.startscreen h1').addClass('appearFromBottom');
+    // else if(!bigTextFieldIsScrolledIntoView('.about')){
+    //     $('#hello').removeClass('appearFromLeft');
+    // }
+
+    if(isScrolledIntoView('#slideLeft')){
+        $('#slideLeft').addClass("appearFromLeft");
+    }
+    // else if(!bigTextFieldIsScrolledIntoView('.projects')){
+    //     $('#slideLeft').removeClass("appearFromLeft");
+    // }
+
+    if(isScrolledIntoView('#slideRight')){
+        $('#slideRight').addClass("appearFromRight");
+    }
+    // else if(!bigTextFieldIsScrolledIntoView('.projects')){
+    //     $('#slideRight').removeClass("appearFromRight");
+    // }
 
     if(isScrolledIntoView('#profileImg')){
         $('#profileImg').addClass("spinAppearance");
     }
+    // else if(!bigTextFieldIsScrolledIntoView('.startscreen')){
+    //     $('#profileImg').removeClass("spinAppearance");
+    // }
 
-    if(isScrolledIntoView('#eduPeriscopeWrapper .eduBorder')){
-        $('#eduPeriscopeWrapper .eduBorder').addClass("expand20");
+
+    if(isScrolledIntoView('#projectHeader')){
+        $('#projectHeader').addClass('appearFromRight');
     }
+
+    if(isScrolledIntoView('.expUpper > h1')){
+        $('.expUpper > h1').addClass("appearFromTop");
+    }
+
+    if(isScrolledIntoView('.expSeparator')){
+        $('.expSeparator').addClass("expand20");
+    }
+    // else if(!bigTextFieldIsScrolledIntoView('.education')){
+    //     $('#eduPeriscopeWrapper .eduBorder').removeClass("expand20");
+    // }
+
+    if(isScrolledIntoView('#aboutSeparator')){
+        $('#aboutSeparator').addClass("expandFromBottom30");
+    }
+    // else if(!bigTextFieldIsScrolledIntoView('.about')){
+    //     $('#aboutSeparator').removeClass("expandFromBottom30");
+    // }
 
     if(isScrolledIntoView('#eduTimelineWrapper .eduBorder')){
         $('#eduTimelineWrapper .eduBorder').addClass("expand20");
     }
 
-    if(isScrolledIntoView('.bigButton')){
-        $('.bigButton').addClass("slideDownBig");
+    if(bigTextFieldIsScrolledIntoView('#mac')){
+        $('#mac').addClass("appearFromRightInBackground");
+    }
+    // else if(!bigTextFieldIsScrolledIntoView('.education')){
+    //     $('#eduTimelineWrapper .eduBorder').removeClass("expand20");
+    // }
+
+    var interests = $('.interestHolder');
+    for(var i = 0; i < interests.length; i++){
+        var elem = interests[i];
+        if(isScrolledIntoView(elem)){
+            if(i < 2){
+                $(elem).addClass("appearFromLeft");
+            }else{
+                $(elem).addClass("appearFromRight");
+            }
+        }
+        // else if(!bigTextFieldIsScrolledIntoView('.about')){
+        //     $(elem).addClass("appearFromLeft1");
+        //     $(elem).addClass("appearFromLeft");
+        //     $(elem).addClass("appearFromRight1");
+        //     $(elem).addClass("appearFromRight");
+        // }
     }
 
-    
-
-
-//     if(scrolledY > distToEdu){
-//         var goal = distToEdu + 700;
-//         if(window.innerWidth <= 925){
-//             var swoop = -Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 900);
-//         }else {
-//             if(scrolledY < goal){
-//              var swoop = Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
-//          }else{
-//             swoop = 0;
-//         }
-//     }
-
-//     $('.educationContainer > .eduTimeline').css({'transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
-//     $('.educationContainer > .eduTimeline').css({'-webkit-transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
-//     $('.educationContainer > .eduTimeline').css({'-moz-transform': 'translate3d('+swoop+'px, ' + swoop + 'px, 0px)'});
-// }
-
-// if(scrolledY > distToEdu){
-//     var goal = distToEdu + 700;
-//     if(window.innerWidth <= 925){
-//         var swoopX = Math.min(0, scrolledY - $('.education').offset().top + $(window).height() - 400);            
-//     }else{
-//         if(scrolledY < goal){
-//             var swoopX = -Math.min(0.002*Math.pow(scrolledY - goal, 2), $(window).height());                   
-//         }else{
-//             swoopX = 0;
-//         }
-//     }
-
-
-//     var swoopY = -swoopX / 3;
-
-//     $('.educationContainer > .eduSummary').css({'transform': 'translate3d(' + swoopX + 'px,' + swoopY + 'px, 0px)'});
-//     $('.educationContainer > .eduSummary').css({'-webkit-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
-//     $('.educationContainer > .eduSummary').css({'-moz-transform': 'translate3d('+swoopX+'px, ' + swoopY + 'px, 0px)'});
-// } 
+    var bigButtons = $('.bigButton');
+    for(var i = 0; i < bigButtons.length; i++){
+        var elem = bigButtons[i];
+        if(isScrolledIntoView(elem)){
+            $(elem).addClass("slideDownBig" + i);
+        }
+        // else if(!bigTextFieldIsScrolledIntoView('.experience')){
+        //     for(var a = 0; a < bigButtons.length; a++){
+        //         $(elem).removeClass("slideDownBig" + a);
+        //     }
+        // }
+    }
 }
 
 function whatBackground(scrolledY){
 
     var halfStart = $(window).height()*1/2;
     var windowHeight = $(window).height();
-    var shiftContact = $('.projects').offset().top - 100;
-    var shiftSchool = $('.education').offset().top - windowHeight - 100;
+    var shiftContact = $('.projects').offset().top
+    var shiftSchool = $('.about').offset().top + $(window).height() - 200;
 
     if(scrolledY > shiftContact){
         $('#contact').show();
@@ -340,6 +389,23 @@ function whatBackground(scrolledY){
         else 
             $('.schoolImg').hide();
     }
+}
+
+function bigTextFieldIsScrolledIntoView(elem){
+
+    var $elem = $(elem);
+    var $window = $(window);
+
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+    var elemTop = $elem.offset().top + 100;
+    var elemBottom = elemTop + $elem.height() - 100;
+
+    var bottomIsOnElement = (docViewBottom < elemBottom) && (docViewBottom > elemTop);
+    var topIsOnElement = (docViewTop < elemBottom) && (docViewTop > elemTop);
+
+    return bottomIsOnElement || topIsOnElement || isScrolledIntoView(elem);
 }
 
 function isScrolledIntoView(elem){
