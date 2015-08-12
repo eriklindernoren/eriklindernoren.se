@@ -13,52 +13,71 @@
 	padding: 0;
 	display: block;
 	position: relative;
-	margin: 0 auto;
-	text-align: center;
 	transform: translate3d(0,0,0);
-	border-bottom: 5px solid rgb(80,80,80);
-	/*box-shadow: inset 0px -4px 10px 0px rgba(223, 133, 133, 0.4), 0px 2px 3px 2px rgba(0,0,0, 0.5);*/
+	text-align: center;
+	overflow: hidden;
+	border-bottom: 5px solid rgb(160,160,160);
 }
 
-.slideWrapper{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	width: 100%;
+#projWrapper{
 	position: relative;
-	padding: 60px 0px 80px 0px;
+	overflow: hidden;
+	width: 90%;
+	max-width: 1400px;
 }
 
 #projectHeader{
 	opacity: 0;
 	position: relative;
+	margin: 0 auto;
 	top: 50px;
 	display: inline-block;
 	color: rgb(250,250,250);
 	font-family: 'Abril Fatface';
+
 	font-size: 40px;
+	z-index: 4;
 }
 
+#projContent{
+	position: relative;
+	width: 90%;
+}
 
+#projImages{
+	position: absolute;
+	bottom: -70px;
+	right: 0px;
+	display: block;
+	width: 60%;
+	max-width: 650px;
+	height: auto;
+	opacity: 0;
+}
+
+#projImages a{
+	transition: 0.3s linear;
+}
+
+#projImages a img{
+	width: 100%;
+	height: auto;
+}
+
+#projImages a:hover{
+	transform: translateY(-30px);
+}
 
 .slideDiv{
-	padding: 60px 0px 40px 0px;
+	position: relative;
+	float: left;
 	border-radius: 2px;
-	width: 100%;
+	width: 60%;
 	display: none;
 	z-index: 3;
+	padding-top: 120px;
+	padding-bottom: 80px;
 	overflow: hidden;
-}
-
-.projWrapper{
-	display: flex;
-	text-align: center;
-	margin: 0 auto;
-	width: 80%;
-	max-width: 1200px;
-	align-items: center;
-	justify-content: space-around;
 }
 
 .slideDir{
@@ -93,18 +112,11 @@
 	transform: translateX(5px) scale(1.2);
 }
 
-.slideDiv .container{
-	width: 80%;
-}
-
-.slideDiv .row{
-	text-align: center;
-}
 
 .info{
 	text-align: left;
 	color: rgb(250,250,250);
-	width: 45%;
+	width: 100%;
 	display: inline-block;
 }
 
@@ -174,55 +186,38 @@
 	display: block
 }
 
-.imageDiv{
-	position: relative;
-	text-align: center;
-	width: 50%;
-	max-width: 771px;
-	max-height: 600px;
-	overflow: hidden;
-	text-align: center;
-	transition: 0.2s linear;
-	border-radius: 2px;
-	margin: 0;
-	padding: 0;
+#bars{
+	position: absolute;
+	bottom: 20px;
+	right: 100px;
+	width: 20%;
+	height: auto;
+	z-index: 3;
 }
 
+#mapapp{
+	position: absolute;
+	bottom: 25px;
+	right: 20px;
+	width: 20%;
+	height: auto;
+	z-index: 4;
+}
 
-.imageDiv img{
-	display: block;
+#site{
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	width: 80%;
+	height: auto;
+	z-index: 1;
+}
+
+#sonus{
+	position: absolute;
+	bottom: 20px;
+	right: 0px;
 	width: 100%;
 	height: auto;
-	transition: 0.3s linear;
-}
-
-
-
-.imgText{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	bottom: 0;
-	height: 0;
-	width: 100%;
-	background-color: rgb(250,250,250);
-	cursor: pointer;
-	text-decoration: none;
-}
-
-.imageDiv p{
-	font-family: 'Roboto';
-	font-weight: 300;
-	font-style: normal;
-	font-size: 30px;
-	color: rgb(170,170,170);
-	opacity: 0;
-	transition: color 0.2s linear;
-
-}
-
-.imageDiv .imgText:hover > p{
-	color: rgb(173,63,63);
-	color: #d64541;
+	z-index: 2;
 }

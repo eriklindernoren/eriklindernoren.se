@@ -40,6 +40,12 @@ div{
 	background: #ffb7b7;/* Gecko Browsers */
 } 
 
+.container{
+	position: relative;
+	width: 100%;
+	max-width: 1800px;
+}
+
 
 /*---------------------------------------*/
 /*	---------- CSS ANIMATIONS -----------*/
@@ -66,6 +72,7 @@ div{
 	0%   	{opacity: 0; transform: translateY(100px);}
 	100%   	{opacity: 1; transform: translateY(0px);}
 }
+
 
 .appearFromTop{
 	animation-name: appearFromTop;
@@ -277,6 +284,17 @@ div{
 	100%   {opacity: 0.3; transform: translateX(0);}
 }
 
+.fadeInFromLeft{
+	animation-name: fadeInFromLeft;
+	animation-duration: 1.4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromLeft{
+	0%   {opacity: 0; transform: translateX(-20px);}
+	100%   {opacity: 1; transform: translateX(0);}
+}
+
 
 
 
@@ -284,7 +302,7 @@ div{
 /*	---------- NON SELECTABLE -----------*/
 /*---------------------------------------*/
 
-#profileImg, #interests, .workButtons, .imageDiv, .socMedia, #resume, h1, #navbar, #mobileNav, a, #startImg, #schoolImg{
+#profileImg, #interests, .workButtons, .socMedia, #resume, h1, #navbar, #mobileNav, a, #startImg, #schoolImg{
 	user-select: none;
 }
 
@@ -561,13 +579,13 @@ div{
 	}
 
 
-	.info, .imageDiv{
+	.info{
 		margin: 0 auto;
 		width: 100%;
 	}
 
-	.imageDiv{
-		margin-top: 20px;
+	.slideDiv{
+		width: 80%;
 	}
 
 
@@ -604,6 +622,7 @@ div{
 	.eduPeriscopeLowerBack{
 		height: 250px;
 	}
+
 
 	.socMedia{
 		width: 60px;
@@ -715,6 +734,15 @@ div{
 
 	.scrollToTop{
 		display: none;
+	}
+
+	#projImages{
+		display: none;
+	}
+
+	.slideDiv{
+		float: none;
+		width: 100%;
 	}
 
 	#contact{                

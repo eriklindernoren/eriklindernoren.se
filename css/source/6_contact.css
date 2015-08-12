@@ -8,7 +8,7 @@ footer{
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
-	z-index: 2;
+	z-index: -1;
 	background-color: rgb(245,245,245);
 	text-align: center;
 	display: none;
@@ -43,6 +43,7 @@ footer{
 	opacity: 0;
 	display: block;
 	width: 0;
+	max-width: 300px;
 	border-bottom: 5px solid rgb(100,100,100);
 	margin: 70px auto 50px auto;
 }
