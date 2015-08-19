@@ -20,16 +20,16 @@
 
 .expUpper{
 	transform: translate3d(0,0,0);
-	background: linear-gradient(to bottom, transparent 275px, rgb(100,100,100) 0);
+	background: linear-gradient(to bottom, transparent 275px, rgb(60,60,60) 0);
 }
 
 .expUpper > h1{
 	opacity: 0;
 	padding: 50px 0 60px 0;
-	font-family: 'Abril Fatface';
+	font-family: 'Oswald';
 	font-weight: 700;
 	font-size: 40px; 
-	color: rgb(100,100,100);
+	color: rgb(60,60,60);
 	transition: color 150ms linear;
 }
 
@@ -113,22 +113,21 @@
 }
 
 .flip3d .workButton p{
-	color: rgb(100,100,100);
+	color: rgb(60,60,60);
 }
 
 .flip3d .workButtonBack p{
-	color: rgb(245,245,245);
+	color: white;
 }
 
 #popDownWrapper{
 	width: 100%;
 	height: 0px;
-	background-color: rgb(245,245,245);
+	background-color: rgb(100,100,100);
 	transition: 0.5s ease;
 	margin: 0 auto;
 	overflow: hidden;
 	transform: translate3d(0,0,0);
-
 }
 
 
@@ -141,16 +140,17 @@
 	margin-top: 40px;
 	max-width: 600px;
 	padding: 20px;
-	border-radius: 5px;
+	border-radius: 3px;
 	opacity: 0;
-	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
+	box-shadow: 0px 4px 10px 1px rgb(40,40,40);
+	background-color: rgb(230,230,230);
 	z-index: -1;
 }
 
 .workplaceHeader{
 	width: 100%;
 	padding: 10px 0 10px 0;
-	background-color: rgb(220,220,220);
+	background-color: rgb(210,210,210);
 	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
 	border-radius: 2px;
 	display: flex;
@@ -177,14 +177,15 @@
 
 .smallButton > .workButton{
 	transform: perspective(600px) rotateY(0deg);
-	background-color: rgb(245,245,245);
+	background-color: rgb(240,240,240);
 	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
 
 }
 
 .smallButton > .workButtonBack{
-	background-color: rgb(140,140,140);
+	background-color: rgb(100,100,100);
 	transform: perspective(600px) rotateY(180deg);
+	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
 }
 
 
@@ -212,9 +213,6 @@
 	font-size: 24px;
 	font-weight: 300;
 }
-
-
-
 
 .workplace img{
 	max-width: 300px;

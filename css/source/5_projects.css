@@ -7,7 +7,7 @@
 
 
 .projects{
-	background-color: rgb(100,100,100);
+	background-color: rgb(60,60,60);
 	z-index: 3;
 	width: 100%;
 	padding: 0;
@@ -16,14 +16,14 @@
 	transform: translate3d(0,0,0);
 	text-align: center;
 	overflow: hidden;
-	border-bottom: 5px solid rgb(160,160,160);
+	transition: 0.2s linear;
 }
 
 #projWrapper{
 	position: relative;
-	overflow: hidden;
 	width: 90%;
-	max-width: 1400px;
+	height: 100%;
+	max-width: 1300px;
 }
 
 #projectHeader{
@@ -31,26 +31,23 @@
 	position: relative;
 	margin: 0 auto;
 	top: 50px;
-	display: inline-block;
+	display: block;
 	color: rgb(250,250,250);
-	font-family: 'Abril Fatface';
-
+	font-family: 'Oswald';
+	font-weight: 700;
 	font-size: 40px;
 	z-index: 4;
-}
-
-#projContent{
-	position: relative;
-	width: 90%;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #projImages{
 	position: absolute;
 	bottom: -70px;
-	right: 0px;
+	right: 20px;
 	display: block;
 	width: 60%;
-	max-width: 650px;
+	max-width: 600px;
 	height: auto;
 	opacity: 0;
 }
@@ -69,47 +66,73 @@
 }
 
 .slideDiv{
-	position: relative;
-	float: left;
-	border-radius: 2px;
-	width: 60%;
-	display: none;
-	z-index: 3;
-	padding-top: 120px;
-	padding-bottom: 80px;
+	position: absolute;
+	left: 20px;
+	bottom: 0;
+	padding-bottom: 120px;
+	width: 50%;
+	opacity: 0;
+	z-index: -1;
 	overflow: hidden;
+	transition: opacity 1s linear;
 }
+
 
 .slideDir{
 	cursor: pointer;
 	position: absolute;
-	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	text-decoration: none;
+	border: 3px solid rgb(250,250,250);
 	top: 45%;
 	z-index: 5;
+	transform: translater3d(0,0,0) scale(1);
+	transition: 0.2s linear;
 }
 
 #slideLeft{
-	opacity: 0;
-	left: 5%;
+	left: 20px;
 }
 
 #slideRight{
-	opacity: 0;
-	right: 5%;
+	right: 20px;
 }
 
 .slideDir i{
 	color: rgb(250,250,250);
-	font-size: 70px;
-	transition: 0.2s linear;
+	font-size: 45px;
 }
 
-#slideLeft:hover > i{
-	transform: translateX(-5px) scale(1.2);
+#slideLeft i{
+	transform: translateX(-1px) translateY(-1px);
 }
 
-#slideRight:hover > i{
-	transform: translateX(5px) scale(1.2);
+#slideRight i{
+	transform: translateX(1px) translateY(-1px);
+}
+
+
+#slideLeft:hover{
+	transform: translateX(20px);
+	background-color: white;
+}
+
+#slideLeft:hover i{
+	color: rgb(80,80,80);
+}
+
+#slideRight:hover{
+	transform: translateX(-20px);
+	background-color: white;
+}
+
+#slideRight:hover i{
+	color: rgb(80,80,80);
 }
 
 
@@ -122,13 +145,20 @@
 
 
 .info a{
+	display: inline-block;
+	margin-bottom: 40px;
+	text-decoration: none;
+}
+
+.info a p{
 	font-family: 'Roboto';
 	font-weight: 400;
-	display: block;
 	font-size: 28px;
 	color: rgb(250,250,250);
-	text-decoration: none;
-	margin-bottom: 20px;
+}
+
+.info a p:hover{
+	color: rgb(160,160,160);
 }
 
 
@@ -140,8 +170,8 @@
 	font-style: normal;
 	font-size: 18px;
 	text-transform: uppercase;
-	display: inline-block;
-	margin-bottom: 5px;
+	display: block;
+	margin-bottom: 20px;
 }
 
 .info p{
@@ -156,18 +186,8 @@
 	min-width: 50px;
 	width: 30%;
 	border-bottom: 5px solid rgb(250,250,250);
-	margin: 30px auto 30px 0;
+	margin: 50px auto 50px 0;
 }
-
-.projSeparatorRight{
-	display: none;
-	max-width: 200px;
-	min-width: 50px;
-	width: 30%;
-	border-bottom: 5px solid rgb(250,250,250);
-	margin: 30px 0 30px auto;
-}
-
 
 
 .info ul{
@@ -189,7 +209,7 @@
 #bars{
 	position: absolute;
 	bottom: 20px;
-	right: 100px;
+	right: 160px;
 	width: 20%;
 	height: auto;
 	z-index: 3;
@@ -197,8 +217,8 @@
 
 #mapapp{
 	position: absolute;
-	bottom: 25px;
-	right: 20px;
+	bottom: 27px;
+	right: 80px;
 	width: 20%;
 	height: auto;
 	z-index: 4;
@@ -207,17 +227,25 @@
 #site{
 	position: absolute;
 	bottom: 20px;
-	right: 10px;
+	right: 20px;
 	width: 80%;
 	height: auto;
 	z-index: 1;
 }
 
+#site img{
+	border-radius: 7px;
+}
+
 #sonus{
 	position: absolute;
-	bottom: 20px;
+	bottom: 18px;
 	right: 0px;
 	width: 100%;
 	height: auto;
 	z-index: 2;
+}
+
+#sonus img{
+	border-radius: 5px;
 }

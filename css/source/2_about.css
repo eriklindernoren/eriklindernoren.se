@@ -14,16 +14,23 @@
 	justify-content: center;
 	position: relative;
 	z-index: 3;
-	border-bottom: 5px solid rgb(200,200,200);
-	border-top: 5px solid rgb(200,200,200);
+	border-bottom: 5px solid rgb(160,160,160);
+}
+
+#aboutWrapper{
+	position: relative;
+	width: 100%;
+	max-width: 1400px;
 }
 
 
 #aboutMe{
+	position: relative;
 	opacity: 0;
-	font-family: 'Abril Fatface';
+	font-family: 'Oswald';
+	font-weight: 700;
 	font-size: 40px;
-	color: rgb(80,80,80);
+	color: rgb(40,40,40);
 	padding: 0;
 	margin-top: 20px;
 	margin-bottom: 40px;
@@ -48,12 +55,11 @@
 	width: 0;
 	margin: 140px auto 0px 0;
 	border-top: 5px solid rgb(160,160,160);
-	box-shadow: 2px 2px 2px 1px rgb(190,190,190);
 }
 
 #aboutText{
 	padding: 80px 0 20px 0;
-	max-width: 800px;
+	max-width: 700px;
 	margin: 0 auto;
 	width: 80%;
 	display: block;
@@ -61,18 +67,22 @@
 }
 
 #aboutText p{
+	position: relative;
 	opacity: 0;
 	display: inline-block;
 	font-family: 'Roboto';
 	font-weight: 300;
 	font-size: 18px;
 	color: rgb(100,100,100);
+	text-align: left;
+	margin-bottom: 20px;
 }
 
 #resume{
 	opacity: 0;
-	font-family: "Roboto";
-	font-weight: 300;
+	font-family: "Oswald";
+	font-weight: 400;
+	text-transform: uppercase;
 	font-size: 26px;
 	text-align: center;
 	padding: 80px 0 60px 0;
@@ -84,7 +94,7 @@
 
 
 #resume a{
-	color: rgb(80,80,80);
+	color: rgb(40,40,40);
 	text-decoration: none;
 	transition: 0.2s linear;
 }
@@ -123,13 +133,13 @@
 	height: 80px;
 	border-radius: 50%;
 	background-color: rgb(250,250,250);
-	border: 5px solid rgb(200,200,200);
+	border: 5px solid rgb(160,160,160);
 }
 
 
 #interests i{
 	padding-top: 20px;
-	color: rgb(80,80,80);
+	color: rgb(40,40,40);
 }
 
 .fa-stack .inner{

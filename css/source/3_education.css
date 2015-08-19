@@ -11,8 +11,7 @@
 	text-align: center;
 	overflow: hidden;
 	z-index: 1;
-	background-color: rgb(250,250,250);
-	background-color: rgb(80,80,80);
+	background-color: rgb(40,40,40);
 }
 
 
@@ -27,14 +26,14 @@
 	padding: 0;
 	margin: 0;
 	background-color: rgb(250,250,250);
-	background-color: rgb(80,80,80);
+	background-color: rgb(40,40,40);
 }
 
 .eduSummary{
 	position: relative;
 	display: block;
 	width: 60%;
-	max-width: 650px;
+	max-width: 700px;
 	font-size: 18px;
 	text-align: center;
 	margin: 0 auto;
@@ -45,8 +44,7 @@
 }
 
 .eduBorder{
-	border-top: 5px solid rgb(160,160,160);
-	box-shadow: 2px 2px 2px 1px rgb(190,190,190);
+	border-top: 5px solid rgb(40,40,40);
 }
 
 .eduSummary .eduBorder{
@@ -59,7 +57,8 @@
 
 .eduSummary h1{
 	opacity: 0;
-	font-family: 'abril Fatface';
+	font-family: 'Oswald';
+	font-weight: 700;
 	color: rgb(100,100,100);
 	color: rgb(240,240,240);
 	font-size: 40px;
@@ -122,7 +121,7 @@
 	position: relative;
 	width: 100%;
 	background-color: rgb(230,230,230);
-	padding-top: 50px;
+	padding-top: 100px;
 	margin: 0;
 	z-index: 2;
 }
@@ -138,7 +137,7 @@
 
 #eduTimelineWrapper .eduBorder{
 	width: 0;
-	border-color: rgb(160,160,160);
+	border-color: rgb(60,60,60);
 	margin: 0px 0 20px 0;
 }
 
@@ -146,8 +145,9 @@
 .eduTimeline h1{
 	margin: 30px 0 140px 40px;
 	opacity: 0;
-	font-family: 'abril Fatface';
-	color: rgb(100,100,100);
+	font-family: 'Oswald';
+	font-weight: 700;
+	color: rgb(60,60,60);
 	font-size: 40px;
 	text-align: left;
 }
@@ -157,11 +157,12 @@
 	display: flex;
 	align-items: center;
 	margin-top: 60px;
-	max-width: 60%;
+	width: 700px;
+	max-width: 80%;
 }
 
 .timeContent{
-	width: 400px;
+	width: 500px;
 	max-width: 90%;
 	text-align: left;
 }
@@ -183,7 +184,7 @@
 
 .period{
 	width: 200px;
-	text-align: center;
+	text-align: right;
 	font-family: "Roboto";
 	font-size: 20px;
 }

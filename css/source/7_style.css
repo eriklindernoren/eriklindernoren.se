@@ -8,7 +8,7 @@ body,html{
 }
 
 body{
-	z-index: 0;
+	overflow: hidden;
 }
 
 section{
@@ -42,8 +42,10 @@ div{
 
 .container{
 	position: relative;
+	display: block;
 	width: 100%;
-	max-width: 1800px;
+	height: 100%;
+	max-width: 1600px;
 }
 
 
@@ -129,25 +131,61 @@ div{
 }
 
 .slideInFromLeft{
-	animation-name: popleft;
+	animation-name: popInLeft;
 	animation-duration: 1s;
 }
 
-@keyframes popleft{
+@keyframes popInLeft{
 	0%   {opacity: 0;transform: translateX(-800px);}
-	10%  {opacity: 1;}
+	80%  {opacity: 1;}
 	100%   {transform: translateY(0px); opacity: 1;}
 }
 
-.slideRight{
-	animation-name: popright;
+
+.slideInFromBottom{
+	animation-name: popInBottom;
+	animation-duration: 1s;
+}
+
+@keyframes popInBottom{
+	0%   {opacity: 0;transform: translateY(800px); z-index: -1;}
+	10%  {opacity: 1;}
+	100%   {transform: translateY(0px); opacity: 1;z-index: 3;}
+}
+
+
+.slideOutRight{
+	animation-name: popOutRight;
 	animation-duration: 0.5s;
 }
 
 
-@keyframes popright{
+@keyframes popOutRight{
 	0%   {opacity: 1;}
 	100%   {transform: translateX(800px); opacity: 0;}
+}
+
+.slideOutBottom{
+	animation-name: popOutBottom;
+	animation-duration: 0.5s;
+}
+
+
+@keyframes popOutBottom{
+	0%   {opacity: 1;}
+	50%		{opacity: 0.7;}
+	100%   {transform: translateY(800px); opacity: 0;}
+}
+
+.slideOutLeft{
+	animation-name: popOutLeft;
+	animation-duration: 0.5s;
+}
+
+
+@keyframes popOutLeft{
+	0%   {opacity: 1;}
+	100%   {transform: translateX(-800px); opacity: 0;}
 }
 
 .slideDownBig0{
@@ -302,7 +340,7 @@ div{
 /*	---------- NON SELECTABLE -----------*/
 /*---------------------------------------*/
 
-#profileImg, #interests, .workButtons, .socMedia, #resume, h1, #navbar, #mobileNav, a, #startImg, #schoolImg{
+#profileImg, #interests, .workButtons, .socMedia, #resume, h1, #startName, #mobileNav, a, #startImg, #schoolImg, #name{
 	user-select: none;
 }
 
@@ -310,60 +348,101 @@ div{
 /*	------- SCROLL TO TOP POP-UP --------*/
 /*---------------------------------------*/
 
-.scrollToTop{
+.scroll{
 	position: fixed;
-	right: 50px;
-	bottom: -50px;
+	bottom: -60px;
 	cursor: pointer;
 	z-index: 6;
 	text-decoration: none;
-	border-radius: 2px;
-	color: rgb(245,245,245);
-	background-color: rgba(0,0,0,0.7);
-	width: 50px;
-	height: 48px;
-	overflow: hidden;
-	transition: transform 0.5s linear, width 0.15s linear;
-}
-
-.contentHolder{
-	position: absolute;
-	right: 0; 
-	left: auto;
-	top: 30%;
-	width: 110px;
-	height: 50px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 4px solid rgb(70,70,70);
+	color: rgb(70,70,70);
+	width: 45px;
+	height: 45px;
 	display: flex;
 	align-items: center;
-	transform: translateY(-1px);
+	justify-content: center;
+	overflow: hidden;
+	transition: all 0.2s linear, transform 0.4s linear, width 0.4s linear, border-radius 0.1s linear, width 0.3s linear;
+	clear: both;
 }
-.scrollToTop i{
+
+.scrollToTop{
+	right: 40px;
+
+}
+
+.scrollToNext{
+	right: 20px;
+}
+
+
+.contentHolder{
+	width: 115px;
+	height: 100%;
+	clear:both;
+	float: right;
+}
+
+.scrollToNext .contentHolder{
+	width: 110px;
+}
+
+.scrollIcon{
+	width: 45px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: right;
+}
+
+.scrollIcon i{
 	padding: 0;
-	margin: 0;
-	width: 50px;
-	height: 50px;
+	align-self: center;
 	font-size: 45px;
-	transform: translateY(-15px) translateX(10px);
-	transition: transform 0.5s linear;
+	margin: 0 auto;
+	transform: translateY(-4px);
+}
+
+.scrollToNext .scrollIcon i{
+	transform: translateY(0px);
+}
+
+.scrollText{
+	height: 100%;
+	width: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: right;
 }
 
 
-.scrollToTop h1{
-	height: 50px;
+.scrollText h1{
 	margin-right: 0px;
 	font-family: 'Roboto';
-	font-weight: 100;
+	font-weight: 300;
 	font-size: 25px;
 	text-decoration: none;
-	transform: translateY(-2px);
 	padding: 0;
-	color: rgb(245,245,245);
+	color: rgb(40,40,40);
 }
 
 .scrollToTop:hover{
-	width: 110px;	
+	width: 100px;
+	border-radius: 3px;
+	background-color: rgb(70,70,70);
 }
 
+.scrollToTop:hover i{
+	color: rgb(250,250,250);
+}
+
+.scrollToTop:hover .scrollText h1{
+	color: rgb(250,250,250);
+}
 
 
 
@@ -383,17 +462,45 @@ div{
 	top: 0px;
 	width: 100%;
 	z-index: 50;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgb(250,250,250);
 	transition: 0.6s ease;
 	transform: translate3D(0,0,0);
-
+	border-bottom: 4px solid rgb(200,200,200);
 }
 
+#name{
+	position: fixed;
+	top: 0;
+	left: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 160px;
+	background-color: rgb(80,80,80);
+	border-radius: 0 0 1px 1px;
+	transform: translateY(-100px);
+	transition: 0.2s linear;
+	border: 2px solid rgb(100,100,100);
+	text-decoration: none;
+}
+
+#name p{
+	font-family: "Roboto";
+	padding: 0 20px 0 20px;
+	font-weight: 200;
+	font-size: 30px;
+	color: rgb(200,200,200);
+	transform: translateY(50px);
+}
+
+
+
 #navWrapper{
-	width: 90%;
-	max-width: 900px;
-	height: 75px;
-	margin: 0 auto;
+	opacity: 0;
+	width: 70%;
+	max-width: 800px;
+	height: 70px;
+	margin: 0  10px 0 auto;
 	text-align: center;
 	overflow: hidden;
 	display: flex;
@@ -405,12 +512,12 @@ div{
 #navWrapper a{
 	height: 100%;
 	transition: 0.3s ease;
-	padding: 0 20px 0 20px;
+	text-decoration: none;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	text-decoration: none;
-	flex-direction: column;
+	transform: translateY(4px);
 }
 
 
@@ -419,100 +526,26 @@ div{
 	font-family: 'Roboto';
 	font-weight: 300;
 	text-transform: uppercase;
-	color: rgb(245,245,245);
-	font-size: 18px;
+	color: rgb(100,100,100);
+	transition: 0.4s linear;
+	font-size: 19px;
 }
 
+#navWrapper a:hover > p{
+	color: rgb(60,60,60);
+}
 
 #navWrapper a:hover > .expandingUnderline{
 	width: 100%;
 	opacity: 1;
-	transform: translateY(2px);
 }
 
 .expandingUnderline{
-	transform: translateY(12px);
-	border-bottom: 3px solid rgb(245,245,245);
+	border-bottom: 3px solid rgb(100,100,100);
 	width: 0px;
 	opacity: 0.1;
-	transition: 250ms ease;
+	transition: 0.3s ease;
 }
-
-/*MOBILE NAVIGATION*/
-
-#mobileNav{
-	position: fixed;
-	top: 0%;
-	width: 100%;
-	display: none;
-	z-index: 100;
-	margin: 0 auto;
-
-}
-
-.upperMNavList{
-	padding: 0;
-	margin: 0 auto;
-	width: 100%;
-	height: 60px;
-	display: block;
-	position: relative;
-	background-color: rgba(0,0,0,0.6);
-
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-#headerName, .showNav{
-	padding: 0;
-	margin: 0;
-	display: block;
-	color: rgb(245,245,245);
-	text-decoration: none;
-}
-
-#headerName{
-	padding-left: 15px;
-	font-family: "Abril Fatface";
-}
-#headerName i{
-	font-size: 35px;
-}
-
-.showNav{
-	padding-right: 15px;
-	cursor: pointer;
-}
-.showNav i{
-	font-size: 35px;
-	color: rgb(245,245,245);
-}
-
-
-.lowerMNavList{
-	padding: 0;
-	margin: 0 auto;
-	display: none;
-	width: 100%;
-	z-index: 45;
-	background-color: rgba(0,0,0,0.5);
-	text-align: center;
-	padding-bottom: 20px;
-	flex-direction: column;
-}
-
-.mobilenavbuttons{
-	font-family: 'Roboto';
-	font-weight: 300;
-	display: block;
-	margin: 0 auto;
-	color: rgb(245,245,245);
-	text-decoration: none;
-	font-size: 18px;
-	padding: 20px 0 0 0;
-}
-
 
 
 
@@ -520,31 +553,64 @@ div{
 /*	---------- MOBILE --------------  */
 /*---------------------------------------*/
 
+@media screen and (min-width: 1600px){
+	#slideLeft{
+		left: 60px;
+	}
 
+	#slideRight{
+		right: 60px;
+	}
+
+	#navigationButtonWrapper{
+		height: 100px;
+	}
+
+	#startImgHolder{
+		top: 100px;
+	}
+
+	.navHeader{
+		font-size: 18px;
+	}
+
+}
+
+@media screen and (max-width: 1200px){
+	#slideLeft{
+		left: 40px;
+	}
+
+	#slideRight{
+		right: 40px;
+	}
+}
 
 
 
 @media screen and (max-width: 925px){
-	#mobileNav{
-		display: block;
-	}
 
-	#navbar{
-		display: none;
-	}
+
 
 	#workWrapper{
 		width: 100%;
 	}
 
-	.flip3d, .flip3d > .workButton, .flip3d > .workButtonBack{
+	.bigButton, .bigButton > .workButton, .bigButton > .workButtonBack{
 		width: 150px;
 		height: 150px;
-		font-size: 30px;
+	}
+
+	.bigButton p{
+		font-size: 18px;
+	}
+
+	.bigButton em{
+		font-size: 14px;
 	}
 
 	.expUpper{
-		background: linear-gradient(to bottom, transparent 245px, rgb(100,100,100) 0);
+		background: linear-gradient(to bottom, transparent 245px, rgb(60,60,60) 0);
 	}
 
 
@@ -554,30 +620,22 @@ div{
 	}
 
 
-	.flip3d h1{
+	.bigButton h1{
 		font-size: 18px;
 		padding: 0;
 		margin: 0;
 	}
-	.flip3d em{
+	.bigButton em{
 		font-size: 16px;		
 		padding: 0;
 		margin: 0;
 	}
 
-	#eduPeriscopeWrapper .eduBorder{
-		display: none;
-	}
 
 	.projWrapper{
 		flex-direction: column;
-		width: 90%;
+		width: 80%;
 	}
-
-	.projSeparatorRight{
-		display: block;
-	}
-
 
 	.info{
 		margin: 0 auto;
@@ -585,7 +643,15 @@ div{
 	}
 
 	.slideDiv{
-		width: 80%;
+		width: 100%;
+	}
+
+	#slideLeft{
+		left: 10px;
+	}
+
+	#slideRight{
+		right: 10px;
 	}
 
 
@@ -600,29 +666,58 @@ div{
 
 @media screen and (max-width: 768px){
 
+	p{
+		line-height: 25px;
+	}
+
+	#startImgHolder{
+		left: 20px;
+		right: 20px;
+	}
+
+	#scrollDown{
+		bottom: 30px;
+	}
+
+	.navHeader{
+		font-size: 14px;
+	}
+
+	#aboutText p{
+		font-size: 16px;
+	}
+
+	.eduSummary{
+		font-size: 16px;
+	}
+
+	.info p{
+		font-size: 16px;
+	}
+
+	.workplace p{
+		font-size: 16px;
+	}
+
+
+	#navigationButtonWrapper{
+		max-width: 90%;
+	}
+
 
 	#mail{
 		font-size: 50px;
 	}
 
-	.eduTimeline ol{
-		flex-direction: column;
-	}
-
-
 	.eduPeriscope{
 		width: 500px;
 		height: 500px;
+		border-radius: 2px;
 	}
 
 	.eduSummary{
 		width: 80%;
 	}
-
-	.eduPeriscopeLowerBack{
-		height: 250px;
-	}
-
 
 	.socMedia{
 		width: 60px;
@@ -633,14 +728,24 @@ div{
 		font-size: 34px;
 	}
 
+	#startName, #front, #back{
+		width: 120px;
+		height: 120px;
+	}
+
+	#startName p{
+		font-size: 30px;
+	}
+
+	#back p{
+		font-size: 25px;
+		line-height: 25px;
+	}
 
 }
 
 @media screen and (max-width: 668px){
 
-	#eduBackgroundDesc{
-		display: none;
-	}
 
 	#profileImg{
 		width: 180px;
@@ -648,12 +753,9 @@ div{
 	}
 
 	.eduPeriscope{
-		width: 400px;
-		height: 400px;
-	}
-
-	.eduPeriscopeLowerBack{
-		height: 200px;
+		width: 300px;
+		height: 300px;
+		border-radius: 2px;
 	}
 
 	.startscreen h1{
@@ -679,35 +781,39 @@ div{
 		justify-content: center;
 	}
 
-	.expUpper{
-		background-color: rgb(100,100,100);
+	.expUpper h1{
+		color: rgb(240,240,240);
 	}
 
-	.flip3d{
+	.expUpper{
+		background-color: rgb(60,60,60);
+	}
+
+	.bigButton{
 		margin-top: 10px;
 		width: 60%;
 		height: 90px;
 	}
 
-	.flip3d > .workButton, .flip3d > .workButtonBack{
+	.bigButton > .workButton, .bigButton > .workButtonBack{
 		width: 100%;
 		height: 90px;
 		border-radius: 2px;
 	}
 
-	.flip3d > .workButton{
+	.bigButton > .workButton{
 		transform: perspective(600px) rotateX(0deg);	
 	}
 
-	.flip3d > .workButtonBack{
+	.bigButton > .workButtonBack{
 		transform: perspective(600px) rotateX(180deg);
 	}
 
-	.flip3d:hover > .workButton{
+	.bigButton:hover > .workButton{
 		transform: perspective(600px) rotateX(-180deg);
 	}
 
-	.flip3d:hover > .workButtonBack{
+	.bigButton:hover > .workButtonBack{
 		transform: perspective(600px) rotateX(0deg);
 	}
 
@@ -720,6 +826,7 @@ div{
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 	#basketball{
 		display: none;
 	}
@@ -736,14 +843,21 @@ div{
 		display: none;
 	}
 
+	.scrollToNext{
+		display: none;
+	}
+
 	#projImages{
 		display: none;
 	}
 
 	.slideDiv{
-		float: none;
-		width: 100%;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
 	}
+
 
 	#contact{                
 		display: block;
@@ -776,6 +890,10 @@ div{
 
 @media screen and (max-width: 568px){
 
+	.navHeader{
+		font-size: 10px;
+	}
+
 	.startscreen h1{
 		font-size: 24px;
 	}
@@ -795,25 +913,20 @@ div{
 
 	.period{
 		flex-order: 1;
+		text-align: center;
 		margin-bottom: 20px;
 	}
 
 	.eduPeriscope{
-		width: 350px;
-		height: 350px;
-	}
-
-	.eduPeriscopeLowerBack{
-		height: 175px;
+		width: 200px;
+		height: 200px;
+		border-radius: 2px;
 	}
 
 	.experience{
 		padding-top: 30px;
 	}
 
-	.mobileNavListWrapper{
-		top: 70px;
-	}
 
 	#headerName{
 		font-size: 25px;
@@ -824,8 +937,15 @@ div{
 		font-weight: 300;
 	}
 
-}
 
+	#scrollDown{
+		height: 30px;
+		width: 30px;
+		font-size: 30px;
+	}
+
+
+}
 
 
 

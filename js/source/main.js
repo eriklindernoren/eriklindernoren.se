@@ -10,17 +10,72 @@ $(document).ready(function(){
     $(document).on('click','.navbuttons', function(event) {
         event.preventDefault();
         var target = "#" + this.getAttribute('data-target');
+        
+        if(target == "#aboutDown"){
+            target = "#about";
+        }
+
         if(target == "#contact"){
            $('html, body').animate({
             scrollTop: $(document).height()
-        }, 800, "linear");       
+        }, 700, "easeOutQuad");       
        }else{
         $('html, body').animate({
             scrollTop: $(target).offset().top
-        }, 800, "linear");
+        }, 700, "easeOutQuad");
     }
 });
 
+    function findNextSection(){
+        var topOfWindow = $(window).scrollTop();
+        var centerOfWindow = topOfWindow + $(window).height()/2;
+
+        var education = $('.education').offset().top;
+        var experience = $('.experience').offset().top;
+        var projects = $('.projects').offset().top;
+
+        if(centerOfWindow < education){
+            return ".education";
+        }else if(centerOfWindow < experience){
+            return ".experience";
+        }else if(centerOfWindow < projects){
+            return ".projects";
+        }else{
+            return "#contact";
+        }
+
+    }
+
+    $('.navbuttons').hover(function(){
+        var navClicked = this.getAttribute('data-target');
+        var jump = 0;
+
+        if(navClicked == "about"){
+            jump = 1;
+        }
+        else if(navClicked == "education"){
+            jump = 2;
+        }
+        else if(navClicked == "experience"){
+            jump = 3;
+        }
+        else if(navClicked == "projects"){
+            jump = 4;
+        }
+        else if(navClicked == "contact"){
+            jump = 5;
+        }
+        
+        if(jump == 0)
+            return;
+
+        for(var i = 1; i < 6; i++){
+            if(jump != i)
+                $('#span' + i).css({"color": "transparent"});
+        }
+    }, function(){
+        $('#message p span').css({"color": "white"});
+    });
 
 
     //Image div in project section
@@ -36,7 +91,17 @@ $(document).ready(function(){
 
 
 
-
+    $('#scrollDown').hover(function(){
+        $('#scrollDown').css({
+            'background-color': 'rgb(250,250,250)',
+            'color': 'rgb(20,20,20)'
+        });
+    }, function(){
+        $("#scrollDown").css({
+            'background-color': 'rgb(20,20,20)',
+            'color': 'rgb(250,250,250)'
+        });
+    });
 
     // Scroll animations
     $(window).scroll(scrollAnimations);
@@ -57,41 +122,119 @@ $(document).ready(function(){
 
     $('.bigButton').on("click", showWork);
 
-    $('#projImages a').on('click', function(){
-        var targetDiv = this.getAttribute('data-target');
-        $('#div' + currentDiv).hide();
-        currentDiv = targetDiv;
-        $('#div' + currentDiv).fadeIn(2000);
-    });
+    function getProjDivHeight(){
 
+        var height = 0;
+        var projDivs = $('.slideDiv');
+        for(var i = 0; i < projDivs.length; i++){
+            var $elem = $(projDivs[i]);
+            if($elem.height() > height){
+                height = $elem.height();
+            }
+        }
 
+        var offsetFromHeader = $('#projectHeader').position().top + $('#projectHeader').height();
+
+        return height + offsetFromHeader + 220;
+    }
+    
     //Slide divs in project section
     var currentDiv = 4;
-    $(".slideDir").on("click", function(){
+    
+    $('#div4').css({'opacity': '1', 'z-index': '3'});
+    $(".slideDir").on('click', function(){
         var dir = $(this).attr("id");
-        $('#div' + currentDiv).hide();
+
         if(dir == "slideRight") {
-            currentDiv -= 1;
-            if(currentDiv == 0) currentDiv = 4;
-        }else if(dir == "slideLeft"){
-            currentDiv += 1;
-            if (currentDiv == 5)currentDiv = 1;
+            var lastDiv = currentDiv;
+
+            currentDiv = parseInt(currentDiv) - 1;
+
+            if(currentDiv == 0) {
+                currentDiv = 4;
+            }
+
+            var $lastUsed = $('#div' + lastDiv);
+            var $this = $('#div' + currentDiv);
+            var $container = $('.projects');
+            $lastUsed.css({'opacity': '0', 'z-index': '-1'});
+            $lastUsed.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                $(this).removeClass("slideOutBottom");
+            }).addClass("slideOutBottom");
+            setTimeout(function(){
+                $this.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                    $(this).removeClass("slideInFromLeft");
+                }).addClass("slideInFromLeft");
+                $this.css({'opacity': '1', 'z-index': '3'});
+            },200);
+
+        }else{
+            var lastDiv = currentDiv;
+            currentDiv = parseInt(currentDiv) + 1;
+            if (currentDiv == 5){
+                currentDiv = 1;
+            }
+
+            var $lastUsed = $('#div' + lastDiv);
+            var $this = $('#div' + currentDiv);
+            var $container = $('.projects');
+
+            $lastUsed.css({'opacity': '0', 'z-index': '-1'});
+            $lastUsed.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                $(this).removeClass("slideOutLeft");
+            }).addClass("slideOutLeft");
+            setTimeout(function(){
+                $this.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                    $(this).removeClass("slideInFromBottom");
+                }).addClass("slideInFromBottom");
+                $this.css({'opacity': '1', 'z-index': '3'});
+            },200);
         }
-        $('#div' + currentDiv).fadeIn(2000);
+
     }); 
+
+
+$('#projImages a').on('click', function(){
+
+    var possibleNewDiv = this.getAttribute('data-target');
+
+    if(currentDiv != possibleNewDiv){
+
+        var lastDiv = currentDiv;
+        currentDiv = possibleNewDiv;
+
+        $lastUsed = $('#div' + lastDiv);
+        $this = $('#div' + currentDiv);
+
+        $lastUsed.css({'opacity': '0', 'z-index': '-1'});
+        $lastUsed.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+            $(this).removeClass("slideOutBottom");
+        }).addClass("slideOutBottom");
+        setTimeout(function(){
+            $this.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                $(this).removeClass("slideInFromLeft");
+            }).addClass("slideInFromLeft");
+            $this.css({'opacity': '1', 'z-index': '3'});
+        },200);
+    }
+});
 
 
     //Done at load and every time the window is resized
     var prevScreenWidth;
     var setupWindowSize = function(){
+
+        $('.projects').css({'height': getProjDivHeight() + 'px'});
+
         if(window.innerWidth > 668){
             if(prevScreenWidth <= 668){
                 $('#contact').css({
                     "display": "block",
                     "position": "fixed",
                     'bottom': '0',
-                    'z-index': '2'
+                    'z-index': '1'
                 });
+                whatBackground();
             }        
             $('.projects').css({"margin-bottom": "660px"});
         }else{
@@ -102,6 +245,7 @@ $(document).ready(function(){
             "position": "relative",
             'bottom': '0'
         });
+
      }
      if(window.innerWidth <= 925 && prevScreenWidth > 925){
         $('#navbar').fadeOut(600);
@@ -136,6 +280,14 @@ var periscopeIfMozilla = function(){
             'background-attachment': 'fixed',
             'background-size': 'cover'
         });
+        $('#startImgHolder').removeClass('startImg');
+        $('#startImgHolder').css({
+            'background-image': 'url("../images/desk5dyed.jpeg")',
+            'background-position': 'center center',
+            'background-attachment': 'fixed',
+            'background-size': 'cover'
+        });
+
     }
 }
 periscopeIfMozilla();
@@ -143,33 +295,52 @@ periscopeIfMozilla();
 
 setUpDisplayTypesForPopups();
 
-    // Show navigation background, "scroll to top"-button
-    var lastDistTop = $(window).scrollTop();
-    var navPos = "down";
-    $(document).scroll(function(){
-        var distTop = $('body').scrollTop();
-        var scrollDif = lastDistTop - distTop;
-        var isHover = $('#navbar').is(":hover");
-        var navBackground = startscreenHeight - 80;
-        if(window.innerWidth > 925){
-            if((navPos == 'down') && scrollDif < 0 && distTop > 200 && !isHover){
-                $('#navbar').css({'transform': 'translateY(-75px)'});
-                navPos = 'up';
-            }
-            else if((navPos == 'up') && (scrollDif > 20 || distTop < 200)){
-                $('#navbar').css({'transform': 'translateY(0px)'});
-                navPos = 'down';
-            }
-        }
+$('#scrollDown').css({
+    "transition": "0.4s linear", 
+    "transform": "translateY(0px)"
+});
+setTimeout(function(){
+    $('#scrollDown').css({"transition": "0.2s linear"});
+},400);
 
-        if(distTop > 200 && window.innerWidth > 668){
-            $('.scrollToTop').css({"transform": "translateY(-100px)"});
-        }
-        else{
-            $('.scrollToTop').css({'transform': 'translateY(100px)'});
-        }
-        lastDistTop = distTop;
-    });
+
+
+$(document).scroll(navAndScrollButtonsOnScroll);
+
+        // Show navigation background, "scroll to top"-button
+        var lastDistTop = $(window).scrollTop();
+        var navPos = "down";
+        function navAndScrollButtonsOnScroll(){
+            var distTop = $('body').scrollTop();
+            var scrollDif = lastDistTop - distTop;
+            var navBackground = startscreenHeight - 80;
+
+            if(distTop > 200 && window.innerWidth > 668){
+                $('.scrollToTop').css({"transform": "translateY(-100px)"});
+                // $('.scrollToNext').css({"transform": "translateY(-80px)"});
+                // $('#scrollDown').css({
+                //     "transition": "0.4s linear", 
+                //     "transform": "translateY(100px)"
+                // });
+                // setTimeout(function(){
+                //     $('#scrollDown').css({"transition": "0.2s linear"});
+                // },400);
+
+}
+else{
+    $('.scrollToTop').css({'transform': 'translateY(100px)'});
+                // $('.scrollToNext').css({"transform": "translateY(100px)"});
+                // $('#scrollDown').css({
+                //     "transition": "0.4s linear", 
+                //     "transform": "translateY(0)"
+                // });
+                // setTimeout(function(){
+                //     $('#scrollDown').css({"transition": "0.2s linear"});
+                // },400);
+
+}
+lastDistTop = distTop;
+}
 });
 
 var lastUsed;
@@ -180,8 +351,8 @@ function showWork(){
     if(isShowing && _this != lastUsed){
         $(lastUsed).css({'opacity': '0', 'z-index': '-1'});
         $(lastUsed).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-            $(this).removeClass("slideRight");
-        }).addClass("slideRight");
+            $(this).removeClass("slideOutRight");
+        }).addClass("slideOutRight");
         $(_this).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
             $(this).removeClass("slideInFromLeft");
         }).addClass("slideInFromLeft");
@@ -209,22 +380,15 @@ function showWork(){
 }
 
 
+
 var projImagesLoaded = false;
 function scrollAnimations(){
     var scrolledY = $(window).scrollTop();
     whatBackground(scrolledY);
 
-
     var appearFromBottomList = [['#resume'],['.eduTimeline h1']];
 
     var triggerContactAnimations = $('.projects').offset().top + $(window).height();
-
-    if(scrolledY > triggerContactAnimations){
-        $('#contactSeparator').addClass('expandFromBottom20');
-    }
-    // else{
-    //     $('#contactSeparator').removeClass('expandFromBottom20');
-    // }
 
     for(var i = 0; i < appearFromBottomList.length; i++){
         var elements = appearFromBottomList[i];
@@ -247,10 +411,6 @@ function scrollAnimations(){
                 $(elem).addClass("appearFromLeft");
 
         }
-        // else if(!isPartlyScrolledIntoView('.education')){
-        //     $(elem).removeClass("appearFromRight");
-        //     $(elem).removeClass("appearFromLeft");            
-        // }
     }
 
     var eduSumSeparators = $('.eduSummary .eduBorder');
@@ -259,25 +419,44 @@ function scrollAnimations(){
         if(isFullyScrolledIntoView(elem)){
             $(elem).addClass("growToFull");
         }
-        // else if(!isPartlyScrolledIntoView('.education')){
-        //     $(elem).removeClass("expand70");
-        // }
     }
 
 
-    var aboutTextParagraphs = $('#aboutText p');
-    for(var i = 0; i < aboutTextParagraphs.length; i++){
-        var elem = aboutTextParagraphs[i];
-        if(isFullyScrolledIntoView(elem)){
-            $(elem).addClass("appearFromBottom");
+    if($(window).innerWidth() < 668){
+        if(isPartlyScrolledIntoView("#aboutText p")){
+            $("#aboutText p").addClass("appearFromBottom");
+        }
+    }else{
+        var aboutTextParagraphs = $('#aboutText p');
+        for(var i = 0; i < aboutTextParagraphs.length; i++){
+            var elem = aboutTextParagraphs[i];
+            if(isFullyScrolledIntoView(elem)){
+                $(elem).addClass("appearFromBottom");
+            }
         }
     }
 
-    var eduSummaryTextParagraphs = $('.eduSummary p');
-    for(var i = 0; i < eduSummaryTextParagraphs.length; i++){
-        var elem = eduSummaryTextParagraphs[i];
+    if($(window).innerWidth() < 668){
+        if(isPartlyScrolledIntoView(".eduSummary p")){
+            $(".eduSummary p").addClass("appearFromBottom");
+        }
+    }else{
+        var eduSummaryTextParagraphs = $('.eduSummary p');
+        for(var i = 0; i < eduSummaryTextParagraphs.length; i++){
+            var elem = eduSummaryTextParagraphs[i];
+            if(isFullyScrolledIntoView(elem)){
+                $(elem).addClass("appearFromBottom");
+            }
+        }
+    }
+
+
+
+    var navButtons = $('#navigationButtonWrapper a');
+    for(var i = 0; i < navButtons.length; i++){
+        var elem = navButtons[i];
         if(isFullyScrolledIntoView(elem)){
-            $(elem).addClass("appearFromBottom");
+            $(elem).addClass("appearFromTop");
         }
     }
 
@@ -294,51 +473,19 @@ function scrollAnimations(){
     }
 
 
-    $('.startscreen h1').addClass('appearFromBottom');
-    // else if(!isPartlyScrolledIntoView('.about')){
-    //     $('#hello').removeClass('appearFromLeft');
-    // }
-
-    if(isFullyScrolledIntoView('#slideLeft')){
-        $('#slideLeft').addClass("appearFromLeft");
-    }
-    // else if(!isPartlyScrolledIntoView('.projects')){
-    //     $('#slideLeft').removeClass("appearFromLeft");
-    // }
-
-    if(isFullyScrolledIntoView('#slideRight')){
-        $('#slideRight').addClass("appearFromRight");
-    }
-    // else if(!isPartlyScrolledIntoView('.projects')){
-    //     $('#slideRight').removeClass("appearFromRight");
-    // }
-
-    if(isFullyScrolledIntoView('#profileImg')){
-        $('#profileImg').addClass("spinAppearance");
-    }
-    // else if(!isPartlyScrolledIntoView('.startscreen')){
-    //     $('#profileImg').removeClass("spinAppearance");
-    // }
-
 
     if(isFullyScrolledIntoView('#projectHeader')){
         $('#projectHeader').addClass('appearFromRight');
     }
 
     if(isFullyScrolledIntoView('.expUpper > h1')){
-        $('.expUpper > h1').addClass("appearFromTop");
+        $('.expUpper > h1').addClass("appearFromLeft");
     }
 
-    // else if(!isPartlyScrolledIntoView('.education')){
-    //     $('#eduPeriscopeWrapper .eduBorder').removeClass("expand20");
-    // }
 
     if(isFullyScrolledIntoView('#aboutSeparator')){
         $('#aboutSeparator').addClass("expandFromBottom30");
     }
-    // else if(!isPartlyScrolledIntoView('.about')){
-    //     $('#aboutSeparator').removeClass("expandFromBottom30");
-    // }
 
     if(isFullyScrolledIntoView('#eduTimelineWrapper .eduBorder')){
         $('#eduTimelineWrapper .eduBorder').addClass("expand20");
@@ -347,9 +494,6 @@ function scrollAnimations(){
     if(isPartlyScrolledIntoView('#mac')){
         $('#mac').addClass("appearFromRightInBackground");
     }
-    // else if(!isPartlyScrolledIntoView('.education')){
-    //     $('#eduTimelineWrapper .eduBorder').removeClass("expand20");
-    // }
 
     var interests = $('.interestHolder');
     for(var i = 0; i < interests.length; i++){
@@ -361,12 +505,6 @@ function scrollAnimations(){
                 $(elem).addClass("appearFromRight");
             }
         }
-        // else if(!isPartlyScrolledIntoView('.about')){
-        //     $(elem).addClass("appearFromLeft1");
-        //     $(elem).addClass("appearFromLeft");
-        //     $(elem).addClass("appearFromRight1");
-        //     $(elem).addClass("appearFromRight");
-        // }
     }
 
     var bigButtons = $('.bigButton');
@@ -375,17 +513,15 @@ function scrollAnimations(){
         if(isFullyScrolledIntoView(elem)){
             $(elem).addClass("slideDownBig" + i);
         }
-        // else if(!isPartlyScrolledIntoView('.experience')){
-        //     for(var a = 0; a < bigButtons.length; a++){
-        //         $(elem).removeClass("slideDownBig" + a);
-        //     }
-        // }
     }
 }
 
 function whatBackground(scrolledY){
 
-    if(isPartlyScrolledIntoView('.projects')){
+    var docViewBottom = $(window).scrollTop() + $(window).height();
+    var slidesInProject =  $('.slideDir').offset().top;
+
+    if(docViewBottom > slidesInProject){
         $('#contact').show();
     }else{
         $('#contact').hide();
@@ -405,8 +541,8 @@ function isPartlyScrolledIntoView(elem){
     var docViewTop = $window.scrollTop();
     var docViewBottom = docViewTop + $window.height();
 
-    var elemTop = $elem.offset().top + 100;
-    var elemBottom = elemTop + $elem.height() - 100;
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
 
     var bottomIsOnElement = (docViewBottom < elemBottom) && (docViewBottom > elemTop);
     var topIsOnElement = (docViewTop < elemBottom) && (docViewTop > elemTop);

@@ -8,7 +8,7 @@ footer{
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
-	z-index: -1;
+	z-index: 1;
 	background-color: rgb(245,245,245);
 	text-align: center;
 	display: none;
@@ -20,9 +20,10 @@ footer{
 	width: 80%;
 	display: block;
 	padding-top: 50px;
-	font-family: "Abril Fatface";
+	font-family: "Oswald";
+	font-weight: 700;
 	font-size: 40px;
-	color: rgb(160,160,160);
+	color: rgb(100,100,100);
 }
 
 #mail{
@@ -30,19 +31,18 @@ footer{
 	font-family: "Roboto";
 	font-weight: 100;
 	font-size: 70px;
-	color: rgb(170,170,170);
+	color: rgb(100,100,100);
 	text-decoration: none;
 	transition: 150ms linear;
 }
 
 #mail:hover{
-	color: rgb(80,80,80);
+	color: rgb(230,0,0);
 }
 
 #contactSeparator{
-	opacity: 0;
 	display: block;
-	width: 0;
+	width: 20%;
 	max-width: 300px;
 	border-bottom: 5px solid rgb(100,100,100);
 	margin: 70px auto 50px auto;
@@ -77,7 +77,7 @@ footer{
 	display: inline-block;
 	font-family: 'Roboto';
 	font-size: 18px;
-	color: rgb(160,160,160);
+	color: rgb(100,100,100);
 	text-align: center;
 	background: rgb(250,250,250);
 	padding: 10px 20px 18px 20px;
@@ -94,7 +94,7 @@ footer{
 	transform: scale(1.1);
 	background-color: rgb(250,250,250);
 	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
-	color: rgb(100,100,100);
+	color: rgb(80,80,80);
 }
 
 
@@ -105,7 +105,7 @@ footer{
 	height: 90px;
 	border-radius: 50%;
 	background-color: rgb(250,250,250);
-	box-shadow: 0px 4px 10px 1px rgb(180,180,180);
+	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
 	transition: 0.12s linear;
 	overflow: hidden;
 	text-decoration: none;
@@ -122,7 +122,7 @@ footer{
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	color: rgb(160,160,160);
+	color: rgb(120,120,120);
 	transition: color 80ms linear;
 	width: 100%;
 	height: 100%;
@@ -149,7 +149,7 @@ footer{
 .socMedia:hover{
 	transform: scale(1.2);
 	background-color: rgb(250,250,250);
-	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
+	box-shadow: 0px 4px 10px 1px rgb(140,140,140);
 }
 
 
