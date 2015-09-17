@@ -356,7 +356,7 @@ div{
 	text-decoration: none;
 	border-radius: 50%;
 	background-color: transparent;
-	border: 4px solid rgb(70,70,70);
+	border: 3px solid rgb(70,70,70);
 	color: rgb(70,70,70);
 	width: 45px;
 	height: 45px;
@@ -401,7 +401,7 @@ div{
 .scrollIcon i{
 	padding: 0;
 	align-self: center;
-	font-size: 45px;
+	font-size: 30px;
 	margin: 0 auto;
 	transform: translateY(-4px);
 }
@@ -610,7 +610,7 @@ div{
 	}
 
 	.expUpper{
-		background: linear-gradient(to bottom, transparent 245px, rgb(60,60,60) 0);
+		background: linear-gradient(to bottom, transparent 245px, rgb(40,40,40) 0);
 	}
 
 
@@ -786,7 +786,7 @@ div{
 	}
 
 	.expUpper{
-		background-color: rgb(60,60,60);
+		background-color: rgb(40,40,40);
 	}
 
 	.bigButton{
@@ -939,11 +939,9 @@ div{
 
 
 	#scrollDown{
-		height: 30px;
-		width: 30px;
-		font-size: 30px;
+		height: 40px;
+		width: 40px;
 	}
-
 
 }
 

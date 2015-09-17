@@ -7,7 +7,7 @@
 
 
 .projects{
-	background-color: rgb(60,60,60);
+	background-color: rgb(40,40,40);
 	z-index: 3;
 	width: 100%;
 	padding: 0;
@@ -88,7 +88,7 @@
 	width: 45px;
 	height: 45px;
 	text-decoration: none;
-	border: 3px solid rgb(250,250,250);
+	border: 2px solid rgb(250,250,250);
 	top: 45%;
 	z-index: 5;
 	transform: translater3d(0,0,0) scale(1);
@@ -105,7 +105,7 @@
 
 .slideDir i{
 	color: rgb(250,250,250);
-	font-size: 45px;
+	font-size: 30px;
 }
 
 #slideLeft i{
@@ -116,19 +116,13 @@
 	transform: translateX(1px) translateY(-1px);
 }
 
-
-#slideLeft:hover{
-	transform: translateX(20px);
-	background-color: white;
+.slideDir:hover{
+	background-color: rgb(250,250,250);
 }
+
 
 #slideLeft:hover i{
 	color: rgb(80,80,80);
-}
-
-#slideRight:hover{
-	transform: translateX(-20px);
-	background-color: white;
 }
 
 #slideRight:hover i{

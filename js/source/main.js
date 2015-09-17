@@ -290,14 +290,26 @@ var periscopeIfMozilla = function(){
 
     }
 }
+
+var periscopeIfSafari = function(){
+    if($.browser.safari){
+        $('.eduPeriscope').css({
+            'border-radius': '1px',
+            'height': '600px',
+            'border': '7px solid rgb(230,230,230)'
+        });
+    }
+}
+
 periscopeIfMozilla();
+periscopeIfSafari();
 
 
 setUpDisplayTypesForPopups();
 
 $('#scrollDown').css({
     "transition": "0.4s linear", 
-    "transform": "translateY(0px)"
+    "transform": "translateY(-5px)"
 });
 setTimeout(function(){
     $('#scrollDown').css({"transition": "0.2s linear"});

@@ -23,7 +23,7 @@ footer{
 	font-family: "Oswald";
 	font-weight: 700;
 	font-size: 40px;
-	color: rgb(100,100,100);
+	color: rgb(40,40,40);
 }
 
 #mail{
@@ -87,7 +87,7 @@ footer{
 }
 
 #contactText p{
-	margin-top: 10px;
+	margin-top: 4px;
 }
 
 #contactText:hover{
