@@ -359,7 +359,7 @@ var lastUsed;
 var isShowing = false;
 function showWork(){
     var _this = '.' + $(this).children('.workButton').children('a').data("target");
-    $('#popDownWrapper').css({'height': $(_this).outerHeight()+80+'px'});
+    $('#popDownWrapper').css({'height': $(_this).outerHeight()+180+'px'});
     if(isShowing && _this != lastUsed){
         $(lastUsed).css({'opacity': '0', 'z-index': '-1'});
         $(lastUsed).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){

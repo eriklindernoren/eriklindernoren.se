@@ -12,7 +12,7 @@
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
-	z-index: 3;
+	z-index: 4;
 	transform: translate3d(0,0,0);
 
 }
@@ -20,7 +20,8 @@
 
 .expUpper{
 	transform: translate3d(0,0,0);
-	background: linear-gradient(to bottom, transparent 275px, rgb(40,40,40) 0);
+	/*background: linear-gradient(to bottom, transparent 275px, rgb(40,40,40) 0);*/
+	transform: translateY(100px);
 }
 
 .expUpper > h1{
@@ -36,13 +37,12 @@
 #workWrapper{
 	margin: 0 auto;
 	text-align: center;
-	padding: 10px 0 40px 0;
+	padding: 10px 0 0px 0;
 	width: 100%;
 	max-width: 1400px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	z-index: 2;
 }
 
 
@@ -80,7 +80,7 @@
 }
 
 .bigButton > .workButtonBack{
-	background-color: rgb(80,80,80);
+	background-color: rgb(60,60,60);
 	transform: perspective(600px) rotateY(180deg);
 }
 
@@ -128,6 +128,14 @@
 	margin: 0 auto;
 	overflow: hidden;
 	transform: translate3d(0,0,0);
+	z-index: 2;
+}
+
+.imgPosition{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 
@@ -137,7 +145,7 @@
 	margin-right: auto;
 	right: 0;
 	left: 0;
-	margin-top: 40px;
+	margin-top: 140px;
 	max-width: 600px;
 	padding: 20px;
 	border-radius: 3px;

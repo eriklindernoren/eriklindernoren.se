@@ -17,6 +17,7 @@
 	text-align: center;
 	overflow: hidden;
 	transition: 0.2s linear;
+	padding-top: 100px;
 }
 
 #projWrapper{
