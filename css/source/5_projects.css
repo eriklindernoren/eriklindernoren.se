@@ -125,6 +125,10 @@
 	color: rgb(80,80,80);
 }
 
+#slideRight:hover{
+	transform: rotateZ(90deg);
+}
+
 #slideRight:hover i{
 	color: rgb(80,80,80);
 }
