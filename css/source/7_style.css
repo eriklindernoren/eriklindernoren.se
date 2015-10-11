@@ -427,21 +427,21 @@ div{
 	font-size: 25px;
 	text-decoration: none;
 	padding: 0;
-	color: rgb(40,40,40);
+	color: rgb(70,70,70);
 }
 
 .scrollToTop:hover{
 	width: 100px;
 	border-radius: 3px;
-	background-color: rgb(70,70,70);
+	/*background-color: rgb(70,70,70);*/
 }
 
 .scrollToTop:hover i{
-	color: rgb(250,250,250);
+	/*color: rgb(250,250,250);*/
 }
 
 .scrollToTop:hover .scrollText h1{
-	color: rgb(250,250,250);
+	/*color: rgb(250,250,250);*/
 }
 
 

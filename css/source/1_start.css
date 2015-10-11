@@ -128,6 +128,7 @@
 	margin-right: auto;
 	margin-left: auto;
 	z-index: 2;
+	background-color: rgb(40,40,40);
 	background-image: url("../images/desk5dyed.jpeg");
 	background-position: center center;
 	background-size: cover; 
@@ -178,7 +179,6 @@
 
 
 .startscreen h1{
-	opacity:;
 	position: absolute;
 	bottom: 60px;
 	left: 0;

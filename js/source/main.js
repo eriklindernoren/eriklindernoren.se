@@ -377,9 +377,10 @@ function showWork(){
         }).addClass("slideUp");
         $('#popDownWrapper').delay(100).queue(function (next) { 
             $(this).css('height', '0'); 
+            $('.experience').css({'box-shadow': 'none'});
+            $('.bigButton > div').css({'box-shadow': '0px 0px 0px 0px rgb(0,0,0)'});
             next(); 
         });
-
         isShowing = false;
     }else {
         $(_this).css({'opacity': '1', 'z-index': '3'});
@@ -387,6 +388,8 @@ function showWork(){
             $(this).removeClass("slideDown");
         }).addClass("slideDown");
         isShowing = true;
+        $('.experience').css({'box-shadow': '0px 6px 10px -2px rgb(20,20,20)'});
+        $('.bigButton > div').css({'box-shadow': '0px 6px 10px -2px rgb(40,40,40)'});
     }
     lastUsed = _this;
 }
@@ -531,7 +534,7 @@ function scrollAnimations(){
 function whatBackground(scrolledY){
 
     var docViewBottom = $(window).scrollTop() + $(window).height();
-    var slidesInProject =  $('.slideDir').offset().top;
+    var slidesInProject =  $('.projects').offset().top + $('.projects').height() - 100;
 
     if(docViewBottom > slidesInProject){
         $('#contact').show();
