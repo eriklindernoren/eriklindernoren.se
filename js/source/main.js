@@ -236,7 +236,7 @@ $('#projImages a').on('click', function(){
                 });
                 whatBackground();
             }        
-            $('.projects').css({"margin-bottom": "660px"});
+            $('.projects').css({"margin-bottom": "700px"});
         }else{
          $('.projects').css({"margin-bottom": "0px"});
          $('#contact').css({
@@ -416,17 +416,17 @@ function scrollAnimations(){
         
     }
 
-    var timelineItems = $('.time');
-    for(var i = 0; i < timelineItems.length; i++){
-        var elem = timelineItems[i];
-        if(isFullyScrolledIntoView(elem)){
-            if((i%2)==0)
-                $(elem).addClass("appearFromRight");
-            else
-                $(elem).addClass("appearFromLeft");
+    // var timelineItems = $('.time');
+    // for(var i = 0; i < timelineItems.length; i++){
+    //     var elem = timelineItems[i];
+    //     if(isFullyScrolledIntoView(elem)){
+    //         if((i%2)==0)
+    //             $(elem).addClass("appearFromRight");
+    //         else
+    //             $(elem).addClass("appearFromLeft");
 
-        }
-    }
+    //     }
+    // }
 
     var eduSumSeparators = $('.eduSummary .eduBorder');
     for(var i = 0; i < eduSumSeparators.length; i++){
@@ -435,36 +435,6 @@ function scrollAnimations(){
             $(elem).addClass("growToFull");
         }
     }
-
-
-    if($(window).innerWidth() < 668){
-        if(isPartlyScrolledIntoView("#aboutText p")){
-            $("#aboutText p").addClass("appearFromBottom");
-        }
-    }else{
-        var aboutTextParagraphs = $('#aboutText p');
-        for(var i = 0; i < aboutTextParagraphs.length; i++){
-            var elem = aboutTextParagraphs[i];
-            if(isFullyScrolledIntoView(elem)){
-                $(elem).addClass("appearFromBottom");
-            }
-        }
-    }
-
-    if($(window).innerWidth() < 668){
-        if(isPartlyScrolledIntoView(".eduSummary p")){
-            $(".eduSummary p").addClass("appearFromBottom");
-        }
-    }else{
-        var eduSummaryTextParagraphs = $('.eduSummary p');
-        for(var i = 0; i < eduSummaryTextParagraphs.length; i++){
-            var elem = eduSummaryTextParagraphs[i];
-            if(isFullyScrolledIntoView(elem)){
-                $(elem).addClass("appearFromBottom");
-            }
-        }
-    }
-
 
 
     var navButtons = $('#navigationButtonWrapper a');
@@ -506,9 +476,9 @@ function scrollAnimations(){
         $('#eduTimelineWrapper .eduBorder').addClass("expand20");
     }
 
-    if(isPartlyScrolledIntoView('#mac')){
-        $('#mac').addClass("appearFromRightInBackground");
-    }
+    // if(isPartlyScrolledIntoView('#mac')){
+    //     $('#mac').addClass("appearFromRightInBackground");
+    // }
 
     var interests = $('.interestHolder');
     for(var i = 0; i < interests.length; i++){

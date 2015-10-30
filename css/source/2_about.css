@@ -14,7 +14,7 @@
 	justify-content: center;
 	position: relative;
 	z-index: 3;
-	border-bottom: 5px solid rgb(160,160,160);
+	border-bottom: 5px solid rgb(40,40,40);
 }
 
 #aboutWrapper{
@@ -36,14 +36,21 @@
 	margin-bottom: 40px;
 }
 
-
-#mac{
-	z-index: -1;
-	opacity: 0;
+#imageHolder{
+	border-bottom: 5px solid rgb(40,40,40);
+	width: 100%;
 	position: absolute;
-	bottom: 13%;
-	right: 5%;
-	width: 500px;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+
+#zurich{
+	z-index: -2;
+	opacity: 1;
+	transform: translateY(5px);
+	width: 100%;
 	height: auto;
 }
 
@@ -68,7 +75,6 @@
 
 #aboutText p{
 	position: relative;
-	opacity: 0;
 	display: inline-block;
 	font-family: 'Roboto';
 	font-weight: 300;
@@ -133,7 +139,8 @@
 	height: 80px;
 	border-radius: 50%;
 	background-color: rgb(250,250,250);
-	border: 5px solid rgb(160,160,160);
+	border: 2px solid rgb(40,40,40);
+	z-index: 1;
 }
 
 
