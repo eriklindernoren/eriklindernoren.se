@@ -370,7 +370,6 @@ div{
 
 .scrollToTop{
 	right: 40px;
-
 }
 
 
@@ -421,7 +420,7 @@ div{
 
 .scrollToTop:hover{
 	width: 104px;
-	border-radius: 24px;
+	border-radius: 15px;
 }
 
 
@@ -533,10 +532,29 @@ div{
 /*	---------- MOBILE --------------  */
 /*---------------------------------------*/
 
+@media screen and (min-width: 2400px){
+	#scrollDown{
+		bottom: 20px;
+	}
+}
+
+
+@media screen and (min-width: 1900px){
+	#forestHolder{
+		max-height: 500px;
+		height: auto;
+		bottom: 50px;
+	}
+
+}
+
 @media screen and (min-width: 1600px){
 	#slideLeft{
 		left: 60px;
 	}
+
+	
+
 
 	#slideRight{
 		right: 60px;
@@ -650,13 +668,21 @@ div{
 		line-height: 25px;
 	}
 
-	#startImgHolder{
-		left: 20px;
-		right: 20px;
+	#message p{
+		font-size: 18px;
 	}
 
 	#scrollDown{
 		bottom: 30px;
+	}
+
+	#eHolder{
+		display: none;
+	}
+
+	#startImgHolder{
+		left: 20px;
+		right: 20px;
 	}
 
 	.navHeader{

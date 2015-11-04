@@ -14,13 +14,14 @@
 	justify-content: center;
 	position: relative;
 	z-index: 3;
-	border-bottom: 5px solid rgb(40,40,40);
+	border-bottom: 3px solid rgb(200,200,200);
 }
 
 #aboutWrapper{
 	position: relative;
 	width: 100%;
 	max-width: 1400px;
+	padding-bottom: 0px;
 }
 
 
@@ -36,7 +37,7 @@
 	margin-bottom: 40px;
 }
 
-#imageHolder{
+#zurichHolder{
 	border-bottom: 5px solid rgb(40,40,40);
 	width: 100%;
 	position: absolute;
@@ -139,7 +140,7 @@
 	height: 80px;
 	border-radius: 50%;
 	background-color: rgb(250,250,250);
-	border: 2px solid rgb(40,40,40);
+	border: 3px solid rgb(200,200,200);
 	z-index: 1;
 }
 

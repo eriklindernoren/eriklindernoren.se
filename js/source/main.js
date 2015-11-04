@@ -3,8 +3,7 @@
 $(document).ready(function(){
 
     // Cache
-    var startscreenHeight = screen.height - 80;
-    
+    // $('.svg-inject').svgInject();
 
     // Animate to div 
     $(document).on('click','.navbuttons', function(event) {
@@ -21,7 +20,7 @@ $(document).ready(function(){
         }, 700, "easeOutQuad");       
        }else{
         $('html, body').animate({
-            scrollTop: $(target).offset().top
+            scrollTop: $(target).offset().top 
         }, 700, "easeOutQuad");
     }
 });
@@ -89,19 +88,6 @@ $(document).ready(function(){
         $(this).children('.imgText').children('p').animate({'opacity': '0'},100,"linear");
     });
 
-
-
-    $('#scrollDown').hover(function(){
-        $('#scrollDown').css({
-            'background-color': 'rgb(250,250,250)',
-            'color': 'rgb(20,20,20)'
-        });
-    }, function(){
-        $("#scrollDown").css({
-            'background-color': 'rgb(20,20,20)',
-            'color': 'rgb(250,250,250)'
-        });
-    });
 
     // Scroll animations
     $(window).scroll(scrollAnimations);
@@ -317,42 +303,20 @@ setTimeout(function(){
 
 
 
-$(document).scroll(navAndScrollButtonsOnScroll);
+    $(document).scroll(navAndScrollButtonsOnScroll);
 
         // Show navigation background, "scroll to top"-button
-        var lastDistTop = $(window).scrollTop();
         var navPos = "down";
         function navAndScrollButtonsOnScroll(){
-            var distTop = $('body').scrollTop();
-            var scrollDif = lastDistTop - distTop;
-            var navBackground = startscreenHeight - 80;
 
+            var distTop = $(window).scrollTop();
             if(distTop > 200 && window.innerWidth > 668){
                 $('.scrollToTop').css({"transform": "translateY(-100px)"});
-                // $('.scrollToNext').css({"transform": "translateY(-80px)"});
-                // $('#scrollDown').css({
-                //     "transition": "0.4s linear", 
-                //     "transform": "translateY(100px)"
-                // });
-                // setTimeout(function(){
-                //     $('#scrollDown').css({"transition": "0.2s linear"});
-                // },400);
-
-}
-else{
-    $('.scrollToTop').css({'transform': 'translateY(100px)'});
-                // $('.scrollToNext').css({"transform": "translateY(100px)"});
-                // $('#scrollDown').css({
-                //     "transition": "0.4s linear", 
-                //     "transform": "translateY(0)"
-                // });
-                // setTimeout(function(){
-                //     $('#scrollDown').css({"transition": "0.2s linear"});
-                // },400);
-
-}
-lastDistTop = distTop;
-}
+            }
+            else{
+                $('.scrollToTop').css({'transform': 'translateY(100px)'});
+            }
+        }
 });
 
 var lastUsed;

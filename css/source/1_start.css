@@ -12,16 +12,60 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-	background-color: rgb(250,250,250);
-}
-
-#upperBackground{
-	position: absolute;
-	top:0;
-	width: 100%;
-	height: 60%;
 	background-color: rgb(20,20,20);
 }
+
+.star{
+	width: 3px;
+	height: 3px;
+	background-color: rgb(250,250,250);
+	position: fixed;
+	border-radius: 50%;
+}
+
+
+#s1{
+	top: 20%;
+	left: 20%;
+}
+#s2{
+	top: 45%;
+	left: 40%;
+}
+#s3{
+	top: 45%;
+	right: 35%;
+}
+#s4{
+	top: 25%;
+	left: 10%;
+}
+#s5{
+	top: 15%;
+	left: 40%;
+}
+#s6{
+	top: 45%;
+	right: 15%;
+}
+#s7{
+	top: 25%;
+	right: 20%;
+}
+#s8{
+	top: 15%;
+	right: 40%;
+}
+#s9{
+	bottom: 45%;
+	left: 30%;
+}
+
+#s10{
+	bottom: 50%;
+	left: 15%;
+}
+
 
 #navigationBar{
 	position: absolute;
@@ -33,6 +77,7 @@
 	width: 100%;
 	z-index: 4;
 }
+
 
 
 
@@ -78,7 +123,7 @@
 
 #message{
 	position: absolute;
-	top: 45%;
+	top: 35%;
 	transform: translateY(-50%);
 	width: 100%;
 	display: flex;
@@ -91,7 +136,7 @@
 	max-width: 80%;
 	width: 600px;
 	font-family: "Oswald";
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 25px;
 	color: rgb(250,250,250);
 	display: block;
@@ -103,6 +148,53 @@
 	transform: scale(1);
 }
 
+#eHolder{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	border: 2px solid rgb(250,250,250);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#e{
+	color: rgb(250,250,250);
+	font-weight: 200;
+	font-family: "Roboto";
+	font-size: 40px;
+	transform: translateY(-2px);
+}
+
+
+#forestHolder{
+	z-index: 3;
+	position: absolute;
+	bottom: 75px;
+	height: auto;
+	max-height: 350px;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+#forest{
+	position: center center;
+	width: 110%;
+	height: auto;
+	z-index: 3;
+}
+
+#lowerBackground{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+	background-color: rgb(250,250,250);
+}
 
 
 #startImgHolder{
@@ -144,17 +236,17 @@
 
 #scrollDown{
 	border-radius: 50%;
-	width: 55px;
-	height: 55px;
+	border: 2px solid transparent;
+	width: 50px;
+	height: 50px;
 	font-size: 30px;
 	position: absolute;
-	bottom: 20px;
+	bottom: 70px;
 	left: 0;
 	right: 0;
 	margin: 0 auto 0 auto;
 	z-index: 4;
-	background-color: rgb(20,20,20);
-	color: rgb(250,250,250);
+	color: rgb(20,20,20);
 	text-decoration: none;
 	display: flex;
 	align-items: center;
@@ -166,6 +258,11 @@
 #scrollDown > i {
 	font-size: 35px;
 }
+
+#scrollDown:hover{
+	border: 2px solid rgb(20,20,20);
+}
+
 
 
 #profileImg{
