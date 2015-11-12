@@ -13,58 +13,18 @@
 	overflow: hidden;
 	z-index: 1;
 	background-color: rgb(20,20,20);
+	background: linear-gradient(to bottom, rgb(20,20,20), #2e8ece);
+
 }
 
 .star{
-	width: 3px;
-	height: 3px;
+	width: 2px;
+	height: 2px;
 	background-color: rgb(250,250,250);
 	position: fixed;
 	border-radius: 50%;
 }
 
-
-#s1{
-	top: 20%;
-	left: 20%;
-}
-#s2{
-	top: 45%;
-	left: 40%;
-}
-#s3{
-	top: 45%;
-	right: 35%;
-}
-#s4{
-	top: 25%;
-	left: 10%;
-}
-#s5{
-	top: 15%;
-	left: 40%;
-}
-#s6{
-	top: 45%;
-	right: 15%;
-}
-#s7{
-	top: 25%;
-	right: 20%;
-}
-#s8{
-	top: 15%;
-	right: 40%;
-}
-#s9{
-	bottom: 45%;
-	left: 30%;
-}
-
-#s10{
-	bottom: 50%;
-	left: 15%;
-}
 
 
 #navigationBar{
@@ -107,6 +67,7 @@
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	flex-direction: column;
 }
 
 .navHeader{
@@ -117,8 +78,16 @@
 	text-transform: uppercase;
 }
 
-#navigationButtonWrapper a:hover  p{
-	color: rgb(80,80,80);
+.navbuttons > .expandingUnderline{
+	border-bottom: 3px solid rgb(250,250,250);
+	width: 0px;
+	opacity: 0.1;
+	transition: 0.3s ease;
+}
+
+.navbuttons:hover > .expandingUnderline{
+	width: 100%;
+	opacity: 1;
 }
 
 #message{
@@ -188,6 +157,40 @@
 	z-index: 3;
 }
 
+#mountainHolder{
+	transform: translate3d(0, 0, 0);
+	position: absolute;
+	bottom: 130px;
+	left: -40%;
+	height: auto;
+	width: 135%;
+	overflow: hidden;
+}
+
+
+#mountain{
+	position: center center;
+	width: 100%;
+	height: auto;
+}
+
+#mountainHolder2{
+	transform: translate3d(0, 0, 0);
+	position: absolute;
+	bottom: 130px;
+	right: -20%;
+	height: auto;
+	width: 90%;
+	overflow: hidden;
+}
+
+
+#mountain2{
+	position: center center;
+	width: 110%;
+	height: auto;
+}
+
 #lowerBackground{
 	width: 100%;
 	position: absolute;
@@ -245,7 +248,7 @@
 	left: 0;
 	right: 0;
 	margin: 0 auto 0 auto;
-	z-index: 4;
+	z-index: 40;
 	color: rgb(20,20,20);
 	text-decoration: none;
 	display: flex;

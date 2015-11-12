@@ -2,8 +2,16 @@
 
 $(document).ready(function(){
 
-    // Cache
-    // $('.svg-inject').svgInject();
+    $(window).bind('scroll',function(e){
+    parallaxScroll();
+    });
+
+    function parallaxScroll(){
+        var scrolled = $(window).scrollTop();
+        $('#mountainHolder2').css('transform','translateY('+((scrolled*.25))+'px)');
+        $('#mountainHolder').css('transform','translateY('+((scrolled*.5))+'px)');
+    }
+
 
     // Animate to div 
     $(document).on('click','.navbuttons', function(event) {
@@ -24,6 +32,38 @@ $(document).ready(function(){
         }, 700, "easeOutQuad");
     }
 });
+
+    var beenSetUp = false;
+    if(!beenSetUp){
+        setupStars();
+    }
+    function setupStars(){
+
+        var placing = [
+        [20,60],
+        [45,55],
+        [20,35],
+        [25,85],
+        [15,75],
+        [45,15],
+        [25,10],
+        [15,25],
+        [10,50],
+        [50,25],
+        [60,40],
+        [60,85],
+        [50,70],
+        ];
+        for(i = 0; i < 13; i++){
+            var star = $('#s' + (i+1));
+            var top = placing[i][0];
+            var left = placing[i][1];
+            $(star).css({'top': top + '%', 'left': left + '%'});
+        }
+        beenSetUp = true;
+    }
+
+
 
     function findNextSection(){
         var topOfWindow = $(window).scrollTop();

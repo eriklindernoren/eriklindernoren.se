@@ -14,7 +14,7 @@
 	justify-content: center;
 	position: relative;
 	z-index: 3;
-	border-bottom: 3px solid rgb(200,200,200);
+	border-bottom: 3px solid rgb(160,160,160);
 }
 
 #aboutWrapper{
@@ -108,8 +108,10 @@
 
 
 #resume a > .expandingUnderline{
-	border-color: rgb(160,160,160);
-	border-width: 4px;
+	border-bottom: 4px solid rgb(160,160,160);
+	width: 0px;
+	opacity: 0.1;
+	transition: 0.3s ease;
 }
 
 
@@ -140,7 +142,7 @@
 	height: 80px;
 	border-radius: 50%;
 	background-color: rgb(250,250,250);
-	border: 3px solid rgb(200,200,200);
+	border: 3px solid rgb(160,160,160);
 	z-index: 1;
 }
 
