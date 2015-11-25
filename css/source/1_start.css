@@ -23,6 +23,7 @@
 	background-color: rgb(250,250,250);
 	position: fixed;
 	border-radius: 50%;
+	transition: 0.1s linear;
 }
 
 
@@ -125,16 +126,18 @@
 	width: 50px;
 	height: 50px;
 	border: 2px solid rgb(250,250,250);
+	background-color: rgb(250,250,250);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	box-shadow: 1px 1px 10px 3px black;
 }
 
 #e{
-	color: rgb(250,250,250);
+	color: #2C3E50;
 	font-weight: 200;
 	font-family: "Roboto";
-	font-size: 40px;
+	font-size: 45px;
 	transform: translateY(-2px);
 }
 
@@ -165,6 +168,7 @@
 	height: auto;
 	width: 135%;
 	overflow: hidden;
+	transition: 0.1s linear;
 }
 
 
@@ -182,6 +186,7 @@
 	height: auto;
 	width: 90%;
 	overflow: hidden;
+	transition: 0.1s linear;
 }
 
 

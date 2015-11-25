@@ -8,8 +8,8 @@ $(document).ready(function(){
 
     function parallaxScroll(){
         var scrolled = $(window).scrollTop();
-        $('#mountainHolder2').css('transform','translateY('+((scrolled*.25))+'px)');
-        $('#mountainHolder').css('transform','translateY('+((scrolled*.5))+'px)');
+        $('#mountainHolder2').css('transform','translateY('+Math.round(((scrolled*.25)))+'px)');
+        $('#mountainHolder').css('transform','translateY('+Math.round(((scrolled*.5)))+'px)');
     }
 
 
