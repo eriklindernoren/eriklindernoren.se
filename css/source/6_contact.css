@@ -105,8 +105,8 @@ footer{
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
-	background-color: rgb(250,250,250);
-	box-shadow: 0px 4px 10px 1px rgb(160,160,160);
+	background-color: white;
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
 	transition: 0.12s linear;
 	overflow: hidden;
 	text-decoration: none;
@@ -149,8 +149,7 @@ footer{
 
 .socMedia:hover{
 	transform: scale(1.2);
-	background-color: rgb(250,250,250);
-	box-shadow: 0px 4px 10px 1px rgb(140,140,140);
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
 }
 
 

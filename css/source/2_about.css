@@ -14,14 +14,53 @@
 	justify-content: center;
 	position: relative;
 	z-index: 3;
-	border-bottom: 3px solid rgb(160,160,160);
+	padding-top: 100px;
 }
 
 #aboutWrapper{
 	position: relative;
 	width: 100%;
-	max-width: 1400px;
-	padding-bottom: 0px;
+	max-width: 1000px;
+	overflow: hidden;
+}
+
+
+#resume{
+	width: 130px;
+	height: 55px;
+	border-radius: 30px;
+	border: 2px solid #34495E;
+	text-decoration: none;
+	transition: 0.05s linear;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transform: scale(1);
+	margin: 50px auto 120px auto;
+}
+
+#resume p{
+	font-family: "Oswald";
+	font-weight: 300;
+	font-size: 22px;
+	letter-spacing: 3px;
+	text-align: center;
+	display: inline-block;
+	text-decoration: uppercase;
+	position: relative;
+	z-index: 3;
+	color: #34495E;
+	display: block;
+}
+
+#resume:hover{
+	background-color: #34495E;
+	border-color: #34495E;
+}
+
+#resume:hover p{
+	color: rgb(250,250,250);
 }
 
 
@@ -31,42 +70,15 @@
 	font-family: 'Oswald';
 	font-weight: 700;
 	font-size: 40px;
-	color: rgb(40,40,40);
+	color: rgb(20,20,20);
 	padding: 0;
-	margin-top: 20px;
 	margin-bottom: 40px;
 }
 
-#zurichHolder{
-	border-bottom: 5px solid rgb(40,40,40);
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	overflow: hidden;
-}
 
-
-#zurich{
-	z-index: -2;
-	opacity: 1;
-	transform: translateY(5px);
-	width: 100%;
-	height: auto;
-}
-
-#aboutSeparator{
-	opacity: 0;
-	display: block;
-	max-width: 200px;
-	min-width: 50px;
-	width: 0;
-	margin: 140px auto 0px 0;
-	border-top: 5px solid rgb(160,160,160);
-}
 
 #aboutText{
-	padding: 80px 0 20px 0;
+	padding: 0px 0 0px 0;
 	max-width: 700px;
 	margin: 0 auto;
 	width: 80%;
@@ -74,84 +86,23 @@
 	position: relative;
 }
 
+
+
 #aboutText p{
+	margin: 20px;
 	position: relative;
 	display: inline-block;
 	font-family: 'Roboto';
 	font-weight: 300;
 	font-size: 18px;
-	color: rgb(100,100,100);
+	color: rgb(120,120,120);
 	text-align: left;
-	margin-bottom: 20px;
 }
 
-#resume{
-	opacity: 0;
-	font-family: "Oswald";
-	font-weight: 400;
-	text-transform: uppercase;
-	font-size: 26px;
-	text-align: center;
-	padding: 80px 0 60px 0;
-	display: inline-block;
-	position: relative;
-	transition: 0.2s linear;
-	z-index: 3;
-}
-
-
-#resume a{
-	color: rgb(40,40,40);
-	text-decoration: none;
-	transition: 0.2s linear;
-}
-
-
-#resume a > .expandingUnderline{
-	border-bottom: 4px solid rgb(160,160,160);
-	width: 0px;
-	opacity: 0.1;
-	transition: 0.3s ease;
-}
-
-
-#resume a:hover > .expandingUnderline{
-	width: 100%;
-	transform: translateY(2px);
-	opacity: 1;
-}
-
-
-#interests{
-	position: relative;
-	bottom: -45px;
-	width: 100%;
-	margin: 0 auto;
-	max-width: 800px;
-	font-size: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.interestHolder{
-	opacity: 0;
-	display: block;
-	position: relative;
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
+#eduSep{
+	width: 50px;
+	height: 50px;
+	transform: translateY(50%) rotateZ(45deg);
 	background-color: rgb(250,250,250);
-	border: 3px solid rgb(160,160,160);
-	z-index: 1;
 }
 
-
-#interests i{
-	padding-top: 20px;
-	color: rgb(40,40,40);
-}
-
-.fa-stack .inner{
-	color: rgb(250,250,250);
-}

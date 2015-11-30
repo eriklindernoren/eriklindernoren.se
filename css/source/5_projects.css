@@ -8,6 +8,9 @@
 
 .projects{
 	background-color: rgb(40,40,40);
+	background: url("../images/desk-edited.jpeg") center center;
+	background-size: cover;
+	border-bottom: 3px solid rgb(80,80,80);
 	z-index: 3;
 	width: 100%;
 	padding: 0;
@@ -18,13 +21,24 @@
 	overflow: hidden;
 	transition: 0.2s linear;
 	padding-top: 100px;
+	transform: translate3d(0,0,0);
 }
+
+#projectFilter{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 140%;
+	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(34, 49, 63,0.7);
+/*	background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+*/}
 
 #projWrapper{
 	position: relative;
 	width: 90%;
 	height: 100%;
-	max-width: 1300px;
+	max-width: 1400px;
 }
 
 #projectHeader{
@@ -33,49 +47,27 @@
 	margin: 0 auto;
 	top: 50px;
 	display: block;
-	color: rgb(250,250,250);
+	color: white;
 	font-family: 'Oswald';
 	font-weight: 700;
 	font-size: 40px;
 	z-index: 4;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 
-#projImages{
-	position: absolute;
-	bottom: -70px;
-	right: 20px;
-	display: block;
-	width: 60%;
-	max-width: 600px;
-	height: auto;
-	opacity: 0;
-}
-
-#projImages a{
-	transition: 0.3s linear;
-}
-
-#projImages a img{
-	width: 100%;
-	height: auto;
-}
-
-#projImages a:hover{
-	transform: translateY(-30px);
-}
 
 .slideDiv{
 	position: absolute;
 	left: 20px;
-	bottom: 0;
-	padding-bottom: 120px;
+	top: 55%;
+	transform: translateY(-50%);
 	width: 50%;
 	opacity: 0;
 	z-index: -1;
 	overflow: hidden;
 	transition: opacity 1s linear;
+	pointer-events : none;
 }
 
 
@@ -90,9 +82,9 @@
 	height: 45px;
 	text-decoration: none;
 	border: 2px solid rgb(250,250,250);
-	top: 45%;
+	top: 50%;
 	z-index: 5;
-	transform: translater3d(0,0,0) scale(1);
+	transform: translater3d(0,0,0) scale(1) translateY(-50%);
 	transition: 0.2s linear;
 }
 
@@ -179,6 +171,14 @@
 	font-size: 16px;
 }
 
+.info a{
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 16px;
+	color: white;
+	pointer-events : auto;
+}
+
 .projSeparatorLeft{
 	display: block;
 	max-width: 200px;
@@ -205,31 +205,71 @@
 	display: block
 }
 
-#bars{
+
+#projImages{
 	position: absolute;
-	bottom: 20px;
-	right: 160px;
-	width: 20%;
+	bottom: -70px;
+	right: 20px;
+	display: block;
+	width: 60%;
 	height: auto;
-	z-index: 3;
+	opacity: 0;
+}
+
+#projImages a{
+	transition: 0.3s linear;
+}
+
+#projImages a img{
+	width: 100%;
+	height: auto;
+}
+
+/*#projImages a:hover{
+	transform: translateY(-30px);
+}*/
+
+.prototype{
+	position: absolute;
+}
+
+#ethcircle{
+	bottom: 25px;
+	right: 170px;
+	width: 15%;
+	height: auto;
+	z-index: 4;
 }
 
 #mapapp{
 	position: absolute;
-	bottom: 27px;
-	right: 80px;
-	width: 20%;
+	bottom: 32px;
+	right: 60px;
+	width: 15%;
 	height: auto;
-	z-index: 4;
+	z-index: 5;
 }
 
 #site{
 	position: absolute;
 	bottom: 20px;
-	right: 20px;
+	right: 0px;
 	width: 80%;
 	height: auto;
 	z-index: 1;
+
+}
+
+#moodi{
+	position: absolute;
+	bottom: 40px;
+	right: 20px;
+	width: 87%;
+	height: auto;
+	z-index: 2;
+	max-width: 800px;
+	border-radius: 7px;
+	overflow: hidden;
 }
 
 #site img{
@@ -238,11 +278,13 @@
 
 #sonus{
 	position: absolute;
-	bottom: 18px;
-	right: 0px;
-	width: 100%;
+	bottom: 50px;
+	right: 40px;
+	width: 70%;
 	height: auto;
-	z-index: 2;
+	max-width: 600px;
+	z-index: 3;
+
 }
 
 #sonus img{

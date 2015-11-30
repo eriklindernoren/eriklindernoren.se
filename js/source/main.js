@@ -12,6 +12,9 @@ $(document).ready(function(){
         $('#mountainHolder').css('transform','translateY('+Math.round(((scrolled*.5)))+'px)');
     }
 
+    $('#aboutRight').css({'height': $('#aboutText').height() + 'px'});
+    $('.projects').css({'height': getProjDivHeight() + 'px'});
+
 
     // Animate to div 
     $(document).on('click','.navbuttons', function(event) {
@@ -36,6 +39,7 @@ $(document).ready(function(){
     var beenSetUp = false;
     if(!beenSetUp){
         setupStars();
+        //setStarShine();
     }
     function setupStars(){
 
@@ -62,6 +66,16 @@ $(document).ready(function(){
         }
         beenSetUp = true;
     }
+
+    // function setStarShine(){
+    //     window.setInterval(starShine, 500);
+    // }
+
+    // function starShine(){
+    //     var i = Math.floor((Math.random() * 12) + 0);
+    //     var star = '#s' + (i+1);
+    //     $(star).addClass("shine");
+    // }
 
 
 
@@ -152,21 +166,27 @@ $(document).ready(function(){
 
         var height = 0;
         var projDivs = $('.slideDiv');
-        for(var i = 0; i < projDivs.length; i++){
-            var $elem = $(projDivs[i]);
-            if($elem.height() > height){
-                height = $elem.height();
-            }
-        }
-
+        // for(var i = 0; i < projDivs.length; i++){
+        //     var $elem = $(projDivs[i]);
+        //     if($elem.height() > height){
+        //         height = $elem.height();
+        //     }
+        // }
+        var biggestHeight = $('#div4').height();
         var offsetFromHeader = $('#projectHeader').position().top + $('#projectHeader').height();
 
-        return height + offsetFromHeader + 220;
+        // return height + offsetFromHeader + 190;
+        return biggestHeight + offsetFromHeader + 170;
     }
+
+                    //     <a id="ethcircle" href="javascript:void(0)" data-target="2"><img src="images/ethcircle.png" alt=""></img></a>
+                    // <a id="mapapp" href="javascript:void(0)" data-target="1"><img src="images/mapapp.png" alt=""></img></a>
+                    // <a id="site" href="javascript:void(0)" data-target="4"><img src="images/site.png" alt=""></img></a>
+                    // <a id="sonus" href="javascript:void(0)" data-target="3"><img src="images/sonus.jpeg" alt=""></img></a>
+                    // <a id="moodi" href="javascript:void(0)" data-target="5"><img src="images/moodi.png" alt=""></img></a>
     
     //Slide divs in project section
     var currentDiv = 4;
-    
     $('#div4').css({'opacity': '1', 'z-index': '3'});
     $(".slideDir").on('click', function(){
         var dir = $(this).attr("id");
@@ -177,7 +197,7 @@ $(document).ready(function(){
             currentDiv = parseInt(currentDiv) - 1;
 
             if(currentDiv == 0) {
-                currentDiv = 4;
+                currentDiv = 5;
             }
 
             var $lastUsed = $('#div' + lastDiv);
@@ -197,7 +217,7 @@ $(document).ready(function(){
         }else{
             var lastDiv = currentDiv;
             currentDiv = parseInt(currentDiv) + 1;
-            if (currentDiv == 5){
+            if (currentDiv == 6){
                 currentDiv = 1;
             }
 
@@ -215,10 +235,24 @@ $(document).ready(function(){
                 }).addClass("slideInFromBottom");
                 $this.css({'opacity': '1', 'z-index': '3'});
             },200);
+
         }
 
     }); 
 
+$('#projImages a').hover(function(){
+    $(this).css({'transform':'translateY(-30px)'});
+    var prototypes = $("#projImages a").not(this);
+    for(var i = 0; i < prototypes.length; i++){
+        var elem = prototypes[i];
+        if(parseInt($(elem).css("z-index")) > parseInt($(this).css("z-index"))){
+            $(elem).css({'opacity':'0.1'});
+        }
+    }
+
+}, function(){
+    $("#projImages a").css({'transform':'translateY(0)', 'opacity': '1'});
+});
 
 $('#projImages a').on('click', function(){
 
@@ -244,7 +278,6 @@ $('#projImages a').on('click', function(){
         },200);
     }
 });
-
 
     //Done at load and every time the window is resized
     var prevScreenWidth;
@@ -297,38 +330,20 @@ var setUpDisplayTypesForPopups = function(){
     $('.lowerMNavList').hide(); 
 }
 
-var periscopeIfMozilla = function(){
-    if($.browser.mozilla){
-        $('.eduPeriscope > div').removeClass('schoolImg');
-        $('.eduPeriscope').css({
-            'background-image': 'url("../images/zurich1.jpeg")',
-            'background-position': 'center center',
-            'background-attachment': 'fixed',
-            'background-size': 'cover'
-        });
-        $('#startImgHolder').removeClass('startImg');
-        $('#startImgHolder').css({
-            'background-image': 'url("../images/desk5dyed.jpeg")',
-            'background-position': 'center center',
-            'background-attachment': 'fixed',
-            'background-size': 'cover'
-        });
+// var periscopeIfMozilla = function(){
+//     if($.browser.mozilla){
+//         $('.eduPeriscope > div').removeClass('schoolImg');
+//         $('.eduPeriscope').css({
+//             'background-image': 'url("../images/zurich1.jpeg")',
+//             'background-position': 'center center',
+//             'background-attachment': 'fixed',
+//             'background-size': 'cover'
+//         });
+//     }
+// }
 
-    }
-}
 
-var periscopeIfSafari = function(){
-    if($.browser.safari){
-        $('.eduPeriscope').css({
-            'border-radius': '1px',
-            'height': '600px',
-            'border': '7px solid rgb(230,230,230)'
-        });
-    }
-}
-
-periscopeIfMozilla();
-periscopeIfSafari();
+// periscopeIfMozilla();
 
 
 setUpDisplayTypesForPopups();
@@ -344,7 +359,6 @@ setTimeout(function(){
 
 
     $(document).scroll(navAndScrollButtonsOnScroll);
-
         // Show navigation background, "scroll to top"-button
         var navPos = "down";
         function navAndScrollButtonsOnScroll(){
@@ -362,8 +376,10 @@ setTimeout(function(){
 var lastUsed;
 var isShowing = false;
 function showWork(){
+    $('#contact').hide();
     var _this = '.' + $(this).children('.workButton').children('a').data("target");
-    $('#popDownWrapper').css({'height': $(_this).outerHeight()+180+'px'});
+    // $('#popDownWrapper').css({'height': $(_this).outerHeight()+180+'px'});
+    $('#popDownWrapper').css({'height': $(".ericsson").outerHeight()+180+'px'});
     if(isShowing && _this != lastUsed){
         $(lastUsed).css({'opacity': '0', 'z-index': '-1'});
         $(lastUsed).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
@@ -405,7 +421,7 @@ function scrollAnimations(){
     var scrolledY = $(window).scrollTop();
     whatBackground(scrolledY);
 
-    var appearFromBottomList = [['#resume'],['.eduTimeline h1']];
+    var appearFromBottomList = [['.eduTimeline h1']];
 
     var triggerContactAnimations = $('.projects').offset().top + $(window).height();
 
@@ -472,9 +488,9 @@ function scrollAnimations(){
     }
 
 
-    if(isFullyScrolledIntoView('#aboutSeparator')){
-        $('#aboutSeparator').addClass("expandFromBottom30");
-    }
+    // if(isFullyScrolledIntoView('#aboutSeparator')){
+    //     $('#aboutSeparator').addClass("expandFromBottom30");
+    // }
 
     if(isFullyScrolledIntoView('#eduTimelineWrapper .eduBorder')){
         $('#eduTimelineWrapper .eduBorder').addClass("expand20");
@@ -483,18 +499,6 @@ function scrollAnimations(){
     // if(isPartlyScrolledIntoView('#mac')){
     //     $('#mac').addClass("appearFromRightInBackground");
     // }
-
-    var interests = $('.interestHolder');
-    for(var i = 0; i < interests.length; i++){
-        var elem = interests[i];
-        if(isFullyScrolledIntoView(elem)){
-            if(i < 2){
-                $(elem).addClass("appearFromLeft");
-            }else{
-                $(elem).addClass("appearFromRight");
-            }
-        }
-    }
 
     var bigButtons = $('.bigButton');
     for(var i = 0; i < bigButtons.length; i++){

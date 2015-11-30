@@ -12,9 +12,7 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-	background-color: rgb(20,20,20);
 	background: linear-gradient(to bottom, rgb(20,20,20), #2e8ece);
-
 }
 
 .star{
@@ -54,7 +52,7 @@
 }
 
 #navigationButtonWrapper > i{
-	color: rgb(60,60,60);
+	color: #2C3E50;
 	font-size: 6px;
 }
 
@@ -126,15 +124,13 @@
 	width: 50px;
 	height: 50px;
 	border: 2px solid rgb(250,250,250);
-	background-color: rgb(250,250,250);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 1px 1px 10px 3px black;
 }
 
 #e{
-	color: #2C3E50;
+	color: rgb(250,250,250);
 	font-weight: 200;
 	font-family: "Roboto";
 	font-size: 45px;
@@ -259,7 +255,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transform: translateY(88px);
+	transform: translateY(0);
 	transition: 0.2s linear;
 }
 
@@ -269,20 +265,6 @@
 
 #scrollDown:hover{
 	border: 2px solid rgb(20,20,20);
-}
-
-
-
-#profileImg{
-	position: absolute;
-	top: 45%;
-	transform: translateY(-50%);
-	left: 0;
-	right: 0;
-	border-radius: 50%;
-	width: 150px;
-	height: 150px;
-	z-index: 4;
 }
 
 

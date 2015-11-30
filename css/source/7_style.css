@@ -45,7 +45,8 @@ div{
 	display: block;
 	width: 100%;
 	height: 100%;
-	max-width: 1600px;
+	max-width: 1700px;
+	z-index: 1;
 }
 
 
@@ -136,9 +137,9 @@ div{
 }
 
 @keyframes popInLeft{
-	0%   {opacity: 0;transform: translateX(-800px);}
+	0%   {opacity: 0;transform: translateX(-800px) translateY(-50%);}
 	80%  {opacity: 1;}
-	100%   {transform: translateY(0px); opacity: 1;}
+	100%   {transform: translateX(0) translateY(-50%); opacity: 1;}
 }
 
 
@@ -150,7 +151,7 @@ div{
 @keyframes popInBottom{
 	0%   {opacity: 0;transform: translateY(800px); z-index: -1;}
 	10%  {opacity: 1;}
-	100%   {transform: translateY(0px); opacity: 1;z-index: 3;}
+	100%   {transform: translateY(-50%); opacity: 1;z-index: 3;}
 }
 
 
@@ -185,7 +186,7 @@ div{
 
 @keyframes popOutLeft{
 	0%   {opacity: 1;}
-	100%   {transform: translateX(-800px); opacity: 0;}
+	100%   {transform: translateX(-800px) translateY(-50%); opacity: 0;}
 }
 
 .slideDownBig0{
@@ -333,6 +334,18 @@ div{
 	100%   {opacity: 1; transform: translateX(0);}
 }
 
+.shine{
+	animation-name: shine;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes shine{
+	0%   {box-shadow: 0px 0px 0px 0px transparent;}
+	50%   {box-shadow: 0px 0px 10px 3px white;}
+	100%   {box-shadow: 0px 0px 0px 0px transparent;}
+}
+
 
 
 
@@ -357,7 +370,9 @@ div{
 	border-radius: 50%;
 	background-color: transparent;
 	border: 2px solid rgb(20,20,20);
+	border: 2px solid #34495E;
 	color: rgb(20,20,20);
+	color: #34495E;
 	width: 45px;
 	height: 45px;
 	display: flex;
@@ -393,10 +408,11 @@ div{
 .scrollIcon i{
 	padding: 0;
 	align-self: center;
-	font-size: 30px;
+	font-size: 28px;
 	margin: 0 auto;
-	transform: translateY(-4px);
+	transform: translateY(-3px);
 	color: rgb(20,20,20);
+	color: #34495E;
 }
 
 .scrollText{
@@ -412,16 +428,17 @@ div{
 .scrollText h1{
 	margin-right: 0px;
 	font-family: 'Roboto';
-	font-weight: 200;
-	font-size: 25px;
+	font-weight: 300;
+	font-size: 22px;
 	text-decoration: none;
 	padding: 0;
 	color: rgb(20,20,20);
+	color: #34495E;
 }
 
 .scrollToTop:hover{
-	width: 104px;
-	border-radius: 15px;
+	width: 100px;
+	border-radius: 3px;
 }
 
 
@@ -432,34 +449,11 @@ div{
 /*	---------- MOBILE --------------  */
 /*---------------------------------------*/
 
-@media screen and (min-width: 2400px){
-	#scrollDown{
-		bottom: 20px;
-	}
-}
-
-
-@media screen and (min-width: 1900px){
-	#forestHolder{
-		max-height: 500px;
-		height: auto;
-		bottom: 50px;
-	}
-
-	#mountainHolder, #mountainHolder2{
-		max-height: auto;
-		height: auto;
-		bottom: 0px;
-	}
-
-}
 
 @media screen and (min-width: 1600px){
 	#slideLeft{
 		left: 60px;
 	}
-
-	
 
 
 	#slideRight{
@@ -480,6 +474,34 @@ div{
 
 }
 
+
+@media screen and (min-width: 1900px){
+	#forestHolder{
+		max-height: 500px;
+		height: auto;
+		bottom: 50px;
+	}
+
+	#mountainHolder, #mountainHolder2{
+		max-height: auto;
+		height: auto;
+		bottom: 140px;
+	}
+
+}
+
+
+@media screen and (min-width: 2400px){
+	#scrollDown{
+		bottom: 20px;
+	}
+
+	#mountainHolder, #mountainHolder2{
+		bottom: 0px;
+	}
+}
+
+
 @media screen and (max-width: 1200px){
 	#slideLeft{
 		left: 40px;
@@ -487,6 +509,10 @@ div{
 
 	#slideRight{
 		right: 40px;
+	}
+
+	#projImages{
+		width: 80%;
 	}
 }
 
@@ -635,10 +661,15 @@ div{
 		font-size: 50px;
 	}
 
+	#eduTimelineWrapper{
+		padding-top: 100px;
+	}
+
 	.eduPeriscope{
 		width: 500px;
 		height: 500px;
 		border-radius: 2px;
+		border-width: 7px;
 	}
 
 	.eduSummary{
@@ -671,12 +702,6 @@ div{
 }
 
 @media screen and (max-width: 668px){
-
-
-	#profileImg{
-		width: 180px;
-		height: 180px;
-	}
 
 	.eduPeriscope{
 		width: 300px;
@@ -826,11 +851,6 @@ div{
 
 	.startscreen h1{
 		font-size: 24px;
-	}
-
-	#profileImg{
-		width: 130px;
-		height: 130px;
 	}
 
 	.time{
