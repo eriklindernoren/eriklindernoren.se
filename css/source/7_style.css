@@ -131,15 +131,26 @@ div{
 	100%   {transform: translateY(-800px); opacity: 1;}
 }
 
+.slideInFromLeftPro{
+	animation-name: popInLeftPro;
+	animation-duration: 1s;
+}
+
+@keyframes popInLeftPro{
+	0%   {opacity: 0;transform: translateX(-800px) translateY(-50%);}
+	80%  {opacity: 1;}
+	100%   {transform: translateX(0) translateY(-50%); opacity: 1;}
+}
+
 .slideInFromLeft{
 	animation-name: popInLeft;
 	animation-duration: 1s;
 }
 
 @keyframes popInLeft{
-	0%   {opacity: 0;transform: translateX(-800px) translateY(-50%);}
+	0%   {opacity: 0;transform: translateX(-800px);}
 	80%  {opacity: 1;}
-	100%   {transform: translateX(0) translateY(-50%); opacity: 1;}
+	100%   {transform: translateX(0); opacity: 1;}
 }
 
 

@@ -210,7 +210,7 @@ $(document).ready(function(){
             setTimeout(function(){
                 $this.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
                     $(this).removeClass("slideInFromLeft");
-                }).addClass("slideInFromLeft");
+                }).addClass("slideInFromLeftPro");
                 $this.css({'opacity': '1', 'z-index': '3'});
             },200);
 
