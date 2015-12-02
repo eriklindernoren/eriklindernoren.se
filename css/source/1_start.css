@@ -13,6 +13,8 @@
 	overflow: hidden;
 	z-index: 1;
 	background: linear-gradient(to bottom, rgb(20,20,20), #2e8ece);
+	background: linear-gradient(to bottom, rgb(10,10,10),#2e8ece) no-repeat;
+
 }
 
 .star{
@@ -24,8 +26,6 @@
 	transition: 0.1s linear;
 }
 
-
-
 #navigationBar{
 	position: absolute;
 	top: 0;
@@ -36,8 +36,6 @@
 	width: 100%;
 	z-index: 4;
 }
-
-
 
 
 #navigationButtonWrapper{
@@ -246,16 +244,15 @@
 	font-size: 30px;
 	position: absolute;
 	bottom: 70px;
-	left: 0;
-	right: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	margin: 0 auto 0 auto;
 	z-index: 40;
-	color: rgb(20,20,20);
+	color: #34495E;
 	text-decoration: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transform: translateY(0);
 	transition: 0.2s linear;
 }
 
@@ -264,7 +261,7 @@
 }
 
 #scrollDown:hover{
-	border: 2px solid rgb(20,20,20);
+	border: 2px solid #34495E;
 }
 
 

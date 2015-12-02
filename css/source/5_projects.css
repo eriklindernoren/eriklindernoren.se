@@ -10,7 +10,7 @@
 	background-color: rgb(40,40,40);
 	background: url("../images/desk.jpg") center center;
 	background-size: cover;
-	border-bottom: 3px solid rgb(80,80,80);
+	border-bottom: 1px solid rgb(80,80,80);
 	z-index: 3;
 	width: 100%;
 	padding: 0;
@@ -29,10 +29,8 @@
 	top: 0;
 	width: 100%;
 	height: 140%;
-	background-color: rgba(0,0,0,0.7);
 	background-color: rgba(34, 49, 63,0.7);
-/*	background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
-*/}
+}
 
 #projWrapper{
 	position: relative;
@@ -42,10 +40,9 @@
 }
 
 #projectHeader{
-	opacity: 0;
 	position: relative;
 	margin: 0 auto;
-	top: 60px;
+	top: 100px;
 	display: block;
 	color: white;
 	font-family: 'Oswald';
@@ -53,8 +50,6 @@
 	letter-spacing: 1px;
 	font-size: 40px;
 	z-index: 4;
-	margin-top: 20px;
-	margin-bottom: 0px;
 }
 
 
@@ -114,17 +109,12 @@
 	background-color: rgb(250,250,250);
 }
 
-
-#slideLeft:hover i{
+.slideDir:hover i{
 	color: rgb(80,80,80);
 }
 
 #slideRight:hover{
 	transform: rotateZ(90deg);
-}
-
-#slideRight:hover i{
-	color: rgb(80,80,80);
 }
 
 
@@ -138,7 +128,7 @@
 
 .info a{
 	display: inline-block;
-	margin-bottom: 40px;
+	margin-bottom: 25px;
 	text-decoration: none;
 }
 
@@ -156,14 +146,14 @@
 
 
 .info em{
-	font-style: bold;
 	font-family: 'Roboto';
 	font-weight: 400;
 	font-style: normal;
-	font-size: 18px;
+	font-size: 16px;
 	text-transform: uppercase;
 	display: block;
-	margin-bottom: 20px;
+	color: rgb(160,160,160);
+	margin-bottom: 25px;
 }
 
 .info p{
@@ -235,20 +225,20 @@
 }
 
 #ethcircle{
-	bottom: 25px;
-	right: 170px;
-	width: 15%;
-	height: auto;
-	z-index: 4;
-}
-
-#mapapp{
-	position: absolute;
-	bottom: 32px;
+	bottom: 28px;
 	right: 60px;
 	width: 15%;
 	height: auto;
 	z-index: 5;
+}
+
+#mapapp{
+	position: absolute;
+	bottom: 20px;
+	right: 160px;
+	width: 15%;
+	height: auto;
+	z-index: 4;
 }
 
 #site{
@@ -263,7 +253,7 @@
 
 #moodi{
 	position: absolute;
-	bottom: 40px;
+	bottom: 30px;
 	right: 20px;
 	width: 80%;
 	height: auto;
@@ -279,7 +269,7 @@
 
 #sonus{
 	position: absolute;
-	bottom: 50px;
+	bottom: 35px;
 	right: 40px;
 	width: 65%;
 	height: auto;

@@ -348,13 +348,7 @@ var setUpDisplayTypesForPopups = function(){
 
 setUpDisplayTypesForPopups();
 
-$('#scrollDown').css({
-    "transition": "0.4s linear", 
-    "transform": "translateY(-5px)"
-});
-setTimeout(function(){
-    $('#scrollDown').css({"transition": "0.2s linear"});
-},400);
+
 
 
 
@@ -421,32 +415,7 @@ function scrollAnimations(){
     var scrolledY = $(window).scrollTop();
     whatBackground(scrolledY);
 
-    var appearFromBottomList = [[]];
-
     var triggerContactAnimations = $('.projects').offset().top + $(window).height();
-
-    for(var i = 0; i < appearFromBottomList.length; i++){
-        var elements = appearFromBottomList[i];
-        for(var a = 0; a < elements.length; a++){
-            var elem = elements[a];
-            if(isFullyScrolledIntoView(elem)){
-                $(elem).addClass("appearFromBottom");
-            }
-        }
-        
-    }
-
-    // var timelineItems = $('.time');
-    // for(var i = 0; i < timelineItems.length; i++){
-    //     var elem = timelineItems[i];
-    //     if(isFullyScrolledIntoView(elem)){
-    //         if((i%2)==0)
-    //             $(elem).addClass("appearFromRight");
-    //         else
-    //             $(elem).addClass("appearFromLeft");
-
-    //     }
-    // }
 
     var dots = $('.timelineDot');
     for(var i = 0; i < dots.length; i++){
@@ -456,25 +425,12 @@ function scrollAnimations(){
         }
     }
 
-    var eduSumSeparators = $('.eduSummary .eduBorder');
-    for(var i = 0; i < eduSumSeparators.length; i++){
-        var elem = eduSumSeparators[i];
-        if(isFullyScrolledIntoView(elem)){
-            $(elem).addClass("growToFull");
-        }
-    }
-
-
     var navButtons = $('#navigationButtonWrapper a');
     for(var i = 0; i < navButtons.length; i++){
         var elem = navButtons[i];
         if(isFullyScrolledIntoView(elem)){
             $(elem).addClass("appearFromTop");
         }
-    }
-
-    if(isFullyScrolledIntoView(".eduSummary h1")){
-        $('.eduSummary h1').addClass('appearFromTop');
     }
 
     if(isFullyScrolledIntoView('#aboutMe')){
@@ -484,26 +440,6 @@ function scrollAnimations(){
     if(isFullyScrolledIntoView('.slideDir')){
         $('#projImages').addClass('appearFromBottom');
     }
-
-
-
-    if(isFullyScrolledIntoView('#projectHeader')){
-        $('#projectHeader').addClass('appearFromRight');
-    }
-
-    if(isFullyScrolledIntoView('.expUpper > h1')){
-        $('.expUpper > h1').addClass("appearFromLeft");
-    }
-
-
-    // if(isFullyScrolledIntoView('#aboutSeparator')){
-    //     $('#aboutSeparator').addClass("expandFromBottom30");
-    // }
-
-
-    // if(isPartlyScrolledIntoView('#mac')){
-    //     $('#mac').addClass("appearFromRightInBackground");
-    // }
 
     var bigButtons = $('.bigButton');
     for(var i = 0; i < bigButtons.length; i++){

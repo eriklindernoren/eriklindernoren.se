@@ -97,8 +97,8 @@ div{
 }
 
 @keyframes appearFromTopCentered{
-	0%   	{opacity: 0; transform: translateY(-100px) translateX(50%);}
-	100%   	{opacity: 1; transform: translateY(-50%px) translateX(50%);}
+	0%   	{opacity: 0; transform: translateY(-100px) translateX(-10px);}
+	100%   	{opacity: 1; transform: translateY(-50%) translateX(-10px);}
 }
 
 .expandFromBottom30{
@@ -679,22 +679,6 @@ div{
 		padding-top: 100px;
 	}
 
-	.leftOfTimeline p{
-
-	}
-
-	.rightOfTimeline p{
-		right: 20px;
-	}
-
-	.timelineDot{
-		right: 0px;
-	}
-
-	.contTimeline, .timeline{
-		right: 0px;
-	}
-
 	.eduPeriscope{
 		width: 500px;
 		height: 500px;
@@ -704,6 +688,8 @@ div{
 
 	.eduSummary{
 		width: 80%;
+		transform: translateX(0);
+		background: #2C3E50;
 	}
 
 	.socMedia{
@@ -771,16 +757,6 @@ div{
 		background-color: rgb(245,245,245);
 	}
 
-	.experience .timelineWrapper{
-		width: 100%;
-	}
-
-	.experience .timelineWrapper .contTimeline{
-		border-left: none;
-		right: -20px;
-		border-top: 2px solid #F64747;
-		width: 22px;
-	}
 
 	#workWrapper{
 		transform: translateY(0);
@@ -939,9 +915,35 @@ div{
 		width: 40px;
 	}
 
+
+	#timelineStartVert, #timelineStartHor, #upperTimeline, #timelineStop, .contTimeline, .timeline, .timelineDot{
+		left: 70%;
+	}
+
+	.rightOfTimeline{
+		width: 30%;
+	}
+
+	.rightOfTimeline p{
+		left: 20px;
+	}
+
+	.leftOfTimeline div{
+		right: 20px;
+	}
+
+	.leftOfTimeline{
+		width: 70%;
+	}
+
 }
 
-
+/*iPhone 5s*/
+@media screen and (max-width: 320px){
+	#timelineStartVert, #timelineStartHor, #upperTimeline, #timelineStop, .contTimeline{
+		display: none;
+	}
+}
 
 
 
