@@ -59,7 +59,8 @@
 .eduSummary h1{
 	opacity: 0;
 	font-family: 'Oswald';
-	font-weight: 700;
+	font-weight: 400;
+	letter-spacing: 1px;
 	color: rgb(100,100,100);
 	color: rgb(240,240,240);
 	font-size: 40px;
@@ -122,7 +123,8 @@
 	position: relative;
 	width: 100%;
 	background-color: rgb(245,245,245);
-	padding-top: 150px;
+	padding-top: 100px;
+	padding-bottom: 60px;
 	margin: 0;
 	z-index: 2;
 }
@@ -133,62 +135,126 @@
 	min-width: 340px;
 	transition: linear;
 	transform: translate3D(0,0,0);
-	padding-bottom: 0px;
 }
 
-#eduTimelineWrapper .eduBorder{
-	width: 0;
-	border-color: rgb(60,60,60);
-	margin: 0px 0 20px 0;
-}
-
-
-.eduTimeline h1{
-	margin: 0px 0 140px 40px;
-	opacity: 0;
-	font-family: 'Oswald';
-	font-weight: 700;
-	color: rgb(60,60,60);
-	font-size: 40px;
-	text-align: left;
-}
-
-.time{
-	opacity: 1;
-	display: flex;
-	align-items: center;
-	margin-top: 40px;
+#edus{
 	width: 700px;
-	max-width: 80%;
+	max-width: 95%;
 }
 
-.timeContent{
-	width: 500px;
-	max-width: 90%;
+.edu{
+	position: relative;
+	width: 100%;
+	height: 170px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+.leftOfTimeline{
+	height: 100%;
+	width: 80%;
+	float: left;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.leftOfTimeline > div{
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translateY(-50%);
 	text-align: left;
+	max-width: 100%;
 }
 
-.timeContent h2{
-	color: rgb(60,60,60);
+.leftOfTimeline h2{
+	font-family: "Roboto";
+	font-weight: 500;
+	color: rgb(80,80,80);
+	font-size: 24px;
+	margin-bottom: 4px;
+	max-width: 100%;
 }
 
-.timeContent h3{
+.leftOfTimeline h3{
+	font-family: "Roboto";
+	font-weight: 400;
 	color: rgb(100,100,100);
 	font-size: 16px;
-	margin-top: 5px;
+	margin-bottom: 4px;
+	max-width: 100%;
 }
 
-.timeContent p{
-	font-size: 16px;
-	margin-top: 7px;
-}
-
-.period{
-	width: 200px;
-	text-align: right;
+.leftOfTimeline p{
 	font-family: "Roboto";
-	font-size: 20px;
+	font-weight: 300;
+	color: rgb(80,80,80);
+	font-size: 16px;
+	max-width: 100%;
 }
+
+.rightOfTimeline{
+	height: 100%;
+	width: 20%;
+	float: right;
+	z-index: 1;
+}
+
+.rightOfTimeline p{
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	transform: translateY(-50%);
+	text-align: right;
+	max-width: 100%;
+	font-family: "Roboto";
+	font-weight: 300;
+	color: rgb(80,80,80);
+	font-size: 18px;
+}
+
+
+
+.timelineWrapper{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 700px;
+	max-width: 95%;
+	height: 100%;
+}
+
+.timelineDot{
+	position: absolute;
+	top: 50%;
+	transform: translateX(6px) translateY(-50%);
+	right: 23%;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background-color: rgb(245,245,245);
+	border: 2px solid #F64747;
+	z-index: 3;
+	transition: 0.4s linear;
+	opacity: 0;
+}
+
+
+.contTimeline, .timeline{
+	border-left: 2px solid #F64747;
+	height: 100%;
+	position: absolute;
+	right: 23%;
+	z-index: -1;
+}
+
+#eduPeriscopeWrapper .timelineWrapper{
+	top: 50%;
+}
+
+
 
 
 

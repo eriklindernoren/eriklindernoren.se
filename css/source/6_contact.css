@@ -22,7 +22,8 @@ footer{
 	display: block;
 	padding-top: 50px;
 	font-family: "Oswald";
-	font-weight: 700;
+	font-weight: 400;
+	letter-spacing: 1px;
 	font-size: 40px;
 	color: rgb(40,40,40);
 }

@@ -50,6 +50,8 @@ div{
 }
 
 
+
+
 /*---------------------------------------*/
 /*	---------- CSS ANIMATIONS -----------*/
 /*---------------------------------------*/
@@ -88,6 +90,17 @@ div{
 	100%   	{opacity: 1; transform: translateY(0px);}
 }
 
+.appearFromTopCentered{
+	animation-name: appearFromTopCentered;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearFromTopCentered{
+	0%   	{opacity: 0; transform: translateY(-100px) translateX(50%);}
+	100%   	{opacity: 1; transform: translateY(-50%px) translateX(50%);}
+}
+
 .expandFromBottom30{
 	animation-name: expandFromBottom30;
 	animation-duration: 1s;
@@ -118,7 +131,7 @@ div{
 
 @keyframes popdown{
 	0%   {display: none;opacity: 0;transform: translateY(-800px);}
-	100%   {transform: translateY(0px); opacity: 1;}
+	100%   {transform: translateY(-50%); opacity: 1;}
 }
 
 .slideUp{
@@ -131,16 +144,6 @@ div{
 	100%   {transform: translateY(-800px); opacity: 1;}
 }
 
-.slideInFromLeftPro{
-	animation-name: popInLeftPro;
-	animation-duration: 1s;
-}
-
-@keyframes popInLeftPro{
-	0%   {opacity: 0;transform: translateX(-800px) translateY(-50%);}
-	80%  {opacity: 1;}
-	100%   {transform: translateX(0) translateY(-50%); opacity: 1;}
-}
 
 .slideInFromLeft{
 	animation-name: popInLeft;
@@ -148,9 +151,9 @@ div{
 }
 
 @keyframes popInLeft{
-	0%   {opacity: 0;transform: translateX(-800px);}
+	0%   {opacity: 0;transform: translateX(-800px) translateY(-50%);}
 	80%  {opacity: 1;}
-	100%   {transform: translateX(0); opacity: 1;}
+	100%   {transform: translateX(0) translateY(-50%); opacity: 1;}
 }
 
 
@@ -173,8 +176,8 @@ div{
 
 
 @keyframes popOutRight{
-	0%   {opacity: 1;}
-	100%   {transform: translateX(800px); opacity: 0;}
+	0%   {opacity: 1; transform: translateY(-50%);}
+	100%   {transform: translateX(800px) translateY(-50%); opacity: 0;}
 }
 
 .slideOutBottom{
@@ -676,6 +679,22 @@ div{
 		padding-top: 100px;
 	}
 
+	.leftOfTimeline p{
+
+	}
+
+	.rightOfTimeline p{
+		right: 20px;
+	}
+
+	.timelineDot{
+		right: 0px;
+	}
+
+	.contTimeline, .timeline{
+		right: 0px;
+	}
+
 	.eduPeriscope{
 		width: 500px;
 		height: 500px;
@@ -742,17 +761,33 @@ div{
 		display: none;
 	}
 
-	#workWrapper{
-		flex-direction: column;
-		justify-content: center;
-	}
 
 	.expUpper h1{
-		color: rgb(240,240,240);
+		color: rgb(80,80,80);
+		padding: 0px 0 60px 0;
 	}
 
 	.expUpper{
-		background-color: rgb(40,40,40);
+		background-color: rgb(245,245,245);
+	}
+
+	.experience .timelineWrapper{
+		width: 100%;
+	}
+
+	.experience .timelineWrapper .contTimeline{
+		border-left: none;
+		right: -20px;
+		border-top: 2px solid #F64747;
+		width: 22px;
+	}
+
+	#workWrapper{
+		transform: translateY(0);
+		flex-direction: column;
+		justify-content: center;
+		background-color: rgb(245,245,245);
+		padding-bottom: 60px;
 	}
 
 	.bigButton{

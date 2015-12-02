@@ -59,7 +59,7 @@ $(document).ready(function(){
         [50,70],
         ];
         for(i = 0; i < 13; i++){
-            var star = $('#s' + (i+1));
+            var star = $('.s' + (i+1));
             var top = placing[i][0];
             var left = placing[i][1];
             $(star).css({'top': top + '%', 'left': left + '%'});
@@ -210,7 +210,7 @@ $(document).ready(function(){
             setTimeout(function(){
                 $this.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
                     $(this).removeClass("slideInFromLeft");
-                }).addClass("slideInFromLeftPro");
+                }).addClass("slideInFromLeft");
                 $this.css({'opacity': '1', 'z-index': '3'});
             },200);
 
@@ -408,8 +408,8 @@ function showWork(){
             $(this).removeClass("slideDown");
         }).addClass("slideDown");
         isShowing = true;
-        $('.experience').css({'box-shadow': '0px 6px 10px -2px rgb(20,20,20)'});
-        $('.bigButton > div').css({'box-shadow': '0px 6px 10px -2px rgb(40,40,40)'});
+        $('.experience').css({'box-shadow': '0px 6px 10px -2px rgba(0,0,0,0.4)'});
+        $('.bigButton > div').css({'box-shadow': '0px 6px 10px -2px rgba(0,0,0,0.4)'});
     }
     lastUsed = _this;
 }
@@ -421,7 +421,7 @@ function scrollAnimations(){
     var scrolledY = $(window).scrollTop();
     whatBackground(scrolledY);
 
-    var appearFromBottomList = [['.eduTimeline h1']];
+    var appearFromBottomList = [[]];
 
     var triggerContactAnimations = $('.projects').offset().top + $(window).height();
 
@@ -447,6 +447,14 @@ function scrollAnimations(){
 
     //     }
     // }
+
+    var dots = $('.timelineDot');
+    for(var i = 0; i < dots.length; i++){
+        var elem = dots[i];
+        if(isFullyScrolledIntoView(elem)){
+            $(elem).addClass("appearFromTopCentered")
+        }
+    }
 
     var eduSumSeparators = $('.eduSummary .eduBorder');
     for(var i = 0; i < eduSumSeparators.length; i++){
@@ -492,9 +500,6 @@ function scrollAnimations(){
     //     $('#aboutSeparator').addClass("expandFromBottom30");
     // }
 
-    if(isFullyScrolledIntoView('#eduTimelineWrapper .eduBorder')){
-        $('#eduTimelineWrapper .eduBorder').addClass("expand20");
-    }
 
     // if(isPartlyScrolledIntoView('#mac')){
     //     $('#mac').addClass("appearFromRightInBackground");

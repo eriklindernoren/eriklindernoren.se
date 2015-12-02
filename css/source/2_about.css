@@ -68,7 +68,8 @@
 	position: relative;
 	opacity: 0;
 	font-family: 'Oswald';
-	font-weight: 700;
+	font-weight: 400;
+	letter-spacing: 1px;
 	font-size: 40px;
 	color: rgb(20,20,20);
 	padding: 0;

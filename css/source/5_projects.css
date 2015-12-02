@@ -8,7 +8,7 @@
 
 .projects{
 	background-color: rgb(40,40,40);
-	background: url("../images/desk-edited.jpeg") center center;
+	background: url("../images/desk.jpg") center center;
 	background-size: cover;
 	border-bottom: 3px solid rgb(80,80,80);
 	z-index: 3;
@@ -45,11 +45,12 @@
 	opacity: 0;
 	position: relative;
 	margin: 0 auto;
-	top: 50px;
+	top: 60px;
 	display: block;
 	color: white;
 	font-family: 'Oswald';
-	font-weight: 700;
+	font-weight: 400;
+	letter-spacing: 1px;
 	font-size: 40px;
 	z-index: 4;
 	margin-top: 20px;
@@ -254,7 +255,7 @@
 	position: absolute;
 	bottom: 20px;
 	right: 0px;
-	width: 80%;
+	width: 73%;
 	height: auto;
 	z-index: 1;
 
@@ -264,7 +265,7 @@
 	position: absolute;
 	bottom: 40px;
 	right: 20px;
-	width: 87%;
+	width: 80%;
 	height: auto;
 	z-index: 2;
 	max-width: 800px;
@@ -280,7 +281,7 @@
 	position: absolute;
 	bottom: 50px;
 	right: 40px;
-	width: 70%;
+	width: 65%;
 	height: auto;
 	max-width: 600px;
 	z-index: 3;

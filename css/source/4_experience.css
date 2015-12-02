@@ -14,20 +14,14 @@
 	text-align: center;
 	z-index: 4;
 	transform: translate3d(0,0,0);
-	transform: translateY(-100px);
-}
-
-
-.expUpper{
-	transform: translate3d(0,0,0);
-	transform: translateY(100px);
 }
 
 .expUpper > h1{
 	opacity: 0;
-	padding: 50px 0 60px 0;
+	padding: 0px 0 0px 0;
 	font-family: 'Oswald';
-	font-weight: 700;
+	font-weight: 400;
+	letter-spacing: 1px;
 	font-size: 40px; 
 	color: rgb(60,60,60);
 	transition: color 150ms linear;
@@ -36,13 +30,14 @@
 #workWrapper{
 	margin: 0 auto;
 	text-align: center;
-	padding: 10px 0 0px 0;
+	padding: 0px 0 0px 0;
 	width: 100%;
 	max-width: 1400px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
+	transform: translate3d(0,0,0);
+	transform: translateY(50%);
 }
 
 
@@ -135,8 +130,9 @@
 	overflow: hidden;
 	transform: translate3d(0,0,0);
 	z-index: 2;
-	background: linear-gradient(to bottom, rgb(60,60,60), rgb(40,40,40));
-	box-shadow: inset 0 -6px 10px 2px rgba(0,0,0,0.4);
+	background: linear-gradient(to bottom, rgb(120,120,120), rgb(80,80,80));
+	background: linear-gradient(to bottom, #ecf0f1, #bdc3c7);
+	box-shadow: inset 0 -6px 10px 2px rgba(0,0,0,0.8);
 }
 
 
@@ -147,12 +143,13 @@
 	margin-right: auto;
 	right: 0;
 	left: 0;
-	margin-top: 140px;
+	top: 58%;
+	transform: translateY(-50%);
 	max-width: 600px;
-	padding: 20px;
+	padding: 0px 0px 20px 0px;
 	border-radius: 3px;
 	opacity: 0;
-	box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.7);
+	box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.4);
 	background-color: rgb(230,230,230);
 }
 
@@ -170,11 +167,13 @@
 }
 
 
-.workplace p{
-	font-size: 20px;
+
+.workplace > p{
+	font-size: 18px;
 	line-height: 30px;
 	color: rgb(140,140,140);
 	text-align: center;
+	width: 90%;
 }
 
 
@@ -182,6 +181,7 @@
 .smallButton{
 	width: 80px;
 	height: 80px;
+	cursor: default;
 }
 
 
@@ -207,29 +207,46 @@
 	transform: perspective(600px) rotateY(0deg);
 }
 
-
-
 .smallButton p{
 	font-size: 22px;
 	font-family: "Roboto";
 	font-weight: 300;
+	text-align: center;
+	color: rgb(200,200,200);
+	margin: auto;
 }
 
+.smallButton .workButton p{
+	color: rgb(120,120,120);
+}
 
+.imgPosition{
+	margin: auto;
+	width: 300px;
+}
 
 .imgPosition > img{
 	display: block;
 	margin: auto auto 10px auto;
-	max-width: 300px;
-	width: 80%;
+	width: 220px;
 }
 
 .imgPosition > p{
 	display: block;
+	width: 100%;
+	text-align: center;
 	margin: 10px auto auto auto;
 	color: rgb(50,50,50);
 	font-size: 24px;
 	font-weight: 300;
 	color: rgb(140,140,140);
+}
+
+.siba img{
+	width: 160px;
+	margin-bottom: 0px;
+}
+.siba .imgPosition > p{
+	margin-top: 0px;
 }
 

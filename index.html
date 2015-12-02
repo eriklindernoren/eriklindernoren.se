@@ -6,14 +6,9 @@
 	<title>Erik Linder-Norén</title>
 	<meta name="description" content="The digital resume and personal website of Master of Science student Erik Linder-Norén.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="E_Icon.ico" />
-
-	<!-- 'abril Fatface' -->
-	<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-
 	<!-- 'Roboto' -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
 
@@ -65,19 +60,19 @@
 				</p>
 		</div>
 
-		<div class="star" id="s1"></div>
-		<div class="star" id="s2"></div>
-		<div class="star" id="s3"></div>
-		<div class="star" id="s4"></div>
-		<div class="star" id="s5"></div>
-		<div class="star" id="s6"></div>
-		<div class="star" id="s7"></div>
-		<div class="star" id="s8"></div>
-		<div class="star" id="s9"></div>
-		<div class="star" id="s10"></div>
-		<div class="star" id="s11"></div>
-		<div class="star" id="s12"></div>
-		<div class="star" id="s13"></div>
+		<div class="star s1"></div>
+		<div class="star s2"></div>
+		<div class="star s3"></div>
+		<div class="star s4"></div>
+		<div class="star s5"></div>
+		<div class="star s6"></div>
+		<div class="star s7"></div>
+		<div class="star s8"></div>
+		<div class="star s9"></div>
+		<div class="star s10"></div>
+		<div class="star s11"></div>
+		<div class="star s12"></div>
+		<div class="star s13"></div>
 
 
 		<div id="forestHolder"><img src="images/forest.svg" id="forest"></div>
@@ -88,7 +83,7 @@
 	
 	<section id="about" class="about">		
 		<div id="aboutWrapper">
-			<h1 id="aboutMe">About Me</h1>
+			<h1 id="aboutMe" class="header">About Me</h1>
 			<div id="aboutText">
 				<p>
 					My name is Erik Linder-Norén and I'm currently studying towards a Master of Science in Computer Science while at the same time being employed by Ericsson as a Software Developer. <br>
@@ -112,7 +107,7 @@
 		<section  id="education" class="education">
 			<div id="eduSummaryWrapper">
 				<div class="eduSummary">
-					<h1>Education</h1>
+					<h1 class="header">Education</h1>
 					<div class="eduBorder"></div>
 					<p>
 						I'm currently on my third year of studies on a Master of Science degree in Computer Science.
@@ -127,61 +122,93 @@
 			</div>
 			<div id="eduPeriscopeWrapper">
 				<div class="eduPeriscope"><div class="schoolImg"></div></div>
+				<div class="timelineWrapper"><div class="contTimeline"></div></div>
 			</div>
 			<div id="eduTimelineWrapper">
+				<div class="timelineWrapper"><div class="contTimeline"></div></div>
 				<div class="container">
-					<div class="eduBorder"></div>
 					<div class="eduTimeline">
-						<h1>Timeline</h1>
-
-						<div class="time">
-							<div class="timeContent">
-								<h2>University of Gävle</h2>
-								<h3>Gävle, Sweden</h3>
-								<p>Course - 3D modelling and animation in Open Source environment</p>
-								<p>Course - Digital film and video</p>
+						<div id="edus">
+							<div class="edu">
+								<div class="leftOfTimeline">
+									<div>
+										<h2>University of Gävle</h2>
+										<h3>Gävle, Sweden</h3>
+										<p>Course - 3D modelling and animation</p>
+										<p>Course - Digital film and video</p>
+									</div>
+								</div>
+								<div class="timelineDot"></div>
+								<div class="timeline"></div>
+								<div class="rightOfTimeline">
+									<p>2012</p>
+								</div>
 							</div>
-							<div class="period">2012</div>
-						</div>
-						<div class="time">
-							<div class="timeContent">
-								<h2>University of Gävle</h2>
-								<h3>Gävle, Sweden</h3>
-								<p>Studies in Natural Science</p>
+							<div class="edu">
+								<div class="leftOfTimeline">
+									<div>
+										<h2>University of Gävle</h2>
+										<h3>Gävle, Sweden</h3>
+										<p>Studies in Natural Science</p>
+									</div>
+								</div>
+								<div class="timelineDot"></div>
+								<div class="timeline"></div>
+								<div class="rightOfTimeline">
+									<p>2012 - 2013</p>
+								</div>
 							</div>
-							<div class="period">2012 - 2013</div>
-						</div>
-						<div class="time">
-							<div class="timeContent">
-								<h2>Linköping University</h2>
-								<h3>Linköping, Sweden</h3>
-								<p>Bachelor of Computer Science</p>
+							<div class="edu">
+								<div class="leftOfTimeline">
+									<div>
+										<h2>Linköping University</h2>
+										<h3>Linköping, Sweden</h3>
+										<p>Bachelor of Computer Science</p>
+									</div>
+								</div>
+								<div class="timelineDot"></div>
+								<div class="timeline"></div>
+								<div class="rightOfTimeline">
+									<p>2013 - 2016</p>
+								</div>
 							</div>
-							<div class="period">2013 - 2016</div>
-						</div>
-						<div class="time">
-							<div class="timeContent">
-								<h2>ETH Zürich</h2>
-								<h3>Zürich, Switzerland</h3>
-								<p>Bachelor of Computer Science - Exchange studies</p>
+							<div class="edu">
+								<div class="leftOfTimeline">
+									<div>
+										<h2>ETH Zürich</h2>
+										<h3>Zürich, Switzerland</h3>
+										<p>Bachelor of Computer Science - Exchange studies</p>
+									</div>
+								</div>
+								<div class="timelineDot"></div>
+								<div class="timeline"></div>
+								<div class="rightOfTimeline">
+									<p>2015 - 2016</p>
+								</div>
 							</div>
-							<div class="period">2015 - 2016</div>
-						</div>
-						<div class="time">
-							<div class="timeContent">
-								<h2>Linköping University</h2>
-								<h3>Linköping, Sweden</h3>
-								<p>Master of Science in Computer Science</p>
+							<div class="edu">
+								<div class="leftOfTimeline">
+									<div>
+										<h2>Linköping University</h2>
+										<h3>Linköping, Sweden</h3>
+										<p>Master of Science in Computer Science</p>
+									</div>
+								</div>
+								<div class="timelineDot"></div>
+								<div class="timeline"></div>
+								<div class="rightOfTimeline">
+									<p>2016 - 2018</p>
+								</div>
 							</div>
-							<div class="period">2016 - 2018</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="experience" class="experience">
+			<div class="timelineWrapper"><div class="contTimeline"></div></div>
 			<div class="expUpper">
-				<h1>Experience</h1>
+				<h1 class="header">Experience</h1>
 				<div id="workWrapper">
 					<div class="flip3d bigButton">
 						<div class="workButton">
@@ -342,7 +369,7 @@
 						</div>
 					</div>
 
-					<p>I have been developing a command-line interface for handling communication and manipulation of Radio Base Stations using the NETCONF protocol. I have also helped develop the COM abstraction layer on top of the NETCONF common library at Ericsson. The COM abstraction layer was used as back end of the application I was working on. Both were built in Java.<br> I was employed as a summer intern in the summer of 2014 and have since then worked on the project among others in parallel to my studies in Linköping and Zürich.</p>				
+					<p>I have been developing a command-line interface for handling communication and manipulation of Radio Base Stations using the NETCONF protocol. I have also helped develop the COM abstraction layer on top of the NETCONF common library at Ericsson. The COM abstraction layer was used as back end of the application I was working on. Both were built in Java. I was employed as a summer intern in the summer of 2014 and have since then worked on the project among others in parallel to my studies in Linköping and Zürich.</p>				
 				</div>
 			</div>
 		<section class="projects" id="projects">
@@ -351,7 +378,7 @@
 				<a class="slideDir" id="slideLeft" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
 				<a class="slideDir" id="slideRight" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
 				<div id="projWrapper">
-					<h1 id="projectHeader">Some Personal Projects</h1>
+					<h1 id="projectHeader" class="header">Some Personal Projects</h1>
 					<div class="slideDiv" id="div1">
 						<div class="info">
 							<a href="https://github.com/eriklindernoren/MapApp"  target="_blank"><p>Geolocation Application</p></a>
@@ -410,7 +437,6 @@
 								<li>CSS</li>
 								<li>Javascript</li>
 								<li>Gulp</li>
-								<li>JQuery</li>
 							</ul>							
 						</div>
 					</div>
