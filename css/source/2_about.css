@@ -74,7 +74,7 @@
 	color: rgb(20,20,20);
 	color: #2C3E50;
 	padding: 0;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 
@@ -94,9 +94,9 @@
 	margin: 20px;
 	position: relative;
 	display: inline-block;
-	font-family: 'Roboto';
-	font-weight: 300;
-	font-size: 18px;
+	font-family: 'Raleway';
+	font-weight: 400;
+	font-size: 16px;
 	color: rgb(120,120,120);
 	text-align: left;
 }
@@ -112,19 +112,19 @@
 	background-color: rgb(250,250,250);
 }
 
-#timelineStartHor{
+#timelineStartDot{
 	position: absolute;
 	left: 50%;
 	bottom: 50px;
 	transform: translateX(-10px);
 	width: 15px;
 	height: 15px;
-	border-radius: 1px;
+	border-radius: 2px;
 	border: 2px solid #F64747;
 	background-color: rgb(250,250,250);
 }
 
-#timelineStartVert{
+#timelineStartLine{
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);

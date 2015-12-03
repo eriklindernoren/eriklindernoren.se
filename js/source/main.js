@@ -241,7 +241,7 @@ $(document).ready(function(){
     }); 
 
 $('#projImages a').hover(function(){
-    $(this).css({'transform':'translateY(-30px)'});
+    $(this).css({'transform':'translateY(-20px)'});
     var prototypes = $("#projImages a").not(this);
     for(var i = 0; i < prototypes.length; i++){
         var elem = prototypes[i];
@@ -295,7 +295,7 @@ $('#projImages a').on('click', function(){
                 });
                 whatBackground();
             }        
-            $('.projects').css({"margin-bottom": "700px"});
+            $('.projects').css({"margin-bottom": "400px"});
         }else{
          $('.projects').css({"margin-bottom": "0px"});
          $('#contact').css({
@@ -319,36 +319,20 @@ $('#projImages a').on('click', function(){
 setupWindowSize();
 $(window).resize(setupWindowSize);
 
-var setUpDisplayTypesForPopups = function(){
-
-    $('.lowerMNavList').css({
-        "display": "-webkit-box",
-        "display": "-ms-flexbox", 
-        "display": "-webkit-flex",
-        "display": "flex"
-    });
-    $('.lowerMNavList').hide(); 
+var periscopeIfMozilla = function(){
+    if($.browser.mozilla){
+        $('.eduPeriscope > div').removeClass('schoolImg');
+        $('.eduPeriscope').css({
+            'background-image': 'url("../images/zurich1.jpeg")',
+            'background-position': 'center center',
+            'background-attachment': 'fixed',
+            'background-size': 'cover'
+        });
+    }
 }
 
-// var periscopeIfMozilla = function(){
-//     if($.browser.mozilla){
-//         $('.eduPeriscope > div').removeClass('schoolImg');
-//         $('.eduPeriscope').css({
-//             'background-image': 'url("../images/zurich1.jpeg")',
-//             'background-position': 'center center',
-//             'background-attachment': 'fixed',
-//             'background-size': 'cover'
-//         });
-//     }
-// }
 
-
-// periscopeIfMozilla();
-
-
-setUpDisplayTypesForPopups();
-
-
+periscopeIfMozilla();
 
 
 
@@ -372,7 +356,6 @@ var isShowing = false;
 function showWork(){
     $('#contact').hide();
     var _this = '.' + $(this).children('.workButton').children('a').data("target");
-    // $('#popDownWrapper').css({'height': $(_this).outerHeight()+180+'px'});
     $('#popDownWrapper').css({'height': $(".ericsson").outerHeight()+180+'px'});
     if(isShowing && _this != lastUsed){
         $(lastUsed).css({'opacity': '0', 'z-index': '-1'});
@@ -425,16 +408,28 @@ function scrollAnimations(){
         }
     }
 
+    var dots = $('.timelineDotUpper');
+    for(var i = 0; i < dots.length; i++){
+        var elem = dots[i];
+        if(isPartlyScrolledIntoView(elem)){
+            $(elem).addClass('growAndShrink');
+        }
+    }
+
     var navButtons = $('#navigationButtonWrapper a');
     for(var i = 0; i < navButtons.length; i++){
         var elem = navButtons[i];
-        if(isFullyScrolledIntoView(elem)){
+        if(isPartlyScrolledIntoView(elem)){
             $(elem).addClass("appearFromTop");
         }
     }
 
     if(isFullyScrolledIntoView('#aboutMe')){
         $('#aboutMe').addClass('appearFromLeft');
+    }
+
+    if(isPartlyScrolledIntoView('#timelineDotHeader')){
+        $('#timelineDotHeader').addClass('rotate360').addClass('appearFromTopCentered');
     }
 
     if(isFullyScrolledIntoView('.slideDir')){

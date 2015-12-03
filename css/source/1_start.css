@@ -12,7 +12,6 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-	background: linear-gradient(to bottom, rgb(20,20,20), #2e8ece);
 	background: linear-gradient(to bottom, rgb(10,10,10),#2e8ece) no-repeat;
 
 }
@@ -69,10 +68,10 @@
 
 .navHeader{
 	font-weight: 300;
-	font-size: 17px;
+	font-size: 18px;
 	font-family: "Oswald";
+	letter-spacing: 2px;
 	color: rgb(250,250,250);
-	text-transform: uppercase;
 }
 
 .navbuttons > .expandingUnderline{
@@ -104,6 +103,7 @@
 	font-family: "Oswald";
 	font-weight: 300;
 	font-size: 25px;
+	letter-spacing: 1px;
 	color: rgb(250,250,250);
 	display: block;
 	line-height: 40px;
@@ -113,28 +113,6 @@
 	transition: 0.3s linear;
 	transform: scale(1);
 }
-
-#eHolder{
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	border: 2px solid rgb(250,250,250);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#e{
-	color: rgb(250,250,250);
-	font-weight: 200;
-	font-family: "Roboto";
-	font-size: 45px;
-	transform: translateY(-2px);
-}
-
 
 #forestHolder{
 	z-index: 3;

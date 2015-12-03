@@ -1,6 +1,6 @@
 
 body,html{
-	font-family: 'Roboto';
+	font-family: 'Raleway';
 	font-weight: 300;
 	width: 100%;
 	overflow-x: hidden;
@@ -32,6 +32,8 @@ p{
 div{
 	backface-visibility: hidden;
 }
+
+
 
 ::selection {
 	background: #ffb7b7; /* WebKit/Blink Browsers */
@@ -97,8 +99,8 @@ div{
 }
 
 @keyframes appearFromTopCentered{
-	0%   	{opacity: 0; transform: translateY(-100px) translateX(-10px);}
-	100%   	{opacity: 1; transform: translateY(-50%) translateX(-10px);}
+	0%   	{opacity: 0; transform: translateY(-100px) translateX(-50%);}
+	100%   	{opacity: 1; transform: translateY(-50%) translateX(-50%);}
 }
 
 .expandFromBottom30{
@@ -348,6 +350,30 @@ div{
 	100%   {opacity: 1; transform: translateX(0);}
 }
 
+.rotate360{
+	animation-name: rotate360;
+	animation-duration: 1.2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rotate360{
+	0%   {opacity: 0; transform: translateY(-100px) translateX(-50%) rotateZ(45deg);}
+	10%   {opacity: 1;}
+	100%   {opacity: 1; transform: translateY(-50%) translateX(-50%) rotateZ(405deg);}
+}
+
+.growAndShrink{
+	animation-name: growAndShrink;
+	animation-duration: 1.4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes growAndShrink{
+	0%   {opacity: 0; transform: scale(0) translateY(-50%) translateX(40%);}
+	50% 	{transform: scale(1.4) translateY(-50%) translateX(40%);}
+	100%   {opacity: 1; transform: scale(1) translateY(-50%) translateX(50%);}
+}
+
 .shine{
 	animation-name: shine;
 	animation-duration: 1s;
@@ -441,7 +467,7 @@ div{
 
 .scrollText h1{
 	margin-right: 0px;
-	font-family: 'Roboto';
+	font-family: 'Raleway';
 	font-weight: 300;
 	font-size: 22px;
 	text-decoration: none;
@@ -686,11 +712,7 @@ div{
 		border-width: 7px;
 	}
 
-	.eduSummary{
-		width: 80%;
-		transform: translateX(0);
-		background: #2C3E50;
-	}
+	
 
 	.socMedia{
 		width: 60px;
@@ -720,9 +742,7 @@ div{
 @media screen and (max-width: 668px){
 
 	.eduPeriscope{
-		width: 300px;
-		height: 300px;
-		border-radius: 2px;
+		display: none;
 	}
 
 	.startscreen h1{
@@ -731,6 +751,16 @@ div{
 
 	.time{
 		max-width: 90%;
+	}
+
+	.eduSummary{
+		width: 80%;
+		transform: translateX(0);
+		background-color: #2C3E50;
+	}
+
+	.timelineStopLine{
+		display: block;
 	}
 
 
@@ -862,6 +892,47 @@ div{
 		padding-top: 30px;
 	}
 
+	#eduSummaryWrapper{
+		padding-bottom: 600px;
+	}
+
+	#timelineDotHeader{
+		display: none;
+	}
+	#eduSummary{
+		width: 95%;
+	}
+
+	#progLangs{
+		left: 70%;
+		top: 75%;
+	}
+
+	.progLang h2{
+		right: 20px;
+		width: 140px;
+	}
+
+	#timelineStartLine, #timelineStartDot, #upperTimeline, #timelineStop, .contTimeline, .timeline, .timelineDot, #timelineStopDot{
+		left: 70%;
+	}
+
+	.rightOfTimeline{
+		width: 30%;
+	}
+
+	.rightOfTimeline p{
+		left: 20px;
+	}
+
+	.leftOfTimeline div{
+		right: 20px;
+	}
+
+	.leftOfTimeline{
+		width: 70%;
+	}
+
 }
 
 
@@ -913,27 +984,6 @@ div{
 	#scrollDown{
 		height: 40px;
 		width: 40px;
-	}
-
-
-	#timelineStartVert, #timelineStartHor, #upperTimeline, #timelineStop, .contTimeline, .timeline, .timelineDot{
-		left: 70%;
-	}
-
-	.rightOfTimeline{
-		width: 30%;
-	}
-
-	.rightOfTimeline p{
-		left: 20px;
-	}
-
-	.leftOfTimeline div{
-		right: 20px;
-	}
-
-	.leftOfTimeline{
-		width: 70%;
 	}
 
 }
