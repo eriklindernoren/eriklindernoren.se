@@ -40,10 +40,18 @@ $(document).ready(function(){
         $('#underMail .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
         $('#underMail .bulbShine').css({'border-color': 'white'});
         $('#underMail .bulbHolder').css({'background-color': 'rgb(220,220,220)'});
+        // $('#lampShadeLeft').css({'box-shadow': '1px -1px 3px 0px #F39C12'});
+        // $('#lampShadeRight').css({'box-shadow': '-1px -1px 3px 0px #F39C12'});
+        // $('#lampShadeTop').css({'box-shadow': 'inset 0px -1px 3px 0px #F39C12'});
+        // $('#lampShadeBottom').css({'box-shadow': 'inset 0px 1px 3px 0px #F39C12'});
     },function(){
         $('#underMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#underMail .bulbShine').css({'border-color': 'transparent'});
         $('#underMail .bulbHolder').css({'background-color': 'rgb(200,200,200)'});
+        // $('#lampShadeLeft').css({'box-shadow': 'none'});
+        // $('#lampShadeRight').css({'box-shadow': 'none'});
+        // $('#lampShadeTop').css({'box-shadow': 'none'});
+        // $('#lampShadeBottom').css({'box-shadow': 'none'});
     });
 
 
@@ -326,7 +334,7 @@ $('#projImages a').on('click', function(){
                 // });
                 whatBackground();
             }        
-            $('.projects').css({"margin-bottom": "400px"});
+            $('.projects').css({"margin-bottom": "450px"});
         }else{
             $('.projects').css({"margin-bottom": "0px"});
             // $('.projects').css({"margin-bottom": "0px"});
