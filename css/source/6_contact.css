@@ -16,7 +16,7 @@ footer{
 	backface-visibility: hidden;
 }
 
-h1{
+footer h1{
 	position: absolute;
 	left: 50%;
 	top: 80px;
@@ -24,22 +24,118 @@ h1{
 	font-family: 'Oswald';
 	font-weight: 400;
 	letter-spacing: 1px;
-	color: rgb(160,160,160);
+	color: #F64747;
 	font-size: 40px;
 	display: none;
 }
 
-#mailWrapper{
+#overMail, #underMail{
+	width: 200px;
+	height: 110px;
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	border-radius: 3px;
+	transform: translateX(-50%);
+}
+
+.contactLine{
+	z-index: -1;
+	position: absolute;
+	left: 50%;
+	height: 100%;
+	border-left: 2px solid rgb(160,160,160);
+	transform: translateX(-50%);
+}
+
+.bulbHolder{
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	border: 2px solid rgb(160,160,160);
+	transform: translateX(-50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 2px;
+	background-color: rgb(200,200,200);
+	transition: 0.1s linear;
+}
+
+.bulb{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	border: 2px solid rgb(160,160,160);
 	background-color: rgb(250,250,250);
+	box-shadow: none;
+	transition: 0.15s linear;
+	overflow: hidden;
+}
+
+.bulbShine{
+	position: absolute;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transition: 0.15s linear;
+	border: 2px solid transparent;
+	box-shadow: none;
+}
+
+#overMail{
+	top: 30px;
+}
+
+#envelope{
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgb(250,250,250);
+	z-index: 1;
+	border: 2px solid rgb(160,160,160);
+	transition: 0.1s linear;
+	text-decoration: none;
+}
+
+#envelope i{
+	color: rgb(160,160,160);
+	font-size: 40px;
+	transition: 0.1s linear;
+}
+
+#overMail .contactLine{
+	top: 0;
+}
+
+#overMail .bulbHolder{
+	bottom: 0;
+}
+
+#overMail .bulb{
+	transform: translateX(-50%) translateY(5px);
+	z-index: 2;
+}
+
+#overMail .bulbShine{
+	top: 40%;
 	transform: translateX(-50%) translateY(-50%);
-	padding-bottom: 10px;
 }
 
 #mail{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
 	font-family: "Raleway";
 	font-weight: 300;
 	font-size: 70px;
@@ -50,13 +146,68 @@ h1{
 	text-shadow: -1px 0 rgb(160,160,160), 0 1px rgb(160,160,160), 1px 0 rgb(160,160,160), 0 -1px rgb(160,160,160);
 }
 
+#underMail{
+	bottom: 30px;
+}
+
+
+#underMail .contactLine{
+	bottom: 0;
+}
+
+#underMail .bulbHolder{
+	top: 8px;
+}
+
+#underMail .bulb{
+	transform: translateX(-50%) translateY(-20px);
+	z-index: 2;
+}
+
+#underMail .bulbShine{
+	bottom: 40%;
+	transform: translateX(-50%) translateY(50%);
+}
+
 #contactWrap{
 	position: absolute;
-	bottom: 20px;
+	bottom: 0px;
 	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	width: 200px;
+	transform: translateX(-50%);
+	width: 100%;
 	clear: both;
+}
+
+
+#socSquare{
+	border: 2px solid rgb(160,160,160);
+	width: 150px;
+	height: 60px;
+	background-color: rgb(250,250,250);
+	position: absolute;
+	border-radius: 3px;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+
+#socLeftLine, #socRightLine{
+	position: absolute;
+	bottom: 0;
+	border-left: 2px solid rgb(160,160,160);
+	height: 30px;
+	transform: translateX(-50%);
+}
+
+
+#socLeftLine{
+	left: 33%;
+}
+
+#socRightLine{
+	left: 67%;
 }
 
 .socMedia{
@@ -72,7 +223,7 @@ h1{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 0px 2px;
+	margin: 10px 3px;
 	float: left;
 }
 
@@ -122,138 +273,6 @@ h1{
 	color: rgb(250,250,250);
 }
 
-
-#mailBorder1, #mailBorder2{
-	position: absolute;
-	left: 50%;
-	border: 2px solid rgb(160,160,160);
-	transform: translateX(-50%);
-	width: 10px;
-	height: 10px;
-	border-radius: 2px;
-	background-color: rgb(200,200,200);
-}
-
-#mailBorder1{
-	top: -30px;
-}
-#mailBorder2{
-	bottom: -30px;
-}
-
-.bulb{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 22px;
-	height: 22px;
-	border-radius: 50%;
-	border: 2px solid rgb(160,160,160);
-	background-color: rgb(250,250,250);
-	box-shadow: none;
-	transition: 0.15s linear;
-	overflow: hidden;
-}
-
-.bulbShine{
-	position: absolute;
-	left: 50%;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	transition: 0.15s linear;
-	border: 2px solid transparent;
-	box-shadow: none;
-}
-
-#mailBorder1 .bulb{
-	bottom: -20px;
-}
-
-#mailBorder1 .bulb .bulbShine{
-	top: 40%;
-	transform: translateX(-50%) translateY(-50%);
-}
-
-#mailBorder2 .bulb{
-	top: -20px;
-}
-
-#mailBorder2 .bulb .bulbShine{
-	bottom: 40%;
-	transform: translateX(-50%) translateY(50%);
-}
-
-
-#envelopeAndLine{
-	position: absolute;
-	left: 50%;
-	bottom: 35px;
-	height: 300px;
-	transform: translateX(-50%);
-}
-
-#envelope{
-	border-radius: 50%;
-	width: 70px;
-	height: 70px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: -40px;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: rgb(250,250,250);
-	z-index: 1;
-	border: 2px solid rgb(160,160,160);
-	transition: 0.1s linear;
-	text-decoration: none;
-}
-
-#envelopeAndLine i{
-	color: rgb(160,160,160);
-	font-size: 40px;
-	transition: 0.1s linear;
-}
-
-#contactLine{
-	position: absolute;
-	border-left: 2px solid rgb(160,160,160);
-	left: 50%;
-	bottom: 0px;
-	transform: translateX(-50%);
-	height: 100%;
-}
-
-#socSquare{
-	border: 2px solid rgb(160,160,160);
-	width: 143px;
-	height: 60px;
-	background-color: rgb(250,250,250);
-	position: absolute;
-	border-radius: 3px;
-	top: -10px;
-	left: 96px;
-	transform: translateX(-50%);
-	z-index: -1;
-}
-
-#socLeftLine, #socRightLine{
-	position: absolute;
-	bottom: 0;
-	border-left: 2px solid rgb(160,160,160);
-	height: 30px;
-	transform: translateX(-50%);
-}
-
-#socLeftLine{
-	left: 33%;
-}
-
-#socRightLine{
-	left: 67%;
-}
 
 #copyright{
 	position: absolute;

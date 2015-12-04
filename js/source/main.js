@@ -16,30 +16,34 @@ $(document).ready(function(){
     $('.projects').css({'height': getProjDivHeight() + 'px'});
 
     var mailHover = function(){
-        $('#mailBorder1 .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
+        $('#overMail .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
         $('#mail').css({'color': '#F64747', 'text-shadow': 'none'});
         $('#envelope').css({'background-color': '#89C4F4', 'border-color': '#2574A9'});
         $('#envelope i').css({'color': '#2574A9'});
         $('#envelope i').css({'color': 'rgb(250,250,250)', 'text-shadow': '-1px 0 #2574A9, 0 1px #2574A9, 1px 0 #2574A9, 0 -1px #2574A9'});
-        $('#mailBorder1 .bulbShine').css({'border-color': 'white'});
+        $('#overMail .bulbShine').css({'border-color': 'white'});
+        $('#overMail .bulbHolder').css({'background-color': 'rgb(220,220,220)'});
     }
     var mailNotHover = function(){
-        $('#mailBorder1 .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
+        $('#overMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#mail').css({'color': 'rgb(250,250,250)', 'text-shadow': '-1px 0 rgb(160,160,160), 0 1px rgb(160,160,160), 1px 0 rgb(160,160,160), 0 -1px rgb(160,160,160)'});
         $('#envelope').css({'background-color': 'rgb(250,250,250)', 'border-color': 'rgb(160,160,160)'});
         $('#envelope i').css({'color': 'rgb(160,160,160)', 'text-shadow': 'none'});       
-        $('#mailBorder1 .bulbShine').css({'border-color': 'transparent'});
+        $('#overMail .bulbShine').css({'border-color': 'transparent'});
+        $('#overMail .bulbHolder').css({'background-color': 'rgb(200,200,200)'});
     }
 
     $('#mail').hover(mailHover,mailNotHover);
     $('#envelope').hover(mailHover, mailNotHover);
 
     $('.socMedia').hover(function(){
-        $('#mailBorder2 .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
-        $('#mailBorder2 .bulbShine').css({'border-color': 'white'});
+        $('#underMail .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
+        $('#underMail .bulbShine').css({'border-color': 'white'});
+        $('#underMail .bulbHolder').css({'background-color': 'rgb(220,220,220)'});
     },function(){
-        $('#mailBorder2 .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
-        $('#mailBorder2 .bulbShine').css({'border-color': 'transparent'});
+        $('#underMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
+        $('#underMail .bulbShine').css({'border-color': 'transparent'});
+        $('#underMail .bulbHolder').css({'background-color': 'rgb(200,200,200)'});
     });
 
 

@@ -1007,20 +1007,19 @@ div{
 		display: none;
 	}
 
-	#mailWrapper{
+	#mail, .contactLine, .bulbHolder{
 		display: none;
 	}
 
-	#envelopeAndLine{
-		height: 100px;
-		bottom: 110px;
+	#overMail{
+		top: 140px;
 	}
 
 	#contactWrap{
 		bottom: 60px;
 	}
 
-	#contact h1{
+	#contact  > h1{
 		display: block;
 	}
 
