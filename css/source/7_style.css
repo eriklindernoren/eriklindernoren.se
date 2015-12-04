@@ -731,7 +731,7 @@ div{
 
 
 	#mail{
-		font-size: 50px;
+		font-size: 45px;
 	}
 
 	#eduTimelineWrapper{
@@ -895,17 +895,6 @@ div{
 		bottom: 0;
 	}
 
-	.socMedia{
-		width: 40px;
-		height: 40px;
-		border-radius: 2px;
-		margin: 0 3px 0 3px;
-	}
-
-	.socMedia i{
-		font-size: 24px;
-	}
-
 	#contactSeparator{
 		margin: 40px auto 40px auto;
 	}
@@ -1009,24 +998,32 @@ div{
 		font-size: 25px;
 	}
 
-	#mail{
-		font-size: 26px;
-		font-weight: 300;
-	}
-
-
 	#scrollDown{
 		height: 40px;
 		width: 40px;
 	}
 
-	#mail{
-		font-size: 18px;
-	}
-
 	#navigationButtonWrapper i{
 		display: none;
 	}
+
+	#mailWrapper{
+		display: none;
+	}
+
+	#envelopeAndLine{
+		height: 100px;
+		bottom: 110px;
+	}
+
+	#contactWrap{
+		bottom: 60px;
+	}
+
+	#contact h1{
+		display: block;
+	}
+
 
 }
 

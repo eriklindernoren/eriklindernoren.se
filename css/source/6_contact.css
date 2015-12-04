@@ -16,6 +16,18 @@ footer{
 	backface-visibility: hidden;
 }
 
+h1{
+	position: absolute;
+	left: 50%;
+	top: 80px;
+	transform: translateX(-50%) translateY(-50%);
+	font-family: 'Oswald';
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: rgb(160,160,160);
+	font-size: 40px;
+	display: none;
+}
 
 #mailWrapper{
 	position: absolute;
@@ -211,7 +223,7 @@ footer{
 	left: 50%;
 	bottom: 0px;
 	transform: translateX(-50%);
-	height: 300px;
+	height: 100%;
 }
 
 #socSquare{
