@@ -24,6 +24,7 @@
 	letter-spacing: 1px;
 	font-size: 40px; 
 	color: rgb(60,60,60);
+	max-width: 80%;
 	transform: translateY(20px);
 	transition: color 150ms linear;
 }

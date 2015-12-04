@@ -242,8 +242,6 @@
 	border: 2px solid #34495E;
 }
 
-
-
 .startscreen h1{
 	position: absolute;
 	bottom: 60px;
@@ -253,4 +251,94 @@
 	font-size: 40px;
 	color: rgb(245,245,245);
 }
+
+#airBalloon{
+	z-index: 10;
+	position: absolute;
+	right: 200px;
+	top: 200px;
+	height: 210px;
+	width: 150px;
+}
+
+
+#balloon{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	z-index: 11;
+	border-radius: 50%;
+	border: 2px solid #34495E;
+	background-color: #3A539B;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow: hidden;
+}
+
+#leftCurve, #rightCurve{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	top: 50%;
+	border: 2px solid #34495E;
+	transform: translateY(-50%);
+}
+
+#leftCurve{
+	left: 27%;
+}
+
+#rightCurve{
+	right: 27%;
+}
+
+
+#basket{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 30px;
+	width: 30px;
+	border: 2px solid #96281B;
+	background-color: #C0392B;
+	border-radius: 3px 3px 10px 10px;
+	z-index: 11;
+}
+
+#leftRope, #rightRope{
+	position: absolute;
+	bottom: 30px;
+	border-left: 2px solid brown;
+	height: 50px;
+}
+#leftRope{
+	left: 52px;
+	transform: translateX(-50%) rotateZ(-20deg);
+}
+
+#rightRope{
+	left: 98px;
+	transform: translateX(-50%) rotateZ(20deg);;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

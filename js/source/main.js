@@ -15,6 +15,33 @@ $(document).ready(function(){
     $('#aboutRight').css({'height': $('#aboutText').height() + 'px'});
     $('.projects').css({'height': getProjDivHeight() + 'px'});
 
+    var mailHover = function(){
+        $('#mailBorder1 .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
+        $('#mail').css({'color': '#F64747', 'text-shadow': 'none'});
+        $('#envelope').css({'background-color': '#89C4F4', 'border-color': '#2574A9'});
+        $('#envelope i').css({'color': '#2574A9'});
+        $('#envelope i').css({'color': 'rgb(250,250,250)', 'text-shadow': '-1px 0 #2574A9, 0 1px #2574A9, 1px 0 #2574A9, 0 -1px #2574A9'});
+        $('#mailBorder1 .bulbShine').css({'border-color': 'white'});
+    }
+    var mailNotHover = function(){
+        $('#mailBorder1 .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
+        $('#mail').css({'color': 'rgb(250,250,250)', 'text-shadow': '-1px 0 rgb(160,160,160), 0 1px rgb(160,160,160), 1px 0 rgb(160,160,160), 0 -1px rgb(160,160,160)'});
+        $('#envelope').css({'background-color': 'rgb(250,250,250)', 'border-color': 'rgb(160,160,160)'});
+        $('#envelope i').css({'color': 'rgb(160,160,160)', 'text-shadow': 'none'});       
+        $('#mailBorder1 .bulbShine').css({'border-color': 'transparent'});
+    }
+
+    $('#mail').hover(mailHover,mailNotHover);
+    $('#envelope').hover(mailHover, mailNotHover);
+
+    $('.socMedia').hover(function(){
+        $('#mailBorder2 .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
+        $('#mailBorder2 .bulbShine').css({'border-color': 'white'});
+    },function(){
+        $('#mailBorder2 .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
+        $('#mailBorder2 .bulbShine').css({'border-color': 'transparent'});
+    });
+
 
     // Animate to div 
     $(document).on('click','.navbuttons', function(event) {
@@ -287,23 +314,24 @@ $('#projImages a').on('click', function(){
 
         if(window.innerWidth > 668){
             if(prevScreenWidth <= 668){
-                $('#contact').css({
-                    "display": "block",
-                    "position": "fixed",
-                    'bottom': '0',
-                    'z-index': '1'
-                });
+                // $('#contact').css({
+                //     "display": "block",
+                //     "position": "fixed",
+                //     'bottom': '0',
+                //     'z-index': '1'
+                // });
                 whatBackground();
             }        
             $('.projects').css({"margin-bottom": "400px"});
         }else{
-         $('.projects').css({"margin-bottom": "0px"});
-         $('#contact').css({
-            "display": "block",
-            "z-index": "-1",
-            "position": "relative",
-            'bottom': '0'
-        });
+            $('.projects').css({"margin-bottom": "0px"});
+            // $('.projects').css({"margin-bottom": "0px"});
+        //  $('#contact').css({
+        //     "display": "block",
+        //     "z-index": "-1",
+        //     "position": "relative",
+        //     'bottom': '0'
+        // });
 
      }
      if(window.innerWidth <= 925 && prevScreenWidth > 925){
@@ -408,11 +436,10 @@ function scrollAnimations(){
         }
     }
 
-    var dots = $('.timelineDotUpper');
-    for(var i = 0; i < dots.length; i++){
-        var elem = dots[i];
-        if(isPartlyScrolledIntoView(elem)){
-            $(elem).addClass('growAndShrink');
+
+    if(isFullyScrolledIntoView($('.timelineDotUpper')[0])){
+        for(var i = 0; i < 6; i++){
+            $($('.timelineDotUpper')[i]).addClass('growAndShrink' + (i+1));
         }
     }
 

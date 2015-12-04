@@ -350,21 +350,54 @@ div{
 	100%   {opacity: 1; transform: translateX(0);}
 }
 
+
+
 .rotate360{
 	animation-name: rotate360;
-	animation-duration: 1.2s;
+	animation-duration: 1.5s;
 	animation-fill-mode: forwards;
 }
 
 @keyframes rotate360{
-	0%   {opacity: 0; transform: translateY(-100px) translateX(-50%) rotateZ(45deg);}
+	0%   {opacity: 0; transform: translateY(-120px) translateX(-50%) rotateZ(45deg);}
 	10%   {opacity: 1;}
 	100%   {opacity: 1; transform: translateY(-50%) translateX(-50%) rotateZ(405deg);}
 }
 
-.growAndShrink{
+.growAndShrink1{
 	animation-name: growAndShrink;
 	animation-duration: 1.4s;
+	animation-delay: 0.2s;
+	animation-fill-mode: forwards;
+}
+.growAndShrink2{
+	animation-name: growAndShrink;
+	animation-duration: 1.4s;
+	animation-delay: 0.4s;
+	animation-fill-mode: forwards;
+}
+.growAndShrink3{
+	animation-name: growAndShrink;
+	animation-duration: 1.4s;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+}
+.growAndShrink4{
+	animation-name: growAndShrink;
+	animation-duration: 1.4s;
+	animation-delay: 0.8s;
+	animation-fill-mode: forwards;
+}
+.growAndShrink5{
+	animation-name: growAndShrink;
+	animation-duration: 1.4s;
+	animation-delay: 1.0s;
+	animation-fill-mode: forwards;
+}
+.growAndShrink6{
+	animation-name: growAndShrink;
+	animation-duration: 1.4s;
+	animation-delay: 1.2s;
 	animation-fill-mode: forwards;
 }
 
@@ -712,17 +745,6 @@ div{
 		border-width: 7px;
 	}
 
-	
-
-	.socMedia{
-		width: 60px;
-		height: 60px;
-	}
-
-	.socMedia i{
-		font-size: 34px;
-	}
-
 	#startName, #front, #back{
 		width: 120px;
 		height: 120px;
@@ -839,7 +861,7 @@ div{
 	}
 
 	.workplace{
-		width: 80%;
+		width: 90%;
 	}
 
 	#mail{
@@ -933,6 +955,18 @@ div{
 		width: 70%;
 	}
 
+	#aboutText{
+		width: 95%;
+	}
+
+	.eduSummary p, .eduSummary h1, .eduBorder{
+		margin-left: 0;
+	}
+
+	.workplace > p{
+		margin: 20px 20px;
+	}
+
 }
 
 
@@ -986,16 +1020,15 @@ div{
 		width: 40px;
 	}
 
-}
+	#mail{
+		font-size: 18px;
+	}
 
-/*iPhone 5s*/
-@media screen and (max-width: 320px){
-	#timelineStartVert, #timelineStartHor, #upperTimeline, #timelineStop, .contTimeline{
+	#navigationButtonWrapper i{
 		display: none;
 	}
+
 }
-
-
 
 
 
