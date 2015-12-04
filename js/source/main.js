@@ -17,42 +17,36 @@ $(document).ready(function(){
 
     var mailHover = function(){
         $('#overMail .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
-        $('#mail').css({'color': '#F64747', 'text-shadow': 'none'});
-        $('#envelope').css({'background-color': '#89C4F4', 'border-color': '#2574A9'});
-        $('#envelope i').css({'color': '#2574A9'});
-        $('#envelope i').css({'color': 'rgb(250,250,250)', 'text-shadow': '-1px 0 #2574A9, 0 1px #2574A9, 1px 0 #2574A9, 0 -1px #2574A9'});
+        // $('#mail').css({'color': '#F64747', 'text-shadow': 'none'});
         $('#overMail .bulbShine').css({'border-color': 'white'});
         $('#overMail .bulbHolder').css({'background-color': 'rgb(220,220,220)'});
-    }
-    var mailNotHover = function(){
-        $('#overMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
-        $('#mail').css({'color': 'rgb(250,250,250)', 'text-shadow': '-1px 0 rgb(160,160,160), 0 1px rgb(160,160,160), 1px 0 rgb(160,160,160), 0 -1px rgb(160,160,160)'});
-        $('#envelope').css({'background-color': 'rgb(250,250,250)', 'border-color': 'rgb(160,160,160)'});
-        $('#envelope i').css({'color': 'rgb(160,160,160)', 'text-shadow': 'none'});       
-        $('#overMail .bulbShine').css({'border-color': 'transparent'});
-        $('#overMail .bulbHolder').css({'background-color': 'rgb(200,200,200)'});
-    }
-
-    $('#mail').hover(mailHover,mailNotHover);
-    $('#envelope').hover(mailHover, mailNotHover);
-
-    $('.socMedia').hover(function(){
+        $('#screen').css({'background-color': '#ECF0F1'});
+        $('.computerLine').css({'border-color': 'rgb(160,160,160)'});
+        $('.hiddenCompLine').css({'visibility': 'visible'});
         $('#underMail .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
         $('#underMail .bulbShine').css({'border-color': 'white'});
         $('#underMail .bulbHolder').css({'background-color': 'rgb(220,220,220)'});
-        // $('#lampShadeLeft').css({'box-shadow': '1px -1px 3px 0px #F39C12'});
-        // $('#lampShadeRight').css({'box-shadow': '-1px -1px 3px 0px #F39C12'});
-        // $('#lampShadeTop').css({'box-shadow': 'inset 0px -1px 3px 0px #F39C12'});
-        // $('#lampShadeBottom').css({'box-shadow': 'inset 0px 1px 3px 0px #F39C12'});
-    },function(){
+        $('#pSquare1').css({'border-color': '#F64747'});
+        $('#pSquare2').css({'border-color': '#03A678'});
+        $('#pCircle1').css({'border-color': '#D35400'});
+        $('#pCircle2').css({'border-color': '#6BB9F0'});
+    }
+    var mailNotHover = function(){
+        $('#overMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
+        $('#overMail .bulbShine').css({'border-color': 'transparent'});
+        $('#overMail .bulbHolder').css({'background-color': 'rgb(200,200,200)'});
+        $('#screen').css({'background-color': 'rgb(200,200,200)'});
+        $('.computerLine').css({'border-color': 'white'});
+        $('.hiddenCompLine').css({'visibility': 'hidden'});
         $('#underMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#underMail .bulbShine').css({'border-color': 'transparent'});
         $('#underMail .bulbHolder').css({'background-color': 'rgb(200,200,200)'});
-        // $('#lampShadeLeft').css({'box-shadow': 'none'});
-        // $('#lampShadeRight').css({'box-shadow': 'none'});
-        // $('#lampShadeTop').css({'box-shadow': 'none'});
-        // $('#lampShadeBottom').css({'box-shadow': 'none'});
-    });
+        $('.deskPart').css({'background-color': 'rgb(250,250,250)', 'border-color': 'rgb(160,160,160)'});
+        $('#selfPortrait div').css({'border-color': 'rgb(160,160,160)'});
+    }
+
+    $('#mail').hover(mailHover,mailNotHover);
+    $('.socMedia').hover(mailHover, mailNotHover);
 
 
     // Animate to div 
@@ -326,24 +320,23 @@ $('#projImages a').on('click', function(){
 
         if(window.innerWidth > 668){
             if(prevScreenWidth <= 668){
-                // $('#contact').css({
-                //     "display": "block",
-                //     "position": "fixed",
-                //     'bottom': '0',
-                //     'z-index': '1'
-                // });
+                $('#contact').css({
+                    "display": "block",
+                    "position": "fixed",
+                    'bottom': '0',
+                    'z-index': '1'
+                });
                 whatBackground();
             }        
-            $('.projects').css({"margin-bottom": "450px"});
+            $('.projects').css({"margin-bottom": "540px"});
         }else{
             $('.projects').css({"margin-bottom": "0px"});
-            // $('.projects').css({"margin-bottom": "0px"});
-        //  $('#contact').css({
-        //     "display": "block",
-        //     "z-index": "-1",
-        //     "position": "relative",
-        //     'bottom': '0'
-        // });
+         $('#contact').css({
+            "display": "block",
+            "z-index": "-1",
+            "position": "relative",
+            'bottom': '0'
+        });
 
      }
      if(window.innerWidth <= 925 && prevScreenWidth > 925){

@@ -367,37 +367,37 @@ div{
 .growAndShrink1{
 	animation-name: growAndShrink;
 	animation-duration: 1.4s;
-	animation-delay: 0.2s;
+	animation-delay: 0s;
 	animation-fill-mode: forwards;
 }
 .growAndShrink2{
 	animation-name: growAndShrink;
 	animation-duration: 1.4s;
-	animation-delay: 0.4s;
+	animation-delay: 0.2s;
 	animation-fill-mode: forwards;
 }
 .growAndShrink3{
 	animation-name: growAndShrink;
 	animation-duration: 1.4s;
-	animation-delay: 0.6s;
+	animation-delay: 0.4s;
 	animation-fill-mode: forwards;
 }
 .growAndShrink4{
 	animation-name: growAndShrink;
 	animation-duration: 1.4s;
-	animation-delay: 0.8s;
+	animation-delay: 0.6s;
 	animation-fill-mode: forwards;
 }
 .growAndShrink5{
 	animation-name: growAndShrink;
 	animation-duration: 1.4s;
-	animation-delay: 1.0s;
+	animation-delay: 0.8s;
 	animation-fill-mode: forwards;
 }
 .growAndShrink6{
 	animation-name: growAndShrink;
 	animation-duration: 1.4s;
-	animation-delay: 1.2s;
+	animation-delay: 1.0s;
 	animation-fill-mode: forwards;
 }
 
@@ -1007,20 +1007,25 @@ div{
 		display: none;
 	}
 
-	#mail, .contactLine, .bulbHolder{
-		display: none;
+	#mail{
+		font-size: 18px;
+		text-shadow: none;
+		color: rgb(160,160,160);
+		bottom: 80px;
+	}
+
+	#lamp{
+		left: 10px;
 	}
 
 	#overMail{
-		top: 140px;
+		right: 40px;
 	}
 
-	#contactWrap{
-		bottom: 60px;
-	}
 
-	#contact  > h1{
-		display: block;
+	#copyright{
+		font-size: 14px;
+		bottom: 1px;
 	}
 
 
