@@ -405,24 +405,58 @@
 	transition: 0.1s linear;
 }
 
+#leftLegBall, #rightLegBall{
+	width: 4px;
+	height: 4px;
+	position: absolute;
+	bottom: 1px;
+	border-radius: 50%;
+	background-color: rgb(200,200,200);
+}
+
 #leftLeg, #rightLeg{
 	width: 5px;
 	height: 80px;
 	position: absolute;
-	bottom: 0px;
+	bottom: 8px;
 	border-radius: 0px 0px 3px 3px;
 	background-color: rgb(240,240,240);
 }
 
-#leftLeg{
+#leftLegTop, #rightLegTop{
+	width: 7px;
+	height: 60px;
+	position: absolute;
+	bottom: 20px;
+	border-radius: 0px 0px 3px 3px;
+	border-width: 2px 2px 2px 2px;
+	background-color: rgb(240,240,240);
+}
+
+#legLine1, #legLine2{
+	border-left: 1px solid rgb(160,160,160);
+	position: absolute;
+	bottom: 5px;
+	height: 55px;
+}
+#legLine1{
+	left: 5px;
+}
+#legLine2{
+	right: 5px;
+}
+
+
+#leftLeg, #leftLegBall, #leftLegTop{
 	left: 10px;
 	transform: translateX(-50%);
 }
 
-#rightLeg{
+#rightLeg, #rightLegBall, #rightLegTop{
 	right: 10px;
 	transform: translateX(50%);
 }
+
 
 #lowerPart{
 	position: absolute;
@@ -446,10 +480,20 @@
 	background-color: rgb(200,200,200);
 }
 
+#innerDrawer{
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	border: 1px solid rgb(160,160,160);
+	height: 8px;
+	width: 96px;
+	border-radius: 2px;
+}
+
 #keyHole{
 	position: absolute;
 	left: 50%;
-	top: 4px;
+	top: 5px;
 	transform: translateY(-50%) translateX(-50%);
 	width: 3px;
 	height: 3px;
@@ -588,6 +632,15 @@
 	border-radius: 2px;
 }
 
+#innerFrame{
+	position: absolute;
+	border-radius: 1px;
+	left: 2px;
+	top: 3px;
+	width: 58px;
+	height: 78px;
+	border: 1px solid rgb(120,120,120);
+}
 
 #selfPortrait{
 	position: absolute;
