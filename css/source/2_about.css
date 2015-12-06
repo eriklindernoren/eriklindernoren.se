@@ -38,7 +38,8 @@
 	justify-content: center;
 	flex-direction: column;
 	transform: scale(1);
-	margin: 50px auto 120px auto;
+	margin: 100px auto 150px auto;
+	z-index: 20;
 }
 
 #resume p{
@@ -122,6 +123,7 @@
 	border-radius: 2px;
 	border: 2px solid #F64747;
 	background-color: rgb(250,250,250);
+	display: none;
 }
 
 #timelineStartLine{
@@ -131,5 +133,518 @@
 	height: 50px;
 	bottom: 0px;
 	border-left: 2px solid #F64747;
+	border-top: 2px solid #F64747;
+	display: none;
 }
+
+/*---------------------------*/
+/*DESK AND LAMP*/
+/*---------------------------*/
+
+
+.bulbLine{
+	z-index: -1;
+	position: absolute;
+	left: 50%;
+	height: 100%;
+	border-left: 2px solid #2C3E50;
+	transform: translateX(-50%);
+}
+
+.bulbHolder{
+	position: absolute;
+	left: 50%;
+	border: 2px solid #2C3E50;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 2px;
+	background-color: rgb(200,200,200);
+	transition: 0.1s linear;
+}
+
+.footLine{
+	position: absolute;
+	border-bottom: 1px solid #2C3E50;
+	width: 5px;
+	transform: translateY(-50%);
+}
+
+.bulb{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	border: 2px solid #2C3E50;
+	background-color: rgb(240,240,240);
+	box-shadow: none;
+	transition: 0.15s linear;
+	overflow: hidden;
+}
+
+.bulbShine{
+	position: absolute;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transition: 0.15s linear;
+	border: 2px solid transparent;
+	box-shadow: none;
+}
+
+#overMail{
+	position: absolute;
+	transform: translateX(-50%);
+	width: 200px;
+	height: 110px;
+	left: 50%;
+	top: 00px;
+}
+
+#envelope{
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white; 
+	border: 2px solid #2C3E50;
+	transition: 0.1s linear;
+	text-decoration: none;
+}
+
+#envelope i{
+	color: #2C3E50;
+	font-size: 40px;
+	transition: 0.1s linear;
+}
+
+#bulbLineStart{
+	position: absolute;
+	left: 50%;
+	top: -5px;
+	width: 16px;
+	height: 16px;
+	border-left: 2px solid #2C3E50;
+	border-right: 2px solid #2C3E50;
+	border-bottom: 2px solid #2C3E50;
+	background-color: rgb(200,200,200);
+	transform: translateX(-50%);
+	border-radius: 3px;
+	z-index: 2;
+}
+
+#bulbLineStartBottom{
+	position: absolute;
+	top: 7px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 2px solid #2C3E50;
+	background-color: rgb(200,200,200);
+	width: 6px;
+	height: 5px;
+	border-radius: 3px;
+	z-index: 1;
+}
+
+#overMail .bulbLine{
+	/*border-color: #F64747;*/
+	top: 0px;
+	height: 120px;
+}
+
+#overMail .bulbHolder{
+	bottom: 0;
+}
+
+#overMail .footLine{
+	left: 0px;
+	top: 3px;
+}
+
+#overMail .bulb{
+	z-index: 10;
+	transform: translateX(-50%) translateY(5px);
+}
+
+#overMail .bulbShine{
+	top: 40%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+
+#underAbout{
+	position: absolute;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 700px;
+	bottom: 0px;
+	left: 50%;
+}
+
+#underAbout .bulbHolder{
+	top: 8px;
+}
+
+#underAbout .footLine{
+	right: 0px;
+	bottom: 1px;
+}
+
+#underAbout .bulb{
+	transform: translateX(-50%) translateY(-20px);
+}
+
+#underAbout .bulbShine{
+	bottom: 40%;
+	transform: translateX(-50%) translateY(50%);
+}
+
+
+
+#lamp{
+	height: 240px;
+	width: 100px;
+	position: absolute;
+	bottom: -1px;
+	left: 0px;
+}
+
+#lamp .bulbLine{
+	bottom: 0;
+}
+
+#lampFoot{
+	position: absolute;
+	border: 2px solid #2C3E50;
+	background-color: rgb(200,200,200);
+	height: 4px;
+	width: 30px;
+	left: 50%;
+	bottom: 0px;
+	transform: translateX(-50%);
+	border-radius: 3px;
+}
+
+
+#tableLamp{
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	transform: translateX(-50%) translateY(-50%);
+	width: 90px;
+	height: 80px;
+	overflow: hidden;
+}
+
+#lampShadeBottom{
+	position: absolute;
+	left: 50%;
+	bottom: 7px;
+	transform: translateX(-50%);
+	width: 86px;
+	height: 5px;
+	border-radius: 50%;
+	border: 2px solid #2C3E50;
+	transition: 0.1s linear;
+}
+
+#lampShadeTop{
+	position: absolute;
+	left: 50%;
+	top: 8px;
+	transform: translateX(-50%);
+	width: 20px;
+	height: 2px;
+	border-radius: 50%;
+	border: 2px solid #2C3E50;
+	transition: 0.1s linear;
+}
+
+#lampShadeLeft{
+	position: absolute;
+	left: 14px;
+	bottom: 0px;
+	transform: rotateZ(31deg);
+	border-left: 2px solid #2C3E50;
+	height: 74px;
+	transition: 0.1s linear;
+}
+
+#lampShadeRight{
+	position: absolute;
+	right: 14px;
+	bottom: 0px;
+	transform: rotateZ(-31deg);
+	border-left: 2px solid #2C3E50;
+	height: 74px;
+	transition: 0.1s linear;
+}
+
+
+#desk{
+	position: absolute;
+	right: 20px;
+	bottom: -2px;
+	width: 180px;
+	height: 100px;
+	z-index: -1;
+}
+
+.deskPart{
+	border: 2px solid #2C3E50;
+	background-color: rgb(240,240,240);
+	transition: 0.1s linear;
+}
+
+#leftLeg, #rightLeg{
+	width: 5px;
+	height: 80px;
+	position: absolute;
+	bottom: 0px;
+	border-radius: 0px 0px 3px 3px;
+	background-color: rgb(240,240,240);
+}
+
+#leftLeg{
+	left: 10px;
+	transform: translateX(-50%);
+}
+
+#rightLeg{
+	right: 10px;
+	transform: translateX(50%);
+}
+
+#lowerPart{
+	position: absolute;
+	left: 50%;
+	bottom: 75px;
+	transform: translateX(-50%);
+	width: 180px;
+	height: 20px;
+	z-index: 1;
+	border-radius: 0px 0px 3px 3px;
+}
+
+#drawer{
+	height: 12px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100px;
+	border-radius: 2px;
+	background-color: rgb(200,200,200);
+}
+
+#keyHole{
+	position: absolute;
+	left: 50%;
+	top: 4px;
+	transform: translateY(-50%) translateX(-50%);
+	width: 3px;
+	height: 3px;
+	background-color: #2C3E50;
+	border-radius: 50%;
+}
+
+#upperPart{
+	position: absolute;
+	left: 50%;
+	bottom: 96px;
+	transform: translateX(-50%);
+	height: 5px;
+	width: 200px;
+	border-radius: 2px;
+	z-index: 2;
+}
+
+
+#computer{
+	position: absolute;
+	left: 50%;
+	bottom: 101px;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 80px;
+}
+
+#compLower{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	width: 70px;
+	height: 6px;
+	border-radius: 2px 2px 10px 10px;
+	border: 2px solid #2C3E50;
+	background-color: rgb(240,240,240);
+	z-index: 3;
+}
+
+#compUpper{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	width: 60px;
+	height: 40px;
+	border-radius: 4px;
+	border: 2px solid #2C3E50;
+	background-color: rgb(240,240,240);
+	z-index: 2;
+}
+
+#screen{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0px;
+	width: 52px;
+	height: 34px;
+	border-radius: 2px;
+	border: 1px solid #2C3E50;
+	background-color: rgb(200,200,200);
+	z-index: 2;
+
+}
+.computerLine{
+	position: absolute;
+	left: 3px;
+	border-top: 1px solid white;
+}
+
+.hiddenCompLine{
+	visibility: hidden;
+}
+
+#line1{
+	top: 5px;
+	width: 20px;
+}
+#line2{
+	top: 7px;
+	width: 5px;
+}
+#line3{
+	top: 9px;
+	width: 10px;
+}
+#line4{
+	top: 11px;
+	width: 25px;
+}
+#line5{
+	top: 7px;
+	width: 8px;
+}
+#line6{
+	top: 9px;
+	width: 15px;
+}
+#line7{
+	top: 13px;
+	width: 21px;
+}
+#line8{
+	top: 15px;
+	width: 4px;
+}
+#line9{
+	top: 17px;
+	width: 12px;
+}
+
+#webcam{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 37px;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	background-color: #2C3E50;
+}
+
+
+#painting{
+	position: absolute;
+	right: 55px;
+	bottom: 150px;
+	transform: translateY(-50%);
+	width: 64px;
+	height: 86px;
+	border: 2px solid #2C3E50;
+	background-color: rgb(200,200,200);
+	border-radius: 2px;
+}
+
+
+#selfPortrait{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 50px;
+	height: 70px;
+	border: 2px solid #2C3E50;
+	border-radius: 2px;
+	background-color: rgb(240,240,240);
+}
+
+#selfPortrait div{
+	transition: 0.1s linear;
+}
+
+#pSquare1{
+	position: absolute;
+	border: 2px solid #2C3E50;
+	width: 20px;
+	height: 20px;
+	left: 20px;
+	top: 20px;
+}
+
+#pSquare2{
+	position: absolute;
+	border: 2px solid #2C3E50;
+	width: 25px;
+	height: 25px;
+	left: 5px;
+	bottom: 10px;
+}
+
+#pCircle1{
+	position: absolute;
+	border: 2px solid #2C3E50;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	left: 5px;
+	top: 5px;
+}
+
+#pCircle2{
+	position: absolute;
+	border: 2px solid rgb(240,240,240);
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	right: 5px;
+	bottom: 5px;
+}
+
+
+
+
+
 

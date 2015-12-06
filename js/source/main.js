@@ -12,42 +12,32 @@ $(document).ready(function(){
         $('#mountainHolder').css('transform','translateY('+Math.round(((scrolled*.5)))+'px)');
     }
 
-    $('#aboutRight').css({'height': $('#aboutText').height() + 'px'});
-    $('.projects').css({'height': getProjDivHeight() + 'px'});
 
     var mailHover = function(){
-        $('#overMail .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
-        // $('#mail').css({'color': '#F64747', 'text-shadow': 'none'});
-        $('#overMail .bulbShine').css({'border-color': 'white'});
-        $('#overMail .bulbHolder').css({'background-color': 'rgb(220,220,220)'});
-        $('#screen').css({'background-color': '#ECF0F1'});
+        // $('#overMail .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
+        // $('#overMail .bulbShine').css({'border-color': 'white'});
+        $('#screen').css({'background-color': 'rgb(240,240,240)'});
         $('.computerLine').css({'border-color': 'rgb(160,160,160)'});
         $('.hiddenCompLine').css({'visibility': 'visible'});
-        $('#underMail .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
-        $('#underMail .bulbShine').css({'border-color': 'white'});
-        $('#underMail .bulbHolder').css({'background-color': 'rgb(220,220,220)'});
-        $('#pSquare1').css({'border-color': '#F64747'});
-        $('#pSquare2').css({'border-color': '#03A678'});
-        $('#pCircle1').css({'border-color': '#D35400'});
-        $('#pCircle2').css({'border-color': '#6BB9F0'});
+        $('#underAbout .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
+        $('#underAbout .bulbShine').css({'border-color': 'white'});
+        $('#pSquare1').css({'border-color': '#F64747', 'background-color': 'rgba(246,71,71,0.2)'});
+        $('#pSquare2').css({'border-color': '#03A678', 'background-color': 'rgba(3,166,120,0.2)'});
+        $('#pCircle1').css({'border-color': '#F39C12', 'background-color': 'rgba(243,156,18,0.2)'});
+        $('#pCircle2').css({'border-color': '#6BB9F0', 'background-color': 'rgba(107,185,240,0.2)'});
     }
     var mailNotHover = function(){
-        $('#overMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
-        $('#overMail .bulbShine').css({'border-color': 'transparent'});
-        $('#overMail .bulbHolder').css({'background-color': 'rgb(200,200,200)'});
+        // $('#overMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(240,240,240)', 'box-shadow': 'none'});
+        // $('#overMail .bulbShine').css({'border-color': 'transparent'});
         $('#screen').css({'background-color': 'rgb(200,200,200)'});
         $('.computerLine').css({'border-color': 'white'});
         $('.hiddenCompLine').css({'visibility': 'hidden'});
-        $('#underMail .bulb').css({'border-color': 'rgb(160,160,160)', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
-        $('#underMail .bulbShine').css({'border-color': 'transparent'});
-        $('#underMail .bulbHolder').css({'background-color': 'rgb(200,200,200)'});
-        $('.deskPart').css({'background-color': 'rgb(250,250,250)', 'border-color': 'rgb(160,160,160)'});
-        $('#selfPortrait div').css({'border-color': 'rgb(160,160,160)'});
+        $('#underAbout .bulb').css({'border-color': '#2C3E50', 'background-color': 'rgb(240,240,240)', 'box-shadow': 'none'});
+        $('#underAbout .bulbShine').css({'border-color': 'transparent'});
+        $('#selfPortrait div').css({'border-color': '#2C3E50', 'background-color': 'transparent'});
     }
 
-    $('#mail').hover(mailHover,mailNotHover);
-    $('.socMedia').hover(mailHover, mailNotHover);
-
+    $('#resume').hover(mailHover, mailNotHover);
 
     // Animate to div 
     $(document).on('click','.navbuttons', function(event) {
@@ -61,11 +51,12 @@ $(document).ready(function(){
         if(target == "#contact"){
            $('html, body').animate({
             scrollTop: $(document).height()
-        }, 700, "easeOutQuad");       
+        }, 2000, "easeInOutQuart");
+        setTimeout(function(){$('.schoolImg').hide();},2000);
        }else{
         $('html, body').animate({
             scrollTop: $(target).offset().top 
-        }, 700, "easeOutQuad");
+        }, 1200, "easeInOutQuart");
     }
 });
 
@@ -99,18 +90,6 @@ $(document).ready(function(){
         }
         beenSetUp = true;
     }
-
-    // function setStarShine(){
-    //     window.setInterval(starShine, 500);
-    // }
-
-    // function starShine(){
-    //     var i = Math.floor((Math.random() * 12) + 0);
-    //     var star = '#s' + (i+1);
-    //     $(star).addClass("shine");
-    // }
-
-
 
     function findNextSection(){
         var topOfWindow = $(window).scrollTop();
@@ -315,30 +294,11 @@ $('#projImages a').on('click', function(){
     //Done at load and every time the window is resized
     var prevScreenWidth;
     var setupWindowSize = function(){
-
-        $('.projects').css({'height': getProjDivHeight() + 'px'});
-
         if(window.innerWidth > 668){
             if(prevScreenWidth <= 668){
-                $('#contact').css({
-                    "display": "block",
-                    "position": "fixed",
-                    'bottom': '0',
-                    'z-index': '1'
-                });
                 whatBackground();
             }        
-            $('.projects').css({"margin-bottom": "540px"});
-        }else{
-            $('.projects').css({"margin-bottom": "0px"});
-         $('#contact').css({
-            "display": "block",
-            "z-index": "-1",
-            "position": "relative",
-            'bottom': '0'
-        });
-
-     }
+        }
      if(window.innerWidth <= 925 && prevScreenWidth > 925){
         $('#navbar').fadeOut(600);
         $('#mobileNav').fadeIn(600);
@@ -433,16 +393,16 @@ function scrollAnimations(){
 
     var triggerContactAnimations = $('.projects').offset().top + $(window).height();
 
-    var dots = $('.timelineDot');
-    for(var i = 0; i < dots.length; i++){
-        var elem = dots[i];
-        if(isFullyScrolledIntoView(elem)){
-            $(elem).addClass("appearFromTopCentered")
-        }
-    }
+    // var dots = $('.timelineDot');
+    // for(var i = 0; i < dots.length; i++){
+    //     var elem = dots[i];
+    //     if(isFullyScrolledIntoView(elem)){
+    //         $(elem).addClass('rotate360');
+    //     }
+    // }
 
 
-    if(isFullyScrolledIntoView($('.timelineDotUpper')[0])){
+    if(isFullyScrolledIntoView($('.timelineDotUpper')[3])){
         for(var i = 0; i < 6; i++){
             $($('.timelineDotUpper')[i]).addClass('growAndShrink' + (i+1));
         }
@@ -484,6 +444,7 @@ function whatBackground(scrolledY){
 
     if(docViewBottom > slidesInProject){
         $('#contact').show();
+        $('.schoolImg').hide();
     }else{
         $('#contact').hide();
         if(isPartlyScrolledIntoView('.education')){

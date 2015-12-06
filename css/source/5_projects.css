@@ -21,6 +21,8 @@
 	transition: 0.2s linear;
 	padding-top: 100px;
 	transform: translate3d(0,0,0);
+	margin-bottom: 400px;
+	height: 1100px;
 }
 
 #projectFilter{

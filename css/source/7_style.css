@@ -5,6 +5,7 @@ body,html{
 	width: 100%;
 	overflow-x: hidden;
 	position: relative;
+	background-color: #2C3E50;
 }
 
 body{
@@ -443,9 +444,9 @@ div{
 	border-radius: 50%;
 	background-color: transparent;
 	border: 2px solid rgb(20,20,20);
-	border: 2px solid #34495E;
+	border: 2px solid rgb(160,160,160);
 	color: rgb(20,20,20);
-	color: #34495E;
+	color: rgb(160,160,160);
 	width: 45px;
 	height: 45px;
 	display: flex;
@@ -485,7 +486,7 @@ div{
 	margin: 0 auto;
 	transform: translateY(-3px);
 	color: rgb(20,20,20);
-	color: #34495E;
+	color: rgb(160,160,160);
 }
 
 .scrollText{
@@ -501,12 +502,12 @@ div{
 .scrollText h1{
 	margin-right: 0px;
 	font-family: 'Raleway';
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 22px;
 	text-decoration: none;
 	padding: 0;
 	color: rgb(20,20,20);
-	color: #34495E;
+	color: rgb(160,160,160);
 }
 
 .scrollToTop:hover{
@@ -587,6 +588,23 @@ div{
 	#projImages{
 		width: 80%;
 	}
+
+	.projWrapper{
+		flex-direction: column;
+		width: 80%;
+	}
+
+	.slideDiv{
+		width: 60%;
+	}
+
+	#slideLeft{
+		left: 10px;
+	}
+
+	#slideRight{
+		right: 10px;
+	}
 }
 
 
@@ -622,6 +640,10 @@ div{
 		bottom: 5%;
 	}
 
+	.slideDiv{
+		width: 95%;
+	}
+
 
 	.bigButton h1{
 		font-size: 18px;
@@ -634,35 +656,25 @@ div{
 		margin: 0;
 	}
 
-
-	.projWrapper{
-		flex-direction: column;
-		width: 80%;
-	}
-
 	.info{
 		margin: 0 auto;
 		width: 100%;
 	}
 
-	.slideDiv{
-		width: 100%;
-	}
-
-	#slideLeft{
-		left: 10px;
-	}
-
-	#slideRight{
-		right: 10px;
-	}
+	
 
 
 	#mail{
 		font-size: 60px;
 	}
 
+	.projects{
+		height: 1000px;
+	}
 
+	#projectHeader{
+		top: 60px;
+	}
 }
 
 
@@ -758,6 +770,8 @@ div{
 		font-size: 25px;
 		line-height: 25px;
 	}
+
+
 
 }
 
@@ -887,14 +901,6 @@ div{
 		margin-right: auto;
 	}
 
-
-	#contact{                
-		display: block;
-		z-index: 3;
-		position: relative;
-		bottom: 0;
-	}
-
 	#contactSeparator{
 		margin: 40px auto 40px auto;
 	}
@@ -956,6 +962,10 @@ div{
 		margin: 20px 20px;
 	}
 
+	#projectHeader{
+		top: 40px;
+	}
+
 }
 
 
@@ -1010,8 +1020,14 @@ div{
 	#mail{
 		font-size: 18px;
 		text-shadow: none;
-		color: rgb(160,160,160);
-		bottom: 80px;
+	}
+
+	#underAbout{
+		display: none;
+	}
+
+	#timelineStartDot, #timelineStartLine{
+		display: block;
 	}
 
 	#lamp{
@@ -1026,6 +1042,50 @@ div{
 	#copyright{
 		font-size: 14px;
 		bottom: 1px;
+	}
+
+
+}
+
+@media screen and (max-width: 500px){
+	#projectHeader{
+		top: 20px;
+	}
+
+	.projects{
+		height: 1100px;
+	}
+
+	#painting{
+		right: 40px;
+	}
+
+}
+
+@media screen and (max-width: 440px){
+	.projects{
+		height: 1200px;
+	}
+
+}
+
+
+@media screen and (max-width: 360px){
+	.projects{
+		height: 1300px;
+	}
+
+	.projects{
+		margin-bottom: 400px;
+	}
+
+	footer{
+		height: 400px;
+	}
+
+	footer h1{
+		left: 0px;
+		width: 150px;
 	}
 
 

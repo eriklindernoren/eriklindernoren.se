@@ -364,7 +364,7 @@
 	border: 2px solid #F64747;
 	z-index: 5;
 	transition: 0.4s linear;
-	opacity: 0;
+	opacity: 1;
 }
 
 
