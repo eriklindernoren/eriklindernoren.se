@@ -5,7 +5,7 @@ body,html{
 	width: 100%;
 	overflow-x: hidden;
 	position: relative;
-	background-color: #2C3E50;
+	background-color: rgb(255,255,255);
 }
 
 body{
@@ -365,6 +365,19 @@ div{
 	100%   {opacity: 1; transform: translateY(-50%) translateX(-50%) rotateZ(405deg);}
 }
 
+.growAndShrink{
+	animation-name: growAndShrinkBig;
+	animation-duration: 1.0s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes growAndShrinkBig{
+	0%   {opacity: 0; transform: scale(0) translateX(-50%) translateY(-50%);}
+	50% 	{transform: scale(1.3) translateX(-35%) translateY(-50%);}
+	100%   {opacity: 1; transform: scale(1) translateX(-50%) translateY(-50%);}
+}
+
 .growAndShrink1{
 	animation-name: growAndShrink;
 	animation-duration: 1.4s;
@@ -604,6 +617,10 @@ div{
 
 	#slideRight{
 		right: 10px;
+	}
+
+	#penHolder, #arrowHolder{
+		display: none;
 	}
 }
 
@@ -1022,8 +1039,12 @@ div{
 		text-shadow: none;
 	}
 
-	#underAbout{
+	#underResume, #overResume{
 		display: none;
+	}
+
+	#resume{
+		margin: 60px auto 120px auto;
 	}
 
 	#timelineStartDot, #timelineStartLine{
@@ -1033,11 +1054,6 @@ div{
 	#lamp{
 		left: 10px;
 	}
-
-	#overMail{
-		right: 40px;
-	}
-
 
 	#copyright{
 		font-size: 14px;

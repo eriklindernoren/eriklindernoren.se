@@ -293,7 +293,7 @@
 .leftOfTimeline h2{
 	font-family: "Oswald";
 	font-weight: 400;
-	color: rgb(80,80,80);
+	color: rgb(60,60,60);
 	letter-spacing: 1px;
 	font-size: 24px;
 	margin-bottom: 4px;
@@ -311,7 +311,7 @@
 
 .leftOfTimeline p{
 	font-family: "Raleway";
-	font-weight: 300;
+	font-weight: 400;
 	color: rgb(60,60,60);
 	font-size: 16px;
 	max-width: 100%;
@@ -364,7 +364,7 @@
 	border: 2px solid #F64747;
 	z-index: 5;
 	transition: 0.4s linear;
-	opacity: 1;
+	opacity: 0;
 }
 
 
@@ -394,6 +394,135 @@
 }
 
 
+#penHolder{
+	position: absolute;
+	right: 262px;
+	top: 345px;
+	transform: translateY(-50%) rotateZ(-20deg);
+	height: 300px;
+	width: 50px;
+	transition: 1.4s ease;
+	z-index: 3;
+}
+
+#penTop{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 40px;
+	width: 10px;
+}
+
+#penTip{
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	border-bottom: 2px solid rgb(100,100,100);
+}
+
+#tipBorderLeft{
+	position: absolute;
+	left: 9px;
+	bottom: 0;
+	border-left: 2px solid rgb(100,100,100);
+	transform: rotateZ(14deg) translateY(53px);
+	height: 70px;
+	z-index: 5;
+}
+
+#tipBorderRight{
+	position: absolute;
+	right: 8px;
+	bottom: 0;
+	border-left: 2px solid rgb(100,100,100);
+	transform: rotateZ(-14deg) translateY(53px);
+	height: 70px;
+	z-index: 5;
+}
+
+#penTipBottom{
+	position: absolute;
+	left: 50%;
+	bottom: -55px;
+	height: 10px;
+	width: 30px;
+	transform: translateX(-50%);
+	border-bottom: 2px solid rgb(100,100,100);
+	border-radius: 50%;
+}
+
+#penBase{
+	position: absolute;
+	top: 90px;
+	left: 8px;
+	width: 31px;
+	height: 250px;
+	border-left: 2px solid rgb(100,100,100);
+	border-right: 2px solid rgb(100,100,100);
+	border-radius: 0 0 2px 2px;
+}
+
+#penBottom{
+	position: absolute;
+	left: 50%;
+	bottom: -44px;
+	height: 10px;
+	width: 33px;
+	transform: translateX(-50%);
+	border-bottom: 2px solid rgb(100,100,100);
+	border-radius: 50%;
+}
+
+#penLine1, #penLine2{
+	position: absolute;
+	height: 220px;
+	border-left: 1px solid rgb(160,160,160);
+	bottom: 10px;
+	transform: translateX(-50%);
+}
+
+#penLine1{
+	left: 10px;
+}
+
+#penLine2{
+	right: 10px;
+}
+
+#arrowHolder{
+	position: absolute;
+	right: 280px;
+	top: 300px;
+	transform: translateX(-50%) translateY(-50%);
+	width: 50px;
+	height: 150px;
+}
+
+#arrowLine{
+	height: 0px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	border-right: 3px solid #F64747;
+	transition: 1.4s ease;
+}
+
+#arrowHead{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	transform: translateX(-50%) rotateZ(45deg);
+	border-right: 3px solid #F64747;
+	border-bottom: 3px solid #F64747;
+}
 
 
 

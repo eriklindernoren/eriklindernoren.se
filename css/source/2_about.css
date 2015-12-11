@@ -38,7 +38,7 @@
 	justify-content: center;
 	flex-direction: column;
 	transform: scale(1);
-	margin: 100px auto 150px auto;
+	margin: 270px auto 165px auto;
 	z-index: 20;
 }
 
@@ -195,56 +195,43 @@
 	box-shadow: none;
 }
 
-#overMail{
+#overResume{
 	position: absolute;
 	transform: translateX(-50%);
-	width: 200px;
-	height: 110px;
-	left: 50%;
-	top: 00px;
-}
-
-#envelope{
-	border-radius: 50%;
-	width: 70px;
+	width: 100%;
+	max-width: 80px;
 	height: 70px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: 0px;
 	left: 50%;
-	transform: translateX(-50%);
-	background-color: white; 
-	border: 2px solid #2C3E50;
-	transition: 0.1s linear;
-	text-decoration: none;
-}
-
-#envelope i{
-	color: #2C3E50;
-	font-size: 40px;
-	transition: 0.1s linear;
+	bottom: 350px;
+	border-top: 2px solid #2C3E50;
 }
 
 #bulbLineStart{
 	position: absolute;
 	left: 50%;
-	top: -5px;
+	top: -2px;
 	width: 16px;
 	height: 16px;
-	border-left: 2px solid #2C3E50;
-	border-right: 2px solid #2C3E50;
-	border-bottom: 2px solid #2C3E50;
+	border: 2px solid #2C3E50;
 	background-color: rgb(200,200,200);
 	transform: translateX(-50%);
-	border-radius: 3px;
+	border-radius: 1px 1px 3px 3px;
 	z-index: 2;
+}
+
+#roofBoxLine{
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	height: 12px;
+	width: 5px;
+	border-left: 1px solid rgb(120,120,120);
+	border-top: 1px solid rgb(120,120,120);
 }
 
 #bulbLineStartBottom{
 	position: absolute;
-	top: 7px;
+	top: 11px;
 	left: 50%;
 	transform: translateX(-50%);
 	border: 2px solid #2C3E50;
@@ -255,33 +242,33 @@
 	z-index: 1;
 }
 
-#overMail .bulbLine{
+#overResume .bulbLine{
 	/*border-color: #F64747;*/
 	top: 0px;
-	height: 120px;
+	height: 100%;
 }
 
-#overMail .bulbHolder{
+#overResume .bulbHolder{
 	bottom: 0;
 }
 
-#overMail .footLine{
+#overResume .footLine{
 	left: 0px;
 	top: 3px;
 }
 
-#overMail .bulb{
+#overResume .bulb{
 	z-index: 10;
 	transform: translateX(-50%) translateY(5px);
 }
 
-#overMail .bulbShine{
+#overResume .bulbShine{
 	top: 40%;
 	transform: translateX(-50%) translateY(-50%);
 }
 
 
-#underAbout{
+#underResume{
 	position: absolute;
 	transform: translateX(-50%);
 	width: 100%;
@@ -290,20 +277,20 @@
 	left: 50%;
 }
 
-#underAbout .bulbHolder{
+#underResume .bulbHolder{
 	top: 8px;
 }
 
-#underAbout .footLine{
+#underResume .footLine{
 	right: 0px;
 	bottom: 1px;
 }
 
-#underAbout .bulb{
+#underResume .bulb{
 	transform: translateX(-50%) translateY(-20px);
 }
 
-#underAbout .bulbShine{
+#underResume .bulbShine{
 	bottom: 40%;
 	transform: translateX(-50%) translateY(50%);
 }
@@ -322,16 +309,58 @@
 	bottom: 0;
 }
 
+#thickLampLeg{
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	width: 7px;
+	height: 170px;
+	border: 2px solid #2C3E50;
+	background-color: rgb(240,240,240);
+	border-radius: 3px;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+#lampLine{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	border-left: 1px solid rgb(160,160,160);
+	height: 160px;
+}
+
+#lampBallUnder, #lampBallOver{
+	position: absolute;
+	left: 50%;
+	width: 5px;
+	height: 5px;
+	border: 2px solid #2C3E50;
+	background-color: rgb(200,200,200);
+	border-radius: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+#lampBallUnder{
+	bottom: 7px;
+}
+
+#lampBallOver{
+	bottom: 188px;
+}
+
 #lampFoot{
 	position: absolute;
 	border: 2px solid #2C3E50;
 	background-color: rgb(200,200,200);
 	height: 4px;
-	width: 30px;
+	width: 40px;
 	left: 50%;
 	bottom: 0px;
 	transform: translateX(-50%);
 	border-radius: 3px;
+	z-index: 2;
 }
 
 
