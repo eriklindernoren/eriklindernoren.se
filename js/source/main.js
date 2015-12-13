@@ -402,12 +402,23 @@ function scrollAnimations(){
         }
     }
 
-    if(!penAnimationDone && isFullyScrolledIntoView('#arrowHead')){
+    if(!penAnimationDone && isFullyScrolledIntoView($('.timelineDot')[3])){
         $('#arrowLine').css({'height': '100%'});
-        $('#penHolder').css({'top': '495px'});
+        $('#penHolder').css({'top': '110px'});
         setTimeout(function(){
-            $('#penHolder').css({'transition': '0.5s ease', 'top': '480px', 'right': '180px', 'transform': 'translateY(-50%) rotateZ(15deg)'});
-        },2000);
+            $('#arrowHead').css({'width': '50px', 'bottom': '18px', 'left': '7px', 'border-color': '#F64747'});
+            $('#penHolder').css({'transition': '1.0s ease', 'top': '79px', 'left': '42px', 'transform': 'rotateZ(-25deg)'});
+        },1700);
+        setTimeout(function(){
+            $('#penHolder').css({'transition': '0.6s ease', 'top': '110px', 'left': '88px', 'transform': 'rotateZ(-30deg)'});
+        },2700);
+        setTimeout(function(){
+            $('#arrowHead').css({'height': '50px', 'bottom': '36px', 'left': '25px'});
+            $('#penHolder').css({'transition': '1.0s ease', 'top': '69px', 'left': '133px', 'transform': 'rotateZ(-35deg)'});
+        },3300);
+        setTimeout(function(){
+            $('#penHolder').css({'transition': '0.5s ease', 'top': '130px', 'left': '130px', 'transform': 'rotateZ(15deg)'});
+        },4300);
         penAnimationDone = true;
     }
 
