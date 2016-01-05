@@ -51,6 +51,9 @@
 	letter-spacing: 1px;
 	font-size: 40px;
 	z-index: 4;
+	font-family: "Playfair Display";
+	font-weight: 900;
+	letter-spacing: -1px;
 }
 
 
@@ -159,7 +162,7 @@
 
 .info p{
 	font-family: 'Raleway';
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 16px;
 }
 
@@ -171,7 +174,7 @@
 	pointer-events : auto;
 }
 
-.projSeparatorLeft{
+.thickBorder{
 	display: block;
 	max-width: 150px;
 	min-width: 50px;

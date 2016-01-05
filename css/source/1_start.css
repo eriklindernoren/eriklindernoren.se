@@ -13,7 +13,7 @@
 	overflow: hidden;
 	z-index: 1;
 	background: linear-gradient(to bottom, rgb(10,10,10),#2e8ece) no-repeat;
-
+	box-sizing: border-box;
 }
 
 .star{
@@ -28,18 +28,40 @@
 #navigationBar{
 	position: absolute;
 	top: 0;
-	right: 0;
-	left: 0;
-	margin-right: auto;
-	margin-left: auto;
+	left: 50%;
+	transform: translateX(-50%);
 	width: 100%;
+	max-width: 1400px;
 	z-index: 4;
+}
+
+#eHolder{
+	position: absolute;
+	top: 50px;
+	left: 30px;
+	transform: translateY(-50%);
+	border: 2px solid rgb(250,250,250);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+#eHolder > h2{
+	font-family: "Raleway";
+	font-weight: 300;
+	font-size: 35px;
+	color: rgb(250,250,250);
+	transform: translateY(2px);
 }
 
 
 #navigationButtonWrapper{
 	height: 80px;
 	width: 700px;
+	position: absolute;
+	left: 50%;
+	top: 40px;
+	transform: translateY(-50%) translateX(-50%);
 	max-width: 80%;
 	text-align: center;
 	display: flex;
@@ -55,22 +77,23 @@
 
 
 #navigationButtonWrapper a{
-	opacity: 0;
+	opacity: 1;
 	text-decoration: none;
 	position: relative;
-	transition: 0.3s;
+	transition: 0.3s ease;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
 	flex-direction: column;
+	/*transform: translateY(-100px);*/
 }
 
 .navHeader{
-	font-weight: 300;
-	font-size: 18px;
-	font-family: "Oswald";
-	letter-spacing: 2px;
+	font-weight: 400;
+	font-size: 16px;
+	font-family: "Raleway";
+	letter-spacing: 1px;
 	color: rgb(250,250,250);
 }
 
@@ -102,7 +125,7 @@
 	width: 600px;
 	font-family: "Oswald";
 	font-weight: 300;
-	font-size: 25px;
+	font-size: 26px;
 	letter-spacing: 1px;
 	color: rgb(250,250,250);
 	display: block;
@@ -114,10 +137,11 @@
 	transform: scale(1);
 }
 
+
 #forestHolder{
 	z-index: 3;
 	position: absolute;
-	bottom: 75px;
+	bottom: 50px;
 	height: auto;
 	max-height: 350px;
 	width: 100%;
@@ -135,17 +159,20 @@
 #mountainHolder{
 	transform: translate3d(0, 0, 0);
 	position: absolute;
-	bottom: 130px;
+	bottom: 50px;
 	left: -40%;
 	height: auto;
 	width: 135%;
 	overflow: hidden;
 	transition: 0.1s linear;
+	box-sizing: border-box;
+	border-bottom: 80px solid rgb(250,250,250);
+	background: linear-gradient(to top, white 20px, transparent 10px);
 }
 
 
 #mountain{
-	position: center center;
+	position: bottom center;
 	width: 100%;
 	height: auto;
 }
@@ -153,12 +180,15 @@
 #mountainHolder2{
 	transform: translate3d(0, 0, 0);
 	position: absolute;
-	bottom: 130px;
+	bottom: 50px;
 	right: -20%;
 	height: auto;
 	width: 90%;
 	overflow: hidden;
 	transition: 0.1s linear;
+	box-sizing: border-box;
+	border-bottom: 80px solid rgb(250,250,250);
+	background: linear-gradient(to top, white 20px, transparent 10px);
 }
 
 
@@ -221,17 +251,18 @@
 	height: 50px;
 	font-size: 30px;
 	position: absolute;
-	bottom: 70px;
+	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
 	margin: 0 auto 0 auto;
 	z-index: 40;
 	color: #34495E;
+	color: rgb(20,20,20);
 	text-decoration: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: 0.2s linear;
+	transition: 0.1s linear;
 }
 
 #scrollDown > i {
@@ -239,7 +270,7 @@
 }
 
 #scrollDown:hover{
-	border: 2px solid #34495E;
+	transform: translateX(-50%) translateY(5px);
 }
 
 .startscreen h1{
@@ -252,80 +283,46 @@
 	color: rgb(245,245,245);
 }
 
-#airBalloon{
-	z-index: 10;
-	position: absolute;
-	right: 200px;
-	top: 200px;
-	height: 210px;
-	width: 150px;
-}
-
-
-#balloon{
-	position: absolute;
-	width: 150px;
-	height: 150px;
-	z-index: 11;
-	border-radius: 50%;
-	border: 2px solid #34495E;
-	background-color: #3A539B;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	overflow: hidden;
-}
-
-#leftCurve, #rightCurve{
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	top: 50%;
-	border: 2px solid #34495E;
-	transform: translateY(-50%);
-}
-
-#leftCurve{
-	left: 27%;
-}
-
-#rightCurve{
-	right: 27%;
-}
-
-
-#basket{
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 30px;
+#hamburger{
 	width: 30px;
-	border: 2px solid #96281B;
-	background-color: #C0392B;
-	border-radius: 3px 3px 10px 10px;
-	z-index: 11;
-}
-
-#leftRope, #rightRope{
+	height: 20px;
 	position: absolute;
-	bottom: 30px;
-	border-left: 2px solid brown;
-	height: 50px;
-}
-#leftRope{
-	left: 52px;
-	transform: translateX(-50%) rotateZ(-20deg);
-}
-
-#rightRope{
-	left: 98px;
-	transform: translateX(-50%) rotateZ(20deg);;
+	top: 50px;
+	right: 40px;
+	transform: translateY(-50%);
+	z-index: 20;
+	border: 10px solid transparent;
+	display: none;
 }
 
+.menuLine{
+	position: absolute;
+	right: 0;
+	height: 0;
+	transform: translateY(-50%);
+	border-bottom: 2px solid rgb(250,250,250);
+	transition: 0.3s ease, border-radius 0s linear;
+}
 
+#menuLine1{
+	top: 0;
+	width: 100%;
+}
+
+#menuLine2{
+	top: 33%;
+	width: 80%;
+}
+
+#menuLine3{
+	top: 67%;
+	width: 90%;
+}
+
+#menuLine4{
+	top: 100%;
+	width: 100%;
+}
 
 
 

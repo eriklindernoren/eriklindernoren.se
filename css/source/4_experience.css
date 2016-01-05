@@ -19,14 +19,14 @@
 
 .expUpper > h1{
 	padding: 0px 0 0px 0;
-	font-family: 'Oswald';
-	font-weight: 400;
-	letter-spacing: 1px;
 	font-size: 40px; 
-	color: rgb(60,60,60);
+	color: rgb(40,40,40);
 	max-width: 80%;
 	transform: translateY(20px);
 	transition: color 150ms linear;
+	font-family: "Playfair Display";
+	font-weight: 900;
+	letter-spacing: -1px;
 }
 
 #workWrapper{
@@ -83,7 +83,7 @@
 }
 
 .bigButton > .workButtonBack{
-	background-color: rgb(60,60,60);
+	background-color: rgb(40,40,40);
 	transform: perspective(600px) rotateY(180deg);
 }
 
@@ -170,6 +170,8 @@
 
 
 .workplace > p{
+	font-family: "Raleway";
+	font-weight: 400;
 	font-size: 18px;
 	line-height: 30px;
 	color: rgb(140,140,140);
