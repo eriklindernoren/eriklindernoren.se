@@ -7,7 +7,7 @@ $(document).ready(function(){
     });
 
     var menuVisible = false;
-    $('#hamburger').click(function(){
+    $('#hamburger').click(function(){ 
         if(!menuVisible){
             var buttons = $('#navigationButtonWrapper a');
             setTimeout(function(){
@@ -143,25 +143,46 @@ $(document).ready(function(){
     var mailHover = function(){
         $('#overResume .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
         $('#overResume .bulbShine').css({'border-color': 'white'});
-        $('#screen').css({'background-color': 'rgb(240,240,240)'});
-        $('.computerLine').css({'border-color': 'rgb(160,160,160)'});
-        $('.hiddenCompLine').css({'visibility': 'visible'});
-        $('#underResume .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
-        $('#underResume .bulbShine').css({'border-color': 'white'});
         $('#pSquare1').css({'border-color': '#F64747', 'background-color': 'rgba(246,71,71,0.2)'});
         $('#pSquare2').css({'border-color': '#03A678', 'background-color': 'rgba(3,166,120,0.2)'});
         $('#pCircle1').css({'border-color': '#F39C12', 'background-color': 'rgba(243,156,18,0.2)'});
         $('#pCircle2').css({'border-color': '#6BB9F0', 'background-color': 'rgba(107,185,240,0.2)'});
+        
+        setTimeout(function(){
+            $('#underResume .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
+            $('#underResume .bulbShine').css({'border-color': 'white'});
+            $('#screen').css({'background-color': 'rgb(250,250,250)'});
+            $('.computerLine').css({'border-color': 'rgb(160,160,160)'});
+            $('.hiddenCompLine').css({'visibility': 'visible'});
+        },100);
+        setTimeout(function(){
+            $('.coffeeSteam').css({'transform': 'translateY(-50%) translateX(-50%)', 'opacity': '1'});
+            $('#b9').css({'transform': 'translateX(-50%) rotateZ(10deg) translateY(-2px)', 'right': '56px', 'bottom': '40%'});
+        },400);
+
+        
+        
+
+        
+        
+        
     }
     var mailNotHover = function(){
-        $('#overResume .bulb').css({'border-color': '#2C3E50', 'background-color': 'rgb(240,240,240)', 'box-shadow': 'none'});
+        $('#overResume .bulb').css({'border-color': '#2C3E50', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#overResume .bulbShine').css({'border-color': 'transparent'});
         $('#screen').css({'background-color': 'rgb(200,200,200)'});
         $('.computerLine').css({'border-color': 'white'});
         $('.hiddenCompLine').css({'visibility': 'hidden'});
-        $('#underResume .bulb').css({'border-color': '#2C3E50', 'background-color': 'rgb(240,240,240)', 'box-shadow': 'none'});
+        $('#underResume .bulb').css({'border-color': '#2C3E50', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#underResume .bulbShine').css({'border-color': 'transparent'});
         $('#selfPortrait div').css({'border-color': '#2C3E50', 'background-color': 'transparent'});
+        $('.coffeeSteam').css({'transform': 'translateY(23px) translateX(-50%)', 'opacity': '0'});
+
+        $('#b9').css({'transform': 'translateX(-50%) rotateZ(-90deg)', 'right': '76px', 'bottom': '15px'});
+
+        // for(var i = 1; i <= 9; i++){
+        //     $('#b' + i).css({'background-color':'rgb(240,240,240)'});
+        // }
     }
 
     $('#resume').hover(mailHover, mailNotHover);
@@ -218,29 +239,35 @@ $(document).ready(function(){
         beenSetUp = true;
     }
 
-    function findNextSection(){
+    function getNavButtonColor(dist){
         var topOfWindow = $(window).scrollTop();
-        var centerOfWindow = topOfWindow + $(window).height()/2;
+        var elementDist = dist;
 
-        var education = $('.education').offset().top;
+        var about = $('.about').offset().top;
+        var eduSummary = $('.education').offset().top;
+        var eduTimeline = $('#eduTimelineWrapper').offset().top - 350;
         var experience = $('.experience').offset().top;
         var projects = $('.projects').offset().top;
 
-        if(centerOfWindow < education){
-            return ".education";
-        }else if(centerOfWindow < experience){
-            return ".experience";
-        }else if(centerOfWindow < projects){
-            return ".projects";
+        if(elementDist < eduSummary){
+            return "rgb(200,200,200)";
+        }else if(elementDist < eduTimeline){
+            return "#E4F1FE";
+        }else if(elementDist < projects){
+            return "rgb(200,200,200)";
         }else{
-            return "#contact";
+            return "rgb(250,250,250)";
         }
-
     }
 
     $('.navbuttons').hover(function(){
+
         var navClicked = this.getAttribute('data-target');
         var jump = 0;
+        var distTop = $(window).scrollTop();
+        if(distTop > 550 && window.innerWidth > 1300){
+            $(this).find('p').css({'color': '#F64747'});
+        }
 
         if(navClicked == "about"){
             jump = 1;
@@ -266,6 +293,9 @@ $(document).ready(function(){
                 $('#span' + i).css({"color": "transparent"});
         }
     }, function(){
+        var dist = $(this).offset().top;
+        var color = getNavButtonColor(dist);
+        $(this).find('p').css({'color': color});
         $('#message p span').css({"color": "white"});
     });
 
@@ -381,10 +411,11 @@ $(document).ready(function(){
 
 $('#projImages a').hover(function(){
     $(this).css({'transform':'translateY(-20px)'});
+    var hover_z_index = parseInt($(this).css("z-index"));
     var prototypes = $("#projImages a").not(this);
     for(var i = 0; i < prototypes.length; i++){
         var elem = prototypes[i];
-        if(parseInt($(elem).css("z-index")) > parseInt($(this).css("z-index"))){
+        if(parseInt($(elem).css("z-index")) > hover_z_index){
             $(elem).css({'opacity':'0.1'});
         }
     }
@@ -452,9 +483,8 @@ var periscopeIfMozilla = function(){
 }
 
 
+
 periscopeIfMozilla();
-
-
 
     $(document).scroll(navAndScrollButtonsOnScroll);
         // Show navigation background, "scroll to top"-button
@@ -462,14 +492,75 @@ periscopeIfMozilla();
         function navAndScrollButtonsOnScroll(){
 
             var distTop = $(window).scrollTop();
-            if(distTop > 200 && window.innerWidth > 668){
-                $('.scrollToTop').css({"transform": "translateY(-100px)"});
+            if(distTop > 550 && window.innerWidth > 1300){
+                var buttons = $('#scrollNavigationButtonWrapper a');
+                setTimeout(function(){
+                    $(buttons[0]).css({'transform': 'translateX(0)'});
+                },0);
+                setTimeout(function(){
+                    $(buttons[1]).css({'transform': 'translateX(0)'});
+                },100);
+                setTimeout(function(){
+                    $(buttons[2]).css({'transform': 'translateX(0)'});
+                },200);
+                setTimeout(function(){
+                    $(buttons[3]).css({'transform': 'translateX(0)'});
+                },300);
+                setTimeout(function(){
+                    $(buttons[4]).css({'transform': 'translateX(0)'});
+                },400);
+            }else{
+                var buttons = $('#scrollNavigationButtonWrapper a');
+                setTimeout(function(){
+                    $(buttons[0]).css({'transform': 'translateX(200px)'});
+                },0);
+                setTimeout(function(){
+                    $(buttons[1]).css({'transform': 'translateX(200px)'});
+                },100);
+                setTimeout(function(){
+                    $(buttons[2]).css({'transform': 'translateX(200px)'});
+                },200);
+                setTimeout(function(){
+                    $(buttons[3]).css({'transform': 'translateX(200px)'});
+                },300);
+                setTimeout(function(){
+                    $(buttons[4]).css({'transform': 'translateX(200px)'});
+                },400);
             }
+            for(var i = 0; i < $(".scrollNavHeader").length; i++){
+                var elem = $(".scrollNavHeader")[i];
+                var elemDist = $(elem).offset().top;
+                var color = getNavButtonColor(elemDist);
+                $(elem).css({'color': color});
+            }
+            var scrollDist = $(".scrollToTop").offset().top;
+            var color = getNavButtonColor(scrollDist);
+            $('.scrollToTop').css({'border-color': color});
+            $('.scrollToTop .scrollIcon i').css({'color': color});
+            $('.scrollToTop .scrollText h1').css({'color': color});
+
+            if(distTop > ($(document).height() - 1000)){
+                $("#scrollNavigationBar").css({'top': 'auto', 'bottom': '120px', 'height': '230px', 'transform': 'translateY(0)'});
+                $("#scrollNavigationButtonWrapper a").css({'height': '20px', 'padding-right': '20px'});
+                
+            }else{
+                $("#scrollNavigationBar").css({'top': '47%', 'bottom': 'auto', 'height': '400px', 'transform': 'translateY(-50%)'});
+                $("#scrollNavigationButtonWrapper a").css({'height': '40px', 'padding-right': '25px'});
+
+            }
+            
+
+            
+
+            if(distTop > 300 && window.innerWidth > 668){
+                $('.scrollToTop').css({"transform": "translateY(-100px)"});
+                }
             else{
                 $('.scrollToTop').css({'transform': 'translateY(100px)'});
             }
         }
 });
+
 
 var lastUsed;
 var isShowing = false;
@@ -567,6 +658,14 @@ function scrollAnimations(){
         $('#projImages').addClass('appearFromBottom');
     }
 
+    var timelineDots = $('.timelineDot');
+    for(var i = 0; i < timelineDots.length; i++){
+        var elem = timelineDots[i];
+        if(isFullyScrolledIntoView($('.edu')[i])){
+            transformTimelineDots(elem);
+        }
+    }
+
     var bigButtons = $('.bigButton');
     for(var i = 0; i < bigButtons.length; i++){
         var elem = bigButtons[i];
@@ -574,6 +673,13 @@ function scrollAnimations(){
             $(elem).addClass("slideDownBig" + i);
         }
     }
+}
+
+function transformTimelineDots(elem){
+    setTimeout(function(){
+        $(elem).css({'border-radius': '50%'});
+    },400);
+    $(elem).css({'transform': 'translateX(-50%) translateY(-50%) rotateZ(0deg)', 'width': '13px','height': '13px'});
 }
 
 function whatBackground(scrolledY){

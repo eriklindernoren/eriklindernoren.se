@@ -444,6 +444,93 @@ div{
 	100%   {box-shadow: 0px 0px 0px 0px transparent;}
 }
 
+/*---------------------------------------*/
+/*	------- Navbar after scroll --------*/
+/*---------------------------------------*/
+
+
+#scrollNavigationBar{
+	position: fixed;
+	top: 50%;
+	right: 60px;
+	transform: translateY(-50%);
+	width: 100px;
+	height: 400px;
+	z-index: 10;
+	transition: 0.4s linear;
+}
+
+
+#scrollNavigationButtonWrapper{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+	max-width: 80%;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0;
+	transition: 0.4s linear;
+}
+
+
+#scrollNavigationButtonWrapper a{
+	opacity: 1;
+	text-decoration: none;
+	position: relative;
+	transition: 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 100%;
+	padding-right: 20px;
+	transform: translateX(200px);
+}
+
+.navDot{
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	transform: translateY(-50%) translateX(50%) rotateZ(0);
+	height: 8px;
+	width: 3px;
+	border-radius: 1px;
+	border: none;
+	background-color: #EF4836;
+	transition: 0.2s linear;
+
+}
+
+#scrollNavigationButtonWrapper a:hover > .navDot{
+	width: 5px;
+	height: 5px;
+	background-color: transparent;
+	border: 2px solid #EF4836;
+	border-radius: 1px;
+	transform: translateY(-50%) translateX(50%) rotateZ(225deg);
+}
+
+#scrollNavigationButtonWrapper a:hover > .scrollNavHeader{
+	color: #F64747;
+}
+
+
+.scrollNavHeader{
+	font-weight: 300;
+	font-size: 17px;
+	font-family: "Oswald";
+	letter-spacing: 1px;
+	color: rgb(220,220,220);
+	width: 100%;
+	/*transition: 0.2s linear;*/
+}
+
 
 
 
@@ -467,7 +554,7 @@ div{
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	transition: all 0.2s linear, transform 0.4s linear, width 0.4s linear, border-radius 0.1s linear, width 0.3s linear;
+	transition: transform 0.4s linear, width 0.4s linear, border-radius 0.1s linear, width 0.3s linear;
 	clear: both;
 }
 

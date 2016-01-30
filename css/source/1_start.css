@@ -19,7 +19,7 @@
 .star{
 	width: 2px;
 	height: 2px;
-	background-color: rgb(250,250,250);
+	background-color: white;
 	position: fixed;
 	border-radius: 50%;
 	transition: 0.1s linear;
@@ -33,6 +33,7 @@
 	width: 100%;
 	max-width: 1400px;
 	z-index: 4;
+	height: auto;
 }
 
 #eHolder{
@@ -65,9 +66,11 @@
 	max-width: 80%;
 	text-align: center;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 20px 0 20px;
+	transition: 0.4s linear;
 }
 
 #navigationButtonWrapper > i{
@@ -95,13 +98,14 @@
 	font-family: "Raleway";
 	letter-spacing: 1px;
 	color: rgb(250,250,250);
+	
 }
 
 .navbuttons > .expandingUnderline{
 	border-bottom: 3px solid rgb(250,250,250);
 	width: 0px;
 	opacity: 0.1;
-	transition: 0.3s ease;
+	transition: 0.4s ease;
 }
 
 .navbuttons:hover > .expandingUnderline{

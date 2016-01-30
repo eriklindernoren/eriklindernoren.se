@@ -173,7 +173,7 @@
 	font-weight: 400;
 	letter-spacing: 3px;
 	font-size: 20px;
-	color: rgb(200,200,200);
+	color: #E4F1FE;
 	text-align: right;
 	border-right: 2px solid rgb(200,200,200);
 	padding-right: 10px;
@@ -193,7 +193,7 @@
 	font-weight: 300;
 	letter-spacing: 3px;
 	font-size: 18px;
-	color: rgb(200,200,200);
+	color: rgb(230,230,230);
 	text-align: right;
 }
 
@@ -363,14 +363,14 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
+	transform: translateX(-50%) translateY(-50%) rotateZ(225deg);
+	width: 5px;
+	height: 5px;
+	border-radius: 2px;
 	background-color: rgb(245,245,245);
 	border: 2px solid #F64747;
 	z-index: 5;
-	transition: 0.4s linear;
+	transition: 0.4s linear, border-radius 0.2s linear;
 }
 
 
@@ -387,16 +387,31 @@
 	top: 50%;
 }
 
+/*#timelineStopDot{
+	position: absolute;
+	border-top: 2px solid #F64747;
+	width: 5px;
+	left: 50%;
+	top: -19px;
+}*/
+
 #timelineStopDot{
 	position: absolute;
-	left: 50%;
-	bottom: 0;
-	transform: translateX(-50%);
-	width: 15px;
-	height: 15px;
-	border-radius: 2px;
 	border: 2px solid #F64747;
+	border-radius: 3px;
+	width: 2px;
+	height: 2px;
 	background-color: rgb(245,245,245);
+	left: 50%;
+	bottom: -60px;
+	transform: translateX(-50%);
+}
+
+#timelineStopDot i{
+	color: #F64747;
+	font-size: 31px;
+	transform: translateX(-10px);
+	display: none;
 }
 
 #penAndArrow{
