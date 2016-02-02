@@ -330,7 +330,7 @@
 }
 
 .shelfPart:nth-child(2){
-	bottom: 13px;
+	bottom: 20px;
 }
 
 .leftShelfHolder{
@@ -355,29 +355,29 @@
 	border-radius: 3px;
 	z-index: -1;
 }
-
+/*
 .leftShelfHolder > div, .rightShelfHolder > div{
 	position: absolute;
-	top: 0;
+	top: 2px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 4px;
-	height: 10px;
+	height: 5px;
 	border-radius: 3px;
 	border: 2px solid #2C3E50;
 	background-color: rgb(230,230,230);
 }
-
-.upperScrew{
+*/
+/*.upperScrew{
 	position: absolute;
-	top: 1px;
+	top: 2px;
 	left: 2px;
 	transform: translateX(-50%);
 	width: 2px;
 	height: 2px;
 	background-color: #2C3E50;
-}
-.lowerScrew{
+}*/
+/*.lowerScrew{
 	position: absolute;
 	bottom: 1px;
 	left: 2px;
@@ -385,12 +385,12 @@
 	width: 2px;
 	height: 2px;
 	background-color: #2C3E50;
-}
+}*/
 
 .overBoardLeft, .overBoardRight{
 	position: absolute;
 	bottom: 24px;
-	height: 5px;
+	height: 7px;
 	width: 4px;
 	border-radius: 3px;
 	border: 2px solid #2C3E50;
@@ -401,6 +401,16 @@
 .overBoardLeft{
 	left: 10px;
 	transform: translateX(-50%) translateY(-50%);
+}
+
+.overBoardLeft div, .overBoardRight div{
+	position: absolute;
+	top: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2px;
+	height: 2px;
+	background-color: #2C3E50;
 }
 
 .overBoardRight{
@@ -515,7 +525,7 @@
 	top: 65%;
 	right: 60px;
 	border-radius: 2px;
-	z-index: 2;
+	z-index: 1;
 	background-color: rgb(250,250,250);
 	overflow: hidden;
 	transition: 0.2s linear;
@@ -582,7 +592,7 @@
 	border: 2px solid #2C3E50;
 	background-color: rgb(200,200,200);
 	height: 4px;
-	width: 40px;
+	width: 46px;
 	left: 50%;
 	bottom: 3px;
 	transform: translateX(-50%);
@@ -602,12 +612,12 @@
 }
 
 #lampFootBallLeft{
-	left: 35%;
+	left: 32px;
 	transform: translateX(-50%);
 }
 
 #lampFootBallRight{
-	right: 35%;
+	right: 32px;
 	transform: translateX(50%);
 }
 
@@ -1069,32 +1079,6 @@
 	right: 5px;
 	bottom: 5px;
 }
-
-#resumeBackground{
-	position: absolute;
-	bottom: 0;
-	height: 300px;
-	width: 100%;
-	z-index: -1;
-	background-color: #2C3E50;
-}
-
-#resumeBackground div{
-	position: absolute;
-	bottom: 0;
-	height: 422px;
-	width: 1200px;
-	max-width: 95%;
-	left: 50%;
-	transform: translateX(-50%);
-	overflow: hidden;
-	z-index: -1;
-	background-color: rgb(250,250,250);
-	border: 2px solid #2C3E50;
-	box-sizing: border-box;
-	border-radius: 3px;
-}
-
 
 
 

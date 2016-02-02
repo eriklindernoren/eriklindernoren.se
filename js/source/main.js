@@ -260,14 +260,10 @@ $(document).ready(function(){
         }
     }
 
-    $('.navbuttons').hover(function(){
+    $('#navigationButtonWrapper .navbuttons').hover(function(){
 
         var navClicked = this.getAttribute('data-target');
         var jump = 0;
-        var distTop = $(window).scrollTop();
-        if(distTop > 550 && window.innerWidth > 1300){
-            $(this).find('p').css({'color': '#F64747'});
-        }
 
         if(navClicked == "about"){
             jump = 1;
@@ -293,11 +289,21 @@ $(document).ready(function(){
                 $('#span' + i).css({"color": "transparent"});
         }
     }, function(){
+        $('#message p span').css({"color": "white"});
+    });
+
+    $('#scrollNavigationButtonWrapper .navbuttons').hover(function(){
+        var distTop = $(window).scrollTop();
+        if(distTop > 550 && window.innerWidth > 1300){
+            $(this).find('p').css({'color': '#F64747'});
+        }
+    }, function(){
         var dist = $(this).offset().top;
         var color = getNavButtonColor(dist);
         $(this).find('p').css({'color': color});
-        $('#message p span').css({"color": "white"});
+        
     });
+
 
 
     //Image div in project section
