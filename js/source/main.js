@@ -545,15 +545,18 @@ periscopeIfMozilla();
             $('.scrollToTop .scrollIcon i').css({'color': color});
             $('.scrollToTop .scrollText h1').css({'color': color});
 
-            if(distTop > ($(document).height() - 1000)){
-                $("#scrollNavigationBar").css({'top': 'auto', 'bottom': '120px', 'height': '230px', 'transform': 'translateY(0)'});
-                $("#scrollNavigationButtonWrapper a").css({'height': '20px', 'padding-right': '20px'});
-                
-            }else{
-                $("#scrollNavigationBar").css({'top': '47%', 'bottom': 'auto', 'height': '400px', 'transform': 'translateY(-50%)'});
-                $("#scrollNavigationButtonWrapper a").css({'height': '40px', 'padding-right': '25px'});
 
-            }
+            // Moves the navbar down to the footer when it is reached
+            
+            // if(distTop > ($(document).height() - 1000)){
+            //     $("#scrollNavigationBar").css({'top': 'auto', 'bottom': '120px', 'height': '230px', 'transform': 'translateY(0)'});
+            //     $("#scrollNavigationButtonWrapper a").css({'height': '20px', 'padding-right': '20px'});
+                
+            // }else{
+            //     $("#scrollNavigationBar").css({'top': '47%', 'bottom': 'auto', 'height': '400px', 'transform': 'translateY(-50%)'});
+            //     $("#scrollNavigationButtonWrapper a").css({'height': '40px', 'padding-right': '25px'});
+
+            // }
             
 
             
@@ -664,13 +667,13 @@ function scrollAnimations(){
         $('#projImages').addClass('appearFromBottom');
     }
 
-    var timelineDots = $('.timelineDot');
-    for(var i = 0; i < timelineDots.length; i++){
-        var elem = timelineDots[i];
-        if(isFullyScrolledIntoView($('.edu')[i])){
-            transformTimelineDots(elem);
-        }
-    }
+    // var timelineDots = $('.timelineDot');
+    // for(var i = 0; i < timelineDots.length; i++){
+    //     var elem = timelineDots[i];
+    //     if(isFullyScrolledIntoView($('.edu')[i])){
+    //         transformTimelineDots(elem);
+    //     }
+    // }
 
     var bigButtons = $('.bigButton');
     for(var i = 0; i < bigButtons.length; i++){

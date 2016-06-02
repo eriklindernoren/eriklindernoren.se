@@ -8,7 +8,7 @@
 
 .projects{
 	background-color: rgb(40,40,40);
-	background: url("../images/desk.jpg") center center;
+	background: url("../images/desk_kopia.jpg") center center;
 	background-size: cover;
 	z-index: 3;
 	width: 100%;
@@ -30,7 +30,7 @@
 	top: 0;
 	width: 100%;
 	height: 140%;
-	background-color: rgba(34,49,63,0.7);
+	background-color: rgba(34,49,63,0.6);
 	/*background-color: rgba(0,0,0,0.6);*/
 }
 
@@ -172,6 +172,7 @@
 	font-weight: 500;
 	font-size: 16px;
 	color: rgb(34,49,63);
+	color: #F64747;
 	pointer-events : auto;
 }
 
