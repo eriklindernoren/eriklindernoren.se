@@ -5,7 +5,7 @@ body,html{
 	width: 100%;
 	overflow-x: hidden;
 	position: relative;
-	background-color: rgb(10,10,10);
+	background-color: white;
 }
 
 body{
@@ -37,12 +37,12 @@ div{
 
 
 ::selection {
-	background: rgb(120,120,120); /* WebKit/Blink Browsers */
-	color: rgb(250,250,250);
+	background: rgb(100,100,100); /* WebKit/Blink Browsers */
+	color: white;
 }
 ::-moz-selection {
-	background: rgb(120,120,120); /* Gecko Browsers*/
-	color: rgb(250,250,250);
+	background: rgb(100,100,100); /* Gecko Browsers*/
+	color: white;
 } 
 
 .container{
@@ -502,7 +502,7 @@ div{
 	width: 3px;
 	border-radius: 1px;
 	border: none;
-	background-color: #EF4836;
+	background-color: #c0392b;
 	transition: 0.2s linear;
 
 }
@@ -511,13 +511,13 @@ div{
 	width: 5px;
 	height: 5px;
 	background-color: transparent;
-	border: 2px solid #EF4836;
+	border: 2px solid #c0392b;
 	border-radius: 1px;
 	transform: translateY(-50%) translateX(50%) rotateZ(225deg);
 }
 
 #scrollNavigationButtonWrapper a:hover > .scrollNavHeader{
-	color: #F64747;
+	color: #c0392b;
 }
 
 
@@ -526,7 +526,7 @@ div{
 	font-size: 17px;
 	font-family: "Oswald";
 	letter-spacing: 1px;
-	color: rgb(220,220,220);
+	color: black;
 	width: 100%;
 	/*transition: 0.2s linear;*/
 }
@@ -546,8 +546,8 @@ div{
 	text-decoration: none;
 	border-radius: 50%;
 	background-color: transparent;
-	border: 2px solid rgb(220,220,220);
-	color: rgb(220,220,220);
+	border: 2px solid rgb(200,200,200);
+	color: rgb(200,200,200);
 	width: 45px;
 	height: 45px;
 	display: flex;
@@ -586,7 +586,7 @@ div{
 	font-size: 28px;
 	margin: 0 auto;
 	transform: translateY(-3px);
-	color: rgb(220,220,220);
+	color: rgb(200,200,200);
 }
 
 .scrollText{
@@ -606,7 +606,7 @@ div{
 	font-size: 22px;
 	text-decoration: none;
 	padding: 0;
-	color: rgb(220,220,220);
+	color: rgb(200,200,200);
 }
 
 .scrollToTop:hover{
@@ -621,6 +621,7 @@ div{
 /*---------------------------------------*/
 /*	---------- MOBILE --------------  */
 /*---------------------------------------*/
+
 
 @media screen and (min-width: 1400px){
 	#mountainHolder, #mountainHolder2{
@@ -671,6 +672,12 @@ div{
 		border-width: 140px;
 	}
 
+	#welcome{
+		left: 550px;
+		bottom: 350px;
+		font-size: 60px;
+	}
+
 }
 
 
@@ -681,6 +688,16 @@ div{
 
 	#mountainHolder, #mountainHolder2{
 		bottom: -50px;
+	}
+
+	#welcome{
+		left: 700px;
+		bottom: 350px;
+		font-size: 80px;
+	}
+
+	#hi{
+		font-size: 45px;
 	}
 }
 
@@ -723,6 +740,7 @@ div{
 
 
 @media screen and (max-width: 925px){
+
 
 
 
@@ -806,6 +824,13 @@ div{
 		bottom: 90px;
 		width: 130%;
 		border: none;
+	}
+
+	#welcome{
+		left: 50%;
+		bottom: 50%;
+		font-size: 70px;
+		color: black;
 	}
 
 	#forestHolder{
@@ -895,6 +920,10 @@ div{
 }
 
 @media screen and (max-width: 668px){
+
+	#welcome{
+		display: none;
+	}
 
 	.eduPeriscope{
 		display: none;

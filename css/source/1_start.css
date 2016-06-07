@@ -13,13 +13,45 @@
 	overflow: hidden;
 	z-index: 1;
 	background: linear-gradient(to bottom, rgb(10,10,10),#2e8ece) no-repeat;
+	background: linear-gradient(to bottom, rgb(255,255,255), #f1c40f) no-repeat;
+	background: #f1c40f;
+	background: white;
 	box-sizing: border-box;
 }
 
+#hi{
+	position: absolute;
+	left: 50%;
+	top: 51%;
+	transform: translateY(-50%) translateX(-50%);
+	font-weight: 400;
+	font-family: "Playfair Display";
+	font-size: 36px;
+	color: black;
+	z-index: 3;
+	transition: 0.2s linear;
+}
+
+
+#welcome{
+	position: absolute;
+	display: block;
+	left: 400px;
+	bottom: 250px;
+	transform: translateY(-50%) translateX(-50%);
+	font-weight: 400;
+	font-family: "Playfair Display";
+	font-size: 50px;
+	color: white;
+	z-index: 3;
+}
+
+
 .star{
-	width: 2px;
-	height: 2px;
-	background-color: white;
+	width: 3px;
+	height: 3px;
+	background-color: rgb(255,255,255);
+	opacity: 0;
 	position: fixed;
 	border-radius: 50%;
 	transition: 0.1s linear;
@@ -75,6 +107,8 @@
 
 #navigationButtonWrapper > i{
 	color: #2C3E50;
+	color: #e67e22;
+	opacity: 0;
 	font-size: 6px;
 }
 
@@ -93,16 +127,17 @@
 }
 
 .navHeader{
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 16px;
 	font-family: "Raleway";
 	letter-spacing: 1px;
-	color: rgb(250,250,250);
-	
+	color: rgb(255,255,255);
+	color: black;
 }
 
 .navbuttons > .expandingUnderline{
-	border-bottom: 3px solid rgb(250,250,250);
+	border-bottom: 4px solid rgb(250,250,250);
+	border-color: black;
 	width: 0px;
 	opacity: 0.1;
 	transition: 0.4s ease;
@@ -116,29 +151,23 @@
 #message{
 	position: absolute;
 	top: 35%;
+	right: 20px;
 	transform: translateY(-50%);
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	z-index: 5;
+	text-align: right;
 }
 
 #message p{
-	max-width: 80%;
-	width: 600px;
-	font-family: "Oswald";
-	font-weight: 300;
-	font-size: 26px;
-	letter-spacing: 1px;
-	color: rgb(250,250,250);
-	display: block;
-	line-height: 40px;
-}
-
-#message p span{
+	font-family: "Playfair Display";
+	font-weight: 400;
+	font-size: 24px;
+	letter-spacing: 0px;
+	line-height: 50px;
+	text-align: right; 
+	color: black;
+	text-align: right;
 	transition: 0.3s linear;
-	transform: scale(1);
+	opacity: 0;
 }
 
 
@@ -170,7 +199,7 @@
 	overflow: hidden;
 	transition: 0.1s linear;
 	box-sizing: border-box;
-	border-bottom: 80px solid rgb(250,250,250);
+	border-bottom: 80px solid rgb(255,255,255);
 	background: linear-gradient(to top, white 20px, transparent 10px);
 }
 
@@ -191,7 +220,7 @@
 	overflow: hidden;
 	transition: 0.1s linear;
 	box-sizing: border-box;
-	border-bottom: 80px solid rgb(250,250,250);
+	border-bottom: 80px solid rgb(255,255,255);
 	background: linear-gradient(to top, white 20px, transparent 10px);
 }
 
@@ -207,7 +236,7 @@
 	position: absolute;
 	bottom: 0;
 	height: 100px;
-	background-color: rgb(250,250,250);
+	background-color: rgb(255,255,255);
 }
 
 
@@ -253,15 +282,13 @@
 	border: 2px solid transparent;
 	width: 50px;
 	height: 50px;
-	font-size: 30px;
 	position: absolute;
 	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
 	margin: 0 auto 0 auto;
 	z-index: 40;
-	color: #34495E;
-	color: rgb(20,20,20);
+	color: black;
 	text-decoration: none;
 	display: flex;
 	align-items: center;
@@ -270,7 +297,7 @@
 }
 
 #scrollDown > i {
-	font-size: 35px;
+	font-size: 40px;
 }
 
 #scrollDown:hover{

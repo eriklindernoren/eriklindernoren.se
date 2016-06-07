@@ -168,14 +168,14 @@ $(document).ready(function(){
         
     }
     var mailNotHover = function(){
-        $('#overResume .bulb').css({'border-color': '#2C3E50', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
+        $('#overResume .bulb').css({'border-color': 'black', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#overResume .bulbShine').css({'border-color': 'transparent'});
         $('#screen').css({'background-color': 'rgb(200,200,200)'});
         $('.computerLine').css({'border-color': 'white'});
         $('.hiddenCompLine').css({'visibility': 'hidden'});
-        $('#underResume .bulb').css({'border-color': '#2C3E50', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
+        $('#underResume .bulb').css({'border-color': 'black', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#underResume .bulbShine').css({'border-color': 'transparent'});
-        $('#selfPortrait div').css({'border-color': '#2C3E50', 'background-color': 'transparent'});
+        $('#selfPortrait div').css({'border-color': 'black', 'background-color': 'transparent'});
         $('.coffeeSteam').css({'transform': 'translateY(23px) translateX(-50%)', 'opacity': '0'});
 
         $('#b9').css({'transform': 'translateX(-50%) rotateZ(-90deg)', 'right': '76px', 'bottom': '15px'});
@@ -248,15 +248,18 @@ $(document).ready(function(){
         var eduTimeline = $('#eduTimelineWrapper').offset().top - 350;
         var experience = $('.experience').offset().top;
         var projects = $('.projects').offset().top;
+        var contact = $('.projects').offset().top + $('.projects').height() + 80;
 
         if(elementDist < eduSummary){
             return "rgb(200,200,200)";
         }else if(elementDist < eduTimeline){
-            return "#E4F1FE";
+            return "white";
         }else if(elementDist < projects){
             return "rgb(200,200,200)";
+        }else if(elementDist < contact){
+            return "white";
         }else{
-            return "rgb(250,250,250)";
+            return "rgb(200,200,200)";
         }
     }
 
@@ -279,23 +282,21 @@ $(document).ready(function(){
         }
         else if(navClicked == "contact"){
             jump = 5;
-        }
+        } 
         
         if(jump == 0)
             return;
 
-        for(var i = 1; i < 6; i++){
-            if(jump != i)
-                $('#span' + i).css({"color": "transparent"});
-        }
+        $('#span' + jump).css({"opacity": "1"});
+        
     }, function(){
-        $('#message p span').css({"color": "white"});
+        $('#message p').css({"opacity": "0"});
     });
 
     $('#scrollNavigationButtonWrapper .navbuttons').hover(function(){
         var distTop = $(window).scrollTop();
         if(distTop > 550 && window.innerWidth > 1300){
-            $(this).find('p').css({'color': '#F64747'});
+            $(this).find('p').css({'color': '#c0392b'});
         }
     }, function(){
         var dist = $(this).offset().top;
@@ -547,7 +548,7 @@ periscopeIfMozilla();
 
 
             // Moves the navbar down to the footer when it is reached
-            
+
             // if(distTop > ($(document).height() - 1000)){
             //     $("#scrollNavigationBar").css({'top': 'auto', 'bottom': '120px', 'height': '230px', 'transform': 'translateY(0)'});
             //     $("#scrollNavigationButtonWrapper a").css({'height': '20px', 'padding-right': '20px'});
@@ -594,8 +595,6 @@ function showWork(){
         }).addClass("slideUp");
         $('#popDownWrapper').delay(100).queue(function (next) { 
             $(this).css('height', '0'); 
-            $('.experience').css({'box-shadow': 'none'});
-            $('.bigButton > div').css({'box-shadow': '0px 0px 0px 0px rgb(0,0,0)'});
             next(); 
         });
         isShowing = false;
@@ -605,8 +604,7 @@ function showWork(){
             $(this).removeClass("slideDown");
         }).addClass("slideDown");
         isShowing = true;
-        $('.experience').css({'box-shadow': '0px 6px 10px -2px rgba(0,0,0,0.4)'});
-        $('.bigButton > div').css({'box-shadow': '0px 6px 10px -2px rgba(0,0,0,0.4)'});
+        $('.experience').css({'border-bottom': '1px solid black'});
     }
     lastUsed = _this;
 }
