@@ -498,20 +498,17 @@ div{
 	top: 50%;
 	right: 0px;
 	transform: translateY(-50%) translateX(50%) rotateZ(0);
-	height: 8px;
+	height: 10px;
 	width: 3px;
 	border-radius: 1px;
-	border: none;
-	background-color: #c0392b;
-	transition: 0.2s linear;
-
+	transition: transform 0.25s linear;
 }
 
 #scrollNavigationButtonWrapper a:hover > .navDot{
 	width: 5px;
 	height: 5px;
-	background-color: transparent;
-	border: 2px solid #c0392b;
+	border: 2px solid #c0392b !important;
+	background-color: transparent !important;
 	border-radius: 1px;
 	transform: translateY(-50%) translateX(50%) rotateZ(225deg);
 }
@@ -520,15 +517,12 @@ div{
 	color: #c0392b;
 }
 
-
 .scrollNavHeader{
 	font-weight: 300;
 	font-size: 17px;
 	font-family: "Oswald";
 	letter-spacing: 1px;
-	color: black;
 	width: 100%;
-	/*transition: 0.2s linear;*/
 }
 
 
@@ -547,7 +541,7 @@ div{
 	border-radius: 50%;
 	background-color: transparent;
 	border: 2px solid rgb(200,200,200);
-	color: rgb(200,200,200);
+	color: white;
 	width: 45px;
 	height: 45px;
 	display: flex;
@@ -586,7 +580,7 @@ div{
 	font-size: 28px;
 	margin: 0 auto;
 	transform: translateY(-3px);
-	color: rgb(200,200,200);
+	color: white;
 }
 
 .scrollText{
@@ -606,7 +600,7 @@ div{
 	font-size: 22px;
 	text-decoration: none;
 	padding: 0;
-	color: rgb(200,200,200);
+	color: white;
 }
 
 .scrollToTop:hover{
@@ -740,10 +734,6 @@ div{
 
 
 @media screen and (max-width: 925px){
-
-
-
-
 	#workWrapper{
 		width: 100%;
 	}
@@ -765,14 +755,13 @@ div{
 		background: linear-gradient(to bottom, transparent 245px, rgb(40,40,40) 0);
 	}
 
-
 	#mac{
 		width: 300px;
 		bottom: 5%;
 	}
 
 	.slideDiv{
-		width: 95%;
+		width: 97%;
 	}
 
 
@@ -792,9 +781,6 @@ div{
 		width: 100%;
 	}
 
-	
-
-
 	#mail{
 		font-size: 60px;
 	}
@@ -811,7 +797,6 @@ div{
 
 
 @media screen and (max-width: 768px){
-
 	#mountainHolder{
 		left: -50%;
 		width: 180%;
@@ -827,16 +812,12 @@ div{
 	}
 
 	#welcome{
-		left: 50%;
-		bottom: 50%;
-		font-size: 70px;
-		color: black;
+		display: none;
 	}
 
 	#forestHolder{
 		bottom: 80px;
 	}
-
 
 	p{
 		line-height: 25px;
@@ -914,13 +895,9 @@ div{
 		font-size: 25px;
 		line-height: 25px;
 	}
-
-
-
 }
 
 @media screen and (max-width: 668px){
-
 	#welcome{
 		display: none;
 	}
@@ -940,7 +917,7 @@ div{
 	.eduSummary{
 		width: 80%;
 		transform: translateX(0);
-		background-color: #2C3E50;
+		background-color: black;
 	}
 
 	.timelineStopLine{
@@ -963,12 +940,12 @@ div{
 
 
 	.expUpper h1{
-		color: rgb(80,80,80);
+		color: black;
 		padding: 0px 0 60px 0;
 	}
 
 	.expUpper{
-		background-color: rgb(245,245,245);
+		background-color: white;
 	}
 
 
@@ -976,7 +953,7 @@ div{
 		transform: translateY(0);
 		flex-direction: column;
 		justify-content: center;
-		background-color: rgb(245,245,245);
+		background-color: white;
 		padding-bottom: 60px;
 	}
 
@@ -1057,7 +1034,7 @@ div{
 		display: none;
 	}
 	#eduSummary{
-		width: 95%;
+		width: 97%;
 	}
 
 	#progLangs{
@@ -1091,7 +1068,7 @@ div{
 	}
 
 	#aboutText{
-		width: 95%;
+		width: 97%;
 	}
 
 	.eduSummary p, .eduSummary h1, .eduBorder{
@@ -1105,12 +1082,10 @@ div{
 	#projectHeader{
 		top: 40px;
 	}
-
 }
 
 
 @media screen and (max-width: 568px){
-
 	.navHeader{
 		font-size: 10px;
 	}
@@ -1182,13 +1157,19 @@ div{
 		font-size: 14px;
 		bottom: 1px;
 	}
-
-
 }
 
 @media screen and (max-width: 500px){
+	h1{
+		font-size: 38px !important;
+	}
+
 	#projectHeader{
 		top: 20px;
+	}
+
+	#scrollDown i{
+		font-size: 34px !important;
 	}
 
 	.projects{
@@ -1198,20 +1179,45 @@ div{
 	#painting{
 		right: 40px;
 	}
+	#hi{
+		width: 300px;
+		min-width: auto;
+		font-size: 29px !important;
+	}
 
+	#hi span{
+		font-size: 10px;
+	}
+
+	#timelineStartDot{
+		display: none;
+	}
+
+	.thinBorder{
+		margin: 20px 0px !important;
+	}
+
+	#contactHeaderLine{
+		border-width: 4px;
+		bottom: -5px;
+		right: 16px;
+		width: 71px;
+	}
 }
 
 @media screen and (max-width: 440px){
 	.projects{
 		height: 1200px;
 	}
-
 }
-
 
 @media screen and (max-width: 360px){
 	.projects{
 		height: 1300px;
+	}
+
+	#hi{
+		font-size: 26px !important;
 	}
 
 	.projects{

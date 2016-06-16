@@ -26,10 +26,19 @@
 	transform: translateY(-50%) translateX(-50%);
 	font-weight: 400;
 	font-family: "Playfair Display";
-	font-size: 36px;
+	font-size: 38px;
 	color: black;
 	z-index: 3;
 	transition: 0.2s linear;
+	text-align: center;
+	line-height: 30px;
+	min-width: 400px;
+}
+
+#hi span{
+	font-size: 14px;
+	font-family: "Raleway";
+	color: rgb(100,100,100);
 }
 
 
@@ -106,8 +115,7 @@
 }
 
 #navigationButtonWrapper > i{
-	color: #2C3E50;
-	color: #e67e22;
+	color: black;
 	opacity: 0;
 	font-size: 6px;
 }
@@ -127,17 +135,15 @@
 }
 
 .navHeader{
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 16px;
 	font-family: "Raleway";
 	letter-spacing: 1px;
-	color: rgb(255,255,255);
 	color: black;
 }
 
 .navbuttons > .expandingUnderline{
-	border-bottom: 4px solid rgb(250,250,250);
-	border-color: black;
+	border-bottom: 3px solid black;
 	width: 0px;
 	opacity: 0.1;
 	transition: 0.4s ease;
@@ -151,7 +157,7 @@
 #message{
 	position: absolute;
 	top: 35%;
-	right: 20px;
+	right: 0px;
 	transform: translateY(-50%);
 	z-index: 5;
 	text-align: right;

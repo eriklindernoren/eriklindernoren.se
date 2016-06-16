@@ -170,7 +170,7 @@ $(document).ready(function(){
     var mailNotHover = function(){
         $('#overResume .bulb').css({'border-color': 'black', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#overResume .bulbShine').css({'border-color': 'transparent'});
-        $('#screen').css({'background-color': 'rgb(200,200,200)'});
+        $('#screen').css({'background-color': 'rgb(230,230,230)'});
         $('.computerLine').css({'border-color': 'white'});
         $('.hiddenCompLine').css({'visibility': 'hidden'});
         $('#underResume .bulb').css({'border-color': 'black', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
@@ -287,10 +287,10 @@ $(document).ready(function(){
         if(jump == 0)
             return;
 
-        $('#span' + jump).css({"opacity": "1"});
+        $('#span' + jump).css({"opacity": "1", "transform": "translateX(-20px)"});
         
     }, function(){
-        $('#message p').css({"opacity": "0"});
+        $('#message p').css({"opacity": "0", "transform": "translateX(0)"});
     });
 
     $('#scrollNavigationButtonWrapper .navbuttons').hover(function(){
@@ -536,9 +536,11 @@ periscopeIfMozilla();
             }
             for(var i = 0; i < $(".scrollNavHeader").length; i++){
                 var elem = $(".scrollNavHeader")[i];
+                var dot = $(elem).next();
                 var elemDist = $(elem).offset().top;
                 var color = getNavButtonColor(elemDist);
                 $(elem).css({'color': color});
+                $(dot).css({'background-color': color});
             }
             var scrollDist = $(".scrollToTop").offset().top;
             var color = getNavButtonColor(scrollDist);

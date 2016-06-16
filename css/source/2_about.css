@@ -5,7 +5,7 @@
 /*---------------------------------------*/
 
 .about{
-	background-color: rgb(255,255,255);
+	background-color: white;
 	width: 100%;
 	text-align: center;
 	display: flex;
@@ -29,9 +29,9 @@
 	width: 130px;
 	height: 55px;
 	border-radius: 30px;
-	border-radius: 2px;
+	border-radius: 1px;
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	text-decoration: none;
 	transition: 0.05s linear;
 	display: flex;
@@ -39,7 +39,7 @@
 	justify-content: center;
 	flex-direction: column;
 	transform: scale(1);
-	margin: 320px auto 165px auto;
+	margin: 320px auto 150px auto;
 	z-index: 20;
 }
 
@@ -99,7 +99,7 @@
 	font-family: 'Raleway';
 	font-weight: 400;
 	font-size: 16px;
-	color: rgb(120,120,120);
+	color: rgb(100,100,100);
 	text-align: left;
 }
 
@@ -111,7 +111,7 @@
 	width: 50px;
 	height: 50px;
 	transform: translateY(50%) rotateZ(45deg);
-	background-color: rgb(255,255,255);
+	background-color: white;
 }
 
 #timelineStartDot{
@@ -123,7 +123,7 @@
 	height: 15px;
 	border-radius: 2px;
 	border: 2px solid #F64747;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	display: none;
 }
 
@@ -160,7 +160,8 @@
 	width: 10px;
 	height: 10px;
 	border-radius: 2px;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	transition: 0.1s linear;
 }
 
@@ -179,7 +180,7 @@
 	height: 22px;
 	border-radius: 50%;
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	box-shadow: none;
 	transition: 0.15s linear;
 	overflow: hidden;
@@ -224,7 +225,8 @@
 	width: 16px;
 	height: 16px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	transform: translateX(-50%);
 	border-radius: 1px 1px 3px 3px;
 	z-index: 2;
@@ -236,8 +238,8 @@
 	top: 1px;
 	height: 12px;
 	width: 5px;
-	border-left: 1px solid rgb(120,120,120);
-	border-top: 1px solid rgb(120,120,120);
+	border-left: 1px solid rgb(160,160,160);
+	border-top: 1px solid rgb(160,160,160);
 }
 
 #bulbLineStartBottom{
@@ -246,7 +248,8 @@
 	left: 50%;
 	transform: translateX(-50%);
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	width: 6px;
 	height: 5px;
 	border-radius: 3px;
@@ -423,7 +426,7 @@
 	width: 5px;
 	border-radius: 2px;
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	z-index: -1;
 }
 
@@ -446,7 +449,8 @@
 	width: 100%;
 	border-radius: 2px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	z-index: 2;
 }
 
@@ -458,7 +462,7 @@
 	z-index: 1;
 	transform: translateX(-50%);
 	z-index: 1;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	overflow: hidden;
 	transition: 0.2s linear;
 }
@@ -524,7 +528,7 @@
 	right: 60px;
 	border-radius: 2px;
 	z-index: 1;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	overflow: hidden;
 	transition: 0.2s linear;
 	width: 40px;
@@ -551,7 +555,7 @@
 	width: 7px;
 	height: 170px;
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	border-radius: 3px;
 	transform: translateX(-50%);
 	z-index: 1;
@@ -571,7 +575,8 @@
 	width: 5px;
 	height: 5px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	border-radius: 50%;
 	transform: translateX(-50%);
 	z-index: 1;
@@ -588,7 +593,8 @@
 #lampFoot{
 	position: absolute;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	height: 4px;
 	width: 46px;
 	left: 50%;
@@ -601,7 +607,8 @@
 #lampFootBallLeft, #lampFootBallRight{
 	position: absolute;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	height: 4px;
 	width: 2px;
 	border-radius: 50%;
@@ -686,7 +693,7 @@
 
 .deskPart{
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	transition: 0.1s linear;
 }
 
@@ -696,7 +703,8 @@
 	position: absolute;
 	bottom: 1px;
 	border-radius: 50%;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 }
 
 #leftLeg, #rightLeg{
@@ -705,7 +713,7 @@
 	position: absolute;
 	bottom: 8px;
 	border-radius: 0px 0px 3px 3px;
-	background-color: rgb(255,255,255);
+	background-color: white;
 }
 
 #leftLegTop, #rightLegTop{
@@ -715,7 +723,7 @@
 	bottom: 20px;
 	border-radius: 0px 0px 3px 3px;
 	border-width: 2px 2px 2px 2px;
-	background-color: rgb(255,255,255);
+	background-color: white;
 }
 
 #legLine1, #legLine2{
@@ -762,7 +770,8 @@
 	transform: translateX(-50%) translateY(-50%);
 	width: 115px;
 	border-radius: 2px;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 }
 
 #innerDrawer{
@@ -814,7 +823,7 @@
 	transform: translateX(-50%);
 	border-radius: 2px;
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	width: 100%;
 	height: 100%;
 	z-index: 2;
@@ -825,7 +834,7 @@
 	right: 1px;
 	bottom: 0px;
 	border-radius: 1px;
-	border-left: 1px solid rgb(180,180,180);
+	border-left: 1px solid rgb(160,160,160);
 	transform: translateY(-1px);
 	height: 12px;
 	z-index: 0;
@@ -836,7 +845,7 @@
 	right: 1px;
 	bottom: 0px;
 	border-radius: 1px;
-	border-bottom: 1px solid rgb(180,180,180);
+	border-bottom: 1px solid rgb(160,160,160);
 	transform: translateY(-1px);
 	height: 0px;
 	width: 2px;
@@ -849,7 +858,7 @@
 	top: 1px;
 	border-radius: 50%;
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	width: 7px;
 	height: 9px;
 	z-index: 1;
@@ -902,7 +911,7 @@
 	height: 6px;
 	border-radius: 2px 2px 10px 10px;
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	z-index: 3;
 }
 
@@ -915,7 +924,7 @@
 	height: 43px;
 	border-radius: 4px;
 	border: 2px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	z-index: 2;
 }
 
@@ -928,7 +937,8 @@
 	height: 37px;
 	border-radius: 2px;
 	border: 1px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	z-index: 2;
 
 }
@@ -999,7 +1009,8 @@
 	width: 76px;
 	height: 105px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	border-radius: 2px;
 }
 
@@ -1010,7 +1021,7 @@
 	top: 3px;
 	width: 70px;
 	height: 98px;
-	border: 1px solid rgb(120,120,120);
+	border: 1px solid rgb(160,160,160);
 }
 
 #selfPortrait{
@@ -1022,7 +1033,7 @@
 	height: 88px;
 	border: 2px solid black;
 	border-radius: 2px;
-	background-color: rgb(255,255,255);
+	background-color: white;
 }
 
 #selfPortrait div{
@@ -1054,7 +1065,7 @@
 	height: 10px;
 	right: 12px;
 	top: 12px;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	z-index: 10;
 }
 
@@ -1151,7 +1162,8 @@
 	transform: translateX(-50%);
 	border-radius: 8px 8px 5px 5px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	z-index: 2;
 }
 
@@ -1171,7 +1183,8 @@
 	width: 3px;
 	height: 55px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	border-radius: 0px 0px 5px 5px;
 	z-index: 1;
 }
@@ -1194,7 +1207,8 @@
 	height: 1px;
 	width: 45px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	z-index: -1;
 }
 
@@ -1208,7 +1222,8 @@
 	border-left: 2px solid black;
 	border-right: 2px solid black;
 	border-radius: 0px 0px 4px 4px;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	z-index: 2;
 }
 
@@ -1238,7 +1253,8 @@
 	width: 3px;
 	border-radius: 3px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	z-index: -1;
 }
 
@@ -1250,7 +1266,8 @@
 	width: 3px;
 	border-radius: 3px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	z-index: -1;
 }
 
@@ -1264,7 +1281,7 @@
 	border-radius: 4px;
 	border: 2px solid black;
 	z-index: 1;
-	background-color: rgb(255,255,255);
+	background-color: white;
 }
 
 #backpackHanger{
@@ -1319,7 +1336,8 @@
 	width: 100%;
 	border-radius: 1px 1px 4px 4px;
 	border: 1px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	transform: translateX(-1px) translateY(1px);
 	z-index: 3;
 }
@@ -1333,7 +1351,8 @@
 	width: 52px;
 	border-radius: 3px 3px 5px 5px;
 	border: 2px solid black;
-	background-color: rgb(220,220,220);
+	background-color: rgb(230,230,230);
+	
 	z-index: 4;
 }
 
@@ -1346,7 +1365,7 @@
 	width: 9px;
 	border-radius: 1px;
 	border: 1px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	z-index: 3;
 }
 
@@ -1357,7 +1376,7 @@
 	width: 4px;
 	border-radius: 1px;
 	border: 1px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	z-index: 4;
 }
 
@@ -1369,7 +1388,7 @@
 	width: 6px;
 	height: 6px;
 	border: 1px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	border-radius: 2px;
 }
 
@@ -1417,7 +1436,7 @@
 	top: 16px;
 	width: 4px;
 	border: 1px solid black;
-	background-color: rgb(255,255,255);
+	background-color: white;
 	border-radius: 2px;
 	height: 20px;
 	z-index: 5;

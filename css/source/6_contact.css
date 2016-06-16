@@ -37,10 +37,10 @@ footer h1{
 
 #contactHeaderLine{
 	position: absolute;
-	right: 2px;
+	right: 1px;
 	bottom: -10px;
-	width: 80px;
-	border-bottom: 5px solid #c0392b;
+	width: 81px;
+	border-bottom: 4px solid #c0392b;
 }
 
 #contactWrapper{
@@ -65,13 +65,13 @@ footer h1{
 	text-shadow: none;
 	letter-spacing: 3px;
 	text-decoration: none;
-	padding: 10px 20px 10px 20px;
-	transition: 150ms linear;
+	padding: 0px 20px 0px 20px;
+	transition: 0.1s linear;
 	border-radius: 2px;
 }
 
 #mail:hover{
-	color: #c0392b;
+	color: rgb(200,200,200);
 }
 
 #socMediaHeader{
