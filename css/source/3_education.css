@@ -94,7 +94,6 @@
 	font-weight: 400;
 }
 
-
 .eduSummary p{
 	font-family: 'Raleway';
 	font-weight: 400;
@@ -231,7 +230,6 @@
 	background-size: cover;
 }
 
-
 .eduPeriscope{
 	position: relative;
 	margin: 0 auto;
@@ -276,7 +274,6 @@
 	height: 160px;
 	padding: 0;
 }
-
 
 .leftOfTimeline{
 	height: 100%;
@@ -371,7 +368,6 @@
 	transition: 0.4s linear, border-radius 0.2s linear;
 }
 
-
 .contTimeline, .timeline{
 	border-left: 2px solid #c0392b;
 	height: 100%;
@@ -384,14 +380,6 @@
 #eduPeriscopeWrapper .timelineWrapper{
 	top: 50%;
 }
-
-/*#timelineStopDot{
-	position: absolute;
-	border-top: 2px solid #c0392b;
-	width: 5px;
-	left: 50%;
-	top: -19px;
-}*/
 
 #timelineStopDot{
 	position: absolute;
