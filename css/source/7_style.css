@@ -20,7 +20,7 @@ section{
 h1{
 	font-style: normal;
 }
-
+  
 *{
 	margin: 0 auto;
 	padding: 0;
@@ -33,8 +33,6 @@ p{
 div{
 	backface-visibility: hidden;
 }
-
-
 
 ::selection {
 	background: rgb(100,100,100); /* WebKit/Blink Browsers */
@@ -63,11 +61,13 @@ div{
 	z-index: 1;
 }
 
-
+.noTransition {
+  transition: none !important;
+}
 
 
 /*---------------------------------------*/
-/*	---------- CSS ANIMATIONS -----------*/
+/*----------- CSS ANIMATIONS ------------*/
 /*---------------------------------------*/
 
 .spinAppearance{
@@ -432,6 +432,19 @@ div{
 	100%   {opacity: 1; transform: scale(1) translateY(-50%) translateX(50%);}
 }
 
+.rotateAndShrink{
+	animation-name: rotateAndShrink;
+	animation-duration: 1.2s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rotateAndShrink{
+	0%   {transform: translateY(-50%) translateX(-50%) rotateZ(90deg); width: 45px;}
+	50% 	{transform: translateY(-50%) translateX(-50%) rotateZ(0deg); width: 45px;}
+	100%   {transform: translateY(-50%) translateX(-50%) rotateZ(0deg); width: 27px;}
+}
+
 .shine{
 	animation-name: shine;
 	animation-duration: 1s;
@@ -507,7 +520,7 @@ div{
 #scrollNavigationButtonWrapper a:hover > .navDot{
 	width: 5px;
 	height: 5px;
-	border: 2px solid #c0392b !important;
+	border: 2px solid red !important;
 	background-color: transparent !important;
 	border-radius: 1px;
 	transform: translateY(-50%) translateX(50%) rotateZ(225deg);
@@ -515,6 +528,7 @@ div{
 
 #scrollNavigationButtonWrapper a:hover > .scrollNavHeader{
 	color: #c0392b;
+	color: red;
 }
 
 .scrollNavHeader{
@@ -532,80 +546,51 @@ div{
 /*	------- SCROLL TO TOP POP-UP --------*/
 /*---------------------------------------*/
 
-.scroll{
+
+#scrollUp{
 	position: fixed;
-	bottom: -60px;
-	cursor: pointer;
-	z-index: 6;
-	text-decoration: none;
+	right: 40px;
+	bottom: 40px;
+	transform: translateY(150px);
+	width: 48px;
+	height: 48px;
+	border: 2px solid white;
 	border-radius: 50%;
 	background-color: transparent;
-	border: 2px solid rgb(200,200,200);
-	color: white;
-	width: 45px;
-	height: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	z-index: 10;
+	transition: transform 0.35s linear, opacity 0.05s linear;
 	overflow: hidden;
-	transition: transform 0.4s linear, width 0.4s linear, border-radius 0.1s linear, width 0.3s linear;
-	clear: both;
 }
 
-.scrollToTop{
-	right: 40px;
+#scrollUp div{
+	position: absolute;
+	top: 0;
+	height: 200%;
+	width: 100%;
+	transition: 0.2s linear;
 }
 
-
-
-.contentHolder{
-	width: 115px;
-	height: 100%;
-	clear:both;
-	float: right;
-}
-
-.scrollIcon{
-	width: 45px;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	float: right;
-}
-
-.scrollIcon i{
-	padding: 0;
-	align-self: center;
+#scrollUp i{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-17px);
 	font-size: 28px;
-	margin: 0 auto;
-	transform: translateY(-3px);
 	color: white;
 }
 
-.scrollText{
-	height: 100%;
-	width: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	float: right;
-}
-
-
-.scrollText h1{
-	margin-right: 0px;
-	font-family: 'Raleway';
-	font-weight: 400;
-	font-size: 22px;
-	text-decoration: none;
-	padding: 0;
+#scrollUp p{
+	position: absolute;
+	font-weight: 500;
+	bottom: 7px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 16px;
 	color: white;
 }
 
-.scrollToTop:hover{
-	width: 100px;
-	border-radius: 3px;
+#scrollUp:hover div{
+	transform: translateY(-50%);
 }
 
 
@@ -628,7 +613,6 @@ div{
 	#slideLeft{
 		left: 60px;
 	}
-
 
 	#slideRight{
 		right: 60px;
@@ -902,6 +886,10 @@ div{
 		display: none;
 	}
 
+	.showCourses, .courses{
+		display: none;
+	}
+
 	.eduPeriscope{
 		display: none;
 	}
@@ -1047,7 +1035,7 @@ div{
 		width: 140px;
 	}
 
-	#timelineStartLine, #timelineStartDot, #upperTimeline, #timelineStop, .contTimeline, .timeline, .timelineDot, #timelineStopDot{
+	#timelineStartLine, #timelineStartDot, #upperTimeline, #timelineStop, .contTimeline, .timeline, .timelineDot, #timelineStopDot, .timelineDotLine{
 		left: 70%;
 	}
 
@@ -1060,11 +1048,11 @@ div{
 	}
 
 	.leftOfTimeline div{
-		right: 20px;
+		right: 0px;
 	}
 
 	.leftOfTimeline{
-		width: 70%;
+		width: 60%;
 	}
 
 	#aboutText{
@@ -1205,9 +1193,16 @@ div{
 	}
 }
 
-@media screen and (max-width: 440px){
+@media screen and (max-width: 400px){
 	.projects{
 		height: 1200px;
+	}
+
+	#eduTimelineWrapper{
+		transform: translateY(100px);
+	}
+	#eduPeriscopeWrapper{
+		display: none;
 	}
 }
 
@@ -1228,10 +1223,3 @@ div{
 		height: 400px;
 	}
 }
-
-
-
-
-
-
-

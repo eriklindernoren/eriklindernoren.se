@@ -27,11 +27,10 @@
 
 #resume{
 	width: 130px;
-	height: 55px;
-	border-radius: 30px;
-	border-radius: 1px;
-	border: 2px solid black;
-	background-color: white;
+	height: 60px;
+	border-radius: 500px;
+	border: 1px solid black;
+	background-color: black;
 	text-decoration: none;
 	transition: 0.05s linear;
 	display: flex;
@@ -41,6 +40,18 @@
 	transform: scale(1);
 	margin: 320px auto 150px auto;
 	z-index: 20;
+	overflow: hidden;
+}
+
+#resume div{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	transform: rotateZ(0);
+	height: 0px;
+	transition: 0.3s ease;
+	background-color: white;
 }
 
 #resume p{
@@ -52,17 +63,18 @@
 	display: inline-block;
 	text-decoration: uppercase;
 	position: relative;
-	color: black;
+	color: white;
 	z-index: 3;
 	display: block;
+	transition: 0.2s linear;
 }
 
-#resume:hover{
-	background-color: black;
+#resume:hover div{
+	height: 100%;
 }
 
 #resume:hover p{
-	color: rgb(255,255,255);
+	color: black;
 }
 
 
@@ -122,7 +134,7 @@
 	width: 15px;
 	height: 15px;
 	border-radius: 2px;
-	border: 2px solid #F64747;
+	border: 1px solid #F64747;
 	background-color: white;
 	display: none;
 }
@@ -133,8 +145,8 @@
 	transform: translateX(-50%);
 	height: 50px;
 	bottom: 0px;
-	border-left: 2px solid #F64747;
-	border-top: 2px solid #F64747;
+	border-left: 2px solid black;
+	border-top: 2px solid black;
 	display: none;
 }
 
@@ -148,14 +160,14 @@
 	position: absolute;
 	left: 50%;
 	height: 100%;
-	border-left: 2px solid black;
+	border-left: 1px solid black;
 	transform: translateX(-50%);
 }
 
 .bulbHolder{
 	position: absolute;
 	left: 50%;
-	border: 2px solid black;
+	border: 1px solid black;
 	transform: translateX(-50%);
 	width: 10px;
 	height: 10px;
@@ -179,7 +191,7 @@
 	width: 22px;
 	height: 22px;
 	border-radius: 50%;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: white;
 	box-shadow: none;
 	transition: 0.15s linear;
@@ -193,7 +205,7 @@
 	height: 100%;
 	border-radius: 50%;
 	transition: 0.15s linear;
-	border: 2px solid transparent;
+	border: 1px solid transparent;
 	box-shadow: none;
 }
 
@@ -210,21 +222,21 @@
 #bulbLineStartHolder{
 	position: absolute;
 	left: 50%;
-	top: -2px;
+	top: 0px;
 	width: 100px;
 	height: 20px;
 	transform: translateX(-50%);
-	border-top: 2px solid black;
+	border-top: 1px solid black;
 	z-index: 2;
 }
 
 #bulbLineStart{
 	position: absolute;
 	left: 50%;
-	top: -2px;
+	top: -1px;
 	width: 16px;
 	height: 16px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	transform: translateX(-50%);
@@ -236,7 +248,7 @@
 	position: absolute;
 	left: 1px;
 	top: 1px;
-	height: 12px;
+	height: 10px;
 	width: 5px;
 	border-left: 1px solid rgb(160,160,160);
 	border-top: 1px solid rgb(160,160,160);
@@ -244,15 +256,15 @@
 
 #bulbLineStartBottom{
 	position: absolute;
-	top: 11px;
+	top: 13px;
 	left: 50%;
 	transform: translateX(-50%);
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	width: 6px;
 	height: 5px;
-	border-radius: 3px;
+	border-radius: 2px;
 	z-index: 1;
 }
 
@@ -341,7 +353,7 @@
 	transform: translateX(-50%) translateY(-50%);
 	background-color: black;
 	height: 80%;
-	width: 2px;
+	width: 1px;
 	border-radius: 3px;
 	z-index: -1;
 }
@@ -352,7 +364,7 @@
 	transform: translateX(50%) translateY(-50%);
 	background-color: black;
 	height: 80%;
-	width: 2px;
+	width: 1px;
 	border-radius: 3px;
 	z-index: -1;
 }
@@ -365,7 +377,7 @@
 	width: 4px;
 	height: 5px;
 	border-radius: 3px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 }
 */
@@ -394,7 +406,7 @@
 	height: 7px;
 	width: 4px;
 	border-radius: 3px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	z-index: -1;
 }
@@ -425,7 +437,7 @@
 	height: 1px;
 	width: 5px;
 	border-radius: 2px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: white;
 	z-index: -1;
 }
@@ -448,7 +460,7 @@
 	height: 4px;
 	width: 100%;
 	border-radius: 2px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	z-index: 2;
@@ -458,7 +470,7 @@
 	position: absolute;
 	bottom: 40%;
 	border-radius: 2px;
-	border: 2px solid black;
+	border: 1px solid black;
 	z-index: 1;
 	transform: translateX(-50%);
 	z-index: 1;
@@ -474,13 +486,13 @@
 	width: 5px;
 }
 #b2{
-	left: 30px;
+	left: 27px;
 	height: 35px;
 	width: 7px;
 	
 }
 #b3{
-	left: 45px;
+	left: 40px;
 	height: 40px;
 	width: 5px;
 	transform: translateX(-50%) rotateZ(-20deg) translateY(-1px);
@@ -488,7 +500,7 @@
 
 
 #b4{
-	right: 11px;
+	right: 13px;
 	height: 40px;
 	width: 5px;
 }
@@ -499,17 +511,17 @@
 	
 }
 #b6{
-	right: 28px;
+	right: 27px;
 	height: 40px;
 	width: 5px;
 }
 #b7{
-	right: 35px;
+	right: 33px;
 	height: 40px;
 	width: 5px;
 }
 #b8{
-	right: 42px;
+	right: 38px;
 	height: 35px;
 	width: 7px;
 	
@@ -525,7 +537,7 @@
 #rotatingBookCover{
 	position: absolute;
 	top: 65%;
-	right: 60px;
+	right: 50px;
 	border-radius: 2px;
 	z-index: 1;
 	background-color: white;
@@ -551,10 +563,10 @@
 #thickLampLeg{
 	position: absolute;
 	left: 50%;
-	bottom: 18px;
+	bottom: 15px;
 	width: 7px;
 	height: 170px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: white;
 	border-radius: 3px;
 	transform: translateX(-50%);
@@ -574,7 +586,7 @@
 	left: 50%;
 	width: 5px;
 	height: 5px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	border-radius: 50%;
@@ -583,16 +595,16 @@
 }
 
 #lampBallUnder{
-	bottom: 10px;
+	bottom: 9px;
 }
 
 #lampBallOver{
-	bottom: 191px;
+	bottom: 186px;
 }
 
 #lampFoot{
 	position: absolute;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	height: 4px;
@@ -606,7 +618,7 @@
 
 #lampFootBallLeft, #lampFootBallRight{
 	position: absolute;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	height: 4px;
@@ -645,7 +657,7 @@
 	width: 86px;
 	height: 5px;
 	border-radius: 50%;
-	border: 2px solid black;
+	border: 1px solid black;
 	transition: 0.1s linear;
 }
 
@@ -654,30 +666,30 @@
 	left: 50%;
 	top: 8px;
 	transform: translateX(-50%);
-	width: 20px;
+	width: 18px;
 	height: 2px;
 	border-radius: 50%;
-	border: 2px solid black;
+	border: 1px solid black;
 	transition: 0.1s linear;
 }
 
 #lampShadeLeft{
 	position: absolute;
-	left: 14px;
-	bottom: 0px;
+	left: 17px;
+	bottom: 5px;
 	transform: rotateZ(31deg);
-	border-left: 2px solid black;
-	height: 74px;
+	border-left: 1px solid black;
+	height: 70px;
 	transition: 0.1s linear;
 }
 
 #lampShadeRight{
 	position: absolute;
-	right: 14px;
-	bottom: 0px;
+	right: 17px;
+	bottom: 5px;
 	transform: rotateZ(-31deg);
-	border-left: 2px solid black;
-	height: 74px;
+	border-left: 1px solid black;
+	height: 70px;
 	transition: 0.1s linear;
 }
 
@@ -692,7 +704,7 @@
 }
 
 .deskPart{
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: white;
 	transition: 0.1s linear;
 }
@@ -711,7 +723,7 @@
 	width: 5px;
 	height: 90px;
 	position: absolute;
-	bottom: 8px;
+	bottom: 6px;
 	border-radius: 0px 0px 3px 3px;
 	background-color: white;
 }
@@ -722,7 +734,7 @@
 	position: absolute;
 	bottom: 20px;
 	border-radius: 0px 0px 3px 3px;
-	border-width: 2px 2px 2px 2px;
+	border-width: 1px;
 	background-color: white;
 }
 
@@ -809,7 +821,7 @@
 #coffeeMugOuter{
 	position: absolute;
 	right: 30px;
-	bottom: 113px;
+	bottom: 112px;
 	transform: translateX(50%);
 	width: 15px;
 	height: 19px;
@@ -822,7 +834,7 @@
 	bottom: 0;
 	transform: translateX(-50%);
 	border-radius: 2px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: white;
 	width: 100%;
 	height: 100%;
@@ -854,10 +866,10 @@
 
 #coffeeMugHandle{
 	position: absolute;
-	right: -8px;
-	top: 1px;
+	right: -7px;
+	top: 3px;
 	border-radius: 50%;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: white;
 	width: 7px;
 	height: 9px;
@@ -871,26 +883,26 @@
 	width: 5px;
 	height: 9px;
 	z-index: 1;
-	transition: 0.1s linear;
+	transition: 0.25s linear;
 	opacity: 0;
 }
 
 .coffeeSteam:nth-child(1){
 	left: 7px;
 	top: -10px;
-	border-left: 2px solid rgb(180,180,180);
+	border-left: 2px solid rgba(180,180,180,0.4);
 }
 
 .coffeeSteam:nth-child(2){
 	left: 7px;
 	top: -16px;
-	border-right: 2px solid rgb(180,180,180);
+	border-right: 2px solid rgba(180,180,180,0.4);
 }
 
 .coffeeSteam:nth-child(3){
 	left: 7px;
 	top: -22px;
-	border-left: 2px solid rgb(180,180,180);
+	border-left: 2px solid rgba(180,180,180,0.4);
 }
 
 #computer{
@@ -910,7 +922,7 @@
 	width: 80px;
 	height: 6px;
 	border-radius: 2px 2px 10px 10px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: white;
 	z-index: 3;
 }
@@ -923,7 +935,7 @@
 	width: 65px;
 	height: 43px;
 	border-radius: 4px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: white;
 	z-index: 2;
 }
@@ -1008,7 +1020,7 @@
 	transform: translateY(-50%);
 	width: 76px;
 	height: 105px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	border-radius: 2px;
@@ -1017,10 +1029,10 @@
 #innerFrame{
 	position: absolute;
 	border-radius: 1px;
-	left: 2px;
-	top: 3px;
-	width: 70px;
-	height: 98px;
+	left: 3px;
+	top: 4px;
+	width: 68px;
+	height: 96px;
 	border: 1px solid rgb(160,160,160);
 }
 
@@ -1031,7 +1043,7 @@
 	transform: translateX(-50%) translateY(-50%);
 	width: 61px;
 	height: 88px;
-	border: 2px solid black;
+	border: 1px solid black;
 	border-radius: 2px;
 	background-color: white;
 }
@@ -1042,7 +1054,7 @@
 
 #pSquare1{
 	position: absolute;
-	border: 2px solid black;
+	border: 1px solid black;
 	width: 26px;
 	height: 26px;
 	right: 7px;
@@ -1051,7 +1063,7 @@
 
 #pSquare2{
 	position: absolute;
-	border: 2px solid black;
+	border: 1px solid black;
 	width: 30px;
 	height: 30px;
 	left: 8px;
@@ -1060,7 +1072,7 @@
 
 #pSquare3{
 	position: absolute;
-	border: 2px solid black;
+	border: 1px solid black;
 	width: 10px;
 	height: 10px;
 	right: 12px;
@@ -1071,17 +1083,17 @@
 
 #pCircle1{
 	position: absolute;
-	border: 2px solid black;
+	border: 1px solid black;
 	width: 38px;
 	height: 38px;
 	border-radius: 50%;
 	left: 5px;
-	top: 5px;
+	top: 4px;
 }
 
 #pCircle2{
 	position: absolute;
-	border: 2px solid black;
+	border: 1px solid black;
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
@@ -1147,7 +1159,7 @@
 #stool{
 	position: absolute;
 	left: 50%;
-	bottom: 0;
+	bottom: -1px;
 	transform: translateX(-50%);
 	height: 60px;
 	width: 60px;
@@ -1161,9 +1173,8 @@
 	top: 0;
 	transform: translateX(-50%);
 	border-radius: 8px 8px 5px 5px;
-	border: 2px solid black;
-	background-color: rgb(230,230,230);
-	
+	border: 1px solid black;
+	background-color: white;
 	z-index: 2;
 }
 
@@ -1173,7 +1184,7 @@
 	width: 90%;
 	left: 50%;
 	transform: translateX(-50%);
-	border-bottom: 1px solid rgb(160,160,160);
+	border-bottom: 1px solid rgb(200,200,200);
 }
 
 .stoolLeg{
@@ -1182,8 +1193,8 @@
 	z-index: 1;
 	width: 3px;
 	height: 55px;
-	border: 2px solid black;
-	background-color: rgb(230,230,230);
+	border: 1px solid black;
+	background-color: white;
 	
 	border-radius: 0px 0px 5px 5px;
 	z-index: 1;
@@ -1201,13 +1212,13 @@
 
 #legHolder{
 	position: absolute;
-	bottom: 15px;
+	bottom: 17px;
 	left: 50%;
 	transform: translateX(-50%);
-	height: 1px;
+	height: 2px;
 	width: 45px;
-	border: 2px solid black;
-	background-color: rgb(230,230,230);
+	border: 1px solid black;
+	background-color: white;
 	
 	z-index: -1;
 }
@@ -1218,11 +1229,11 @@
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translateX(-5px);
-	border-left: 2px solid black;
-	border-right: 2px solid black;
+	transform: translateX(-3px);
+	border-left: 1px solid black;
+	border-right: 1px solid black;
 	border-radius: 0px 0px 4px 4px;
-	background-color: rgb(230,230,230);
+	background-color: white;
 	
 	z-index: 2;
 }
@@ -1233,26 +1244,26 @@
 	transform: translateY(-50%);
 	left: 1px;
 	height: 80%;
-	border-left: 1px solid rgb(160,160,160);
+	border-left: 1px solid white;
 }
 
 #backpackHolder{
 	position: absolute;
 	left: 50%;
-	top: 0;
+	top: 1px;
 	transform: translateX(-50%);
-	height: 60px;
+	height: 62px;
 	width: 58px;
 }
 
 #leftSidePocket{
 	position: absolute;
 	top: 8px;
-	left: -5px;
+	left: -4px;
 	height: 30px;
 	width: 3px;
 	border-radius: 3px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	z-index: -1;
@@ -1261,11 +1272,11 @@
 #rightSidePocket{
 	position: absolute;
 	top: 8px;
-	right: -5px;
+	right: -4px;
 	height: 30px;
 	width: 3px;
 	border-radius: 3px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	z-index: -1;
@@ -1279,7 +1290,7 @@
 	height: 60px;
 	width: 58px;
 	border-radius: 4px;
-	border: 2px solid black;
+	border: 1px solid black;
 	z-index: 1;
 	background-color: white;
 }
@@ -1289,7 +1300,7 @@
 	top: -15px;
 	left: 50%;
 	transform: translateX(-50%);
-	border: 2px solid black;
+	border: 1px solid black;
 	z-index: 1;
 	width: 12px;
 	height: 20px;
@@ -1301,10 +1312,10 @@
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
-	border: 2px solid black;
+	border: 1px solid black;
 	z-index: 1;
-	width: 8px;
-	height: 16px;
+	width: 7px;
+	height: 15px;
 	border-radius: 50%;
 }
 
@@ -1315,7 +1326,7 @@
 	width: 10px;
 	height: 30px;
 	border-radius: 2px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(160,160,160);
 }
 
@@ -1350,7 +1361,7 @@
 	height: 30px;
 	width: 52px;
 	border-radius: 3px 3px 5px 5px;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(230,230,230);
 	
 	z-index: 4;

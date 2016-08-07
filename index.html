@@ -81,7 +81,12 @@
 		</a>
 		</div>
 
-		<a href="#" class="navbuttons" id="scrollDown" data-target="aboutDown"><i class="fa fa-angle-down"></i></a>
+		<a href="#" class="navbuttons" id="scrollDown" data-target="aboutDown">
+			<div>
+				<p>Let me introduce myself</p>
+			</div>
+			<i class="fa fa-angle-down"></i>
+		</a>
 
 		<div id="message">
 			<p id="span1">This is me.</p> 
@@ -91,21 +96,8 @@
 			<p id="span5">Feeling social.</p> 
 		</div>
 
-		<h1 id="hi">Hello. My name is Erik. <br> <span>Master of Science Student in Computer Science</span></h1>
+		<h1 id="hi">Hello. My name is Erik. <br> <span>Master of Science student in Computer Science</span></h1>
 		<h1 id="welcome">Welcome.</h1>
-		<div class="star s1"></div>
-		<div class="star s2"></div>
-		<div class="star s3"></div>
-		<div class="star s4"></div>
-		<div class="star s5"></div>
-		<div class="star s6"></div>
-		<div class="star s7"></div>
-		<div class="star s8"></div>
-		<div class="star s9"></div>
-		<div class="star s10"></div>
-		<div class="star s11"></div>
-		<div class="star s12"></div>
-		<div class="star s13"></div>
 
 		<div id="forestHolder"><img src="images/forest.svg" id="forest"></div>
 		<div id="mountainHolder"><img src="images/mountains.svg" id="mountain"></div>
@@ -118,7 +110,7 @@
 			<h1 id="aboutMe" >About Me</h1>
 			<div id="aboutText">
 				<p>
-					My name is Erik Linder-Norén and I'm currently studying towards a Master of Science degree in Computer Science while at the same time being employed by Ericsson as a Software Developer. <br>
+					My name is Erik Linder-Norén and I'm currently studying towards a Master of Science degree in Machine Learning and Artificial Intelligence, while at the same time being employed by Ericsson as a Software Developer. <br>
 					I've always loved sketching, tinkering with things and exploring new tools to create with. I really enjoy building with ones and zeros and have been fascinated with computers since I first saw my family's Macintosh Classic boot up.
 					<br>
 					I love how programming enables people to quickly explore new ideas and I've found that the most efficient and fun way for me to learn is to explore different languages and tools in small side projects in parallel to my studies and current employment. This website is a good example of that as building it was my way of learning web development. <br>
@@ -129,6 +121,7 @@
 		</div>
 		<a id="resume" href="pdf/cv.pdf" target="_black">
 				<p>Resume</p>
+				<div></div>
 		</a>
 		<div id="overResume">
 			<div id="bulbLineStartHolder"><div id="bulbLineStart"><div id="roofBoxLine"></div></div></div>
@@ -355,9 +348,10 @@
 					<h1 >Education</h1>
 					<div class="thinBorder"></div>
 					<p>
-						I'm currently on my third year of studies towards a Master of Science degree in Computer Science.
-						For the first two years of my bachelor I was studying at Linköping University in Sweden but for the last semester I have been studying at the world renowned university ETH Zürich in Switzerland.
-						ETH Zürich is known as the best university in continental Europe, and one of the best in the world in the field of Computer Science. Among other courses here in Zürich I'm taking Machine Learning, a field I have found fascinating and in which I am going to do my master's degree in starting this autumn.
+						I'm currently studying towards a Master of Science degree in Machine Learning and Artificial Intelligence at Linköping University.
+						Last year I spend one semester at the world renowned university ETH Zürich in Switzerland, where I got introduced to Machine Learning. 
+						ETH Zürich is known as the best university in continental Europe, and one of the best in the world in the field of Computer Science.
+						I found the course I took on Machine Learning at ETH fascinating and I am excited about specializing myself in that field going forward.
 					</p>
 					<div class="timelineStopLine"></div>
 				</div>
@@ -374,68 +368,217 @@
 						<div id="edus">
 							<div class="edu">
 								<div class="leftOfTimeline">
-									<div>
+									<div class="university">
 										<h2>University of Gävle</h2>
 										<h3>Gävle, Sweden</h3>
-										<p>Course in 3D modeling and animation</p>
-										<p>Course in Digital film and video</p>
+										<p>Individual courses</p>
+										<div class="showCourses"><p>Show Courses</p></div>
 									</div>
 								</div>
 								<div class="timelineDot"></div>
 								<div class="rightOfTimeline">
 									<p>2012</p>
 								</div>
+								<div class="courseWrapper">
+									<div class="courses">
+										<div class="coursesUpper">
+											<p>Semester 1</p>
+										</div>
+										<div class="listWrapper">
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>3D modeling and animation</li>
+													<li>Digital film and video</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="edu">
 								<div class="leftOfTimeline">
-									<div>
+									<div class="university">
 										<h2>University of Gävle</h2>
 										<h3>Gävle, Sweden</h3>
-										<p>Studies in Natural Science</p>
+										<p>Studies in Natural Sciences</p>
+										<div class="showCourses"><p>Show Courses</p></div>
 									</div>
 								</div>
 								<div class="timelineDot"></div>
 								<div class="rightOfTimeline">
 									<p>2012 - 2013</p>
 								</div>
+								<div class="courseWrapper">
+									<div class="courses">
+										<div class="coursesUpper">
+											<p>Semester 1</p>
+											<div class="courseLeft"><i class="fa fa-angle-left"></i></div>
+											<div class="courseRight"><i class="fa fa-angle-right"></i></div>
+										</div>
+										<div class="listWrapper">
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Physics A</li>
+													<li>Chemistry A</li>
+													<li>Biology A</li>
+													<li>Mathematics C</li>
+												</ul>
+											</div>
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Physics B</li>
+													<li>Chemistry B</li>
+													<li>Biology B</li>
+													<li>Mathematics D</li>
+													<li>Mathematics E</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="edu">
 								<div class="leftOfTimeline">
-									<div>
+									<div class="university">
 										<h2>Linköping University</h2>
 										<h3>Linköping, Sweden</h3>
 										<p>Bachelor of Computer Science</p>
+										<div class="showCourses"><p>Show Courses</p></div>
 									</div>
 								</div>
 								<div class="timelineDot"></div>
 								<div class="rightOfTimeline">
 									<p>2013 - 2015</p>
 								</div>
+								<div class="courseWrapper">
+									<div class="courses">
+										<div class="coursesUpper">
+											<p>Semester 1</p>
+											<div class="courseLeft"><i class="fa fa-angle-left"></i></div>
+											<div class="courseRight"><i class="fa fa-angle-right"></i></div>
+										</div>
+										<div class="listWrapper">
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Discrete Mathematics</li>
+													<li>Computer Systems and Programming</li>
+													<li>Perspectives to Computer Technology</li>
+													<li>Professionalism for Engineers, part 1</li>
+													<li>Imperative Programming in Python</li>
+													<li>Introductory Course in Calculus</li>
+												</ul>
+											</div>
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Calculus in one variable, 1</li>
+													<li>Object Oriented Programming and Java</li>
+													<li>Professionalism for Engineers, part 2</li>
+													<li>Electronics</li>
+													<li>Calculus in one variable, 2</li>
+													<li>Switching Theory and Logical Design</li>
+												</ul>
+											</div>
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Linear Algebra</li>
+													<li>Professionalism for Engineers, part 3</li>
+													<li>Data Structures, Algorithms and Paradigms</li>
+													<li>Computer Hardware and Architecture</li>
+													<li>Engineering Mechanics</li>
+												</ul>
+											</div>
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Multivariable Calculus</li>
+													<li>Concurrent Programming and Operating Systems</li>
+													<li>Professionalism for Engineers, part 4</li>
+													<li>Computer Design</li>
+													<li>Mathematical Statistics</li>
+													<li>Physics</li>
+												</ul>
+											</div>
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Software Engineering Theory</li>
+													<li>Logic</li>
+													<li>Professionalism for Engineers, part 5</li>
+													<li>Signals and Systems, and Transform Theory</li>
+													<li>Microcomputer, Project Laboratory</li>
+													<li>Combinatorial Optimization, Introductory Course</li>
+												</ul>
+											</div>
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Software Engineering - Bachelor Project</li>
+													<li>Professionalism for Engineers, part 6</li>
+													<li>Automatic Control Y</li>
+													<li>Signals, Information and Communication</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="edu">
 								<div class="leftOfTimeline">
-									<div>
+									<div class="university">
 										<h2>ETH Zürich</h2>
 										<h3>Zürich, Switzerland</h3>
 										<p>Bachelor of Computer Science</p>
+										<div class="showCourses"><p>Show Courses</p></div>
 									</div>
 								</div>
 								<div class="timelineDot"></div>
 								<div class="rightOfTimeline">
 									<p>2015 - 2016</p>
 								</div>
+								<div class="courseWrapper">
+									<div class="courses">
+										<div class="coursesUpper">
+											<p>Semester 1</p>
+										</div>
+										<div class="listWrapper">
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Machine Learning</li>
+													<li>Mobile and Personal Information Systems</li>
+													<li>Human Computer Interaction</li>
+													<li>Signal and Information Processing</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="edu">
 								<div class="leftOfTimeline">
-									<div>
+									<div class="university">
 										<h2>Linköping University</h2>
 										<h3>Linköping, Sweden</h3>
-										<p>Master of Science in Computer Science</p>
+										<p>Master of Science in Machine Learning and Artificial Intelligence</p>
+										<div class="showCourses"><p>Show Courses</p></div>
 									</div>
 								</div>
 								<div class="timelineDot"></div>
 								<div class="rightOfTimeline">
 									<p>2016 - 2018</p>
+								</div>
+								<div class="courseWrapper">
+									<div class="courses">
+										<div class="coursesUpper">
+											<p>Semester 1</p>
+										</div>
+										<div class="listWrapper">
+											<div class="courseListWrapper">
+												<ul class="courseList">
+													<li>Artificial Intelligence</li>
+													<li>Numerical Algorithms in Computer Science</li>
+													<li>Software Entrepreurship</li>
+													<li>History of Technology</li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -643,7 +786,7 @@
 							<em>iOS development</em>
 							<p>This was a project I did to get more practice with Swift. It started out in me wanting to build a user interface for the Google Maps SDK and then evolved to adding as much location based information from APIs out there as I could find. The application could with the help of APIs from several photo sharing services display the most recently taken photo from the tagged location. The most interesting part in working on this project was using a bunch of APIs together and realizing how much great accessible data that's out there.</p>
 							<div class="thickBorder"></div>
-							<em>Programming languages and tools used</em>
+							<em>Languages, libraries and tools used</em>
 							<ul>
 								<li>Swift</li>
 								<li>Google Maps SDK</li>
@@ -659,9 +802,9 @@
 						<div class="info">
 							<a href="https://github.com/eriklindernoren/eth-circle"  target="_blank"><p>ETH Circle</p></a>
 							<em>Web Development</em>
-							<p>This was a one week project we had in the course Mobile and Personal Information Systems at ETH Zürich. The idea was to come up with a mock-up of an ETH location aware application using whatever tools we felt comfortable with. I decided to go for an event sharing application which would display different events and friends using Facebook integration. You would via the application be able to create and invite your friends to different events and with the help of location tracking services the application would notify you if there was an event occurring close to your location within a certain time window. I used the Google Maps API to display the location of friends and ongoing events around the ETH campus. The prototype is built with HTML, CSS and Javascript. You can check it out <a href="http://eriklindernoren.se/circle/test.html">here</a>.</p>
+							<p>This was a one week project we had in the course Mobile and Personal Information Systems at ETH Zürich. The idea was to come up with a mock-up of an ETH location aware application using whatever tools we felt comfortable with. I decided to go for an event sharing application which would display different events and friends using Facebook integration. You would via the application be able to create and invite your friends to different events and with the help of location tracking services the application would notify you if there was an event occurring close to your location within a certain time window. I used the Google Maps API to display the location of friends and ongoing events around the ETH campus. The prototype is built with HTML, CSS and Javascript. <br>You can check it out <a href="http://eriklindernoren.se/circle/test.html">here</a>.</p>
 							<div class="thickBorder"></div>
-							<em>Programming languages and tools used</em>
+							<em>Languages, libraries and tools used</em>
 							<ul>
 								<li>HTML</li>
 								<li>CSS</li>
@@ -673,10 +816,10 @@
 					<div class="slideDiv" id="div3">			
 						<div class="info">
 							<a href="https://github.com/eriklindernoren/Sonus-JFugueUI"  target="_blank"><p>Sonus</p></a>
-							<em>Music Composing App Built Using JFugue API</em>
+							<em>Desktop application development in Java</em>
 							<p>This was a project that I did with a classmate in a Java class that we had. The project was not meant to take up as much time that it did in the end, but it was really fun working on. <br> I was after the course ended employed by Ericsson for the summer and ended up building my project there solely in Java and I think that the time that we put into our Java project in the class before helped me out at Ericsson in the beginning. <br>Most other project groups ended up doing games as their project but we decided early on that we wanted to build a tool of some sort. We did a little research about fun modules out there for Java and we found JFugue. <br> JFugue makes it easy to compose music just by entering strings of the chords to be played and by what instrument.</p>
 							<div class="thickBorder"></div>
-							<em>Programming languages and tools used</em>
+							<em>Languages, libraries and tools used</em>
 							<ul>
 								<li>Java</li>
 								<li>JFugue API</li>	
@@ -689,7 +832,7 @@
 							<em>Web Development</em>
 							<p>I have wanted to get into learning web development for a long time and it was fun to finally find the inspiration. The idea of building a digital resume came from a friend who talked to me about building one himself and I thought it sounded like a fun way to get my web development ball rolling. <br> This site has been built with HTML, CSS and Javascript using Gulp as the build system. During the process of building it I have tried frameworks and plugins such as Bootstrap, Animate.css and Wow.js. When I got more accustomed to using HTML, CSS, and Javascript I tried to limit my use of frameworks for structure and plugins for animations to make sure that I understood Javascript and CSS well enough to implement those features by myself. As it stands right now everything on this site is custom built using only HTML, CSS, Javascript and JQuery. <br> Working on this site was a great way to get into learning web development and a good way to hone my design skills. </p>
 							<div class="thickBorder"></div>
-							<em>Programming languages and tools used</em>
+							<em>Languages, libraries and tools used</em>
 							<ul>
 								<li>HTML</li>
 								<li>CSS</li>
@@ -704,7 +847,7 @@
 							<em>Web Development</em>
 							<p>This was a one week project we had in the course Mobile and Personal Information Systems at ETH Zürich. The idea was to come up with a mock-up of a Twitter application that would display content based on the users that was added. I designed a grid with three different zones that pulled Tweets corresponding to the zone that the user was positioned in. I accomplished this using the Twitter API, and modifying the request query by which type of Tweet was requested. Multiple users would result in the application displaying each users Tweets filtered by in what zone they were standing in.</p>
 							<div class="thickBorder"></div>
-							<em>Programming languages and tools used</em>
+							<em>Languages, libraries and tools used</em>
 							<ul>
 								<li>HTML</li>
 								<li>CSS</li>
@@ -715,12 +858,29 @@
 							</ul>
 						</div>
 					</div>
+					<div class="slideDiv" id="div6">			
+						<div class="info">
+							<a href="http://www.eriklindernoren.se/minigolf/"  target="_blank"><p>Miniature Golf Tournament 2016</p></a>
+							<em>Web Development</em>
+							<p>Me and three friends decided to have a miniature golf tournament spanning over a couple of weeks during the summer, since we all were going to spent those weeks together in Linköping. And since it's common sense that any  miniature golf tournament during the summer is going to need its very own website, I decided to build one. <br> The website enabled us to keep up with stats and upload images, videos and so on to.<br>You can check it out <a href="http://eriklindernoren.se/minigolf/">here</a>.</p>
+							<div class="thickBorder"></div>
+							<em>Languages, libraries and tools used</em>
+							<ul>
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>Javascript</li>
+								<li>PHP</li>
+								<li>MySQL</li>
+							</ul>
+						</div>
+					</div>
 					<div id="projImages">
-						<a id="ethcircle" href="javascript:void(0)" data-target="2" class="prototype"><img src="images/ethcircle.png" alt=""></img></a>
 						<a id="mapapp" href="javascript:void(0)" data-target="1" class="prototype"><img src="images/mapapp.png" alt=""></img></a>
-						<a id="site" href="javascript:void(0)" data-target="4" class="prototype"><img src="images/site.png" alt=""></img></a>
+						<a id="ethcircle" href="javascript:void(0)" data-target="2" class="prototype"><img src="images/ethcircle.png" alt=""></img></a>
 						<a id="sonus" href="javascript:void(0)" data-target="3" class="prototype"><img src="images/sonus.jpeg" alt=""></img></a>
+						<a id="site" href="javascript:void(0)" data-target="4" class="prototype"><img src="images/site.jpeg" alt=""></img></a>
 						<a id="moodi" href="javascript:void(0)" data-target="5" class="prototype"><img src="images/moodi.jpeg" alt=""></img></a>
+						<a id="golf" href="javascript:void(0)" data-target="6" class="prototype"><img src="images/golf.jpeg" alt=""></img></a>
 					</div>
 				</div>
 				
@@ -755,14 +915,12 @@
 			<h2 id="copyright">© 2016 Erik Linder-Norén</h2>			
 		</footer>
 
-
-
-		<a class="navbuttons scroll scrollToTop" href="#" data-target="homescreen">
-			<div class="contentHolder">
-				<div class="scrollIcon"><i class="fa fa-angle-up"></i></div>
-				<div class="scrollText"><h1>TOP</h1></div>
-			</div>
-		</a>
+		<a class="navbuttons" id="scrollUp" data-target="homescreen" href="#">
+		<div>
+			<i class="fa fa-angle-up" aria-hidden="true"></i>
+			<p>TOP</p>
+		</div>
+	</a>
 
 
 

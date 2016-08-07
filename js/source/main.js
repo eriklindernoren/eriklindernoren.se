@@ -5,6 +5,97 @@ $(document).ready(function(){
     $(window).bind('scroll',function(e){
         parallaxScroll();
     });
+    
+
+    var coursesAreSetUp = false;
+    if(!coursesAreSetUp){
+        var width = Math.floor($('#edus').width() / 2) - 40;
+        var courses = $('.courses');
+        for(var i = 0; i < courses.length; i++){
+            $(courses[i]).css({"width": width + "px"});
+            var height = 0;
+            $(courses[i]).children(".listWrapper").children(".courseListWrapper").each(function(){
+                var newHeight = $(this).children(".courseList").height();
+                if(newHeight > height){
+                    height = newHeight;
+                }
+            });
+            height += 90;
+            
+            var minHeight = $('.edu').height();
+            $(courses[i]).css({"height": height + "px", "min-height": minHeight + "px"});
+            $(courses[i]).parent().css({"height": height + "px", "min-height": minHeight + "px"});
+            var semesters = $(courses[i]).children(".listWrapper").children(".courseListWrapper").length;
+            $(courses[i]).children(".listWrapper").css({"height": height + "px", "width": semesters*width + "px", "min-height": minHeight + "px"});
+            var courseListWrappers = $(courses[i]).children(".listWrapper").children(".courseListWrapper");
+            for(var a = 0; a < courseListWrappers.length; a++){
+                $(courseListWrappers[a]).css({"width": width + "px", "height": height + "px", "min-height": minHeight + "px"});
+            }
+        }
+        coursesAreSetUp = true;
+    }
+
+    $(".showCourses").click(function() {
+        var text = $(this).children("p").text();
+        if(text == "Show Courses"){
+            $(".showCourses").children("p").text("Show Courses");
+            $(".courses").css({
+                "opacity": "0", 
+                "left": "-100%", 
+            });
+            semester = 1;
+            $(this).children("p").text("Hide Courses");
+            var $newCourses = $(this).parent().parent().siblings(".courseWrapper").children(".courses");
+            $newCourses.children(".coursesUpper").children("p").text("Semester 1");
+            $newCourses.children(".listWrapper").addClass("noTransition");
+            $newCourses.children(".listWrapper").css({"transform": "translateX(0)"});
+            $newCourses.children(".listWrapper")[0].offsetHeight;
+            $newCourses.children(".listWrapper").removeClass("noTransition");
+            $newCourses.css({
+                "opacity": "1",
+                "left": "40px", 
+            });
+        }else{
+            $(this).children("p").text("Show Courses");
+            var $courses = $(this).parent().parent().siblings(".courseWrapper").children(".courses");
+            $courses.children(".coursesUpper").children("p").text("Semester 1");
+            $courses.children(".listWrapper").addClass("noTransition");
+            $courses.children(".listWrapper").css({"transform": "translateX(0)"});
+            $courses.children(".listWrapper")[0].offsetHeight;
+            $courses.children(".listWrapper").removeClass("noTransition");
+            $courses.css({
+                "opacity": "0", 
+                "left": "-100%", 
+            });
+            coursesVisible = false;
+            semester = 1;
+        }
+    });
+
+    var semester = 1;
+    $(".courseRight").click(function() {
+        var semesters = $(this).parent().siblings(".listWrapper").children(".courseListWrapper").length;
+        if(semester == semesters){
+            semester = 1;
+        }else{
+            semester++;
+        }
+        var width = $($(this).parent().siblings(".listWrapper").children(".courseListWrapper")[0]).width();
+        $(this).parent().siblings(".listWrapper").css({"transform": "translateX(" + (semester-1)*width*(-1) + "px)"});
+        $(this).siblings("p").text("Semester " + semester);
+    });
+
+    $(".courseLeft").click(function() {
+        var semesters = $(this).parent().siblings(".listWrapper").children(".courseListWrapper").length;
+        if(semester == 1){
+            semester = semesters;
+        }else{
+            semester--;
+        }
+        var width = $($(this).parent().siblings(".listWrapper").children(".courseListWrapper")[0]).width();
+        $(this).parent().siblings(".listWrapper").css({"transform": "translateX(" + (semester-1)*width*(-1) + "px)"});
+        $(this).siblings("p").text("Semester " + semester);
+    });
 
     var menuVisible = false;
     $('#hamburger').click(function(){ 
@@ -88,59 +179,13 @@ $(document).ready(function(){
         }
     }); 
 
-    $('#hamburger').hover(function(){
-        if(!menuVisible){
-            $('#menuLine1').css({
-                    'width': '16px', 
-                    'height': '16px', 
-                    'border-radius': '50%', 
-                    'border': '2px solid rgb(250,250,250)',
-                    'top': '30%', 
-                    'left': '0',
-                    'right': 'auto',
-            });
-            $('#menuLine2').hide();
-            $('#menuLine3').hide();
-            $('#menuLine4').css({
-                    'width': '12px',
-                    'bottom': '0', 
-                    'right': '5px',
-                    'top': 'auto',
-                    'transform' : 'translateY(-50%) rotateZ(45deg)'
-            });
-        }
-    }, function(){
-        if(!menuVisible){
-            $('#menuLine1').css({
-                'width': '100%', 
-                'height': 'auto', 
-                'border-radius': '0', 
-                'border': 'none',
-                'border-bottom': '2px solid rgb(250,250,250)',
-                'top': '0', 
-                'left': 'auto',
-                'right': '0',
-                'transform' : 'translateY(-50%)'
-            });
-            $('#menuLine2').show();
-            $('#menuLine3').show();
-            $('#menuLine4').css({
-                'width': '100%',
-                'bottom': 'auto',
-                'top': '100%', 
-                'right': '0',
-                'transform' : 'translateY(-50%) rotateZ(0)'
-            });
-        }
-    });
-
     function parallaxScroll(){
         var scrolled = $(window).scrollTop();
         $('#mountainHolder2').css('transform','translateY('+Math.round(((scrolled*.25)))+'px)');
         $('#mountainHolder').css('transform','translateY('+Math.round(((scrolled*.5)))+'px)');
     }
     
-    var mailHover = function(){
+    var resumeHover = function(){
         $('#overResume .bulb').css({'border-color': '#F39C12', 'background-color': '#FDE3A7', 'box-shadow': '0px 0px 10px 0px #F39C12'});
         $('#overResume .bulbShine').css({'border-color': 'white'});
         $('#pSquare1').css({'border-color': '#F64747', 'background-color': 'rgba(246,71,71,0.2)'});
@@ -157,17 +202,10 @@ $(document).ready(function(){
         },100);
         setTimeout(function(){
             $('.coffeeSteam').css({'transform': 'translateY(-50%) translateX(-50%)', 'opacity': '1'});
-            $('#b9').css({'transform': 'translateX(-50%) rotateZ(10deg) translateY(-2px)', 'right': '56px', 'bottom': '40%'});
+            $('#b9').css({'transform': 'translateX(-50%) rotateZ(10deg) translateY(-2px)', 'right': '50px', 'bottom': '40%'});
         },400);
-
-        
-        
-
-        
-        
-        
     }
-    var mailNotHover = function(){
+    var resumeNotHover = function(){
         $('#overResume .bulb').css({'border-color': 'black', 'background-color': 'rgb(250,250,250)', 'box-shadow': 'none'});
         $('#overResume .bulbShine').css({'border-color': 'transparent'});
         $('#screen').css({'background-color': 'rgb(230,230,230)'});
@@ -179,13 +217,9 @@ $(document).ready(function(){
         $('.coffeeSteam').css({'transform': 'translateY(23px) translateX(-50%)', 'opacity': '0'});
 
         $('#b9').css({'transform': 'translateX(-50%) rotateZ(-90deg)', 'right': '76px', 'bottom': '15px'});
-
-        // for(var i = 1; i <= 9; i++){
-        //     $('#b' + i).css({'background-color':'rgb(240,240,240)'});
-        // }
     }
 
-    $('#resume').hover(mailHover, mailNotHover);
+    $('#resume').hover(resumeHover, resumeNotHover);
 
     // Animate to div 
     $(document).on('click','.navbuttons', function(event) {
@@ -208,36 +242,6 @@ $(document).ready(function(){
     }
 });
 
-    var beenSetUp = false;
-    if(!beenSetUp){
-        setupStars();
-        //setStarShine();
-    }
-    function setupStars(){
-
-        var placing = [
-        [20,60],
-        [45,55],
-        [20,35],
-        [25,85],
-        [15,75],
-        [45,15],
-        [25,10],
-        [15,25],
-        [10,50],
-        [50,25],
-        [60,40],
-        [60,85],
-        [50,70],
-        ];
-        for(i = 0; i < 13; i++){
-            var star = $('.s' + (i+1));
-            var top = placing[i][0];
-            var left = placing[i][1];
-            $(star).css({'top': top + '%', 'left': left + '%'});
-        }
-        beenSetUp = true;
-    }
 
     function getNavButtonColor(dist){
         var topOfWindow = $(window).scrollTop();
@@ -296,13 +300,12 @@ $(document).ready(function(){
     $('#scrollNavigationButtonWrapper .navbuttons').hover(function(){
         var distTop = $(window).scrollTop();
         if(distTop > 550 && window.innerWidth > 1300){
-            $(this).find('p').css({'color': '#c0392b'});
+            $(this).children('p').css({'color': 'red'});
         }
     }, function(){
         var dist = $(this).offset().top;
         var color = getNavButtonColor(dist);
-        $(this).find('p').css({'color': color});
-        
+        $(this).children('p').css({'color': color});
     });
 
 
@@ -354,12 +357,6 @@ $(document).ready(function(){
         // return height + offsetFromHeader + 190;
         return biggestHeight + offsetFromHeader + 170;
     }
-
-                    //     <a id="ethcircle" href="javascript:void(0)" data-target="2"><img src="images/ethcircle.png" alt=""></img></a>
-                    // <a id="mapapp" href="javascript:void(0)" data-target="1"><img src="images/mapapp.png" alt=""></img></a>
-                    // <a id="site" href="javascript:void(0)" data-target="4"><img src="images/site.png" alt=""></img></a>
-                    // <a id="sonus" href="javascript:void(0)" data-target="3"><img src="images/sonus.jpeg" alt=""></img></a>
-                    // <a id="moodi" href="javascript:void(0)" data-target="5"><img src="images/moodi.png" alt=""></img></a>
     
     //Slide divs in project section
     var currentDiv = 4;
@@ -489,15 +486,26 @@ var periscopeIfMozilla = function(){
     }
 }
 
-
-
 periscopeIfMozilla();
+
+var resumeIfSafari = function(){
+    var ua = navigator.userAgent.toLowerCase(); 
+    if (ua.indexOf('safari') != -1) { 
+        // Safari
+        if (ua.indexOf('chrome') == -1) {
+            $('#resume').css({"border-radius": "2px"});
+        }
+    }
+}
+
+resumeIfSafari();
 
     $(document).scroll(navAndScrollButtonsOnScroll);
         // Show navigation background, "scroll to top"-button
         var navPos = "down";
         function navAndScrollButtonsOnScroll(){
 
+            // Show / hide navigation buttons
             var distTop = $(window).scrollTop();
             if(distTop > 550 && window.innerWidth > 1300){
                 var buttons = $('#scrollNavigationButtonWrapper a');
@@ -534,6 +542,8 @@ periscopeIfMozilla();
                     $(buttons[4]).css({'transform': 'translateX(200px)'});
                 },400);
             }
+
+            // Change the color of the navigation bar buttons by their current background color
             for(var i = 0; i < $(".scrollNavHeader").length; i++){
                 var elem = $(".scrollNavHeader")[i];
                 var dot = $(elem).next();
@@ -542,33 +552,20 @@ periscopeIfMozilla();
                 $(elem).css({'color': color});
                 $(dot).css({'background-color': color});
             }
-            var scrollDist = $(".scrollToTop").offset().top;
+
+            // Change the color of the scroll up button by its current background color
+            var scrollDist = $("#scrollUp").offset().top;
             var color = getNavButtonColor(scrollDist);
-            $('.scrollToTop').css({'border-color': color});
-            $('.scrollToTop .scrollIcon i').css({'color': color});
-            $('.scrollToTop .scrollText h1').css({'color': color});
+            $('#scrollUp').css({'border-color': color});
+            $('#scrollUp > div > i').css({'color': color});
+            $('#scrollUp > div > p').css({'color': color});
 
-
-            // Moves the navbar down to the footer when it is reached
-
-            // if(distTop > ($(document).height() - 1000)){
-            //     $("#scrollNavigationBar").css({'top': 'auto', 'bottom': '120px', 'height': '230px', 'transform': 'translateY(0)'});
-            //     $("#scrollNavigationButtonWrapper a").css({'height': '20px', 'padding-right': '20px'});
-                
-            // }else{
-            //     $("#scrollNavigationBar").css({'top': '47%', 'bottom': 'auto', 'height': '400px', 'transform': 'translateY(-50%)'});
-            //     $("#scrollNavigationButtonWrapper a").css({'height': '40px', 'padding-right': '25px'});
-
-            // }
-            
-
-            
-
+            // Show / hide the scroll up button
             if(distTop > 300 && window.innerWidth > 668){
-                $('.scrollToTop').css({"transform": "translateY(-100px)"});
-                }
+                $('#scrollUp').css({"transform": "translateY(0) translateX(0)", "opacity": "1"});
+            }
             else{
-                $('.scrollToTop').css({'transform': 'translateY(100px)'});
+                $('#scrollUp').css({'transform': 'translateY(150px) translateX(0)', "opacity": "1"});
             }
         }
 });
@@ -621,15 +618,7 @@ function scrollAnimations(){
 
     var triggerContactAnimations = $('.projects').offset().top + $(window).height();
 
-    // var dots = $('.timelineDot');
-    // for(var i = 0; i < dots.length; i++){
-    //     var elem = dots[i];
-    //     if(isPartlyScrolledIntoView(elem)){
-    //         $(elem).addClass('growAndShrink');
-    //     }
-    // }
-
-    if(!penAnimationDone && isFullyScrolledIntoView($('.timelineDot')[3])){
+    // if(!penAnimationDone && isFullyScrolledIntoView($('.timelineDot')[3])){
         // $('#penHolder').css({'top': '-39px', 'left': '88px', 'transform': 'rotateZ(-30deg)'});
         // setTimeout(function(){
         //     $('#penHolder').css({'transition': '1.4s ease', 'top': '110px'});
@@ -649,15 +638,8 @@ function scrollAnimations(){
         // setTimeout(function(){
         //     $('#penHolder').css({'transition': '0.5s ease', 'top': '130px', 'left': '130px', 'transform': 'rotateZ(15deg)'});
         // },5100);
-        penAnimationDone = true;
-    }
-
-
-    if(isFullyScrolledIntoView($('.timelineDotUpper')[3])){
-        for(var i = 0; i < 6; i++){
-            $($('.timelineDotUpper')[i]).addClass('growAndShrink' + (i+1));
-        }
-    }
+    //     penAnimationDone = true;
+    // }
 
     if(isPartlyScrolledIntoView('#timelineDotHeader')){
         $('#timelineDotHeader').addClass('rotate360').addClass('appearFromTopCentered');
@@ -667,13 +649,6 @@ function scrollAnimations(){
         $('#projImages').addClass('appearFromBottom');
     }
 
-    // var timelineDots = $('.timelineDot');
-    // for(var i = 0; i < timelineDots.length; i++){
-    //     var elem = timelineDots[i];
-    //     if(isFullyScrolledIntoView($('.edu')[i])){
-    //         transformTimelineDots(elem);
-    //     }
-    // }
 
     var bigButtons = $('.bigButton');
     for(var i = 0; i < bigButtons.length; i++){
@@ -682,13 +657,6 @@ function scrollAnimations(){
             $(elem).addClass("slideDownBig" + i);
         }
     }
-}
-
-function transformTimelineDots(elem){
-    setTimeout(function(){
-        $(elem).css({'border-radius': '50%'});
-    },400);
-    $(elem).css({'transform': 'translateX(-50%) translateY(-50%) rotateZ(0deg)', 'width': '13px','height': '13px'});
 }
 
 function whatBackground(scrolledY){
@@ -701,9 +669,13 @@ function whatBackground(scrolledY){
         $('.schoolImg').hide();
     }else{
         $('#contact').hide();
-        if(isPartlyScrolledIntoView('.education')){
+        if(isPartlyScrolledIntoView("#popDownWrapper")){
+            $('.schoolImg').hide();
+        }
+        else if(isPartlyScrolledIntoView('.education')){
             $('.schoolImg').show();
-        }else{
+        }
+        else{
             $('.schoolImg').hide();
         }
     }

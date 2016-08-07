@@ -169,7 +169,7 @@
 	font-weight: 500;
 	font-size: 16px;
 	color: rgb(34,49,63);
-	color: #F64747;
+	color: red;
 	pointer-events : auto;
 }
 
@@ -228,8 +228,8 @@
 }
 
 #ethcircle{
-	bottom: 28px;
-	right: 60px;
+	bottom: 20px;
+	right: 50px;
 	width: 15%;
 	height: auto;
 	z-index: 5;
@@ -238,49 +238,60 @@
 #mapapp{
 	position: absolute;
 	bottom: 20px;
-	right: 160px;
+	right: 167px;
 	width: 15%;
 	height: auto;
-	z-index: 4;
+	z-index: 5;
 }
 
 #site{
 	position: absolute;
-	bottom: 20px;
+	bottom: 40px;
 	right: 0px;
 	width: 73%;
 	height: auto;
 	z-index: 1;
+}
 
+#site img{
+	border-radius: 5px;
+}
+
+#golf{
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+	width: 75%;
+	height: auto;
+	z-index: 3;
+	max-width: 800px;
+	border-radius: 5px;
+	overflow: hidden;
 }
 
 #moodi{
 	position: absolute;
 	bottom: 30px;
-	right: 20px;
+	right: 10px;
 	width: 80%;
 	height: auto;
 	z-index: 2;
 	max-width: 800px;
-	border-radius: 7px;
+	border-radius: 5px;
 	overflow: hidden;
-}
-
-#site img{
-	border-radius: 7px;
 }
 
 #sonus{
 	position: absolute;
 	bottom: 35px;
-	right: 40px;
+	right: 35px;
 	width: 65%;
 	height: auto;
 	max-width: 600px;
-	z-index: 3;
+	z-index: 4;
 
 }
 
 #sonus img{
-	border-radius: 5px;
+	border-radius: 3px;
 }
