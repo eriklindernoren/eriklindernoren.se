@@ -467,8 +467,8 @@ div{
 	top: 50%;
 	right: 60px;
 	transform: translateY(-50%);
-	width: 100px;
-	height: 400px;
+	width: 122px;
+	height: 380px;
 	z-index: 10;
 	transition: 0.4s linear;
 }
@@ -504,6 +504,7 @@ div{
 	width: 100%;
 	padding-right: 20px;
 	transform: translateX(200px);
+	text-align: right;
 }
 
 .navDot{
@@ -511,20 +512,21 @@ div{
 	top: 50%;
 	right: 0px;
 	transform: translateY(-50%) translateX(50%) rotateZ(0);
-	height: 10px;
+	height: 11px;
 	width: 3px;
 	border-radius: 1px;
+	border: 0px solid rgb(200,200,200);
 	transition: transform 0.25s linear;
 }
 
-#scrollNavigationButtonWrapper a:hover > .navDot{
+/*#scrollNavigationButtonWrapper a:hover > .navDot{
 	width: 5px;
 	height: 5px;
 	border: 2px solid red !important;
 	background-color: transparent !important;
 	border-radius: 1px;
 	transform: translateY(-50%) translateX(50%) rotateZ(225deg);
-}
+}*/
 
 #scrollNavigationButtonWrapper a:hover > .scrollNavHeader{
 	color: #c0392b;
@@ -532,11 +534,14 @@ div{
 }
 
 .scrollNavHeader{
-	font-weight: 300;
-	font-size: 17px;
+	font-weight: 500;
+	font-size: 15px;
 	font-family: "Oswald";
+	font-family: "Raleway";
+	text-align: right;
 	letter-spacing: 1px;
 	width: 100%;
+	padding: 10px 0px;
 }
 
 

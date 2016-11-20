@@ -6,6 +6,34 @@ $(document).ready(function(){
         parallaxScroll();
     });
     
+    jQuery('img.svg').each(function(){
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+
+        jQuery.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+
+        }, 'xml');
+
+    });
 
     var coursesAreSetUp = false;
     if(!coursesAreSetUp){
@@ -267,6 +295,30 @@ $(document).ready(function(){
         }
     }
 
+    function getNavButtonHoverColor(dist){
+        var topOfWindow = $(window).scrollTop();
+        var elementDist = dist;
+
+        var about = $('.about').offset().top;
+        var eduSummary = $('.education').offset().top;
+        var eduTimeline = $('#eduTimelineWrapper').offset().top - 350;
+        var experience = $('.experience').offset().top;
+        var projects = $('.projects').offset().top;
+        var contact = $('.projects').offset().top + $('.projects').height() + 80;
+
+        if(elementDist < eduSummary){
+            return "black";
+        }else if(elementDist < eduTimeline){
+            return "rgb(200,200,200)";
+        }else if(elementDist < projects){
+            return "black";
+        }else if(elementDist < contact){
+            return "rgb(200,200,200)";
+        }else{
+            return "black";
+        }
+    }
+
     $('#navigationButtonWrapper .navbuttons').hover(function(){
 
         var navClicked = this.getAttribute('data-target');
@@ -300,12 +352,30 @@ $(document).ready(function(){
     $('#scrollNavigationButtonWrapper .navbuttons').hover(function(){
         var distTop = $(window).scrollTop();
         if(distTop > 550 && window.innerWidth > 1300){
-            $(this).children('p').css({'color': 'red'});
+            var dist = $(this).offset().top;
+            var color = getNavButtonHoverColor(dist);
+            $(this).children('p').css({'color': color});
+            $(this).children('.navDot').css({
+                "width": "5px",
+                "height": "5px",
+                "border-color": color,
+                "border-width": "2px",
+                "background-color": "transparent",
+                "transform": "translateY(-50%) translateX(50%) rotateZ(225deg)",
+            });
         }
     }, function(){
         var dist = $(this).offset().top;
         var color = getNavButtonColor(dist);
         $(this).children('p').css({'color': color});
+        $(this).children('.navDot').css({
+            "width": "3px",
+            "height": "11px",
+            "border-width": "0px",
+            "border-color": color,
+            "background-color": color,
+            "transform": "translateY(-50%) translateX(50%) rotateZ(0)",
+        });
     });
 
 

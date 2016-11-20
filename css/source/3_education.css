@@ -9,9 +9,9 @@
 	position: relative;
 	width: 100%;
 	text-align: center;
-	overflow: auto;
+	overflow: hidden;
 	z-index: 2;
-	background: black;
+	background-color: black;
 }
 
 
@@ -27,6 +27,7 @@
 	background: black;
 	z-index: 3;
 	padding: 200px 0 450px 0;
+
 }
 
 #upperTimeline{
@@ -103,7 +104,7 @@
 }
 
 .eduSummary b{
-	color: #F9690E;
+	color: #CF000F;
 }
 
 #timelineDotHeader{
@@ -146,7 +147,7 @@
 	margin-bottom: 20px;
 }
 
-.progLang:nth-child(n+2):nth-child(-n+7){
+.progLang:nth-child(n+2):nth-child(-n+8){
 	height: 55px;
 }
 
@@ -180,10 +181,8 @@
 
 .red{
 	font-weight: bold;
-	color: #c0392b;
-	color: red;
-	border-color: #c0392b;
-	border-color: red;
+	color: #CF000F;
+	border-color: #CF000F;
 }
 
 .progLang p{
@@ -204,6 +203,18 @@
 /*	---------- PERISCOPE --------------  */
 /*---------------------------------------*/
 
+/*#eduImage{
+	width: 700px;
+	height: 700px;
+	border-radius: 50%;
+	transform: translateX(-50%) translateY(-650px);
+	background-color: yellow;
+	z-index: 10;
+	background: url("../images/zurich1.jpeg") center center;
+	background-size: cover;
+	background-attachment: fixed;
+}*/
+
 #eduPeriscopeWrapper{
 	clear: both;
 	margin: 0;
@@ -220,7 +231,7 @@
 	height: 50%;
 }
 
-.schoolImg{
+/*.schoolImg{
 	display: none;
 	position: fixed;
 	top: 0;
@@ -231,7 +242,7 @@
 	background-image: url("../images/zurich1.jpeg");
 	background-position: center center;
 	background-size: cover;
-}
+}*/
 
 .eduPeriscope{
 	position: relative;
@@ -239,9 +250,13 @@
 	width: 700px;
 	height: 700px;
 	border-radius: 50%;
+	transform: translate3d(0,0,0);
 	overflow: hidden;
 	z-index: 3;
 	transition: 2s linear;	
+	background: url("../images/zurich1.jpeg") center center;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 /*---------------------------------------*/
@@ -254,7 +269,7 @@
 	width: 100%;
 	background-color: white;
 	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-bottom: 140px;
 	margin: 0;
 	z-index: 3;
 }
@@ -319,6 +334,15 @@
 	max-width: 100%;
 }
 
+.leftOfTimeline > .university > p{
+	font-family: "Raleway";
+	font-weight: 400;
+	color: black;
+	font-size: 16px;
+	line-height: 25px;
+	max-width: 100%;
+}
+
 .showCourses{
 	position: relative;
 	display: block;
@@ -344,17 +368,9 @@
 .showCourses:hover{
 	background-color: black;
 }
+
 .showCourses:hover p{
 	color: white;
-}
-
-.leftOfTimeline > .university > p{
-	font-family: "Raleway";
-	font-weight: 400;
-	color: black;
-	font-size: 16px;
-	line-height: 25px;
-	max-width: 100%;
 }
 
 .rightOfTimeline{

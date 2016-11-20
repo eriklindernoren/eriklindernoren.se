@@ -43,7 +43,7 @@
 	overflow: hidden;
 }
 
-#resume div{
+#resumeExpandingBackground{
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -53,6 +53,7 @@
 	transition: 0.3s ease;
 	background-color: white;
 }
+
 
 #resume p{
 	font-family: "Raleway";
@@ -69,7 +70,7 @@
 	transition: 0.2s linear;
 }
 
-#resume:hover div{
+#resume:hover #resumeExpandingBackground{
 	height: 100%;
 }
 
@@ -925,6 +926,7 @@
 	border: 1px solid black;
 	background-color: white;
 	z-index: 3;
+	overflow: hidden;
 }
 
 #compUpper{
@@ -1229,7 +1231,7 @@
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translateX(-3px);
+	transform: translateX(-4px);
 	border-left: 1px solid black;
 	border-right: 1px solid black;
 	border-radius: 0px 0px 4px 4px;
