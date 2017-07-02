@@ -512,11 +512,21 @@ div{
 	top: 50%;
 	right: 0px;
 	transform: translateY(-50%) translateX(50%) rotateZ(0);
-	height: 11px;
+	height: 6px;
 	width: 3px;
 	border-radius: 1px;
-	border: 0px solid rgb(200,200,200);
 	transition: transform 0.25s linear;
+}
+
+.navDotDelayed{
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	height: 3px;
+	width: 3px;
+	border-radius: 1px;
+	transition: width 0.25s linear;
+	transform: translateY(-50%) translateX(50%);
 }
 
 /*#scrollNavigationButtonWrapper a:hover > .navDot{
@@ -534,7 +544,7 @@ div{
 }
 
 .scrollNavHeader{
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 15px;
 	font-family: "Oswald";
 	font-family: "Raleway";
@@ -688,6 +698,10 @@ div{
 @media screen and (max-width: 1200px){
 	#slideLeft{
 		left: 40px;
+	}
+
+	#github_logo{
+		display: none;
 	}
 
 	#slideRight{

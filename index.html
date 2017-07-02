@@ -25,22 +25,27 @@
 				<a class="navbuttons" id="navbutton1" href="#" data-target="about">
 					<p class="scrollNavHeader">About</p>
 					<div class="navDot"></div>
+					<div class="navDotDelayed"></div>
 				</a>
 				<a class="navbuttons" id="navbutton2" href="#" data-target="education">
 					<p class="scrollNavHeader">Education</p>
 					<div class="navDot"></div>
+					<div class="navDotDelayed"></div>
 				</a>
 				<a class="navbuttons" id="navbutton3" href="#" data-target="experience">
 					<p class="scrollNavHeader">Experience</p>
 					<div class="navDot"></div>
+					<div class="navDotDelayed"></div>
 				</a>
 				<a class="navbuttons" id="navbutton4" href="#" data-target="projects">
 					<p class="scrollNavHeader">Projects</p>
 					<div class="navDot"></div>
+					<div class="navDotDelayed"></div>
 				</a>
 				<a class="navbuttons" id="navbutton5" href="#"  data-target="contact">
 					<p class="scrollNavHeader">Contact</p>
 					<div class="navDot"></div>
+					<div class="navDotDelayed"></div>
 				</a>	
  			</div>	
 	</section>
@@ -103,6 +108,11 @@
 		<div id="mountainHolder"><img src="images/mountains.svg" id="mountain"></div>
 		<div id="mountainHolder2"><img src="images/mountains2.svg" id="mountain2"></div>
 		<div id="lowerBackground"></div>
+
+		<a target="_blank", id="github_logo", href="https://github.com/eriklindernoren">
+			<p>GitHub</p>
+			<i class="fa fa-github" aria-hidden="true"></i>
+		</a>
 	</section>
 	
 	<section id="about" class="about">		
@@ -110,11 +120,11 @@
 			<h1 id="aboutMe" >About Me</h1>
 			<div id="aboutText">
 				<p>
-					My name is Erik Linder-Norén and I'm currently studying towards a Master of Science degree in Machine Learning and Artificial Intelligence, while at the same time being employed by Ericsson as a Software Developer. <br>
-					I've always loved sketching, tinkering with things and exploring new tools to create with. I really enjoy building with ones and zeros and have been fascinated with computers since I first saw my family's Macintosh Classic boot up.
-					<br>
-					I love how programming enables people to quickly explore new ideas and I've found that the most efficient and fun way for me to learn is to explore different languages and tools in small side projects in parallel to my studies and current employment. This website is a good example of that as building it was my way of learning web development. <br>
-					If I'm not doing school work, working on a project or hanging out with friends I'm probably watching, reading or thinking about basketball. I have only missed a handful of Boston Celtics games in the last couple of years and have been a NBA Leagues Pass subscriber since 2007. 
+					My name is Erik Linder-Norén and I'm currently in my final year studying towards a Master of Science degree in Machine Learning and Artificial Intelligence. <br> 
+					I've always loved sketching, tinkering with things and exploring new tools to create with. I really enjoy building with ones and zeros and have been fascinated with computers since I first saw my family's Macintosh Classic boot up. 
+					I love how programming enables people to quickly explore new ideas and I've found that the most efficient and fun way for me to learn is to explore different languages and tools in small side projects in parallel to my studies and current employment. This website is a good example of that as building it was my way of learning web development. I have authored the machine learning library <a href="https://github.com/eriklindernoren/ML-From-Scratch" style="text-decoration: none; font-weight: bold; color: black;", target="_black">ML-From-Scratch</a> on GitHub, where I have implemented an extensive list of fundamental machine learning models and algorithms from scratch in vanilla Python.
+					Besides engaging myself in side projects, hanging out with friends and studying, I'm a huge basketball junkie.
+					I have only missed a handful of Boston Celtics games in the last couple of years and have been a NBA League Pass subscriber since 2007. 
 					<br><br>If you want to know more about me, what I'm up to or if you're just feeling social - <b>feel free to get in touch</b>, I would love to hear from you.
 				</p>
 			</div>
@@ -122,7 +132,6 @@
 		<a id="resume" href="pdf/cv.pdf" target="_black">
 				<p>Resume</p>
 				<div id="resumeExpandingBackground"></div>
-				
 		</a>
 		<div id="overResume">
 			<div id="bulbLineStartHolder"><div id="bulbLineStart"><div id="roofBoxLine"></div></div></div>
@@ -321,6 +330,10 @@
 						<div class="timelineDotUpper"></div>
 					</div>
 					<div class="progLang">
+						<p>R</p>
+						<div class="timelineDotUpper"></div>
+					</div>
+					<div class="progLang">
 						<p>Java</p>
 						<div class="timelineDotUpper"></div>
 					</div>
@@ -337,10 +350,6 @@
 						<div class="timelineDotUpper"></div>
 					</div>
 					<div class="progLang">
-						<p>VHDL</p>
-						<div class="timelineDotUpper"></div>
-					</div>
-					<div class="progLang">
 						<p>and others..</p>
 						<div class="timelineDotUpper"></div>
 					</div>
@@ -354,7 +363,7 @@
 					<div class="thinBorder"></div>
 					<p>
 						I'm currently studying towards a Master of Science degree in Machine Learning and Artificial Intelligence at Linköping University.
-						Last year I spend one semester at the world renowned university ETH Zürich in Switzerland, where I got introduced to Machine Learning. 
+						During my studies I've spent one semester at the world renowned university ETH Zürich in Switzerland, where I got introduced to Machine Learning. 
 						ETH Zürich is known as the best university in continental Europe, and one of the best in the world in the field of Computer Science.
 						I found the course I took on Machine Learning at ETH fascinating and I am excited about specializing myself in that field going forward.
 					</p>
@@ -647,19 +656,6 @@
 					</div>
 					<div class="flip3d bigButton">
 						<div class="workButton">
-							<a data-target="onoff" data-color ="red">
-								<p>Onoff</p>
-							</a>
-						</div>
-						<div class="workButtonBack">
-							<a data-color ="red">
-								<p>Salesman</p>
-								<em>2010</em>
-							</a>
-						</div>
-					</div>
-					<div class="flip3d bigButton">
-						<div class="workButton">
 							<a data-target="siba" data-color ="red">
 								<p>Siba</p>
 							</a>
@@ -680,7 +676,20 @@
 						<div class="workButtonBack">
 							<a data-color ="red">
 								<p>Software Developer</p>
-								<em>2014 -</em>
+								<em>2014 - 2017</em>
+							</a>
+						</div>
+					</div>
+					<div class="flip3d bigButton">
+						<div class="workButton">
+							<a data-target="contextvision" data-color ="red">
+								<p>ContextVision</p>
+							</a>
+						</div>
+						<div class="workButtonBack">
+							<a data-color ="red">
+								<p>Research Scientist</p>
+								<em>2017</em>
 							</a>
 						</div>
 					</div>
@@ -713,32 +722,6 @@
 						</div>
 					</div>
 					<p>I was one of 120 out of 6000 applicants who got employed when Media Markt opened their department store in Valbo.<br> I got a salesman education and got to experience the process of opening a new store. I got the chance to build the custom made computers that were used in the gaming department.</p>				
-				</div>
-
-				<div class="onoff workplace">
-					<div class="workplaceHeader">
-						<div class="flip3d smallButton">
-							<div class="workButton">
-								<p>2010</p>
-							</div>
-							<div class="workButtonBack">
-								<p>From</p>
-							</div>
-						</div>
-						<div class="imgPosition">
-							<img src="images/onoff.svg" alt="">
-							<p class="position">Salesman</p>
-						</div>
-						<div class="flip3d smallButton">
-							<div class="workButton">
-								<p>2010</p>
-							</div>
-							<div class="workButtonBack">
-								<p>To</p>
-							</div>
-						</div>
-					</div>
-					<p>My employment at Onoff gave me a new perspective on the home electronics business in that they had a clearer focus on sales figures. The sales figures were always available for the sales force which created a competitive environment which I felt that Media Markt lacked.<br> The store was also much smaller than at Media Markt which gave me a chance to sell from all product categories which was a good learning experience.</p>				
 				</div>
 
 				<div class="siba workplace">
@@ -793,6 +776,33 @@
 
 					<p>I have been developing a command-line interface for handling communication and manipulation of Radio Base Stations using the NETCONF protocol. I have also helped develop the COM abstraction layer on top of the NETCONF common library at Ericsson. The COM abstraction layer was used as back end of the application I was working on. Both were built in Java. I was employed as a summer intern in the summer of 2014 and have since then worked on the project among others in parallel to my studies in Linköping and Zürich.</p>				
 				</div>
+				
+				<div class="contextvision workplace">
+					<div class="workplaceHeader">
+						<div class="flip3d smallButton">
+							<div class="workButton">
+								<p>2017</p>
+							</div>
+							<div class="workButtonBack">
+								<p>From</p>
+							</div>
+						</div>
+						<div class="imgPosition">
+							<img src="images/contextvision.png" alt="">
+							<p class="position">Research Scientist</p>
+						</div>
+						<div class="flip3d smallButton">
+							<div class="workButton">
+								<p>2017</p>
+							</div>
+							<div class="workButtonBack">
+								<p>To</p>
+							</div>
+						</div>
+					</div>
+					<p>Implemented and applied deep learning systems to solving research problems.</p>				
+				</div>
+
 			</div>
 		<section class="projects" id="projects">
 			<div id="projectFilter"></div>
@@ -858,7 +868,6 @@
 								<li>HTML</li>
 								<li>CSS</li>
 								<li>Javascript</li>
-								<li>Gulp</li>
 							</ul>							
 						</div>
 					</div>

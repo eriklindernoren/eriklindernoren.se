@@ -356,12 +356,15 @@ $(document).ready(function(){
             var color = getNavButtonHoverColor(dist);
             $(this).children('p').css({'color': color});
             $(this).children('.navDot').css({
-                "width": "5px",
-                "height": "5px",
-                "border-color": color,
-                "border-width": "2px",
-                "background-color": "transparent",
-                "transform": "translateY(-50%) translateX(50%) rotateZ(225deg)",
+                "width": "3px",
+                "height": "8px",
+                "background-color": color,
+                "transform": "translateY(-50%) translateX(50%) rotateZ(180deg)",
+            });
+            $(this).children('.navDotDelayed').delay(1400).css({
+                "width": "10px",
+                "height": "3px",
+                "background-color": color,
             });
         }
     }, function(){
@@ -370,11 +373,14 @@ $(document).ready(function(){
         $(this).children('p').css({'color': color});
         $(this).children('.navDot').css({
             "width": "3px",
-            "height": "11px",
-            "border-width": "0px",
-            "border-color": color,
+            "height": "6px",
             "background-color": color,
             "transform": "translateY(-50%) translateX(50%) rotateZ(0)",
+        });
+        $(this).children('.navDotDelayed').css({
+            "width": "3px",
+            "height": "3px",
+            "background-color": color,
         });
     });
 
@@ -620,7 +626,7 @@ resumeIfSafari();
                 var elemDist = $(elem).offset().top;
                 var color = getNavButtonColor(elemDist);
                 $(elem).css({'color': color});
-                $(dot).css({'background-color': color});
+                $(elem).siblings().css({'background-color': color});
             }
 
             // Change the color of the scroll up button by its current background color

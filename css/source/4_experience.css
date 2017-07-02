@@ -247,3 +247,13 @@
 	margin-top: 0px;
 }
 
+.contextvision img{
+	width: 160px;
+	padding: 15px 0px 5px 0px;
+}
+
+.contextvision .imgPosition > p{
+	padding-bottom: 10px;
+}
+
+

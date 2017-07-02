@@ -124,6 +124,44 @@
 	opacity: 1;
 }
 
+#github_logo{
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	text-decoration: none;
+	border-radius: 50px;
+	border: 1px solid rgb(200,200,200);
+	text-align: center;
+	padding: 3px 13px;
+	transition: 0.05s ease;
+}
+
+#github_logo p{
+	display: inline;
+	color: rgb(200,200,200);
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+#github_logo i{
+	font-size: 16px;
+	color: rgb(200,200,200);
+	display: inline;
+}
+
+#github_logo:hover > p{
+	color: white;
+}
+
+#github_logo:hover > i{
+	color: white;
+}
+
+#github_logo:hover{
+	background-color: black;
+}
+
+
 #message{
 	position: absolute;
 	top: 35%;
@@ -132,6 +170,7 @@
 	z-index: 5;
 	text-align: right;
 }
+
 
 #message p{
 	font-family: "Raleway";
@@ -145,7 +184,6 @@
 	transition: 0.3s linear;
 	opacity: 0;
 }
-
 
 #forestHolder{
 	z-index: 3;
